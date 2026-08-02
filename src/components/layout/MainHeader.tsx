@@ -9,11 +9,11 @@ export default function MainHeader() {
   return (
     <>
       {/* Masthead (at the very top, before header) */}
-      <div className="w-full text-center pt-12 pb-8 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative">
-        <h1 className="font-black tracking-tighter leading-[0.8] text-[13vw] md:text-[120px] lg:text-[160px] uppercase select-none text-gray-900 font-display pb-4 inline-block opacity-90 mix-blend-multiply">
+      <div className="w-full text-center pt-6 pb-4 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative overflow-hidden">
+        <h1 className="font-black tracking-tighter leading-[0.8] text-[12vw] sm:text-[10vw] md:text-[8vw] xl:text-[100px] uppercase select-none text-gray-900 font-display pb-2 inline-block opacity-90 mix-blend-multiply whitespace-nowrap">
           The FinCommerce
         </h1>
-        <div className="w-full max-w-4xl border-t border-gray-400 mt-4 flex items-center justify-between pt-3 text-[10px] font-bold tracking-widest uppercase text-gray-600 font-sans">
+        <div className="w-full max-w-4xl border-t border-gray-400 mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-600 font-sans">
           <span>Global Edition</span>
           <span>Since 2026</span>
           <span>The Pulse of Enterprise</span>

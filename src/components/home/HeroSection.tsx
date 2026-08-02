@@ -49,9 +49,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-[#0b101e] relative overflow-hidden" data-purpose="hero-slider">
-      <div className="container mx-auto px-6 md:px-12 flex flex-col justify-center h-[calc(100vh-180px)] md:h-[calc(100vh-280px)] min-h-[500px]">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative w-full h-[85%] lg:h-[90%]">
+    <section className="bg-[#0b101e] relative overflow-hidden rounded-[2rem] shadow-xl" data-purpose="hero-slider">
+      <div className="w-full px-6 md:px-12 flex flex-col justify-center h-[calc(100svh-200px)] md:h-[calc(100svh-250px)] min-h-[500px]">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative w-full h-[90%] lg:h-[85%] max-w-[1600px] mx-auto">
           
           {/* Left Content */}
           <div className="flex-1 w-full relative z-10 flex flex-col justify-center">
