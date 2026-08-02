@@ -16,8 +16,8 @@ export default function SecuritySection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-12">
         {/* Main Security Story */}
         <div className="lg:col-span-8 flex flex-col h-full border-r-0 lg:border-r border-gray-300 lg:pr-8">
-          <Link href="/news/security-1" className="group cursor-pointer">
-            <div className="overflow-hidden mb-4 relative w-full h-[450px]">
+          <Link href="/news/security-1" className="group cursor-pointer flex flex-col h-full">
+            <div className="overflow-hidden mb-4 relative w-full flex-1 min-h-[450px]">
               <img
                 alt="Security Main"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

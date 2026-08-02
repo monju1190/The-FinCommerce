@@ -3,8 +3,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary-green: #0B4F43;
-  --color-primary-light: #136B5C;
+  --color-primary-green: #1c1917; /* Warm dark stone to match pink */
+  --color-primary-light: #44403c;
   --color-ft-pink: #fff1e5;
   --font-sans: "Source Serif 4", serif;
   --font-display: "Playfair Display", serif;

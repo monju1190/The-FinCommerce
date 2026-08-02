@@ -1,43 +1,45 @@
 import React from "react";
 import Link from "next/link";
-import { recentEditions } from "@/data/mockData";
 
 export default function MagazineSection() {
+  const covers = [
+    { month: "August 2026", img: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=300&auto=format&fit=crop" },
+    { month: "July 2026", img: "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=300&auto=format&fit=crop" },
+    { month: "June 2026", img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=300&auto=format&fit=crop" },
+    { month: "May 2026", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop" },
+    { month: "April 2026", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop" },
+    { month: "March 2026", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" },
+    { month: "February 2026", img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop" },
+    { month: "January 2026", img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=300&auto=format&fit=crop" }
+  ];
+
   return (
-    <section className="mb-16" data-purpose="magazine-section">
-      <div className="flex justify-between items-center mb-8 border-b border-gray-200">
-        <div className="flex items-center space-x-3 pb-2 border-b-2 border-primary-green">
-          <div className="w-2 h-2 rounded-full bg-primary-green"></div>
-          <h2 className="text-2xl font-bold">The Magazine</h2>
-        </div>
+    <section className="mb-16 mt-8" data-purpose="magazine-section">
+      <div className="flex justify-between items-end mb-6 border-b-2 border-gray-300 pb-2">
+        <h2 className="text-2xl font-black font-display tracking-tight text-gray-900">The magazine</h2>
         <Link href="/magazine">
-          <button className="bg-primary-green text-white px-4 py-1 rounded-full text-xs font-bold hover:bg-primary-light transition-colors transition-colors">
-            See All
-          </button>
+          <span className="text-gray-900 text-xs font-bold uppercase cursor-pointer hover:underline tracking-widest">
+            View All Issues
+          </span>
         </Link>
       </div>
-      
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-        {recentEditions.slice(0, 3).map((edition, index) => (
-          <Link 
-            href={`/magazine/${edition.slug}`} 
-            key={index} 
-            className={`group cursor-pointer flex flex-col ${index === 0 ? "row-span-2 md:row-span-1" : ""}`}
-          >
-            <div className={`rounded-2xl overflow-hidden mb-2 md:mb-4 shadow-md group-hover:shadow-xl transition-shadow ${index === 0 ? "flex-1 md:h-64" : "h-24 sm:h-32 md:h-64"}`}>
+
+      <div className="flex space-x-4 overflow-x-auto pb-6 custom-scrollbar">
+        {covers.map((cover, idx) => (
+          <Link href={`/magazine/${cover.month.toLowerCase().replace(' ', '-')}`} key={idx} className="group cursor-pointer flex-shrink-0 w-32 md:w-40 lg:w-48">
+            <div className="overflow-hidden mb-3 border border-gray-300 shadow-sm relative">
               <img
-                src={edition.imageUrl}
-                alt={edition.month}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                alt={`Magazine Cover ${cover.month}`}
+                className="w-full h-auto aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                src={cover.img}
               />
             </div>
-            <h3 className={`font-bold group-hover:text-primary-green transition-colors text-center ${index === 0 ? "text-base md:text-xl" : "text-xs md:text-xl"}`}>
-              {edition.month}
-            </h3>
+            <h4 className="font-bold text-xs md:text-sm font-display text-gray-900 group-hover:text-primary-green transition-colors mt-2">
+              {cover.month}
+            </h4>
           </Link>
         ))}
       </div>
     </section>
   );
 }
-
