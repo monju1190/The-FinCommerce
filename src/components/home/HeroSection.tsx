@@ -10,7 +10,7 @@ const slides = [
     desc: "How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.",
     img: "/magazine cover/1.png",
     category: "TECHNOLOGY",
-    link: "/magazine/august-2026"
+    link: "/news/technology-1"
   },
   {
     tag: "JULY 2026 ISSUE",
@@ -18,7 +18,7 @@ const slides = [
     desc: "To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets.",
     img: "/magazine cover/2.png",
     category: "ECONOMY",
-    link: "/magazine/july-2026"
+    link: "/news/business-1"
   },
   {
     tag: "JUNE 2026 ISSUE",
@@ -26,7 +26,7 @@ const slides = [
     desc: "Exploring how IoT and AI are revolutionizing consumer interaction with living spaces on a daily basis.",
     img: "/magazine cover/image.png",
     category: "INNOVATION",
-    link: "/magazine/june-2026"
+    link: "/news/technology-2"
   },
   {
     tag: "MAY 2026 ISSUE",
@@ -34,7 +34,7 @@ const slides = [
     desc: "New regulations are forcing legacy airlines to offset carbon footprints, creating a booming secondary market.",
     img: "/magazine cover/image copy.png",
     category: "ENVIRONMENT",
-    link: "/magazine/may-2026"
+    link: "/news/world-1"
   }
 ];
 
@@ -49,7 +49,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-[#0b101e] relative overflow-hidden rounded-[2rem] shadow-xl" data-purpose="hero-slider">
+    <section className="bg-[#0b101e] relative overflow-hidden shadow-xl border-y border-black/20" data-purpose="hero-slider">
       <div className="w-full px-6 md:px-12 flex flex-col justify-center h-[calc(100svh-200px)] md:h-[calc(100svh-250px)] min-h-[500px]">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative w-full h-[90%] lg:h-[85%] max-w-[1600px] mx-auto">
           
@@ -78,11 +78,11 @@ export default function HeroSection() {
 
                 {/* Actions */}
                 <div className="flex flex-wrap items-center gap-4 mb-16">
-                  <Link href={slide.link} className="flex items-center space-x-2 bg-[#d1f0ff] hover:bg-white text-[#0b101e] px-6 py-3.5 rounded-xl font-bold text-sm transition-colors shadow-lg">
+                  <Link href={slide.link} className="flex items-center space-x-2 bg-[#d1f0ff] hover:bg-white text-[#0b101e] px-6 py-3.5 font-bold text-sm transition-colors shadow-lg">
                     <span>Read Article</span>
                     <FaArrowRight size={14} />
                   </Link>
-                  <Link href="/magazine" className="flex items-center space-x-2 bg-transparent hover:bg-white/5 border border-white/20 text-white px-6 py-3.5 rounded-xl font-medium text-sm transition-colors">
+                  <Link href="/magazine" className="flex items-center space-x-2 bg-transparent hover:bg-white/5 border border-white/20 text-white px-6 py-3.5 font-medium text-sm transition-colors">
                     <span>Full Coverage</span>
                   </Link>
                 </div>
@@ -114,7 +114,7 @@ export default function HeroSection() {
 
           {/* Right Image Card */}
           <div className="flex-1 w-full relative z-10 flex justify-end h-full py-4">
-            <div className="relative w-full max-w-[500px] h-full max-h-[600px] aspect-auto lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
+            <div className="relative w-full max-w-[500px] h-full max-h-[600px] aspect-auto lg:aspect-[3/4] overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
               {slides.map((slide, idx) => (
                 <div 
                   key={idx}
