@@ -50,8 +50,8 @@ export default function HeroSection() {
 
   return (
     <section className="bg-[#0b101e] relative overflow-hidden" data-purpose="hero-slider">
-      <div className="container mx-auto px-6 md:px-12 py-16 md:py-24">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 relative min-h-[500px]">
+      <div className="container mx-auto px-6 md:px-12 flex flex-col justify-center h-[calc(100vh-180px)] md:h-[calc(100vh-280px)] min-h-[500px]">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative w-full h-[85%] lg:h-[90%]">
           
           {/* Left Content */}
           <div className="flex-1 w-full relative z-10 flex flex-col justify-center">
@@ -113,8 +113,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image Card */}
-          <div className="flex-1 w-full relative z-10 flex justify-end">
-            <div className="relative w-full max-w-[500px] aspect-[4/5] lg:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
+          <div className="flex-1 w-full relative z-10 flex justify-end h-full py-4">
+            <div className="relative w-full max-w-[500px] h-full max-h-[600px] aspect-auto lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
               {slides.map((slide, idx) => (
                 <div 
                   key={idx}
