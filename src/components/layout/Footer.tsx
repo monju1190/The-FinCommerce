@@ -4,21 +4,21 @@ import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function Footer() {
-  return (
-    <footer className="bg-primary-green text-white pt-16 md:pt-24 relative overflow-hidden" data-purpose="site-footer">
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        
-        {/* Top Row: Newsletter */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/10 pb-16 mb-16 gap-8">
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight font-display">
-            Newsletter
-          </h2>
-          <div className="w-full md:w-auto">
-            <p className="text-white/80 text-sm mb-3">Subscribe to newsletter</p>
+    <div className="mt-12 md:mt-24">
+      {/* Floating Newsletter Section */}
+      <div className="container mx-auto px-4 md:px-12 relative z-20 -mb-24 md:-mb-32">
+        <div className="bg-white rounded-[2rem] p-8 md:p-14 shadow-2xl shadow-gray-200/50 border border-gray-100 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight font-display text-gray-900 mb-2">
+              Stay in the loop
+            </h2>
+            <p className="text-gray-500 text-sm font-medium">Subscribe to our newsletter for the latest updates.</p>
+          </div>
+          <div className="w-full lg:w-auto">
             <div className="flex relative">
               <input
-                className="bg-white border-none rounded-full py-4 pl-6 pr-16 w-full md:w-[350px] text-gray-900 focus:ring-2 focus:ring-white/50 outline-none text-sm placeholder-gray-400"
-                placeholder="Your email here"
+                className="bg-gray-50 border border-gray-200 rounded-full py-4 pl-6 pr-16 w-full lg:w-[400px] text-gray-900 focus:ring-2 focus:ring-primary-green outline-none text-sm placeholder-gray-400"
+                placeholder="Your email address"
                 type="email"
               />
               <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary-green text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-light transition-colors shadow-sm">
@@ -27,9 +27,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Middle Row: Links & Brand */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 border-b border-white/10 pb-16 mb-12">
+      <footer className="bg-primary-green text-white pt-36 md:pt-48 relative overflow-hidden" data-purpose="site-footer">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
+          
+          {/* Middle Row: Links & Brand */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 border-b border-white/10 pb-16 mb-12">
           
           {/* Brand Column */}
           <div className="lg:col-span-5 pr-0 lg:pr-12">
@@ -99,6 +103,7 @@ export default function Footer() {
           FINCOMMERCE
         </span>
       </div>
-    </footer>
+      </footer>
+    </div>
   );
 }
