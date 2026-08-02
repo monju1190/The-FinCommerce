@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function MagazineSection() {
   const covers = [
-    { month: "August 2026", img: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=300&auto=format&fit=crop" },
-    { month: "July 2026", img: "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=300&auto=format&fit=crop" },
-    { month: "June 2026", img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=300&auto=format&fit=crop" },
-    { month: "May 2026", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop" },
-    { month: "April 2026", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop" },
-    { month: "March 2026", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" },
-    { month: "February 2026", img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop" },
-    { month: "January 2026", img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=300&auto=format&fit=crop" }
+    { month: "August 2026", img: "/magazine cover/1.png" },
+    { month: "July 2026", img: "/magazine cover/2.png" },
+    { month: "June 2026", img: "/magazine cover/image.png" },
+    { month: "May 2026", img: "/magazine cover/image copy.png" },
+    { month: "April 2026", img: "/magazine cover/image copy 2.png" },
+    { month: "March 2026", img: "/magazine cover/image copy 3.png" },
+    { month: "February 2026", img: "/magazine cover/1.png" },
+    { month: "January 2026", img: "/magazine cover/2.png" }
   ];
 
   return (
