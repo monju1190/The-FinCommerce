@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className="mt-12 md:mt-24">
       {/* Floating CTA Section (Ashy Black) */}
-      <div className="container mx-auto px-4 md:px-12 relative z-20 -mb-24 md:-mb-32">
+      <div className="container mx-auto px-4 md:px-12 relative z-20">
         <div className="bg-[#1a1a1a] rounded-[2rem] p-12 md:p-24 shadow-2xl border border-zinc-800 flex flex-col justify-center items-center text-center gap-8 relative overflow-hidden">
           
           {/* Background Giant Text */}
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <footer className="bg-primary-green text-white pt-36 md:pt-48 relative overflow-hidden" data-purpose="site-footer">
+      <footer className="bg-primary-green text-white pt-48 md:pt-64 pb-10 -mt-24 md:-mt-32 relative overflow-hidden" data-purpose="site-footer">
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           
           {/* Main Footer Grid */}
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits */}
-        <div className="text-center text-white/50 text-xs pb-24 md:pb-32 relative z-10">
+        <div className="text-center text-white/50 text-xs relative z-10">
           Copyright @2026 The FinCommerce - All Rights Reserved.
         </div>
       </div>
