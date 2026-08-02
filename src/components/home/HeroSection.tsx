@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="max-w-[1400px] mx-auto px-8 pb-24">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full min-h-[600px]">
+    <section className="max-w-[1400px] mx-auto px-4 sm:px-8 pb-16 md:pb-24">
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4 h-[calc(100vh-10rem)] min-h-[500px]">
         {/* Left Column: Primary Feature (Economy) */}
-        <article className="lg:col-span-2 relative rounded-xl overflow-hidden group h-[500px] lg:h-auto shadow-lg" data-purpose="primary-feature">
+        <article className="lg:col-span-2 relative rounded-xl overflow-hidden group flex-[1.5] lg:h-full shadow-lg" data-purpose="primary-feature">
           <img 
             alt="Times Square New York City at Night" 
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -22,9 +22,9 @@ export default function HeroSection() {
         </article>
         
         {/* Right Column: Secondary Features Stacked */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 flex-1 lg:h-full">
           {/* Top Secondary: Style */}
-          <article className="relative rounded-xl overflow-hidden group h-[250px] lg:h-[calc(50%-0.5rem)] shadow-lg" data-purpose="secondary-feature-style">
+          <article className="relative rounded-xl overflow-hidden group flex-1 shadow-lg" data-purpose="secondary-feature-style">
             <img 
               alt="Geometric Architecture" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </article>
           
           {/* Bottom Secondary: Art */}
-          <article className="relative rounded-xl overflow-hidden group h-[250px] lg:h-[calc(50%-0.5rem)] shadow-lg" data-purpose="secondary-feature-art">
+          <article className="relative rounded-xl overflow-hidden group flex-1 shadow-lg" data-purpose="secondary-feature-art">
             <img 
               alt="Classical Art Setting" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 

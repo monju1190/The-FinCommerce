@@ -7,16 +7,16 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-12">
         {/* Newsletter Row */}
         <div className="bg-zinc-900 rounded-3xl p-10 flex flex-col md:flex-row justify-between items-center mb-16 border border-zinc-800">
-          <h2 className="text-3xl font-bold mb-6 md:mb-0 max-w-xs leading-tight">
+          <h2 className="text-3xl font-bold mb-6 md:mb-0 max-w-xs leading-tight text-center md:text-left">
             Join our news later
           </h2>
-          <div className="flex w-full md:w-auto space-x-2">
+          <div className="flex flex-col md:flex-row w-full md:w-auto space-y-3 md:space-y-0 md:space-x-2">
             <input
-              className="bg-zinc-800 border-none rounded-xl py-3 px-6 w-full md:w-80 text-sm focus:ring-1 focus:ring-orange-500 outline-none text-white placeholder-gray-400"
+              className="bg-zinc-800 border-none rounded-xl py-3 px-6 w-full md:w-80 text-sm focus:ring-1 focus:ring-orange-500 outline-none text-white placeholder-gray-400 text-center md:text-left"
               placeholder="Enter Your Email"
               type="email"
             />
-            <button className="bg-orange-accent text-black font-bold px-8 py-3 rounded-xl hover-orange transition-colors">
+            <button className="bg-orange-accent text-black font-bold px-8 py-3 rounded-xl hover-orange transition-colors w-full md:w-auto">
               Submit
             </button>
           </div>
