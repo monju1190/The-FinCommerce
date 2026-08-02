@@ -8,17 +8,25 @@ export default function Footer() {
     <div className="mt-12 md:mt-24">
       {/* Floating Newsletter Section */}
       <div className="container mx-auto px-4 md:px-12 relative z-20 -mb-24 md:-mb-32">
-        <div className="bg-white rounded-[2rem] p-8 md:p-14 shadow-2xl shadow-gray-200/50 border border-gray-100 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight font-display text-gray-900 mb-2">
+        <div className="bg-[#1a1a1a] rounded-[2rem] p-8 md:p-14 shadow-2xl border border-zinc-800 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 relative overflow-hidden">
+          
+          {/* Background Giant Text (Moved here) */}
+          <div className="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-full text-center whitespace-nowrap opacity-5 select-none pointer-events-none">
+            <span className="text-[20vw] md:text-[15vw] lg:text-[10vw] font-black uppercase tracking-tighter leading-none font-display text-white">
+              FINCOMMERCE
+            </span>
+          </div>
+
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight font-display text-white mb-2">
               Stay in the loop
             </h2>
-            <p className="text-gray-500 text-sm font-medium">Subscribe to our newsletter for the latest updates.</p>
+            <p className="text-zinc-400 text-sm font-medium">Subscribe to our newsletter for the latest updates.</p>
           </div>
-          <div className="w-full lg:w-auto">
+          <div className="w-full lg:w-auto relative z-10">
             <div className="flex relative">
               <input
-                className="bg-gray-50 border border-gray-200 rounded-full py-4 pl-6 pr-16 w-full lg:w-[400px] text-gray-900 focus:ring-2 focus:ring-primary-green outline-none text-sm placeholder-gray-400"
+                className="bg-zinc-800/80 border border-zinc-700/50 rounded-full py-4 pl-6 pr-16 w-full lg:w-[400px] text-white focus:ring-2 focus:ring-primary-green outline-none text-sm placeholder-zinc-500"
                 placeholder="Your email address"
                 type="email"
               />
@@ -96,13 +104,6 @@ export default function Footer() {
         <div className="text-center text-white/50 text-xs pb-24 md:pb-32 relative z-10">
           Copyright @2026 The FinCommerce - All Rights Reserved.
         </div>
-      </div>
-
-      {/* Background Giant Text */}
-      <div className="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-full text-center whitespace-nowrap opacity-5 select-none pointer-events-none overflow-hidden">
-        <span className="text-[20vw] font-black uppercase tracking-tighter leading-none font-display">
-          FINCOMMERCE
-        </span>
       </div>
       </footer>
     </div>
