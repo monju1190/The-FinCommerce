@@ -27,7 +27,7 @@ export default function AboutUsPage() {
         {/* Mission & Story */}
         <section id="mission" className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 items-center">
           <div>
-            <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
+            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
               Our Mission
             </span>
             <h2 className="text-4xl font-bold mb-6 leading-tight">
@@ -42,17 +42,17 @@ export default function AboutUsPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-center">
-              <FaGlobe className="text-4xl text-orange-accent mx-auto mb-4" />
+              <FaGlobe className="text-4xl text-primary-green mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">120+</h3>
               <p className="text-gray-500 text-sm">Countries Reached</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-center">
-              <FaTrophy className="text-4xl text-orange-accent mx-auto mb-4" />
+              <FaTrophy className="text-4xl text-primary-green mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">45</h3>
               <p className="text-gray-500 text-sm">Industry Awards</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-center sm:col-span-2">
-              <FaUsers className="text-4xl text-orange-accent mx-auto mb-4" />
+              <FaUsers className="text-4xl text-primary-green mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">5M+</h3>
               <p className="text-gray-500 text-sm">Monthly Readers</p>
             </div>
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
         {/* Our Team */}
         <section id="team" className="mb-24">
           <div className="text-center mb-16 max-w-2xl mx-auto">
-            <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
+            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
               Leadership
             </span>
             <h2 className="text-4xl font-bold mb-6">Meet the Editors</h2>
@@ -81,7 +81,7 @@ export default function AboutUsPage() {
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                   />
                 </div>
-                <h3 className="text-xl font-bold group-hover:text-orange-accent transition-colors">
+                <h3 className="text-xl font-bold group-hover:text-primary-green transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-gray-500 text-sm mt-1">{member.role}</p>
@@ -92,7 +92,7 @@ export default function AboutUsPage() {
 
         {/* Partners */}
         <section id="partners" className="bg-gray-50 rounded-3xl p-12 text-center border border-gray-100">
-          <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
+          <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
             Our Partners
           </span>
           <h2 className="text-3xl font-bold mb-12">Trusted by the Best</h2>
@@ -109,3 +109,4 @@ export default function AboutUsPage() {
     </main>
   );
 }
+

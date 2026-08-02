@@ -7,7 +7,7 @@ export default function CategoryIndexPage() {
     <main className="bg-white text-gray-900 min-h-screen pt-12 pb-24">
       <div className="container mx-auto px-4 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
+          <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
             Topics
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Explore by Category</h1>
@@ -28,14 +28,14 @@ export default function CategoryIndexPage() {
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <div className="flex justify-between items-end">
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-orange-accent transition-colors">
+                    <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-primary-green transition-colors">
                       {category.name}
                     </h2>
                     <p className="text-gray-300 font-medium">
                       {category.description}
                     </p>
                   </div>
-                  <div className="bg-orange-accent rounded-full p-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="bg-primary-green rounded-full p-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
@@ -49,3 +49,4 @@ export default function CategoryIndexPage() {
     </main>
   );
 }
+

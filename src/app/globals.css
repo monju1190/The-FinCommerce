@@ -3,7 +3,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-orange-accent: #ff9800;
+  --color-primary-green: #0B4F43;
+  --color-primary-light: #136B5C;
   --font-sans: "Source Serif 4", serif;
   --font-display: "Playfair Display", serif;
 }
@@ -33,16 +34,16 @@ body {
   backdrop-filter: blur(8px);
 }
 
-.orange-accent {
-  color: #ff9800;
+.primary-green {
+  color: var(--color-primary-green);
 }
 
-.bg-orange-accent {
-  background-color: #ff9800;
+.bg-primary-green {
+  background-color: var(--color-primary-green);
 }
 
-.hover-orange:hover {
-  background-color: #e68900;
+.border-primary-green {
+  border-color: var(--color-primary-green);
 }
 
 .card-shadow {

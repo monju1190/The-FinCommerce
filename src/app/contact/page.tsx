@@ -4,31 +4,38 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
-    <main className="bg-white text-gray-900 min-h-screen pt-12 pb-24">
-      <div className="container mx-auto px-4 md:px-12">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
-            Get In Touch
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">We'd love to hear from you.</h1>
-          <p className="text-xl text-gray-500">
-            Whether you have a tip for a story, a question about your subscription, or want to explore partnership opportunities.
-          </p>
+    <main className="bg-gray-50 text-gray-900 min-h-screen">
+      {/* Immersive Header */}
+      <div className="bg-primary-green text-white pt-24 pb-32 px-4 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-white/60 text-sm font-bold uppercase tracking-widest mb-4 block">
+              Get In Touch
+            </span>
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 font-display tracking-tight">We'd love to hear from you.</h1>
+            <p className="text-xl text-white/80 leading-relaxed font-light">
+              Whether you have a tip for a story, a question about your subscription, or want to explore partnership opportunities.
+            </p>
+          </div>
         </div>
+        
+        {/* Background elements */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-light rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/3 -translate-y-1/2"></div>
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <div className="container mx-auto px-4 md:px-12 -mt-16 pb-24 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-8 md:p-12 card-shadow border border-gray-100">
-              <h2 className="text-2xl font-bold mb-8">Send us a message</h2>
+            <div className="bg-white rounded-[2rem] p-8 md:p-14 shadow-2xl border border-gray-100">
+              <h2 className="text-3xl font-extrabold mb-8 font-display">Send us a message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-2">First Name</label>
                     <input
                       type="text"
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent transition-all text-sm"
                       placeholder="Jane"
                     />
                   </div>
@@ -36,7 +43,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-bold text-gray-700 mb-2">Last Name</label>
                     <input
                       type="text"
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent transition-all text-sm"
                       placeholder="Doe"
                     />
                   </div>
@@ -45,13 +52,13 @@ export default function ContactPage() {
                   <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
                   <input
                     type="email"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent transition-all text-sm"
                     placeholder="jane@example.com"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Subject</label>
-                  <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-gray-700">
+                  <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent transition-all text-sm text-gray-700">
                     <option>General Inquiry</option>
                     <option>Editorial Pitch</option>
                     <option>Subscription Support</option>
@@ -62,13 +69,13 @@ export default function ContactPage() {
                   <label className="block text-sm font-bold text-gray-700 mb-2">Message</label>
                   <textarea
                     rows={5}
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all resize-none"
+                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent transition-all resize-none text-sm"
                     placeholder="How can we help you?"
                   ></textarea>
                 </div>
                 <button
                   type="button"
-                  className="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-orange-accent transition-colors text-lg"
+                  className="w-full bg-primary-green text-white font-bold py-5 rounded-xl hover:bg-primary-light transition-colors text-lg shadow-lg hover:shadow-xl mt-4"
                 >
                   Send Message
                 </button>
@@ -77,55 +84,55 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Info & FAQs */}
-          <div className="lg:col-span-5 space-y-12">
+          <div className="lg:col-span-5 space-y-12 lg:pt-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Our Offices</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-100 p-3 rounded-full text-orange-accent flex-shrink-0">
-                    <FaMapMarkerAlt />
+              <h3 className="text-2xl font-extrabold mb-8 font-display">Our Offices</h3>
+              <div className="space-y-8">
+                <div className="flex items-start space-x-5 group">
+                  <div className="bg-white shadow-sm p-4 rounded-2xl text-primary-green flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <FaMapMarkerAlt size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Headquarters</h4>
-                    <p className="text-gray-500 text-sm mt-1 leading-relaxed">
+                    <h4 className="font-bold text-lg mb-1">Headquarters</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">
                       100 Newsroom Ave, Suite 400<br />
                       New York, NY 10001
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-100 p-3 rounded-full text-orange-accent flex-shrink-0">
-                    <FaPhoneAlt />
+                <div className="flex items-start space-x-5 group">
+                  <div className="bg-white shadow-sm p-4 rounded-2xl text-primary-green flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <FaPhoneAlt size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Phone</h4>
-                    <p className="text-gray-500 text-sm mt-1">
+                    <h4 className="font-bold text-lg mb-1">Phone</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">
                       +1 (555) 123-4567<br />
                       Mon-Fri 9am to 6pm EST
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gray-100 p-3 rounded-full text-orange-accent flex-shrink-0">
-                    <FaEnvelope />
+                <div className="flex items-start space-x-5 group">
+                  <div className="bg-white shadow-sm p-4 rounded-2xl text-primary-green flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <FaEnvelope size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Email</h4>
-                    <p className="text-gray-500 text-sm mt-1">
-                      hello@newsprk.com<br />
-                      press@newsprk.com
+                    <h4 className="font-bold text-lg mb-1">Email</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      hello@fincommerce.com<br />
+                      press@fincommerce.com
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div id="faq">
-              <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+            <div id="faq" className="pt-8 border-t border-gray-200">
+              <h3 className="text-2xl font-extrabold mb-8 font-display">Frequently Asked Questions</h3>
               <div className="space-y-4">
                 {faqs.map((faq, idx) => (
-                  <div key={idx} className="bg-gray-50 border border-gray-100 rounded-xl p-6 group">
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-orange-accent transition-colors">
+                  <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
+                    <h4 className="font-bold text-gray-900 mb-2">
                       {faq.question}
                     </h4>
                     <p className="text-gray-500 text-sm leading-relaxed">
@@ -141,3 +148,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

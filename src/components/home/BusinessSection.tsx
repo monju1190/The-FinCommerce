@@ -4,11 +4,11 @@ export default function BusinessSection() {
   return (
     <section className="mb-16" data-purpose="business-category-section">
       <div className="flex justify-between items-center mb-8 border-b border-gray-200">
-        <div className="flex items-center space-x-3 pb-2 border-b-2 border-orange-500">
-          <div className="w-2 h-2 rounded-full bg-orange-accent"></div>
+        <div className="flex items-center space-x-3 pb-2 border-b-2 border-primary-green">
+          <div className="w-2 h-2 rounded-full bg-primary-green"></div>
           <h2 className="text-2xl font-bold">Business</h2>
         </div>
-        <button className="bg-orange-accent text-white px-4 py-1 rounded-full text-xs font-bold hover-orange transition-colors">
+        <button className="bg-primary-green text-white px-4 py-1 rounded-full text-xs font-bold hover:bg-primary-light transition-colors transition-colors">
           View All
         </button>
       </div>
@@ -23,7 +23,7 @@ export default function BusinessSection() {
             />
           </div>
           <div className="mt-auto">
-          <span className="text-orange-accent text-xs font-bold">
+          <span className="text-primary-green text-xs font-bold">
             AI Powered | 23d ago
           </span>
           <h3 className="text-3xl font-extrabold mt-3 mb-4 leading-tight">
@@ -57,7 +57,7 @@ export default function BusinessSection() {
               <p className="text-[10px] text-blue-500 font-bold mb-1 uppercase">
                 AI Powered | 6mo ago
               </p>
-              <h4 className="font-bold text-sm leading-snug group-hover:text-orange-accent transition-colors">
+              <h4 className="font-bold text-sm leading-snug group-hover:text-primary-green transition-colors">
                 A Guide to The Rise of Gourmet Street Food: Trends and Top Picks
               </h4>
             </div>
@@ -75,7 +75,7 @@ export default function BusinessSection() {
               <p className="text-[10px] text-purple-500 font-bold mb-1 uppercase">
                 Virtual Reality | 8mo ago
               </p>
-              <h4 className="font-bold text-sm leading-snug group-hover:text-orange-accent transition-colors">
+              <h4 className="font-bold text-sm leading-snug group-hover:text-primary-green transition-colors">
                 Hidden Gems: Underrated Travel Destinations Around the World
               </h4>
             </div>
@@ -90,15 +90,15 @@ export default function BusinessSection() {
               />
             </div>
             <div>
-              <p className="text-[10px] text-orange-500 font-bold mb-1 uppercase">
+              <p className="text-[10px] text-primary-green font-bold mb-1 uppercase">
                 Media | 9mo ago
               </p>
-              <h4 className="font-bold text-sm leading-snug group-hover:text-orange-accent transition-colors">
+              <h4 className="font-bold text-sm leading-snug group-hover:text-primary-green transition-colors">
                 Eco-Tourism: Traveling Responsibly and Sustainably
               </h4>
             </div>
           </div>
-          <button className="w-full py-3 bg-orange-accent text-white font-bold rounded-xl mt-4 hover-orange transition-colors">
+          <button className="w-full py-3 bg-primary-green text-white font-bold rounded-xl mt-4 hover:bg-primary-light transition-colors transition-colors">
             See All Tech
           </button>
         </div>
@@ -106,3 +106,4 @@ export default function BusinessSection() {
     </section>
   );
 }
+

@@ -31,7 +31,7 @@ export default async function NewsPage({
       <div className="bg-gray-100 py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <Link href="/magazine">
-            <span className="text-orange-accent font-bold uppercase tracking-widest text-xs mb-6 inline-block cursor-pointer hover:underline">
+            <span className="text-primary-green font-bold uppercase tracking-widest text-xs mb-6 inline-block cursor-pointer hover:underline">
               {article.category}
             </span>
           </Link>
@@ -70,16 +70,16 @@ export default async function NewsPage({
       <div className="container mx-auto max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Social Share Sidebar */}
         <div className="lg:col-span-1 flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 items-center pt-2">
-          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-orange-accent hover:border-orange-accent transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary-green hover:border-primary-green transition-colors">
             <FaFacebookF />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-orange-accent hover:border-orange-accent transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary-green hover:border-primary-green transition-colors">
             <FaTwitter />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-orange-accent hover:border-orange-accent transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary-green hover:border-primary-green transition-colors">
             <FaLinkedinIn />
           </a>
-          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-orange-accent hover:border-orange-accent transition-colors">
+          <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary-green hover:border-primary-green transition-colors">
             <FaEnvelope />
           </a>
         </div>

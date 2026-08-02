@@ -32,7 +32,7 @@ export default async function CategoryArchivePage({
         />
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative z-10 text-center px-4">
-          <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
+          <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
             Category Archive
           </span>
           <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4">
@@ -59,11 +59,11 @@ export default async function CategoryArchivePage({
                     alt={article.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-orange-accent text-white px-3 py-1 text-xs font-bold uppercase rounded-md shadow-lg">
+                  <div className="absolute top-4 left-4 bg-primary-green text-white px-3 py-1 text-xs font-bold uppercase rounded-md shadow-lg">
                     {article.category}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 leading-tight group-hover:text-orange-accent transition-colors">
+                <h3 className="text-2xl font-bold mb-3 leading-tight group-hover:text-primary-green transition-colors">
                   {article.title}
                 </h3>
                 <p className="text-gray-500 text-sm mb-4 line-clamp-3">

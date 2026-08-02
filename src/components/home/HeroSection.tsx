@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="max-w-[1400px] mx-auto px-4 sm:px-8 pb-16 md:pb-24">
-      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4 h-[calc(100vh-10rem)] min-h-[500px]">
+    <section className="max-w-[1400px] mx-auto px-4 sm:px-8 pb-6 md:pb-12">
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4 h-[calc(100svh-200px)] lg:h-[calc(100vh-250px)] max-h-[800px] min-h-[400px]">
         {/* Left Column: Primary Feature (Economy) */}
         <article className="lg:col-span-2 relative rounded-xl overflow-hidden group flex-[1.5] lg:h-full shadow-lg" data-purpose="primary-feature">
           <img 
@@ -59,3 +59,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

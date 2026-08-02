@@ -12,8 +12,8 @@ export default function NewsIndexPage() {
     <main className="bg-white text-gray-900 min-h-screen pt-12 pb-24">
       <div className="container mx-auto px-4 md:px-12">
         
-        <div className="flex items-center space-x-3 mb-10 border-b-2 border-orange-500 pb-2 inline-flex">
-          <div className="w-2 h-2 rounded-full bg-orange-accent"></div>
+        <div className="flex items-center space-x-3 mb-10 border-b-2 border-primary-green pb-2 inline-flex">
+          <div className="w-2 h-2 rounded-full bg-primary-green"></div>
           <h1 className="text-3xl md:text-4xl font-extrabold">Latest News</h1>
         </div>
 
@@ -30,10 +30,10 @@ export default function NewsIndexPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 w-full md:w-3/4">
-                  <span className="bg-orange-accent text-white px-3 py-1 text-xs font-bold uppercase rounded-md shadow-lg mb-4 inline-block">
+                  <span className="bg-primary-green text-white px-3 py-1 text-xs font-bold uppercase rounded-md shadow-lg mb-4 inline-block">
                     Breaking News
                   </span>
-                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight group-hover:text-orange-accent transition-colors">
+                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight group-hover:text-primary-green transition-colors">
                     {featuredNews.title}
                   </h2>
                   <p className="text-gray-300 text-lg line-clamp-2">
@@ -54,10 +54,10 @@ export default function NewsIndexPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <span className="text-orange-accent text-xs font-bold uppercase mb-2 block">
+                  <span className="text-primary-green text-xs font-bold uppercase mb-2 block">
                     {newsItem.category}
                   </span>
-                  <h3 className="text-xl font-bold mb-2 leading-snug group-hover:text-orange-accent transition-colors">
+                  <h3 className="text-xl font-bold mb-2 leading-snug group-hover:text-primary-green transition-colors">
                     {newsItem.title}
                   </h3>
                   <p className="text-gray-500 text-sm mb-3 line-clamp-2">
@@ -73,7 +73,7 @@ export default function NewsIndexPage() {
           <div className="lg:col-span-3">
             <div className="sticky top-8">
               <div className="flex items-center space-x-2 mb-6">
-                <FaBolt className="text-orange-accent" />
+                <FaBolt className="text-primary-green" />
                 <h3 className="text-xl font-bold">Live Updates</h3>
               </div>
               
@@ -87,10 +87,10 @@ export default function NewsIndexPage() {
                   { time: "Yesterday", title: "New energy sector regulations introduced." }
                 ].map((item, idx) => (
                   <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-5 h-5 rounded-full border-4 border-white bg-orange-accent text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow absolute left-0 md:left-1/2 md:-translate-x-1/2 z-10"></div>
+                    <div className="flex items-center justify-center w-5 h-5 rounded-full border-4 border-white bg-primary-green text-gray-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow absolute left-0 md:left-1/2 md:-translate-x-1/2 z-10"></div>
                     <div className="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] pl-8 md:pl-0">
                       <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
-                        <time className="text-xs font-bold text-orange-accent uppercase mb-1 block">{item.time}</time>
+                        <time className="text-xs font-bold text-primary-green uppercase mb-1 block">{item.time}</time>
                         <p className="text-sm font-bold text-gray-800 leading-snug">{item.title}</p>
                       </div>
                     </div>
@@ -104,3 +104,4 @@ export default function NewsIndexPage() {
     </main>
   );
 }
+

@@ -19,27 +19,27 @@ export default function MainHeader() {
         
         {/* Center: Menu Links */}
         <div className="flex-none hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-bold tracking-widest uppercase" data-purpose="main-menu">
-          <Link href="/" className="hover:underline underline-offset-4 hover:text-orange-accent transition-colors">Home</Link>
-          <Link href="/magazine" className="hover:underline underline-offset-4 hover:text-orange-accent transition-colors">Magazine</Link>
+          <Link href="/" className="hover:underline underline-offset-4 hover:text-primary-green transition-colors">Home</Link>
+          <Link href="/magazine" className="hover:underline underline-offset-4 hover:text-primary-green transition-colors">Magazine</Link>
           
           <div className="relative group">
-            <Link href="/news" className="flex items-center hover:underline underline-offset-4 hover:text-orange-accent transition-colors pb-2 pt-2">
+            <Link href="/news" className="flex items-center hover:underline underline-offset-4 hover:text-primary-green transition-colors pb-2 pt-2">
               News
               <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
             </Link>
             {/* Dropdown */}
             <div className="absolute left-1/2 -translate-x-1/2 mt-0 w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded-xl overflow-hidden">
               <div className="py-2 flex flex-col text-left">
-                <Link href="/category/business" className="px-4 py-2 hover:bg-gray-50 hover:text-orange-accent transition-colors">Business</Link>
-                <Link href="/category/technology" className="px-4 py-2 hover:bg-gray-50 hover:text-orange-accent transition-colors">Technology</Link>
-                <Link href="/category/security" className="px-4 py-2 hover:bg-gray-50 hover:text-orange-accent transition-colors">Security</Link>
-                <Link href="/category/culture" className="px-4 py-2 hover:bg-gray-50 hover:text-orange-accent transition-colors">Culture</Link>
+                <Link href="/category/business" className="px-4 py-2 hover:bg-gray-50 hover:text-primary-green transition-colors">Business</Link>
+                <Link href="/category/technology" className="px-4 py-2 hover:bg-gray-50 hover:text-primary-green transition-colors">Technology</Link>
+                <Link href="/category/security" className="px-4 py-2 hover:bg-gray-50 hover:text-primary-green transition-colors">Security</Link>
+                <Link href="/category/culture" className="px-4 py-2 hover:bg-gray-50 hover:text-primary-green transition-colors">Culture</Link>
               </div>
             </div>
           </div>
           
-          <Link href="/about-us" className="hover:underline underline-offset-4 hover:text-orange-accent transition-colors">About Us</Link>
-          <Link href="/contact" className="hover:underline underline-offset-4 hover:text-orange-accent transition-colors">Contact</Link>
+          <Link href="/about-us" className="hover:underline underline-offset-4 hover:text-primary-green transition-colors">About Us</Link>
+          <Link href="/contact" className="hover:underline underline-offset-4 hover:text-primary-green transition-colors">Contact</Link>
         </div>
 
         {/* Right: Social Icons */}
@@ -89,3 +89,4 @@ export default function MainHeader() {
     </div>
   );
 }
+

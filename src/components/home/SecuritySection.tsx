@@ -4,11 +4,11 @@ export default function SecuritySection() {
   return (
     <section className="mb-16" data-purpose="security-category">
       <div className="flex justify-between items-center mb-8 border-b border-gray-200">
-        <div className="flex items-center space-x-3 pb-2 border-b-2 border-orange-500">
-          <div className="w-2 h-2 rounded-full bg-orange-accent"></div>
+        <div className="flex items-center space-x-3 pb-2 border-b-2 border-primary-green">
+          <div className="w-2 h-2 rounded-full bg-primary-green"></div>
           <h2 className="text-2xl font-bold">Security</h2>
         </div>
-        <button className="bg-orange-accent text-white px-4 py-1 rounded-full text-xs font-bold hover-orange transition-colors">
+        <button className="bg-primary-green text-white px-4 py-1 rounded-full text-xs font-bold hover:bg-primary-light transition-colors transition-colors">
           View All
         </button>
       </div>
@@ -22,7 +22,7 @@ export default function SecuritySection() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
           <div className="relative z-10 text-white max-w-2xl">
-            <span className="text-xs font-bold opacity-80 mb-4 block text-orange-400">
+            <span className="text-xs font-bold opacity-80 mb-4 block text-primary-green">
               Network | 9d ago
             </span>
             <h2 className="text-4xl font-extrabold mb-6 leading-tight group-hover:underline cursor-pointer">
@@ -54,7 +54,7 @@ export default function SecuritySection() {
             <p className="text-[10px] text-purple-600 font-bold uppercase mb-1">
               Virtual Reality | 15d ago
             </p>
-            <h4 className="font-bold text-base leading-tight group-hover:text-orange-accent transition-colors">
+            <h4 className="font-bold text-base leading-tight group-hover:text-primary-green transition-colors">
               AI and Marketing: Unlocking Customer Insights
             </h4>
           </div>
@@ -66,10 +66,10 @@ export default function SecuritySection() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeJnk9VxMUUTRu8-RYAxZbBYWI9oIeNT7t5UJ3XpzHVErceBMRl-ejl2t0nS17IHrBJp4lUoLNtOv2GcucgFC2D7w6VBxWrWCyKpnJMwW8B6AgYPy_wiO7SMcs8HRKB7z1-WbYrXqSWHCB_eAar4EHuowzIRLASZ5ghZe8iJ_T66EyZruperWPGPUTOAgUYvai67o3tcobFtCCwWNMIlWWsJeWseVQ80QrbIj1C2aOUtUtururGxI"
               />
             </div>
-            <p className="text-[10px] text-orange-600 font-bold uppercase mb-1">
+            <p className="text-[10px] text-primary-green font-bold uppercase mb-1">
               Trips | 20d ago
             </p>
-            <h4 className="font-bold text-base leading-tight group-hover:text-orange-accent transition-colors">
+            <h4 className="font-bold text-base leading-tight group-hover:text-primary-green transition-colors">
               Eco-Tourism: Traveling Responsibly and Sustainably
             </h4>
           </div>
@@ -84,7 +84,7 @@ export default function SecuritySection() {
             <p className="text-[10px] text-blue-600 font-bold uppercase mb-1">
               AI Powered | 23d ago
             </p>
-            <h4 className="font-bold text-base leading-tight group-hover:text-orange-accent transition-colors">
+            <h4 className="font-bold text-base leading-tight group-hover:text-primary-green transition-colors">
               Hidden Gems: Underrated Travel Destinations Around the World
             </h4>
           </div>
@@ -93,3 +93,4 @@ export default function SecuritySection() {
     </section>
   );
 }
+

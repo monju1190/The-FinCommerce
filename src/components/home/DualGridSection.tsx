@@ -6,7 +6,7 @@ export default function DualGridSection() {
       {/* Worlds News */}
       <div data-purpose="worlds-news" className="flex flex-col h-full">
         <div className="flex justify-between items-center mb-6 border-b border-gray-200">
-          <div className="flex items-center space-x-3 pb-2 border-b-2 border-orange-500">
+          <div className="flex items-center space-x-3 pb-2 border-b-2 border-primary-green">
             <h2 className="text-xl font-bold">Worlds News</h2>
           </div>
           <div className="flex space-x-2 text-gray-400">
@@ -21,7 +21,7 @@ export default function DualGridSection() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ko91mT-wSZ9ThhG4QNKxVESvNSnBlEXkfPQuzmSJ_8VbZ_uSPuptpOntY3O_C3u6RdUgMm79EcX2UBhHIXymVwXI4Pbgrs6nMdk_vE52A4c1h4Qw4hIB2bmxfduJWZ7TE5_LRnvGQ2DD-G0_yfbys-9U0NJm4lGPw1fKQ4-fXO_6kKMZmJht1SNS06v5azGP_oAdpbnj-QMBbpVwDJoL74JZdUd23kqkCa2pLRzUfDYmBJO15dM"
           />
           <div className="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end">
-            <span className="bg-orange-accent text-white text-[10px] absolute top-4 right-4 px-2 py-0.5 rounded font-bold">
+            <span className="bg-primary-green text-white text-[10px] absolute top-4 right-4 px-2 py-0.5 rounded font-bold">
               WAR
             </span>
             <p className="text-white/80 text-[10px] mb-1">
@@ -40,7 +40,7 @@ export default function DualGridSection() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBZZpJp_Hcj5oaxruO_gCZbCu9jAQ0J0y_4s27dhLhV9oiDH3sDAUvBV3tYa4otaFlp1ru4lSMqRTIaoczElJwXUSJJwe3v74eod4OpZduWfuQn7YSfGQl2Wz-f5hFAYRFaZRpdgYLQX924ee_jhB6QMlN5gB50e1LE5BCWqsIe7ArBAJS7meV7ki3XaxmTSqDDBXPbQ35SM7ZUqje-ImjneFx29n3vRdGYBBe5_-E3V1VSqGHflw"
             />
             <p className="text-[10px] text-gray-400">Hantu Raya | 1 April 2025</p>
-            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-orange-accent transition-colors">
+            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-primary-green transition-colors">
               It is a long established fact that a reader will done
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function DualGridSection() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAICfj4SOit-PIORAWO09js0GWnY3hHPzPOSrqgLuE389xzkfRDjMGJtJBmua_voOgt2rZE7b8SiM89C4BMF6LfhgImBYrUKRtxHeikwQxqSLM6S3AYBoGAADpUlcBKF-7Rd00zVrAIc7qfEgIg6F453joHJwLfcKadwKB0eGqKCk_lUczqSePmX-BckoS_Xh8En6uQLKO4TMTVb6K1b3t0qsGvTWnoV2HPUfLR23xIV_Nqp_8FWKY"
             />
             <p className="text-[10px] text-gray-400">Astaroth | 1 April 2025</p>
-            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-orange-accent transition-colors">
+            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-primary-green transition-colors">
               Where Business News Meets Strategic Thinking
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function DualGridSection() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc77A75zRP91evk9OQA_J1aAe_iBCkvQN2-4WhBdEUGxX1gxPe2q375-R6zlq7N7t9uTbzFowwPjiVmjcSjTc2Ag2ZrHPuJDOozU_rOqILQ6hXwW6Zh88qzj03rfWrupN362ke87soN71RaQO1LsPntzge_-P9uvJwa238QEPyyZSJpvqhGUIBag6zbXyTSLoezQtFDMz2j7zvlAFfMJEaHMvVhPeWeHSsc-QO8kc2ZIwGu3YZhbE"
             />
             <p className="text-[10px] text-gray-400">Jantu Maya | 1 March 2025</p>
-            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-orange-accent transition-colors">
+            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-primary-green transition-colors">
               In-Depth Business Journalism, Redefined
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function DualGridSection() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwxRf6tpLYA50L_4fiKKIRdki4TGSjl9uxYg2BzXLF6dM_Lr96qDpqhrQARPiOrTzrLG3UYSOmZgzUidxeoTfzzQgmsci4A62fW63tuIRvFoqeR11K8OVbjft-Uw6tPY2B6gvtNAPeo6etYM6lYPY6O19yo4CEkL38WlV73xSyuy4eiJ_tAS0IvxoIo5wRCc0MVXL5aPEVPmaAiKAAg8cxOETCbtBPpf2qCwLY5qdzMxRyzChSEUw"
             />
             <p className="text-[10px] text-gray-400">Astaroth | 1 April 2025</p>
-            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-orange-accent transition-colors">
+            <p className="font-bold text-xs mt-1 leading-snug group-hover:text-primary-green transition-colors">
               The Pulse of Global Markets and Enterprise
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function DualGridSection() {
       {/* Technology News */}
       <div data-purpose="technology-news" className="flex flex-col h-full">
         <div className="flex justify-between items-center mb-6 border-b border-gray-200">
-          <div className="flex items-center space-x-3 pb-2 border-b-2 border-orange-500">
+          <div className="flex items-center space-x-3 pb-2 border-b-2 border-primary-green">
             <h2 className="text-xl font-bold">Technology News</h2>
           </div>
           <div className="flex space-x-2 text-gray-400">
@@ -117,7 +117,7 @@ export default function DualGridSection() {
               <p className="text-[9px] text-gray-500 uppercase font-bold">
                 Computer | 6mo ago
               </p>
-              <h4 className="font-bold text-xs group-hover:text-orange-accent transition-colors">
+              <h4 className="font-bold text-xs group-hover:text-primary-green transition-colors">
                 Innovating the Future, One Byte at a Time
               </h4>
             </div>
@@ -132,7 +132,7 @@ export default function DualGridSection() {
               <p className="text-[9px] text-gray-500 uppercase font-bold">
                 Syber | 8mo ago
               </p>
-              <h4 className="font-bold text-xs group-hover:text-orange-accent transition-colors">
+              <h4 className="font-bold text-xs group-hover:text-primary-green transition-colors">
                 Decoding Innovation for the Digital Age
               </h4>
             </div>
@@ -147,7 +147,7 @@ export default function DualGridSection() {
               <p className="text-[9px] text-gray-500 uppercase font-bold">
                 Media | 9mo ago
               </p>
-              <h4 className="font-bold text-xs group-hover:text-orange-accent transition-colors">
+              <h4 className="font-bold text-xs group-hover:text-primary-green transition-colors">
                 Your Window to the World of Tomorrow
               </h4>
             </div>
@@ -157,3 +157,4 @@ export default function DualGridSection() {
     </section>
   );
 }
+

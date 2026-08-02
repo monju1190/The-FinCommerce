@@ -11,7 +11,7 @@ export default function BlogIndexPage() {
       <div className="container mx-auto px-4 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end border-b border-gray-200 pb-8 mb-12">
           <div className="max-w-2xl">
-            <span className="text-orange-accent text-sm font-bold uppercase tracking-widest mb-4 block">
+            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
               Editorial Blog
             </span>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Latest Thinking</h1>
@@ -23,7 +23,7 @@ export default function BlogIndexPage() {
             <input
               type="text"
               placeholder="Search blogs..."
-              className="bg-gray-50 border border-gray-200 rounded-full px-6 py-3 w-64 focus:outline-none focus:border-orange-accent transition-colors"
+              className="bg-gray-50 border border-gray-200 rounded-full px-6 py-3 w-64 focus:outline-none focus:border-primary-green transition-colors"
             />
           </div>
         </div>
@@ -43,11 +43,11 @@ export default function BlogIndexPage() {
                   </div>
                 </div>
                 <div className="md:w-2/3 flex flex-col justify-center">
-                  <span className="text-orange-accent text-xs font-bold uppercase mb-2">
+                  <span className="text-primary-green text-xs font-bold uppercase mb-2">
                     {post.category}
                   </span>
                   <Link href={`/news/${post.slug}`}>
-                    <h2 className="text-2xl font-bold mb-3 leading-snug group-hover:text-orange-accent transition-colors">
+                    <h2 className="text-2xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors">
                       {post.title}
                     </h2>
                   </Link>
@@ -69,11 +69,11 @@ export default function BlogIndexPage() {
             
             {/* Pagination Mock */}
             <div className="flex justify-center space-x-2 pt-8">
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-orange-accent hover:text-white transition-colors">1</button>
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-orange-accent hover:text-white transition-colors">2</button>
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-orange-accent hover:text-white transition-colors">3</button>
+              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">1</button>
+              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">2</button>
+              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">3</button>
               <span className="flex items-center justify-center px-2">...</span>
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-orange-accent hover:text-white transition-colors">8</button>
+              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">8</button>
             </div>
           </div>
 
@@ -83,8 +83,8 @@ export default function BlogIndexPage() {
             <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
               <h3 className="text-xl font-bold mb-4">The Weekly Briefing</h3>
               <p className="text-gray-500 text-sm mb-6">Get our best editorial pieces delivered straight to your inbox every Sunday.</p>
-              <input type="email" placeholder="Your email address" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 mb-4 focus:outline-none focus:border-orange-accent" />
-              <button className="w-full bg-black text-white font-bold py-3 rounded-xl hover:bg-orange-accent transition-colors">Subscribe</button>
+              <input type="email" placeholder="Your email address" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 mb-4 focus:outline-none focus:border-primary-green" />
+              <button className="w-full bg-black text-white font-bold py-3 rounded-xl hover:bg-primary-green transition-colors">Subscribe</button>
             </div>
 
             {/* Popular Tags */}
@@ -92,7 +92,7 @@ export default function BlogIndexPage() {
               <h3 className="text-lg font-bold mb-4 border-b border-gray-200 pb-2">Popular Tags</h3>
               <div className="flex flex-wrap gap-2">
                 {["Economy", "AI", "Elections", "Climate", "Op-Ed", "Tech", "Global"].map((tag) => (
-                  <span key={tag} className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold cursor-pointer hover:bg-orange-accent hover:text-white transition-colors">
+                  <span key={tag} className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold cursor-pointer hover:bg-primary-green hover:text-white transition-colors">
                     {tag}
                   </span>
                 ))}
@@ -104,3 +104,4 @@ export default function BlogIndexPage() {
     </main>
   );
 }
+
