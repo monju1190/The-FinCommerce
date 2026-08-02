@@ -1,62 +1,149 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+
+const slides = [
+  {
+    tag: "AUGUST 2026 ISSUE",
+    title: "Mapping the Information Frost",
+    desc: "How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.",
+    img: "/magazine cover/1.png",
+    category: "TECHNOLOGY",
+    link: "/magazine/august-2026"
+  },
+  {
+    tag: "JULY 2026 ISSUE",
+    title: "The Pulse of Global Markets",
+    desc: "To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets.",
+    img: "/magazine cover/2.png",
+    category: "ECONOMY",
+    link: "/magazine/july-2026"
+  },
+  {
+    tag: "JUNE 2026 ISSUE",
+    title: "Smart Homes, Smarter Living",
+    desc: "Exploring how IoT and AI are revolutionizing consumer interaction with living spaces on a daily basis.",
+    img: "/magazine cover/image.png",
+    category: "INNOVATION",
+    link: "/magazine/june-2026"
+  },
+  {
+    tag: "MAY 2026 ISSUE",
+    title: "Eco-Tourism & Sustainability",
+    desc: "New regulations are forcing legacy airlines to offset carbon footprints, creating a booming secondary market.",
+    img: "/magazine cover/image copy.png",
+    category: "ENVIRONMENT",
+    link: "/magazine/may-2026"
+  }
+];
 
 export default function HeroSection() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="max-w-[1400px] mx-auto px-4 sm:px-8 pb-6 md:pb-12">
-      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4 h-[calc(100svh-200px)] lg:h-[calc(100vh-250px)] max-h-[800px] min-h-[400px]">
-        {/* Left Column: Primary Feature (Economy) */}
-        <article className="lg:col-span-2 relative rounded-xl overflow-hidden group flex-[1.5] lg:h-full shadow-lg" data-purpose="primary-feature">
-          <img 
-            alt="Times Square New York City at Night" 
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAZfRu7IeCbkJisNUbSLUswVfrLw1TejFpxWIkT2mQ1XpSCf-x_T85LoAPepGEjWSD1RXPa-YS1N8d5whmLv0xwunPD7yfN6zFPDU24iZy2yrFPrgj960iS4ss9_V3QNBN7CR7poWS87ZCRzfgBQQZEttnV3fvYCvrGZkRglwZJBYwjIcG9-OyCEs8mpPlWPaEf69cXtez2HtwC7v_ujlAIf9_JABo_H3Bs5CC3uHKnzMaiN3mMS0"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-8 lg:p-12">
-            <span className="inline-block bg-red-600 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest mb-4 w-fit">Economy</span>
-            <h2 className="text-white text-2xl lg:text-4xl font-bold max-w-2xl leading-tight">
-              Exploring the Intricacies of Markets, Money, and Global Economies
-            </h2>
-          </div>
-          <Link href="/news" aria-label="Read full economy article" className="absolute inset-0"></Link>
-        </article>
-        
-        {/* Right Column: Secondary Features Stacked */}
-        <div className="flex flex-col gap-4 flex-1 lg:h-full">
-          {/* Top Secondary: Style */}
-          <article className="relative rounded-xl overflow-hidden group flex-1 shadow-lg" data-purpose="secondary-feature-style">
-            <img 
-              alt="Geometric Architecture" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUZ4FlGaP2Sl-L3vH7TAClRzoC1xZ3FiH8Dz-F4iMzxwrWuPDN6JECWgmc4-7LDrigaT96pEAioDD0Gt-metjq8fzgQZ5-H0gCOoUQ7CKU2IZkEWkkBvgFrcJsWSP7k6nbPfatI9rr0xFuH48JHos246TX5JBWG6oJ6Otgu1dDe6NzYsqvUcuzmZX18vKy5cc5gn5GJzMQjyH0XWB2JGr5gcwMsiWuVuUPSrvBi87l7e8a1Q96b64"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
-              <span className="inline-block bg-blue-600 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest mb-2 w-fit">Style</span>
-              <h3 className="text-white text-lg font-bold leading-tight">
-                A Journey Through Colors, Textures, and Trends
-              </h3>
-            </div>
-            <Link href="/news" aria-label="Read full style article" className="absolute inset-0"></Link>
-          </article>
+    <section className="bg-[#0b101e] relative overflow-hidden" data-purpose="hero-slider">
+      <div className="container mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 relative min-h-[500px]">
           
-          {/* Bottom Secondary: Art */}
-          <article className="relative rounded-xl overflow-hidden group flex-1 shadow-lg" data-purpose="secondary-feature-art">
-            <img 
-              alt="Classical Art Setting" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTUcPYoY9tHAqj_2KHGknvv1zVaTmnyfNOs-97rjyHMXevogX_xVnpxfXNJakmPJCiUviHBEtkOthCKO4oivL9I0k54VWETltuFqW56wJp2TD5LH4d1petxolsMDnkIYLF9HD6-27sFJo3iw0-VI8BZfT8wYC66TgDffDcpRt4Nbgg39bf-govHuOfo-79dcu2afCZ0y_ra8STxbzFDp0ZuHBODbGmp_t5vBPHtyi7eRWohm1XQY"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
-              <span className="inline-block bg-green-600 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest mb-2 w-fit">Art</span>
-              <h3 className="text-white text-lg font-bold leading-tight">
-                Inspiring Creativity and Fostering Artistic Expression
-              </h3>
+          {/* Left Content */}
+          <div className="flex-1 w-full relative z-10 flex flex-col justify-center">
+            {slides.map((slide, idx) => (
+              <div 
+                key={idx}
+                className={`transition-all duration-700 absolute inset-0 flex flex-col justify-center ${
+                  idx === activeSlide ? "opacity-100 translate-y-0 z-20" : "opacity-0 translate-y-4 z-0 pointer-events-none"
+                }`}
+              >
+                {/* Tag */}
+                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1.5 mb-6 w-fit border border-white/10 backdrop-blur-sm">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
+                  <span className="text-[10px] text-gray-300 font-bold uppercase tracking-widest">{slide.tag}</span>
+                </div>
+
+                {/* Title & Desc */}
+                <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 font-display leading-tight tracking-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-gray-400 text-base md:text-lg max-w-lg mb-10 leading-relaxed">
+                  {slide.desc}
+                </p>
+
+                {/* Actions */}
+                <div className="flex flex-wrap items-center gap-4 mb-16">
+                  <Link href={slide.link} className="flex items-center space-x-2 bg-[#d1f0ff] hover:bg-white text-[#0b101e] px-6 py-3.5 rounded-xl font-bold text-sm transition-colors shadow-lg">
+                    <span>Read Article</span>
+                    <FaArrowRight size={14} />
+                  </Link>
+                  <Link href="/magazine" className="flex items-center space-x-2 bg-transparent hover:bg-white/5 border border-white/20 text-white px-6 py-3.5 rounded-xl font-medium text-sm transition-colors">
+                    <span>Full Coverage</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+
+            {/* Spacer to give height since absolute divs don't take space */}
+            <div className="invisible">
+              <div className="flex items-center space-x-2 px-3 py-1.5 mb-6"><div className="w-1.5 h-1.5"></div><span className="text-[10px]">SPACER</span></div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 font-display leading-tight">Mapping the Information Frost</h1>
+              <p className="text-base md:text-lg mb-10">How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.</p>
+              <div className="flex gap-4 mb-16"><div className="px-6 py-3.5">Spacer</div><div className="px-6 py-3.5">Spacer</div></div>
             </div>
-            <Link href="/news" aria-label="Read full art article" className="absolute inset-0"></Link>
-          </article>
+
+            {/* Bottom Progress Indicator */}
+            <div className="w-full max-w-sm mt-auto relative z-20">
+              <div className="flex justify-between items-center mb-3 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                <span>Active Slide</span>
+                <span>0{activeSlide + 1} / 0{slides.length}</span>
+              </div>
+              <div className="w-full h-0.5 bg-white/10 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-[#d1f0ff] transition-all duration-500 ease-out"
+                  style={{ width: `${((activeSlide + 1) / slides.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Image Card */}
+          <div className="flex-1 w-full relative z-10 flex justify-end">
+            <div className="relative w-full max-w-[500px] aspect-[4/5] lg:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
+              {slides.map((slide, idx) => (
+                <div 
+                  key={idx}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    idx === activeSlide ? "opacity-100 z-20" : "opacity-0 z-0"
+                  }`}
+                >
+                  <img
+                    alt={slide.title}
+                    src={slide.img}
+                    className={`w-full h-full object-cover transition-transform duration-[10000ms] ${
+                      idx === activeSlide ? "scale-110" : "scale-100"
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  
+                  {/* Category Pill */}
+                  <div className="absolute bottom-6 left-6">
+                    <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+                      {slide.category}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
-
