@@ -5,6 +5,7 @@
 @theme {
   --color-primary-green: #0B4F43;
   --color-primary-light: #136B5C;
+  --color-ft-pink: #fff1e5;
   --font-sans: "Source Serif 4", serif;
   --font-display: "Playfair Display", serif;
 }
@@ -19,7 +20,7 @@
 }
 
 :root {
-  --background: #f8f9fa;
+  --background: #fff1e5;
   --foreground: #111827; /* gray-900 */
 }
 
