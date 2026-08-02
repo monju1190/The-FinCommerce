@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function Footer() {
+  return (
     <div className="mt-12 md:mt-24">
       {/* Floating Newsletter Section */}
       <div className="container mx-auto px-4 md:px-12 relative z-20 -mb-24 md:-mb-32">
