@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/* Top Right: 3 Columns of Links */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24">
+          <div className="grid grid-cols-3 gap-2 sm:gap-12 md:gap-24 w-full lg:w-auto">
             {/* Column 1 */}
             <div>
               <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-6">Menu</h4>
