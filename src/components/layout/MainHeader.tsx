@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { FaTwitter, FaLinkedinIn, FaSpotify } from "react-icons/fa";
-import { Cormorant_Garamond } from "next/font/google";
+import { Bodoni_Moda_SC } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const bodoni = Bodoni_Moda_SC({
   weight: ['400', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -17,10 +17,10 @@ export default function MainHeader() {
     <>
       {/* Masthead (at the very top, before header) */}
       <div className="w-full text-center pt-6 pb-4 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative overflow-hidden">
-        <h1 className={`tracking-tighter leading-[0.8] text-[8.5vw] sm:text-[7vw] md:text-[6vw] xl:text-[100px] uppercase select-none pb-2 inline-block opacity-90 mix-blend-multiply whitespace-nowrap ${cormorant.className}`}>
+        <h1 className={`tracking-tighter leading-[0.8] text-[8.5vw] sm:text-[7vw] md:text-[6vw] xl:text-[100px] uppercase select-none pb-2 inline-block opacity-90 mix-blend-multiply whitespace-nowrap ${bodoni.className}`}>
           <span className="text-gray-800 font-normal mr-2 md:mr-4 text-[0.5em] tracking-wider relative -top-[0.2em]">THE</span>
           <span className="text-[#1E293B] font-bold">FIN</span>
-          <span className="text-[#047857] font-medium">COMMERCE</span>
+          <span className="text-[#9e2a2b] font-medium">COMMERCE</span>
         </h1>
         <div className="w-full max-w-4xl border-t border-gray-400 mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-600 font-sans">
           <span>Global Edition</span>
@@ -35,10 +35,10 @@ export default function MainHeader() {
           
           {/* Mobile Left: Brand Icon (Hidden on Desktop) */}
           <div className="md:hidden flex-1">
-            <Link href="/" className={`text-xl uppercase tracking-wider whitespace-nowrap ${cormorant.className}`}>
+            <Link href="/" className={`text-xl uppercase tracking-wider whitespace-nowrap ${bodoni.className}`}>
               <span className="text-white font-normal mr-1">T</span>
               <span className="text-[#94a3b8] font-bold">F</span>
-              <span className="text-[#34d399] font-medium">C</span>
+              <span className="text-[#9e2a2b] font-medium">C</span>
             </Link>
           </div>
 
