@@ -50,8 +50,8 @@ export default function HeroSection() {
 
   return (
     <section className="bg-[#0b101e] relative overflow-hidden shadow-xl border-y border-black/20" data-purpose="hero-slider">
-      <div className="w-full px-6 md:px-12 flex flex-col justify-center h-[calc(100svh-200px)] md:h-[calc(100svh-250px)] min-h-[500px]">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative w-full h-[90%] lg:h-[85%] max-w-[1600px] mx-auto">
+      <div className="w-full px-6 md:px-12 flex flex-col justify-center h-[calc(100svh-180px)] lg:h-[calc(100svh-250px)] py-4 lg:py-0">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-16 relative w-full h-full lg:h-[85%] max-w-[1600px] mx-auto">
           
           {/* Left Content */}
           <div className="flex-1 w-full relative z-10 flex flex-col justify-center">
@@ -63,26 +63,26 @@ export default function HeroSection() {
                 }`}
               >
                 {/* Tag */}
-                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1.5 mb-6 w-fit border border-white/10 backdrop-blur-sm">
+                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1 lg:py-1.5 mb-3 lg:mb-6 w-fit border border-white/10 backdrop-blur-sm">
                   <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
-                  <span className="text-[10px] text-gray-300 font-bold uppercase tracking-widest">{slide.tag}</span>
+                  <span className="text-[8px] lg:text-[10px] text-gray-300 font-bold uppercase tracking-widest">{slide.tag}</span>
                 </div>
 
                 {/* Title & Desc */}
-                <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 font-display leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-3 lg:mb-6 font-display leading-tight tracking-tight">
                   {slide.title}
                 </h1>
-                <p className="text-gray-400 text-base md:text-lg max-w-lg mb-10 leading-relaxed">
+                <p className="text-gray-400 text-xs sm:text-sm md:text-lg max-w-lg mb-6 lg:mb-10 leading-relaxed">
                   {slide.desc}
                 </p>
 
                 {/* Actions */}
-                <div className="flex flex-wrap items-center gap-4 mb-16">
-                  <Link href={slide.link} className="flex items-center space-x-2 bg-[#d1f0ff] hover:bg-white text-[#0b101e] px-6 py-3.5 font-bold text-sm transition-colors shadow-lg">
+                <div className="flex flex-wrap items-center gap-3 lg:gap-4 mb-6 lg:mb-16">
+                  <Link href={slide.link} className="flex items-center space-x-2 bg-[#d1f0ff] hover:bg-white text-[#0b101e] px-4 py-2.5 lg:px-6 lg:py-3.5 font-bold text-[10px] lg:text-sm transition-colors shadow-lg">
                     <span>Read Article</span>
-                    <FaArrowRight size={14} />
+                    <FaArrowRight size={12} />
                   </Link>
-                  <Link href="/magazine" className="flex items-center space-x-2 bg-transparent hover:bg-white/5 border border-white/20 text-white px-6 py-3.5 font-medium text-sm transition-colors">
+                  <Link href="/magazine" className="flex items-center space-x-2 bg-transparent hover:bg-white/5 border border-white/20 text-white px-4 py-2.5 lg:px-6 lg:py-3.5 font-medium text-[10px] lg:text-sm transition-colors">
                     <span>Full Coverage</span>
                   </Link>
                 </div>
@@ -91,10 +91,10 @@ export default function HeroSection() {
 
             {/* Spacer to give height since absolute divs don't take space */}
             <div className="invisible">
-              <div className="flex items-center space-x-2 px-3 py-1.5 mb-6"><div className="w-1.5 h-1.5"></div><span className="text-[10px]">SPACER</span></div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 font-display leading-tight">Mapping the Information Frost</h1>
-              <p className="text-base md:text-lg mb-10">How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.</p>
-              <div className="flex gap-4 mb-16"><div className="px-6 py-3.5">Spacer</div><div className="px-6 py-3.5">Spacer</div></div>
+              <div className="flex items-center space-x-2 px-3 py-1 lg:py-1.5 mb-3 lg:mb-6"><div className="w-1.5 h-1.5"></div><span className="text-[8px] lg:text-[10px]">SPACER</span></div>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-3 lg:mb-6 font-display leading-tight">Mapping the Information Frost</h1>
+              <p className="text-xs sm:text-sm md:text-lg mb-6 lg:mb-10">How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.</p>
+              <div className="flex gap-3 lg:gap-4 mb-6 lg:mb-16"><div className="px-4 py-2.5 lg:px-6 lg:py-3.5">Spacer</div><div className="px-4 py-2.5 lg:px-6 lg:py-3.5">Spacer</div></div>
             </div>
 
             {/* Bottom Progress Indicator */}
@@ -113,8 +113,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image Card */}
-          <div className="flex-1 w-full relative z-10 flex justify-end h-full py-4">
-            <div className="relative w-full max-w-[500px] h-full max-h-[600px] aspect-auto lg:aspect-[3/4] overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
+          <div className="w-full h-[45%] lg:h-full lg:flex-1 relative z-10 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[400px] lg:max-w-[500px] h-full overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
               {slides.map((slide, idx) => (
                 <div 
                   key={idx}
