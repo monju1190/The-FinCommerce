@@ -4,6 +4,9 @@ import BusinessSection from "@/components/home/BusinessSection";
 import DualGridSection from "@/components/home/DualGridSection";
 import SecuritySection from "@/components/home/SecuritySection";
 import MagazineSection from "@/components/home/MagazineSection";
+import BankingSection from "@/components/home/BankingSection";
+import FinanceSection from "@/components/home/FinanceSection";
+import CompanySection from "@/components/home/CompanySection";
 import CtaSection from "@/components/shared/CtaSection";
 
 export default function Home() {
@@ -14,6 +17,9 @@ export default function Home() {
       </div>
       <MagazineSection />
       <BusinessSection />
+      <FinanceSection />
+      <BankingSection />
+      <CompanySection />
       <DualGridSection />
       <SecuritySection />
       <CtaSection />

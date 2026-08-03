@@ -28,7 +28,7 @@ export default function SecuritySection() {
               <span className="text-[#9e2a2b] text-xs font-black uppercase tracking-widest mb-2 block">
                 Network
               </span>
-              <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-primary-green transition-colors">
+              <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
                 The Pulse of Global Markets and Enterprise
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
@@ -56,7 +56,7 @@ export default function SecuritySection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Virtual Reality
             </span>
-            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-primary-green transition-colors mb-2">
+            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
               AI and Marketing: Unlocking Customer Insights
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
@@ -75,7 +75,7 @@ export default function SecuritySection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Trips
             </span>
-            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-primary-green transition-colors mb-2">
+            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
               Eco-Tourism: Traveling Responsibly and Sustainably
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
@@ -94,7 +94,7 @@ export default function SecuritySection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
               AI Powered
             </span>
-            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-primary-green transition-colors mb-2">
+            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
               Hidden Gems: Underrated Travel Destinations Around the World
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">

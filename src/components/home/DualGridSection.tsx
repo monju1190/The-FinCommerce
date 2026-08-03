@@ -28,7 +28,7 @@ export default function DualGridSection() {
           <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
             Politics
           </span>
-          <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug mb-2">
+          <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
             Siriya attacked by a long established fact that a reader will be distracted by
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
@@ -45,7 +45,7 @@ export default function DualGridSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Global Markets
             </span>
-            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug">
+            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
               It is a long established fact that a reader will be done
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
@@ -57,7 +57,7 @@ export default function DualGridSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Economics
             </span>
-            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug">
+            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
               Where Business News Meets Strategic Thinking
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
@@ -69,7 +69,7 @@ export default function DualGridSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Policy
             </span>
-            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug">
+            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
               In-Depth Business Journalism, Redefined
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
@@ -106,7 +106,7 @@ export default function DualGridSection() {
           <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
             Innovation
           </span>
-          <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug mb-2">
+          <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
             It is a long established fact that a reader will be distracted by
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
@@ -123,7 +123,7 @@ export default function DualGridSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Hardware
             </span>
-            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug">
+            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
               Innovating the Future, One Byte at a Time
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
@@ -135,7 +135,7 @@ export default function DualGridSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Cybersecurity
             </span>
-            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug">
+            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
               Decoding Innovation for the Digital Age
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
@@ -147,7 +147,7 @@ export default function DualGridSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Media
             </span>
-            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-primary-green transition-colors leading-snug">
+            <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
               Your Window to the World of Tomorrow
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">

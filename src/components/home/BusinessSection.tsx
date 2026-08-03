@@ -28,7 +28,7 @@ export default function BusinessSection() {
               <span className="text-[#9e2a2b] text-xs font-black uppercase tracking-widest mb-2 block">
                 Artificial Intelligence
               </span>
-              <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-primary-green transition-colors">
+              <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
                 Smart Homes, Smarter Living: Exploring IoT and AI
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
@@ -50,7 +50,7 @@ export default function BusinessSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Startups
             </span>
-            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-primary-green transition-colors mb-2">
+            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
               A Guide to The Rise of Gourmet Street Food: Trends and Top Picks
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
@@ -66,7 +66,7 @@ export default function BusinessSection() {
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Virtual Reality
             </span>
-            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-primary-green transition-colors mb-2">
+            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
               Hidden Gems: Underrated Travel Destinations Around the World
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
@@ -78,23 +78,23 @@ export default function BusinessSection() {
           </Link>
 
           {/* Item 3 */}
-          <Link href="/news/business-4" className="group cursor-pointer pb-6 mb-6">
+          <Link href="/news/business-4" className="group cursor-pointer pb-6 mb-6 flex-1 flex flex-col">
             <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Sustainability
             </span>
-            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-primary-green transition-colors mb-2">
+            <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
               Eco-Tourism: Traveling Responsibly and Sustainably
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
               New regulations are forcing legacy airlines to offset carbon footprints, creating a booming secondary market.
             </p>
-            <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
+            <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-auto">
               9mo ago
             </div>
           </Link>
 
           <Link href="/category/business" className="mt-auto pt-4 border-t border-gray-900 group flex items-center justify-between">
-            <span className="font-bold text-sm uppercase tracking-widest text-gray-900 group-hover:text-primary-green transition-colors">See All Business</span>
+            <span className="font-bold text-sm uppercase tracking-widest text-gray-900 group-hover:text-[#1a2c5a] transition-colors">See All Business</span>
             <span className="text-xl group-hover:translate-x-1 transition-transform">&rarr;</span>
           </Link>
         </div>

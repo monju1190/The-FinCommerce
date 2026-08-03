@@ -65,7 +65,7 @@ export default function MagazineSection() {
                 src={cover.img}
               />
             </div>
-            <h4 className="font-bold text-xs md:text-sm font-display text-gray-900 group-hover:text-primary-green transition-colors mt-2">
+            <h4 className="font-bold text-xs md:text-sm font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mt-2">
               {cover.month}
             </h4>
           </Link>
