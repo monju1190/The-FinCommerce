@@ -1,22 +1,15 @@
 import React from "react";
 import { FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import Link from "next/link";
-import { Cinzel_Decorative } from "next/font/google";
-
-const cinzel = Cinzel_Decorative({
-  weight: ['400', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export default function Footer() {
   return (
     <footer className="bg-[#121212] text-white pt-20 pb-0 overflow-hidden relative font-sans" data-purpose="site-footer">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        
+
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-20 gap-12 lg:gap-0">
-          
+
           {/* Top Left: Socials & Contact */}
           <div className="flex flex-col space-y-6">
             <div className="flex space-x-3 mb-2">
@@ -30,12 +23,12 @@ export default function Footer() {
                 <FaYoutube size={16} />
               </a>
             </div>
-            
+
             <div className="text-gray-300 text-[15px] leading-relaxed">
               <p>9 Pearse Street. Kinsale</p>
               <p>York, China</p>
             </div>
-            
+
             <div className="text-gray-300 text-[15px] space-y-2">
               <p>info@fincommerce.com</p>
               <p>(+12) 808 130 1190</p>
@@ -93,7 +86,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
             From branding to digital marketing. Our expert team is here to elevate your brand and connect you with your audience
           </p>
-          
+
           <div className="flex flex-wrap gap-8 text-white text-xs font-semibold uppercase tracking-wider">
             <Link href="/terms-and-conditions" className="hover:text-gray-300 transition-colors">
               Terms & Conditions
@@ -107,7 +100,7 @@ export default function Footer() {
 
       {/* Giant Footer Text */}
       <div className="w-full text-center flex justify-center select-none pointer-events-none relative z-0">
-        <span className={`text-[22vw] font-bold tracking-tight leading-[0.75] text-[#222222] block translate-y-4 ${cinzel.className}`}>
+        <span className="text-[22vw] font-bold tracking-tight leading-[0.75] text-[#222222] block translate-y-4">
           fincommerce.
         </span>
       </div>
