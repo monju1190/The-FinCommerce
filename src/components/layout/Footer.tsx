@@ -1,6 +1,13 @@
 import React from "react";
 import { FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import Link from "next/link";
+import { Cinzel_Decorative } from "next/font/google";
+
+const cinzel = Cinzel_Decorative({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function Footer() {
   return (
@@ -100,7 +107,7 @@ export default function Footer() {
 
       {/* Giant Footer Text */}
       <div className="w-full text-center flex justify-center select-none pointer-events-none relative z-0">
-        <span className="text-[22vw] font-bold tracking-tight leading-[0.75] text-[#222222] block translate-y-4">
+        <span className={`text-[22vw] font-bold tracking-tight leading-[0.75] text-[#222222] block translate-y-4 ${cinzel.className}`}>
           fincommerce.
         </span>
       </div>

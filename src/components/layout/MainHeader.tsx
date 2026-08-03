@@ -2,6 +2,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { FaTwitter, FaLinkedinIn, FaSpotify } from "react-icons/fa";
+import { Cinzel_Decorative } from "next/font/google";
+
+const cinzel = Cinzel_Decorative({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function MainHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,7 +17,7 @@ export default function MainHeader() {
     <>
       {/* Masthead (at the very top, before header) */}
       <div className="w-full text-center pt-6 pb-4 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative overflow-hidden">
-        <h1 className="font-black tracking-tighter leading-[0.8] text-[8.5vw] sm:text-[7vw] md:text-[6vw] xl:text-[100px] uppercase select-none text-gray-900 font-display pb-2 inline-block opacity-90 mix-blend-multiply whitespace-nowrap">
+        <h1 className={`font-black tracking-tighter leading-[0.8] text-[8.5vw] sm:text-[7vw] md:text-[6vw] xl:text-[100px] uppercase select-none text-gray-900 pb-2 inline-block opacity-90 mix-blend-multiply whitespace-nowrap ${cinzel.className}`}>
           The FinCommerce
         </h1>
         <div className="w-full max-w-4xl border-t border-gray-400 mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-600 font-sans">
@@ -26,7 +33,7 @@ export default function MainHeader() {
           
           {/* Mobile Left: Brand Icon (Hidden on Desktop) */}
           <div className="md:hidden flex-1">
-            <Link href="/" className="text-xl font-display font-black uppercase tracking-wider whitespace-nowrap">
+            <Link href="/" className={`text-xl font-black uppercase tracking-wider whitespace-nowrap ${cinzel.className}`}>
               TFC
             </Link>
           </div>
