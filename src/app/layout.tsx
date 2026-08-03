@@ -4,8 +4,8 @@ import MainHeader from "@/components/layout/MainHeader";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "NewsPrk - Actionable News for Visionaries",
-  description: "Professional monthly magazine website",
+  title: "The FinCommerce - Actionable Financial News",
+  description: "The FinCommerce is your go-to destination for the latest and most comprehensive business, technology, and economic news.",
 };
 
 export default function RootLayout({
