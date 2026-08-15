@@ -7,7 +7,7 @@ export default function BankingSection() {
       tag: "CENTRAL BANKS",
       title: "Federal Reserve signals potential rate cut as inflation cools",
       desc: "Policymakers hint at a September reduction, ending a prolonged period of aggressive monetary tightening.",
-      time: "2h ago"
+      time: "2026-08-16"
     },
     {
       tag: "INVESTMENT BANKING",
