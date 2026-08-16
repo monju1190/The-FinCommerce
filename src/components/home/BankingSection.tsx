@@ -12,7 +12,7 @@ export default function BankingSection() {
     {
       tag: "INVESTMENT BANKING",
       title: "Goldman Sachs reshuffles leadership in elite advisory unit",
-      desc: "The Wall Street giant is promoting a new generation of dealmakers amidst a sluggish M&A market recovery.",
+      desc: "The Wall Street giant promoting a new generation of dealmakers amidst a sluggish M&A market recovery.",
       time: "4h ago"
     },
     {
