@@ -23,7 +23,7 @@ export default function BankingSection() {
     },
     {
       tag: "RETAIL-BANKING",
-      title: "Digital-only challengers capture 15% of new checking accounts",
+      title: "Digital-only challengers capture 20% of new checking accounts",
       desc: "Traditional lenders struggle to retain younger demographics who favor app-based seamless banking experiences.",
       time: "8h ago"
     }
