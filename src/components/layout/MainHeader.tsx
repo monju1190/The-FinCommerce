@@ -46,8 +46,7 @@ export default function MainHeader() {
           {/* Mobile Left: Brand Icon (Hidden on Desktop) */}
           <div className="md:hidden flex-1">
             <Link href="/" className={`text-xl font-black uppercase tracking-wider whitespace-nowrap ${playfair.className}`}>
-              <span className="text-[#1E293B]">TS</span>
-              <span className="text-[#9e2a2b]">V</span>
+              <span className="text-[#8DC63F]">TSV</span>
             </Link>
           </div>
 
