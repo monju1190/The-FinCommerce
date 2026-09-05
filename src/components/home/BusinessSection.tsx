@@ -16,7 +16,7 @@ export default function BusinessSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-12">
         {/* Main Business Story */}
         <div className="lg:col-span-8 flex flex-col h-full border-r-0 lg:border-r border-gray-300 lg:pr-8">
-          <Link href="/news/business-1" className="group cursor-pointer flex flex-col h-full">
+          <Link href="/news/details" className="group cursor-pointer flex flex-col h-full">
             <div className="overflow-hidden mb-4 relative w-full flex-1 min-h-[400px]">
               <img
                 alt="Business Main"
@@ -25,7 +25,7 @@ export default function BusinessSection() {
               />
             </div>
             <div className="mt-4">
-              <span className="text-[#9e2a2b] text-xs font-black uppercase tracking-widest mb-2 block">
+              <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest mb-2 block">
                 Artificial Intelligence
               </span>
               <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
@@ -46,8 +46,8 @@ export default function BusinessSection() {
         {/* Business Sidebar List */}
         <div className="lg:col-span-4 flex flex-col">
           {/* Item 1 */}
-          <Link href="/news/business-2" className="group cursor-pointer pb-6 mb-6 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer pb-6 mb-6 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Startups
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
@@ -62,8 +62,8 @@ export default function BusinessSection() {
           </Link>
 
           {/* Item 2 */}
-          <Link href="/news/business-3" className="group cursor-pointer pb-6 mb-6 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer pb-6 mb-6 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Virtual Reality
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
@@ -78,8 +78,8 @@ export default function BusinessSection() {
           </Link>
 
           {/* Item 3 */}
-          <Link href="/news/business-4" className="group cursor-pointer pb-6 mb-6 flex-1 flex flex-col">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer pb-6 mb-6 flex-1 flex flex-col">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               Sustainability
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">

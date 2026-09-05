@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -13,25 +13,23 @@ export default function Footer() {
           {/* Top Left: Socials & Contact */}
           <div className="flex flex-col space-y-6">
             <div className="flex space-x-3 mb-2">
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors" aria-label="Instagram">
-                <FaInstagram size={16} />
+              <a href="https://www.facebook.com/sustainabilityvoice" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors" aria-label="Facebook">
+                <FaFacebookF size={16} />
               </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors" aria-label="X">
-                <FaXTwitter size={16} />
-              </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors" aria-label="YouTube">
-                <FaYoutube size={16} />
+              <a href="https://www.linkedin.com/company/the-sustainability-voice/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn">
+                <FaLinkedinIn size={16} />
               </a>
             </div>
 
             <div className="text-gray-300 text-[15px] leading-relaxed">
-              <p>9 Pearse Street. Kinsale</p>
-              <p>York, China</p>
+              <p>Dokan#18, Level-5, Azimpur Aadhunik</p>
+              <p>Nagar Market, Azimpur, Newmarket</p>
+              <p>Dhaka-1205</p>
             </div>
 
             <div className="text-gray-300 text-[15px] space-y-2">
-              <p>info@fincommerce.com</p>
-              <p>(+12) 808 130 1190</p>
+              <p>editor@sustainabilityvoice.com</p>
+              <p>01713039784</p>
             </div>
           </div>
 
@@ -42,8 +40,8 @@ export default function Footer() {
               <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-6">Menu</h4>
               <ul className="space-y-4 text-gray-300 text-[15px]">
                 <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-                <li><Link href="/industries" className="hover:text-white transition-colors">Industries</Link></li>
-                <li><Link href="/product" className="hover:text-white transition-colors">Product</Link></li>
+                <li><Link href="/about-us" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/advertise" className="hover:text-white transition-colors">Advertising</Link></li>
                 <li><Link href="/categories" className="hover:text-white transition-colors">Categories</Link></li>
               </ul>
             </div>
@@ -52,10 +50,9 @@ export default function Footer() {
             <div>
               <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-6">Company</h4>
               <ul className="space-y-4 text-gray-300 text-[15px]">
-                <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-                <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-                <li><Link href="/events" className="hover:text-white transition-colors">Events</Link></li>
-                <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+                <li><Link href="/about-us" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/editorial-board" className="hover:text-white transition-colors">Editorial Board</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
 
@@ -65,8 +62,7 @@ export default function Footer() {
               <ul className="space-y-4 text-gray-300 text-[15px]">
                 <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                 <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition-colors">Terms</Link></li>
-                <li><Link href="/tutorials" className="hover:text-white transition-colors">Tutorials</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
               </ul>
             </div>
           </div>
@@ -84,11 +80,11 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0 pb-4">
           <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
-            From branding to digital marketing. Our expert team is here to elevate your brand and connect you with your audience
+            Championing ESG integration across business and governance by delivering high-impact journalism and evidence-based policy analysis.
           </p>
 
           <div className="flex flex-wrap gap-8 text-white text-xs font-semibold uppercase tracking-wider">
-            <Link href="/terms-and-conditions" className="hover:text-gray-300 transition-colors">
+            <Link href="/terms" className="hover:text-gray-300 transition-colors">
               Terms & Conditions
             </Link>
             <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">
@@ -100,8 +96,8 @@ export default function Footer() {
 
       {/* Giant Footer Text */}
       <div className="w-full text-center flex justify-center select-none pointer-events-none relative z-0">
-        <span className="text-[22vw] font-bold tracking-tight leading-[0.75] text-[#222222] block translate-y-4">
-          fincommerce.
+        <span className="text-[12vw] font-bold tracking-tight leading-[0.75] text-[#222222] block translate-y-4 whitespace-nowrap">
+          sustainability voice.
         </span>
       </div>
     </footer>

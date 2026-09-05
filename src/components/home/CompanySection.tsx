@@ -44,7 +44,7 @@ export default function CompanySection() {
                 src={company.img}
               />
             </div>
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               {company.name}
             </span>
             <h3 className="font-bold text-2xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-3">

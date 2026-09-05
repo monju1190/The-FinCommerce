@@ -17,7 +17,7 @@ export default function DualGridSection() {
         </div>
 
         {/* Featured News Card */}
-        <Link href="/news/world-1" className="group cursor-pointer mb-6">
+        <Link href="/news/details" className="group cursor-pointer mb-6">
           <div className="overflow-hidden mb-3 relative w-full h-[250px]">
             <img
               alt="World News Main"
@@ -25,7 +25,7 @@ export default function DualGridSection() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ko91mT-wSZ9ThhG4QNKxVESvNSnBlEXkfPQuzmSJ_8VbZ_uSPuptpOntY3O_C3u6RdUgMm79EcX2UBhHIXymVwXI4Pbgrs6nMdk_vE52A4c1h4Qw4hIB2bmxfduJWZ7TE5_LRnvGQ2DD-G0_yfbys-9U0NJm4lGPw1fKQ4-fXO_6kKMZmJht1SNS06v5azGP_oAdpbnj-QMBbpVwDJoL74JZdUd23kqkCa2pLRzUfDYmBJO15dM"
             />
           </div>
-          <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
+          <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
             Politics
           </span>
           <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
@@ -41,8 +41,8 @@ export default function DualGridSection() {
 
         {/* List Items */}
         <div className="flex flex-col flex-1 border-t border-gray-300">
-          <Link href="/news/world-2" className="group cursor-pointer py-4 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
+          <Link href="/news/details" className="group cursor-pointer py-4 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Global Markets
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
@@ -53,8 +53,8 @@ export default function DualGridSection() {
             </div>
           </Link>
 
-          <Link href="/news/world-3" className="group cursor-pointer py-4 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
+          <Link href="/news/details" className="group cursor-pointer py-4 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Economics
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
@@ -65,8 +65,8 @@ export default function DualGridSection() {
             </div>
           </Link>
 
-          <Link href="/news/world-4" className="group cursor-pointer py-4 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
+          <Link href="/news/details" className="group cursor-pointer py-4 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Policy
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
@@ -95,7 +95,7 @@ export default function DualGridSection() {
         </div>
 
         {/* Featured News Card */}
-        <Link href="/news/tech-1" className="group cursor-pointer mb-6">
+        <Link href="/news/details" className="group cursor-pointer mb-6">
           <div className="overflow-hidden mb-3 relative w-full h-[250px]">
             <img
               alt="Tech Main"
@@ -103,7 +103,7 @@ export default function DualGridSection() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQd3epbeePAAV2hCAfL8EV336_ncEQecx_luKQnKBYOnhv0wMhnL9jeNo8T5u2qVuhqPQRRxIaGedOuNmfHXW72REDsKN5vEcazwXJfg54GaIoe_NZMb7eRQdHZ3jJPvg3c10n5l47oAQuGARYodChjot8DClM0eLF0dogQjAqQreCzcAJPoa4cIAN8ZJIhKIta1doHbWVz8hW6VeDqUF8wkm-rYFweU4xraFOGDfmDYoryC5BNwo"
             />
           </div>
-          <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
+          <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
             Innovation
           </span>
           <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
@@ -119,8 +119,8 @@ export default function DualGridSection() {
 
         {/* List Items */}
         <div className="flex flex-col flex-1 border-t border-gray-300">
-          <Link href="/news/tech-2" className="group cursor-pointer py-4 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
+          <Link href="/news/details" className="group cursor-pointer py-4 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Hardware
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
@@ -131,8 +131,8 @@ export default function DualGridSection() {
             </div>
           </Link>
 
-          <Link href="/news/tech-3" className="group cursor-pointer py-4 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
+          <Link href="/news/details" className="group cursor-pointer py-4 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Cybersecurity
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
@@ -143,8 +143,8 @@ export default function DualGridSection() {
             </div>
           </Link>
 
-          <Link href="/news/tech-4" className="group cursor-pointer py-4 border-b border-gray-300">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-1 block">
+          <Link href="/news/details" className="group cursor-pointer py-4 border-b border-gray-300">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block">
               Media
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">

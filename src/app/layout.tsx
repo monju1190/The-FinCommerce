@@ -4,8 +4,8 @@ import MainHeader from "@/components/layout/MainHeader";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "The FinCommerce - Actionable Financial News",
-  description: "The FinCommerce is your go-to destination for the latest and most comprehensive business, technology, and economic news.",
+  title: "The Sustainability Voice - Environment & Climate Action",
+  description: "The Sustainability Voice is a quarterly magazine dedicated to advancing informed dialogue on sustainability, environment, climate change, and responsible business.",
 };
 
 export default function RootLayout({

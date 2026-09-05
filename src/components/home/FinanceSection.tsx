@@ -16,7 +16,7 @@ export default function FinanceSection() {
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Main Finance Feature */}
         <div className="lg:w-2/3 flex flex-col border-b lg:border-b-0 lg:border-r border-gray-300 pb-8 lg:pb-0 lg:pr-8">
-          <Link href="/news/finance-1" className="group cursor-pointer flex flex-col h-full">
+          <Link href="/news/details" className="group cursor-pointer flex flex-col h-full">
             <div className="overflow-hidden mb-5 relative w-full aspect-[16/9] shadow-md border border-gray-200">
               <img
                 alt="Stock Market Trading Floor"
@@ -24,7 +24,7 @@ export default function FinanceSection() {
                 src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop"
               />
             </div>
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-3 block">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-3 block">
               MARKETS
             </span>
             <h3 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.1] font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
@@ -43,8 +43,8 @@ export default function FinanceSection() {
 
         {/* Side Finance Stories */}
         <div className="lg:w-1/3 flex flex-col h-full">
-          <Link href="/news/finance-2" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               PRIVATE EQUITY
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
@@ -56,8 +56,8 @@ export default function FinanceSection() {
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">3h ago</div>
           </Link>
 
-          <Link href="/news/finance-3" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               WEALTH MANAGEMENT
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
@@ -69,8 +69,8 @@ export default function FinanceSection() {
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">5h ago</div>
           </Link>
 
-          <Link href="/news/finance-4" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               COMMODITIES
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
@@ -82,8 +82,8 @@ export default function FinanceSection() {
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">6h ago</div>
           </Link>
 
-          <Link href="/news/finance-5" className="group cursor-pointer flex-1 flex flex-col">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-2 block">
+          <Link href="/news/details" className="group cursor-pointer flex-1 flex flex-col">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
               CURRENCIES
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">

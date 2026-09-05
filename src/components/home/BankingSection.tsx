@@ -43,7 +43,7 @@ export default function BankingSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {articles.map((article, idx) => (
           <Link href={`/news/banking-${idx}`} key={idx} className="group cursor-pointer flex flex-col h-full border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 md:pr-8 last:border-0 last:pr-0">
-            <span className="text-[#9e2a2b] text-[10px] font-black uppercase tracking-widest mb-3 block">
+            <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-3 block">
               {article.tag}
             </span>
             <h3 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-3">
