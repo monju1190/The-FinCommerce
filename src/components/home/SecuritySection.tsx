@@ -29,7 +29,7 @@ export default function SecuritySection() {
                 Network
               </span>
               <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
-                The Pulse of Global Markets and Enterprise
+                The Pulse of Bangladesh's Green Economy and Enterprise
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
                 To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets. Security paradigms are shifting rapidly as remote work becomes the permanent norm.

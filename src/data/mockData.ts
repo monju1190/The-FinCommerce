@@ -34,7 +34,7 @@ export const magazineData: MagazineSectionData[] = [
     articles: [
       {
         slug: "algorithm-nation",
-        title: "Algorithm nation",
+        title: "Green Tech Nation",
         subtitle: "Social media’s emergence as our primary news source has amplified alt-right grievance and conspiracies, and ended the major party duopoly.",
         author: "Russell Marks",
         date: "August 2026",
@@ -44,7 +44,7 @@ export const magazineData: MagazineSectionData[] = [
       },
       {
         slug: "eyre-supply",
-        title: "Eyre supply",
+        title: "Sustainable Supply Chains",
         subtitle: "Even after suffering through the worst floods on record, farmers in Queensland’s Channel Country can’t help but be awed by the beauty of Kati Thanda-Lake Eyre.",
         author: "Anthony Ham",
         date: "August 2026",

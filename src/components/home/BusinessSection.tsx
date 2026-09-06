@@ -29,7 +29,7 @@ export default function BusinessSection() {
                 Artificial Intelligence
               </span>
               <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
-                Smart Homes, Smarter Living: Exploring IoT and AI
+                Smart Green Homes in Dhaka: Exploring IoT and AI
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
                 To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets across Europe and North America, revolutionizing how consumers interact with their living spaces on a daily basis.

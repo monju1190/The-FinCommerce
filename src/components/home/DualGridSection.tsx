@@ -29,7 +29,7 @@ export default function DualGridSection() {
             Politics
           </span>
           <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
-            Siriya attacked by a long established fact that a reader will be distracted by
+            Dhaka Startups Lead the Charge in E-Waste Management
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
             A comprehensive look at the escalating tensions and what it means for global markets and diplomatic relations moving forward.
@@ -46,7 +46,7 @@ export default function DualGridSection() {
               Global Markets
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              It is a long established fact that a reader will be done
+              Rooftop Solar in Dhaka: A Sustainable Energy Revolution
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               1 April 2025
@@ -107,7 +107,7 @@ export default function DualGridSection() {
             Innovation
           </span>
           <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
-            It is a long established fact that a reader will be distracted by
+            Sundarbans Conservation: New Corporate Pledges Show Promise
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
             Silicon Valley's latest attempt to merge human consciousness with cloud infrastructure yields surprising results.

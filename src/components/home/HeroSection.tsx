@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 const slides = [
   {
     tag: "AUGUST 2026 ISSUE",
-    title: "Mapping the Information Frost",
+    title: "Mapping Dhaka's Green Infrastructure",
     desc: "How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.",
     img: "/magazine cover/1.png",
     category: "TECHNOLOGY",
@@ -14,7 +14,7 @@ const slides = [
   },
   {
     tag: "JULY 2026 ISSUE",
-    title: "The Pulse of Global Markets",
+    title: "The Pulse of Bangladesh's Green Economy",
     desc: "To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets.",
     img: "/magazine cover/2.png",
     category: "ECONOMY",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     tag: "JUNE 2026 ISSUE",
-    title: "Smart Homes, Smarter Living",
+    title: "Smart Green Homes in Dhaka",
     desc: "Exploring how IoT and AI are revolutionizing consumer interaction with living spaces on a daily basis.",
     img: "/magazine cover/image.png",
     category: "INNOVATION",
@@ -92,7 +92,7 @@ export default function HeroSection() {
             {/* Spacer to give height since absolute divs don't take space */}
             <div className="invisible">
               <div className="flex items-center space-x-2 px-3 py-1 lg:py-1.5 mb-3 lg:mb-6"><div className="w-1.5 h-1.5"></div><span className="text-[8px] lg:text-[10px]">SPACER</span></div>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-3 lg:mb-6 font-display leading-tight">Mapping the Information Frost</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-3 lg:mb-6 font-display leading-tight">Mapping Dhaka's Green Infrastructure</h1>
               <p className="text-xs sm:text-sm md:text-lg mb-6 lg:mb-10">How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.</p>
               <div className="flex gap-3 lg:gap-4 mb-6 lg:mb-16"><div className="px-4 py-2.5 lg:px-6 lg:py-3.5">Spacer</div><div className="px-4 py-2.5 lg:px-6 lg:py-3.5">Spacer</div></div>
             </div>

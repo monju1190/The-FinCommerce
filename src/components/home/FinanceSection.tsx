@@ -28,7 +28,7 @@ export default function FinanceSection() {
               MARKETS
             </span>
             <h3 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.1] font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
-              Global equities rally as tech giants post record quarterly profits
+              Dhaka Stock Exchange Sees Surge in Green Tech Investments
             </h3>
             <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display max-w-3xl">
               Investors shrugged off geopolitical tensions, driving major indices to all-time highs fueled by unexpectedly strong earnings from the magnificent seven technology firms. Analysts warn, however, that valuations may be stretched.
