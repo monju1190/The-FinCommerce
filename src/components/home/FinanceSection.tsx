@@ -48,7 +48,7 @@ export default function FinanceSection() {
               PRIVATE EQUITY
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Blackstone eyes $10bn buyout of European logistics powerhouse
+              Blackstone eyes ৳10bn buyout of European logistics powerhouse
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
               The potential acquisition highlights the ongoing appetite for industrial real estate amidst e-commerce growth.
@@ -74,7 +74,7 @@ export default function FinanceSection() {
               COMMODITIES
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Oil prices slip below $70 amid supply glut concerns
+              Oil prices slip below ৳70 amid supply glut concerns
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
               OPEC+ struggles to maintain cohesion as member states quietly exceed production quotas.

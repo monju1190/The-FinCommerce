@@ -71,7 +71,7 @@ export default function NewsDetailsPage() {
           
           <h2>The Business Case for Circularity</h2>
           <p>
-            Transitioning to a circular economy is not merely an environmental crusade; it presents a massive economic opportunity. Recent studies suggest that adopting circular principles could unlock $4.5 trillion in economic growth globally by 2030. Companies are realizing that by rethinking their supply chains and product lifecycles, they can significantly reduce costs, mitigate risks associated with resource volatility, and tap into new revenue streams.
+            Transitioning to a circular economy is not merely an environmental crusade; it presents a massive economic opportunity. Recent studies suggest that adopting circular principles could unlock ৳4.5 trillion in economic growth globally by 2030. Companies are realizing that by rethinking their supply chains and product lifecycles, they can significantly reduce costs, mitigate risks associated with resource volatility, and tap into new revenue streams.
           </p>
           <p>
             For instance, major technology firms are increasingly designing devices for disassembly, allowing for easier recovery of rare earth metals. Similarly, the fashion industry—historically notorious for its environmental footprint—is seeing a surge in 'clothing as a service' models and advanced recycling technologies that turn old garments into new textiles.

@@ -6,7 +6,7 @@ export default function CompanySection() {
     {
       name: "Apple Inc.",
       title: "Apple unveils next-generation mixed reality headset targeted at enterprise",
-      desc: "Moving beyond consumer entertainment, the tech behemoth aims to revolutionize corporate training and remote collaboration with its $4,000 device.",
+      desc: "Moving beyond consumer entertainment, the tech behemoth aims to revolutionize corporate training and remote collaboration with its ৳4,000 device.",
       img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop"
     },
     {
