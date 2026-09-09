@@ -32,10 +32,10 @@ export default function BusinessSection() {
                 Smart Green Homes in Dhaka: Exploring IoT and AI
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
-                To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets across Europe and North America, revolutionizing how consumers interact with their living spaces on a daily basis.
+                The integration of IoT and AI in modern residential complexes is optimizing energy consumption and significantly reducing urban carbon footprints.
               </p>
               <div className="flex items-center space-x-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
-                <span>By David Pales</span>
+                <span>By Shaquib Quareshi</span>
                 <span>&bull;</span>
                 <span>23d ago</span>
               </div>
@@ -51,10 +51,10 @@ export default function BusinessSection() {
               Startups
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              A Guide to The Rise of Gourmet Street Food: Trends and Top Picks
+              Rise of Eco-Friendly Packaging Startups
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
-              Investors are pouring millions into high-end mobile kitchens as consumer tastes shift toward premium convenience.
+              Investors are pouring capital into local startups creating biodegradable alternatives to single-use plastics.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               6mo ago
@@ -67,10 +67,10 @@ export default function BusinessSection() {
               Virtual Reality
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Hidden Gems: Underrated Travel Destinations Around the World
+              Corporate ESG Reporting Becomes Mandatory
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
-              How the hospitality industry is leveraging VR to sell exotic locations to high-net-worth individuals.
+              New regulations push listed companies to disclose their environmental impact and sustainability goals.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               8mo ago
@@ -83,10 +83,10 @@ export default function BusinessSection() {
               Sustainability
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Eco-Tourism: Traveling Responsibly and Sustainably
+              Green Certifications for RMG Sector
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
-              New regulations are forcing legacy airlines to offset carbon footprints, creating a booming secondary market.
+              Garment manufacturers are racing to achieve LEED certifications, boosting international buyer confidence.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-auto">
               9mo ago

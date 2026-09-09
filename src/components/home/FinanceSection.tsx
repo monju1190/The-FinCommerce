@@ -31,10 +31,10 @@ export default function FinanceSection() {
               Dhaka Stock Exchange Sees Surge in Green Tech Investments
             </h3>
             <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display max-w-3xl">
-              Investors shrugged off geopolitical tensions, driving major indices to all-time highs fueled by unexpectedly strong earnings from the magnificent seven technology firms. Analysts warn, however, that valuations may be stretched.
+              Local investors are increasingly prioritizing ESG metrics, driving capital towards green bonds and sustainable tech startups in Dhaka. Analysts project robust growth for eco-conscious portfolios over the coming years.
             </p>
             <div className="flex items-center space-x-2 text-xs font-bold text-gray-500 uppercase tracking-wider mt-auto">
-              <span>By Sarah Jenkins</span>
+              <span>By Shaquib Quareshi</span>
               <span>&bull;</span>
               <span>1h ago</span>
             </div>
@@ -45,13 +45,13 @@ export default function FinanceSection() {
         <div className="lg:w-1/3 flex flex-col h-full">
           <Link href="/news/details" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
-              PRIVATE EQUITY
+              LOGISTICS
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Blackstone eyes ৳10bn buyout of European logistics powerhouse
+              Local conglomerates eye ৳10bn investment in eco-friendly supply chains
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
-              The potential acquisition highlights the ongoing appetite for industrial real estate amidst e-commerce growth.
+              The shift towards electric delivery fleets highlights a growing commitment to sustainable operations.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">3h ago</div>
           </Link>
@@ -61,36 +61,36 @@ export default function FinanceSection() {
               WEALTH MANAGEMENT
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Family offices shift assets from crypto back to sovereign bonds
+              Family offices shift focus to sustainable agriculture
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
-              Ultra-high-net-worth individuals are prioritizing yield and security over volatile digital assets in 2026.
+              High-net-worth individuals are prioritizing long-term yield and food security over volatile assets.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">5h ago</div>
           </Link>
 
           <Link href="/news/details" className="group cursor-pointer border-b border-gray-300 pb-6 mb-6">
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
-              COMMODITIES
+              CARBON MARKETS
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Oil prices slip below ৳70 amid supply glut concerns
+              Carbon credits gain traction in local industries
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
-              OPEC+ struggles to maintain cohesion as member states quietly exceed production quotas.
+              Bangladeshi manufacturers start exploring international carbon markets as a new sustainable revenue stream.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">6h ago</div>
           </Link>
 
           <Link href="/news/details" className="group cursor-pointer flex-1 flex flex-col">
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
-              CURRENCIES
+              BONDS
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Euro strengthens against dollar ahead of ECB rate decision
+              Green Taka bonds attract foreign investment
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
-              Currency traders are betting on a hawkish tone from the European Central Bank despite slowing regional growth.
+              International investors show strong interest in Bangladesh's latest green bond issuance.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-auto">8h ago</div>
           </Link>

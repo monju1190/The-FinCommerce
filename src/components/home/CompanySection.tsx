@@ -4,21 +4,21 @@ import Link from "next/link";
 export default function CompanySection() {
   const companies = [
     {
-      name: "Apple Inc.",
-      title: "Apple unveils next-generation mixed reality headset targeted at enterprise",
-      desc: "Moving beyond consumer entertainment, the tech behemoth aims to revolutionize corporate training and remote collaboration with its ৳4,000 device.",
+      name: "Rahimafrooz Renewable",
+      title: "Leading solar provider expands footprint to rural Bangladesh",
+      desc: "Aiming to connect 1 million more homes, the company continues its drive toward bringing clean energy to off-grid communities.",
       img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop"
     },
     {
-      name: "Tesla",
-      title: "Tesla halts production at Berlin Gigafactory amidst supply chain woes",
-      desc: "A critical shortage of semiconductor components has forced a temporary shutdown, potentially impacting quarterly delivery targets in Europe.",
+      name: "Walton Eco-Tech",
+      title: "Walton announces new line of highly energy-efficient appliances",
+      desc: "The new series promises to significantly reduce household carbon footprints and electricity consumption across the country.",
       img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=800&auto=format&fit=crop"
     },
     {
-      name: "LVMH",
-      title: "Luxury sector faces headwinds as Chinese consumer spending slows",
-      desc: "LVMH reports rare revenue miss in Asia-Pacific, signaling broader challenges for European luxury brands reliant on the region.",
+      name: "Beximco Pharma",
+      title: "Beximco commits to zero-waste manufacturing by 2030",
+      desc: "Setting a new standard for sustainable healthcare in South Asia, the company unveils its comprehensive eco-strategy.",
       img: "https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=800&auto=format&fit=crop"
     }
   ];

@@ -32,7 +32,7 @@ export default function DualGridSection() {
             Dhaka Startups Lead the Charge in E-Waste Management
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
-            A comprehensive look at the escalating tensions and what it means for global markets and diplomatic relations moving forward.
+            A comprehensive look at how local innovators are tackling the growing problem of electronic waste and recycling.
           </p>
           <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
             Yesterday
@@ -110,7 +110,7 @@ export default function DualGridSection() {
             Sundarbans Conservation: New Corporate Pledges Show Promise
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
-            Silicon Valley's latest attempt to merge human consciousness with cloud infrastructure yields surprising results.
+            Local corporations and NGOs team up to restore mangrove ecosystems and protect endangered wildlife.
           </p>
           <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
             Yesterday
@@ -124,7 +124,7 @@ export default function DualGridSection() {
               Hardware
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              Innovating the Future, One Byte at a Time
+              Dhaka Tech Hubs Lead Green Innovation
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               6mo ago
@@ -136,7 +136,7 @@ export default function DualGridSection() {
               Cybersecurity
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              Decoding Innovation for the Digital Age
+              Cybersecurity in Smart Grids
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               8mo ago
@@ -148,7 +148,7 @@ export default function DualGridSection() {
               Media
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              Your Window to the World of Tomorrow
+              Media's Role in Climate Awareness
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               9mo ago

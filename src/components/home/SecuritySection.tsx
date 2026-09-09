@@ -32,10 +32,10 @@ export default function SecuritySection() {
                 The Pulse of Bangladesh's Green Economy and Enterprise
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
-                To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets. Security paradigms are shifting rapidly as remote work becomes the permanent norm.
+                As cyber threats evolve, local enterprises are adopting robust security protocols to protect their green tech infrastructure and smart grids from potential disruptions.
               </p>
               <div className="flex items-center space-x-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
-                <span>By Nisl Nyung</span>
+                <span>By Shaquib Quareshi</span>
                 <span>&bull;</span>
                 <span>9d ago</span>
               </div>
@@ -57,7 +57,7 @@ export default function SecuritySection() {
               Virtual Reality
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              AI and Marketing: Unlocking Customer Insights
+              AI in Wildlife Conservation
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               15d ago
@@ -76,7 +76,7 @@ export default function SecuritySection() {
               Trips
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Eco-Tourism: Traveling Responsibly and Sustainably
+              Sustainable Tourism in Sylhet
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               20d ago
@@ -95,7 +95,7 @@ export default function SecuritySection() {
               AI Powered
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Hidden Gems: Underrated Travel Destinations Around the World
+              Smart Security for Solar Farms
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               23d ago

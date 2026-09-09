@@ -5,26 +5,26 @@ export default function BankingSection() {
   const articles = [
     {
       tag: "CENTRAL BANKS",
-      title: "Federal Reserve signals potential rate cut as inflation cools",
-      desc: "Policymakers hint at a September reduction, ending a prolonged period of aggressive monetary tightening.",
+      title: "Bangladesh Bank Introduces Green Refinance Scheme",
+      desc: "Central bank allocates ৳50 billion to support eco-friendly projects and green industries across the country.",
       time: "2026-08-16"
     },
     {
-      tag: "INVESTMENT BANKING",
-      title: "Goldman Sachs reshuffles leadership in elite advisory unit",
-      desc: "The Wall Street giant promoting a new generation of dealmakers amidst a sluggish M&A market recovery.",
+      tag: "SUSTAINABLE FINANCE",
+      title: "BRAC Bank Champions Green Financing",
+      desc: "BRAC Bank recognized for its outstanding portfolio in financing small-scale renewable energy and recycling initiatives.",
       time: "4h ago"
     },
     {
-      tag: "REGULATION",
-      title: "European regulators probe major banks over Basel III compliance",
-      desc: "New capital requirement rules are forcing institutions to hold billions more in reserves, sparking industry backlash.",
+      tag: "INNOVATION",
+      title: "Standard Chartered Bangladesh Launches Carbon-Neutral Card",
+      desc: "New offering allows customers to offset their carbon footprint with everyday purchases through local afforestation projects.",
       time: "5h ago"
     },
     {
-      tag: "RETAIL-BANKING",
-      title: "Digital-only challengers capture 20% of new checking accounts",
-      desc: "Traditional lenders struggle to retain younger demographics who favor app-based seamless banking experiences.",
+      tag: "FINTECH",
+      title: "bKash Integrates Carbon Footprint Tracker",
+      desc: "Leading mobile financial service introduces a new feature helping users monitor and reduce their daily environmental impact.",
       time: "9h ago"
     }
   ];
