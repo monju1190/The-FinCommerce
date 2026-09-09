@@ -33,23 +33,23 @@ export const magazineData: MagazineSectionData[] = [
     title: "The Nation Reviewed",
     articles: [
       {
-        slug: "algorithm-nation",
-        title: "Green Tech Nation",
-        subtitle: "Social media’s emergence as our primary news source has amplified alt-right grievance and conspiracies, and ended the major party duopoly.",
-        author: "Russell Marks",
+        slug: "holistic-urban-planning",
+        title: "360-Degree Holistic Urban Planning",
+        subtitle: "Bangladesh prioritizes humane, environment-friendly systems over rapid, unplanned construction.",
+        author: "Shaquib Quareshi",
         date: "August 2026",
         category: "Politics",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD2uL1AJ4fWgqC8W1CjI1Yf8ji-5abe3aYsxy7muXhYEjUrL3Eg07JLHKlPjvhiPBff9njqF4LJpKjnrTzyhvfgCict_WF6RUWxCdD_28cTUrKruAg9D5UlhLIj5t7bMO_EmpXz6Eeirk9VjAinbpsmpHC_jTILATtn6aqLxpQOoACbCwEqNn4VdZs3F1Hf-35laWGV79hPMltxFCtBGQEgMS5hz75Uh0tRfTiVy9hHa6EYs0sWaDE",
+        imageUrl: "/generated/green_city_1788939162339.png",
         content: mockContent,
       },
       {
-        slug: "eyre-supply",
-        title: "Sustainable Supply Chains",
-        subtitle: "Even after suffering through the worst floods on record, farmers in Queensland’s Channel Country can’t help but be awed by the beauty of Kati Thanda-Lake Eyre.",
-        author: "Anthony Ham",
+        slug: "combating-plastic-pollution",
+        title: "Combating Plastic Pollution",
+        subtitle: "Government intensifies efforts to curb plastic and polythene pollution with eco-friendly alternatives.",
+        author: "Shaquib Quareshi",
         date: "August 2026",
         category: "Society",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAa-jFYnqbF0bFDGRs7aXz1KUHq4cT-hfeMERis4eJgmO1Rr43ud9J5VMvw8tuVOCnsEqsFO_UztIlMe4nLgMRIdaiybfzgXJv2s4y9C_Ie5p_ajBBVhk7XDby9P4d363TnKwCvpVf4rsPGJnzRp37-co5anVQpqLB0B4rBav4smYfYjmBIJaCOQ38YQb_60Ut8BvIPcVrhLnfYnwFaszzEyss5Ln1JEQdAdL57LacTS267_F13IMw",
+        imageUrl: "/generated/sustainable_agriculture_1788939197015.png",
         content: mockContent,
       }
     ]
@@ -58,23 +58,23 @@ export const magazineData: MagazineSectionData[] = [
     title: "Essays",
     articles: [
       {
-        slug: "the-news-division",
-        title: "The news division",
-        subtitle: "Amid stories of power struggles and personality clashes, what was behind the news director being unceremoniously pushed out?",
-        author: "Sally Neighbour",
+        slug: "sundarbans-conservation",
+        title: "Sundarbans Conservation Pact",
+        subtitle: "Bangladesh and India renew joint efforts for the conservation of the Sundarbans biodiversity.",
+        author: "Shaquib Quareshi",
         date: "August 2026",
         category: "Society",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-jyQaHaq9IyxjuuDd8xUqz6pGQ4vXNg_FssBSZESCv6KGBZsuQ51mdwm7UT695SpTolUC5UDbt8i6FrC7jKk78kBcfyLdwKqN_ouEMiQspO8yZlaVToCMLboy2QNrJql2cviRXES348Ksq5FvOkpcTRbVvBdNYDCyc8Yy9UG4E6bwB4iAvCMTE5q71ipP9xHeGpd7HgMr63mGs5_G-sxJo1PkSTptfcnuudYG1NWscJLcPa64bTw",
+        imageUrl: "/generated/solar_farm_1788939180065.png",
         content: mockContent,
       },
       {
-        slug: "calling-the-shots",
-        title: "Calling the shots",
-        subtitle: "Debate over a new fishing and hunting “super agency” has highlighted the intersection between the lobby and political leaders.",
-        author: "Katherine Wilson",
+        slug: "climate-adaptation",
+        title: "Climate Adaptation Funding",
+        subtitle: "Germany commits €52.5M to support Bangladesh’s climate change adaptation efforts.",
+        author: "Shaquib Quareshi",
         date: "August 2026",
         category: "Politics",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOwusvvQPz_xmI8uZtR07gv2bVn0w1ME6Okp9AQxhkmrFilxHlVZxTxlDhTfPYrYBVH9JHpYMbPhu7uUlMbn0iReYaHpWsME3S7YiVdomewQUR7jnmJxH-9l3InyAusawBA-s6EU0HkqTEQkDQkKUfXCWOcsnSgjaIKfRWnJi9zHJiJpH_rGu_bbf0OlqY2VzSV3QsYi4mn7Aq-hkXyiof1ig9d93JctI40ifvFxdZpWSpgqNe31I",
+        imageUrl: "/generated/green_city_1788939162339.png",
         content: mockContent,
       }
     ]
@@ -83,13 +83,13 @@ export const magazineData: MagazineSectionData[] = [
     title: "Arts and Letters",
     articles: [
       {
-        slug: "when-i-think-of-falling",
-        title: "When I think of falling: Shaun Gladwell and ‘Man on Fire’",
-        subtitle: "Inside the creative process of the renowned video artist, whose latest exhibition is in conversation with Arthur Boyd.",
-        author: "Erik Jensen",
+        slug: "esg-excellence",
+        title: "ESG Excellence in Business",
+        subtitle: "First ESG Excellence Awards recognizes 32 local companies for pioneering sustainability standards.",
+        author: "Shaquib Quareshi",
         date: "August 2026",
         category: "Culture",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBYvLK1xu5fPHzDHLQe4LuNAgeEKWQ4ihAwIYZPopX_Mvianp-FPpetk5AgMyZ6_hc-7b8sZXLqYm_UgXv_BvUTMaUEPwG5XH8aVuXK442LnfSv2pId6GwCJ0pnww1bOHD3Lcb5OBrXs0Ym-34XnWfae97uWTJ0usc_Brl02qi-TGKLXPdKKLI7WRdW85DGDHv9XXSem50szjvUoo_RTdIEqKebOFovGf-NntyKsy7PlbetiTL9qoI",
+        imageUrl: "/generated/solar_farm_1788939180065.png",
         content: mockContent,
       }
     ]
@@ -126,9 +126,9 @@ export const faqs = [
 ];
 
 export const categories = [
-  { slug: "esg", name: "ESG & Responsible Business", description: "Insights into sustainability, corporate strategy, and value-driven business.", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOwusvvQPz_xmI8uZtR07gv2bVn0w1ME6Okp9AQxhkmrFilxHlVZxTxlDhTfPYrYBVH9JHpYMbPhu7uUlMbn0iReYaHpWsME3S7YiVdomewQUR7jnmJxH-9l3InyAusawBA-s6EU0HkqTEQkDQkKUfXCWOcsnSgjaIKfRWnJi9zHJiJpH_rGu_bbf0OlqY2VzSV3QsYi4mn7Aq-hkXyiof1ig9d93JctI40ifvFxdZpWSpgqNe31I" },
-  { slug: "climate", name: "Climate Action", description: "The latest in environmental protection, carbon emissions, and climate action.", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAQd3epbeePAAV2hCAfL8EV336_ncEQecx_luKQnKBYOnhv0wMhnL9jeNo8T5u2qVuhqPQRRxIaGedOuNmfHXW72REDsKN5vEcazwXJfg54GaIoe_NZMb7eRQdHZ3jJPvg3c10n5l47oAQuGARYodChjot8DClM0eLF0dogQjAqQreCzcAJPoa4cIAN8ZJIhKIta1doHbWVz8hW6VeDqUF8wkm-rYFweU4xraFOGDfmDYoryC5BNwo" },
-  { slug: "finance", name: "Green Finance", description: "Deep dives into sustainable finance, blue economy, and investments.", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBYvLK1xu5fPHzDHLQe4LuNAgeEKWQ4ihAwIYZPopX_Mvianp-FPpetk5AgMyZ6_hc-7b8sZXLqYm_UgXv_BvUTMaUEPwG5XH8aVuXK442LnfSv2pId6GwCJ0pnww1bOHD3Lcb5OBrXs0Ym-34XnWfae97uWTJ0usc_Brl02qi-TGKLXPdKKLI7WRdW85DGDHv9XXSem50szjvUoo_RTdIEqKebOFovGf-NntyKsy7PlbetiTL9qoI" },
-  { slug: "society", name: "Society & Culture", description: "Human rights, decent work, and social sustainability.", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-jyQaHaq9IyxjuuDd8xUqz6pGQ4vXNg_FssBSZESCv6KGBZsuQ51mdwm7UT695SpTolUC5UDbt8i6FrC7jKk78kBcfyLdwKqN_ouEMiQspO8yZlaVToCMLboy2QNrJql2cviRXES348Ksq5FvOkpcTRbVvBdNYDCyc8Yy9UG4E6bwB4iAvCMTE5q71ipP9xHeGpd7HgMr63mGs5_G-sxJo1PkSTptfcnuudYG1NWscJLcPa64bTw" },
+  { slug: "esg", name: "ESG & Responsible Business", description: "Insights into sustainability, corporate strategy, and value-driven business.", imageUrl: "/generated/green_city_1788939162339.png" },
+  { slug: "climate", name: "Climate Action", description: "The latest in environmental protection, carbon emissions, and climate action.", imageUrl: "/generated/solar_farm_1788939180065.png" },
+  { slug: "finance", name: "Green Finance", description: "Deep dives into sustainable finance, blue economy, and investments.", imageUrl: "/generated/sustainable_agriculture_1788939197015.png" },
+  { slug: "society", name: "Society & Culture", description: "Human rights, decent work, and social sustainability.", imageUrl: "/generated/green_city_1788939162339.png" },
 ];
 

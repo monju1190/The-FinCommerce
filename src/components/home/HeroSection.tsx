@@ -8,7 +8,7 @@ const slides = [
     tag: "AUGUST 2026 ISSUE",
     title: "Mapping Dhaka's Green Infrastructure",
     desc: "How data transmission networks are achieving near-zero latency through new translucent physical infrastructure.",
-    img: "/magazine cover/1.png",
+    img: "/magazine cover/bg_megazine.png",
     category: "TECHNOLOGY",
     link: "/news/technology-1"
   },
@@ -16,7 +16,7 @@ const slides = [
     tag: "JULY 2026 ISSUE",
     title: "The Pulse of Bangladesh's Green Economy",
     desc: "To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets.",
-    img: "/magazine cover/2.png",
+    img: "/magazine cover/bg_megazine.png",
     category: "ECONOMY",
     link: "/news/business-1"
   },
@@ -24,7 +24,7 @@ const slides = [
     tag: "JUNE 2026 ISSUE",
     title: "Smart Green Homes in Dhaka",
     desc: "Exploring how IoT and AI are revolutionizing consumer interaction with living spaces on a daily basis.",
-    img: "/magazine cover/image.png",
+    img: "/magazine cover/bg_megazine.png",
     category: "INNOVATION",
     link: "/news/technology-2"
   },
@@ -32,7 +32,7 @@ const slides = [
     tag: "MAY 2026 ISSUE",
     title: "Eco-Tourism & Sustainability",
     desc: "New regulations are forcing legacy airlines to offset carbon footprints, creating a booming secondary market.",
-    img: "/magazine cover/image copy.png",
+    img: "/magazine cover/bg_megazine.png",
     category: "ENVIRONMENT",
     link: "/news/world-1"
   }

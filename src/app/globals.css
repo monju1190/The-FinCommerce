@@ -3,9 +3,10 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary-green: #1c1917; /* Warm dark stone to match pink */
+  --color-primary-green: #1a4d2e; /* Warm dark stone to match pink -> Deep pine green */
   --color-primary-light: #44403c;
-  --color-ft-pink: #fff1e5;
+  --color-ft-pink: #c5dfc0; /* Even stronger soft green background */
+
   --font-sans: "Source Serif 4", serif;
   --font-display: "Playfair Display", serif;
 }
@@ -20,7 +21,7 @@
 }
 
 :root {
-  --background: #fff1e5;
+  --background: #c5dfc0; /* Even stronger soft green background */
   --foreground: #111827; /* gray-900 */
 }
 
