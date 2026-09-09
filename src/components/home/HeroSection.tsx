@@ -49,7 +49,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-[#0b101e] relative overflow-hidden shadow-xl border-y border-black/20" data-purpose="hero-slider">
+    <section className="bg-primary-green relative overflow-hidden shadow-xl border-y border-black/20" data-purpose="hero-slider">
       <div className="w-full px-6 md:px-12 flex flex-col justify-center min-h-[500px] lg:min-h-[600px] py-12 lg:py-16">
         <div className="flex flex-col-reverse lg:flex-row items-stretch gap-8 lg:gap-16 relative w-full max-w-[1600px] mx-auto">
           
