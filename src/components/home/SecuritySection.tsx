@@ -21,7 +21,7 @@ export default function SecuritySection() {
               <img
                 alt="Security Main"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYvLK1xu5fPHzDHLQe4LuNAgeEKWQ4ihAwIYZPopX_Mvianp-FPpetk5AgMyZ6_hc-7b8sZXLqYm_UgXv_BvUTMaUEPwG5XH8aVuXK442LnfSv2pId6GwCJ0pnww1bOHD3Lcb5OBrXs0Ym-34XnWfae97uWTJ0usc_Brl02qi-TGKLXPdKKLI7WRdW85DGDHv9XXSem50szjvUoo_RTdIEqKebOFovGf-NntyKsy7PlbetiTL9qoI"
+                src="/images/security.png"
               />
             </div>
             <div className="mt-4">

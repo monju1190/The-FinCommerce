@@ -16,9 +16,9 @@ export default function MagazineSection() {
     }
   };
   const covers = [
-    { month: "August 2026", img: "/magazine cover/bg_megazine.png" },
-    { month: "July 2026", img: "/magazine cover/bg_megazine.png" },
-    { month: "June 2026", img: "/magazine cover/bg_megazine.png" },
+    { month: "August 2026", img: "/magazine cover/m1.png" },
+    { month: "July 2026", img: "/magazine cover/m2.png" },
+    { month: "June 2026", img: "/magazine cover/m3.png" },
     { month: "May 2026", img: "/magazine cover/bg_megazine.png" },
     { month: "April 2026", img: "/magazine cover/bg_megazine.png" },
     { month: "March 2026", img: "/magazine cover/bg_megazine.png" },

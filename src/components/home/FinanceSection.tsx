@@ -21,7 +21,7 @@ export default function FinanceSection() {
               <img
                 alt="Stock Market Trading Floor"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop"
+                src="/images/finance.png"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-3 block">

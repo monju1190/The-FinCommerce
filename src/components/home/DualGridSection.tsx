@@ -22,7 +22,7 @@ export default function DualGridSection() {
             <img
               alt="World News Main"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ko91mT-wSZ9ThhG4QNKxVESvNSnBlEXkfPQuzmSJ_8VbZ_uSPuptpOntY3O_C3u6RdUgMm79EcX2UBhHIXymVwXI4Pbgrs6nMdk_vE52A4c1h4Qw4hIB2bmxfduJWZ7TE5_LRnvGQ2DD-G0_yfbys-9U0NJm4lGPw1fKQ4-fXO_6kKMZmJht1SNS06v5azGP_oAdpbnj-QMBbpVwDJoL74JZdUd23kqkCa2pLRzUfDYmBJO15dM"
+              src="/images/world.png"
             />
           </div>
           <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
@@ -100,7 +100,7 @@ export default function DualGridSection() {
             <img
               alt="Tech Main"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQd3epbeePAAV2hCAfL8EV336_ncEQecx_luKQnKBYOnhv0wMhnL9jeNo8T5u2qVuhqPQRRxIaGedOuNmfHXW72REDsKN5vEcazwXJfg54GaIoe_NZMb7eRQdHZ3jJPvg3c10n5l47oAQuGARYodChjot8DClM0eLF0dogQjAqQreCzcAJPoa4cIAN8ZJIhKIta1doHbWVz8hW6VeDqUF8wkm-rYFweU4xraFOGDfmDYoryC5BNwo"
+              src="/images/technology.png"
             />
           </div>
           <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">

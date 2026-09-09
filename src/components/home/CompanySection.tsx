@@ -7,19 +7,19 @@ export default function CompanySection() {
       name: "Rahimafrooz Renewable",
       title: "Leading solar provider expands footprint to rural Bangladesh",
       desc: "Aiming to connect 1 million more homes, the company continues its drive toward bringing clean energy to off-grid communities.",
-      img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop"
+      img: "/images/company1.png"
     },
     {
       name: "Walton Eco-Tech",
       title: "Walton announces new line of highly energy-efficient appliances",
       desc: "The new series promises to significantly reduce household carbon footprints and electricity consumption across the country.",
-      img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=800&auto=format&fit=crop"
+      img: "/images/comapny2.png"
     },
     {
       name: "Beximco Pharma",
       title: "Beximco commits to zero-waste manufacturing by 2030",
       desc: "Setting a new standard for sustainable healthcare in South Asia, the company unveils its comprehensive eco-strategy.",
-      img: "https://images.unsplash.com/photo-1549439602-43ebca2327af?q=80&w=800&auto=format&fit=crop"
+      img: "/images/company3.png"
     }
   ];
 
