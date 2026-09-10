@@ -13,13 +13,13 @@ export default function CompanySection() {
       name: "Walton Eco-Tech",
       title: "Walton announces new line of highly energy-efficient appliances",
       desc: "The new series promises to significantly reduce household carbon footprints and electricity consumption across the country.",
-      img: "/images/comapny2.png"
+      img: "/images/company2.png"
     },
     {
       name: "Beximco Pharma",
       title: "Beximco commits to zero-waste manufacturing by 2030",
       desc: "Setting a new standard for sustainable healthcare in South Asia, the company unveils its comprehensive eco-strategy.",
-      img: "/images/company3.png"
+      img: "/images/caompany3.png"
     }
   ];
 

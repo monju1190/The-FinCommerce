@@ -90,7 +90,8 @@ export default function MainHeader() {
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
               {/* Dropdown */}
-              <div className="absolute left-1/2 -translate-x-1/2 mt-0 w-48 bg-primary-green border border-white/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+              <div className="absolute left-1/2 -translate-x-1/2 top-[100%] pt-2 w-48 z-50">
+                <div className="bg-primary-green border border-white/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
                 <div className="py-2 flex flex-col text-left">
                   <Link href="/category/esg" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">ESG & Responsible Business</Link>
                   <Link href="/category/climate" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Climate Action</Link>
@@ -98,6 +99,7 @@ export default function MainHeader() {
                   <Link href="/category/society" className="px-4 py-3 hover:bg-white/10 transition-colors">Society & Culture</Link>
                 </div>
               </div>
+            </div>
             </div>
             
             <Link href="/about-us" className="hover:text-gray-300 transition-colors">About Us</Link>

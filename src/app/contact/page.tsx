@@ -21,11 +21,11 @@ export default function ContactPage() {
       </div>
 
       <div className="container mx-auto px-4 md:px-12 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-6xl mx-auto items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-6xl mx-auto items-stretch">
           
           {/* Contact Info (Left Column) */}
-          <div className="space-y-12">
-            <div>
+          <div className="flex flex-col h-full">
+            <div className="mb-12">
               <h2 className="text-3xl font-extrabold mb-8 font-display">Our Offices</h2>
               <div className="space-y-8">
                 <div className="flex items-start space-x-5">
@@ -66,7 +66,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="w-full h-64 bg-gray-200 rounded-2xl overflow-hidden relative">
+            <div className="w-full flex-grow min-h-[16rem] bg-gray-200 rounded-2xl overflow-hidden relative mt-auto">
               {/* Map Placeholder */}
               <img 
                 src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 

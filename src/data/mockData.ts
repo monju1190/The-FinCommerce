@@ -112,7 +112,7 @@ export const recentEditions = [
 ];
 
 export const teamMembers = [
-  { name: "Shaquib Quareshi", role: "Managing Editor", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0J9uHSLTonsRqFS9pJ8doltTrd2J43DVHuh2BPExq_vGQhwcFq1c3xbUE5xkhjpAQ_t_l82rynloPR2bCD91lzxzkNpWeoDF3NoUYMnBT3Olf3wQI4DtzXXWfB9U-TtdTU1NyYAOswwko_bwMmFD9InIaPYssfAmuhkGPibmLSOQi7N7NLfe0J8L7HjqLzCy3WY1I56ObGK9RgaM3ZNcMllrItivGdR_PcDCR0-nlyV4SSF_Xh5g" },
+  { name: "Shaquib Quareshi", role: "Managing Editor", imageUrl: "/editorial board/managingeditor.png" },
   { name: "Marcus Thorne", role: "Senior Editor", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAa-jFYnqbF0bFDGRs7aXz1KUHq4cT-hfeMERis4eJgmO1Rr43ud9J5VMvw8tuVOCnsEqsFO_UztIlMe4nLgMRIdaiybfzgXJv2s4y9C_Ie5p_ajBBVhk7XDby9P4d363TnKwCvpVf4rsPGJnzRp37-co5anVQpqLB0B4rBav4smYfYjmBIJaCOQ38YQb_60Ut8BvIPcVrhLnfYnwFaszzEyss5Ln1JEQdAdL57LacTS267_F13IMw" },
   { name: "Sophia Lin", role: "Creative Director", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD2uL1AJ4fWgqC8W1CjI1Yf8ji-5abe3aYsxy7muXhYEjUrL3Eg07JLHKlPjvhiPBff9njqF4LJpKjnrTzyhvfgCict_WF6RUWxCdD_28cTUrKruAg9D5UlhLIj5t7bMO_EmpXz6Eeirk9VjAinbpsmpHC_jTILATtn6aqLxpQOoACbCwEqNn4VdZs3F1Hf-35laWGV79hPMltxFCtBGQEgMS5hz75Uh0tRfTiVy9hHa6EYs0sWaDE" },
   { name: "Julian Hayes", role: "Political Correspondent", imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuB85si3gY7VxZWBAjItmW72yCRa3GucsFJr32HMbgixqFTxLySWTwZ0l3VRUto0Uymu1ifF-CS5JxEnxs0y1wwiGybB81JcyJWecKtiY5gHWmNfSkkXRxi6ZiLb56i7Pt-9VcQ9i-Aeeoke4oWnQgkP_kWS8l2fi5k_SGdYZ2YCA3aKMe8Djd-wHCjEhKKcgGBWAY5VCLU1FY3ON3V1Se6oYgKVoYCiHfXG2I0rAhUhVIL-guo9FO4" },
