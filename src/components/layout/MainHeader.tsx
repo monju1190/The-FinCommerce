@@ -93,10 +93,10 @@ export default function MainHeader() {
               <div className="absolute left-1/2 -translate-x-1/2 top-[100%] pt-2 w-48 z-50">
                 <div className="bg-primary-green border border-white/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
                 <div className="py-2 flex flex-col text-left">
-                  <Link href="/category/esg" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">ESG & Responsible Business</Link>
-                  <Link href="/category/climate" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Climate Action</Link>
-                  <Link href="/category/finance" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Green Finance</Link>
-                  <Link href="/category/society" className="px-4 py-3 hover:bg-white/10 transition-colors">Society & Culture</Link>
+                  <Link href="/category/business" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Business</Link>
+                  <Link href="/category/finance" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Finance</Link>
+                  <Link href="/category/banking" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Banking</Link>
+                  <Link href="/category/companies" className="px-4 py-3 hover:bg-white/10 transition-colors">Companies</Link>
                 </div>
               </div>
             </div>

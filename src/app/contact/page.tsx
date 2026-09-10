@@ -1,8 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { faqs } from "@/data/mockData";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaChevronDown } from "react-icons/fa";
 
 export default function ContactPage() {
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const [selectedSubject, setSelectedSubject] = useState("General Inquiry");
+  
   return (
     <main className="text-gray-900 min-h-screen pb-24">
       {/* Clean Header */}
@@ -91,7 +95,7 @@ export default function ContactPage() {
                   <label className="block text-sm font-bold text-gray-700 mb-2">First Name</label>
                   <input
                     type="text"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm"
+                    className="w-full bg-white/40 backdrop-blur-md border border-white/60 shadow-inner rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm text-gray-800 placeholder-gray-500"
                     placeholder="Jane"
                   />
                 </div>
@@ -99,7 +103,7 @@ export default function ContactPage() {
                   <label className="block text-sm font-bold text-gray-700 mb-2">Last Name</label>
                   <input
                     type="text"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm"
+                    className="w-full bg-white/40 backdrop-blur-md border border-white/60 shadow-inner rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm text-gray-800 placeholder-gray-500"
                     placeholder="Doe"
                   />
                 </div>
@@ -108,24 +112,38 @@ export default function ContactPage() {
                 <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
                 <input
                   type="email"
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm"
+                  className="w-full bg-white/40 backdrop-blur-md border border-white/60 shadow-inner rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm text-gray-800 placeholder-gray-500"
                   placeholder="jane@example.com"
                 />
               </div>
-              <div>
+              <div className="relative">
                 <label className="block text-sm font-bold text-gray-700 mb-2">Subject</label>
-                <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm text-gray-700">
-                  <option>General Inquiry</option>
-                  <option>Editorial Pitch</option>
-                  <option>Subscription Support</option>
-                  <option>Advertising / Partnerships</option>
-                </select>
+                <div 
+                  onClick={() => setIsSelectOpen(!isSelectOpen)}
+                  className="w-full bg-white/40 backdrop-blur-md border border-white/60 shadow-inner rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all text-sm text-gray-800 cursor-pointer flex justify-between items-center"
+                >
+                  <span>{selectedSubject}</span>
+                  <FaChevronDown className={`transition-transform duration-300 ${isSelectOpen ? 'rotate-180' : ''}`} />
+                </div>
+                {isSelectOpen && (
+                  <div className="absolute top-full mt-2 left-0 w-full bg-white/60 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-xl overflow-hidden z-50">
+                    {["General Inquiry", "Editorial Pitch", "Subscription Support", "Advertising / Partnerships"].map((opt) => (
+                      <div 
+                        key={opt}
+                        onClick={() => { setSelectedSubject(opt); setIsSelectOpen(false); }}
+                        className="px-5 py-3 hover:bg-white/50 cursor-pointer text-sm text-gray-800 transition-colors border-b border-white/20 last:border-0"
+                      >
+                        {opt}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Message</label>
                 <textarea
                   rows={5}
-                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all resize-none text-sm"
+                  className="w-full bg-white/40 backdrop-blur-md border border-white/60 shadow-inner rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[#16a34a] focus:border-transparent transition-all resize-none text-sm text-gray-800 placeholder-gray-500"
                   placeholder="How can we help you?"
                 ></textarea>
               </div>
