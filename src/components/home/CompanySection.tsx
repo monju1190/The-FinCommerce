@@ -40,7 +40,7 @@ export default function CompanySection() {
             <div className="overflow-hidden mb-4 relative w-full aspect-[4/3] border border-gray-200">
               <img
                 alt={company.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter grayscale group-hover:grayscale-0"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 src={company.img}
               />
             </div>

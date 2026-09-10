@@ -47,7 +47,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-lg mb-1">Phone</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      01713039784<br />
+                      +880 17 4225 4805<br />
                       Mon-Fri 9am to 6pm
                     </p>
                   </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form (Right Column) */}
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+          <div className="bg-white/40 backdrop-blur-2xl rounded-3xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/60">
             <h2 className="text-3xl font-extrabold mb-8 font-display">Send us a message</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
