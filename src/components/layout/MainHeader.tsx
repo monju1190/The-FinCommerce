@@ -90,8 +90,8 @@ export default function MainHeader() {
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
               {/* Dropdown */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-[100%] pt-2 w-48 z-50">
-                <div className="bg-primary-green border border-white/10 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 hidden group-hover:block">
+                <div className="bg-primary-green border border-white/10 shadow-xl overflow-hidden">
                 <div className="py-2 flex flex-col text-left">
                   <Link href="/category/business" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Business</Link>
                   <Link href="/category/finance" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Finance</Link>
