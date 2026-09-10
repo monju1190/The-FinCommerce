@@ -15,6 +15,7 @@ export default function MainHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isNewsDropdownOpen, setIsNewsDropdownOpen] = useState(false);
   const router = useRouter();
 
   const handleSearch = (e: React.FormEvent) => {
@@ -84,22 +85,24 @@ export default function MainHeader() {
             <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
             <Link href="/magazine" className="hover:text-gray-300 transition-colors">Magazine</Link>
             
-            <div className="relative group">
+            <div className="relative" onMouseEnter={() => setIsNewsDropdownOpen(true)} onMouseLeave={() => setIsNewsDropdownOpen(false)}>
               <Link href="/news" className="flex items-center hover:text-gray-300 transition-colors pb-2 pt-2">
                 News
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
               {/* Dropdown */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 hidden group-hover:block">
-                <div className="bg-primary-green border border-white/10 shadow-xl overflow-hidden">
-                <div className="py-2 flex flex-col text-left">
-                  <Link href="/category/business" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Business</Link>
-                  <Link href="/category/finance" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Finance</Link>
-                  <Link href="/category/banking" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Banking</Link>
-                  <Link href="/category/companies" className="px-4 py-3 hover:bg-white/10 transition-colors">Companies</Link>
+              {isNewsDropdownOpen && (
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 block">
+                  <div className="bg-primary-green border border-white/10 shadow-xl overflow-hidden">
+                    <div className="py-2 flex flex-col text-left">
+                      <Link href="/category/business" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Business</Link>
+                      <Link href="/category/finance" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Finance</Link>
+                      <Link href="/category/banking" className="px-4 py-3 hover:bg-white/10 border-b border-white/5 transition-colors">Banking</Link>
+                      <Link href="/category/companies" className="px-4 py-3 hover:bg-white/10 transition-colors">Companies</Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              )}
             </div>
             
             <Link href="/about-us" className="hover:text-gray-300 transition-colors">About Us</Link>
