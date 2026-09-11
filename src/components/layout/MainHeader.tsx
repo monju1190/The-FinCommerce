@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FaTwitter, FaLinkedinIn, FaSpotify, FaFacebookF } from "react-icons/fa";
 import { Playfair_Display_SC } from "next/font/google";
@@ -32,7 +33,7 @@ export default function MainHeader() {
     <>
       {/* Masthead (at the very top, before header) */}
       <div className="w-full text-center pt-6 pb-4 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative overflow-hidden">
-        <img src="/logo.png" alt="The Sustainability Voice" className="h-16 sm:h-20 md:h-28 lg:h-32 object-contain select-none pb-2 inline-block opacity-90 mix-blend-multiply" />
+        <Image src="/logo.png" alt="The Sustainability Voice" width={400} height={128} priority className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto object-contain select-none pb-2 inline-block opacity-90 mix-blend-multiply" />
         <div className="w-full max-w-4xl border-t border-gray-400 mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-600 font-sans">
           <span>A Quarterly Magazine</span>
           <span>On Sustainability & ESG</span>

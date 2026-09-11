@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 
 const slides = [
@@ -122,10 +123,13 @@ export default function HeroSection() {
                     idx === activeSlide ? "opacity-100 z-20" : "opacity-0 z-0"
                   }`}
                 >
-                  <img
+                  <Image
                     alt={slide.title}
                     src={slide.img}
-                    className={`w-full h-full object-cover transition-transform duration-[10000ms] ${
+                    fill
+                    priority={idx === 0}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className={`object-cover transition-transform duration-[10000ms] ${
                       idx === activeSlide ? "scale-110" : "scale-100"
                     }`}
                   />
