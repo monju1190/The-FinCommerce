@@ -32,7 +32,7 @@ const slides = [
   {
     tag: "MAY 2026 ISSUE",
     title: "Eco-Tourism & Sustainability",
-    desc: "New regulations are forcing legacy airlines to offset carbon footprints, creating a booming secondary market.",
+    desc: "New regulations are forcing legacy airlines to offset carbon footprints, creating a booming market.",
     img: "/magazine cover/bg_megazine.png",
     category: "ENVIRONMENT",
     link: "/news/world-1"
@@ -53,15 +53,14 @@ export default function HeroSection() {
     <section className="bg-primary-green relative overflow-hidden shadow-xl border-y border-black/20" data-purpose="hero-slider">
       <div className="w-full px-6 md:px-12 flex flex-col justify-center min-h-[500px] lg:min-h-[600px] py-12 lg:py-16">
         <div className="flex flex-col-reverse lg:flex-row items-stretch gap-8 lg:gap-16 relative w-full max-w-[1600px] mx-auto">
-          
+
           {/* Left Content */}
           <div className="flex-1 w-full relative z-10 flex flex-col justify-center">
             {slides.map((slide, idx) => (
-              <div 
+              <div
                 key={idx}
-                className={`transition-all duration-700 absolute inset-0 flex flex-col justify-center ${
-                  idx === activeSlide ? "opacity-100 translate-y-0 z-20" : "opacity-0 translate-y-4 z-0 pointer-events-none"
-                }`}
+                className={`transition-all duration-700 absolute inset-0 flex flex-col justify-center ${idx === activeSlide ? "opacity-100 translate-y-0 z-20" : "opacity-0 translate-y-4 z-0 pointer-events-none"
+                  }`}
               >
                 {/* Tag */}
                 <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1 lg:py-1.5 mb-3 lg:mb-6 w-fit border border-white/10 backdrop-blur-sm">
@@ -105,7 +104,7 @@ export default function HeroSection() {
                 <span>0{activeSlide + 1} / 0{slides.length}</span>
               </div>
               <div className="w-full h-0.5 bg-white/10 rounded-full overflow-hidden">
-                <div 
+                <div
                   className="h-full bg-[#d1f0ff] transition-all duration-500 ease-out"
                   style={{ width: `${((activeSlide + 1) / slides.length) * 100}%` }}
                 ></div>
@@ -117,11 +116,10 @@ export default function HeroSection() {
           <div className="w-full lg:w-1/2 relative z-10 flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
             <div className="relative w-full max-w-[350px] lg:max-w-[450px] aspect-[3/4] overflow-hidden shadow-2xl border border-white/5 bg-[#121826]">
               {slides.map((slide, idx) => (
-                <div 
+                <div
                   key={idx}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    idx === activeSlide ? "opacity-100 z-20" : "opacity-0 z-0"
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${idx === activeSlide ? "opacity-100 z-20" : "opacity-0 z-0"
+                    }`}
                 >
                   <Image
                     alt={slide.title}
@@ -129,12 +127,11 @@ export default function HeroSection() {
                     fill
                     priority={idx === 0}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className={`object-cover transition-transform duration-[10000ms] ${
-                      idx === activeSlide ? "scale-110" : "scale-100"
-                    }`}
+                    className={`object-cover transition-transform duration-[10000ms] ${idx === activeSlide ? "scale-110" : "scale-100"
+                      }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  
+
                   {/* Category Pill */}
                   <div className="absolute bottom-6 left-6">
                     <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
