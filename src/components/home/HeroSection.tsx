@@ -23,7 +23,7 @@ const slides = [
   },
   {
     tag: "JUNE 2026 ISSUE",
-    title: "Smart Green Homes in Dhaka",
+    title: "Smart Green Homes in Dhaka City",
     desc: "Exploring how IoT and AI are revolutionizing consumer interaction with living spaces on a daily basis.",
     img: "/magazine cover/m3.png",
     category: "INNOVATION",
