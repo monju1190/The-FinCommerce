@@ -15,7 +15,7 @@ const slides = [
   },
   {
     tag: "JULY 2026 ISSUE",
-    title: "The Pulse of Bangladesh's Green Economy",
+    title: "The Pulse of country's Green Economy",
     desc: "To spread the word, the company embarked on a mass marketing drive, TV campaigns launched in the platform's key markets.",
     img: "/magazine cover/m2.png",
     category: "ECONOMY",
