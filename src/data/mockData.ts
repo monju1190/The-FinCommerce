@@ -45,7 +45,7 @@ export const magazineData: MagazineSectionData[] = [
       {
         slug: "combating-plastic-pollution",
         title: "Combating Plastic Pollution",
-        subtitle: "Government intensifies efforts to curb plastic and polythene pollution with eco-friendly alternatives.",
+        subtitle: "Govt. intensifies efforts to curb plastic and polythene pollution with eco-friendly alternatives.",
         author: "Shaquib Quareshi",
         date: "August 2026",
         category: "Society",
