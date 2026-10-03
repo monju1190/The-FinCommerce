@@ -84,7 +84,7 @@ export const magazineData: MagazineSectionData[] = [
     articles: [
       {
         slug: "esg-excellence",
-        title: "ESG Excellence in Business sector",
+        title: "ESG Excellence in Business sector in Bangladesh",
         subtitle: "First ESG Excellence Awards recognizes 32 local companies for pioneering sustainability standards.",
         author: "Shaquib Quareshi",
         date: "August 2026",
