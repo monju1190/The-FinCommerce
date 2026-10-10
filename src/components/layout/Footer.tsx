@@ -83,6 +83,17 @@ export default function Footer() {
             Championing ESG integration across business and governance by delivering high-impact journalism and evidence-based policy analysis.
           </p>
 
+          <a href="https://www.siteliftstudio.com/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 hover:border-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <span className="text-gray-400 text-xs font-medium uppercase tracking-wider group-hover:text-gray-300 transition-colors">Developed By</span>
+            <div className="w-px h-4 bg-white/20"></div>
+            <span className="text-white font-bold tracking-wide flex items-center gap-1.5">
+              Sitelift Studio
+              <svg className="w-3.5 h-3.5 text-white/50 group-hover:text-white transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </span>
+          </a>
+
           <div className="flex flex-wrap gap-8 text-white text-xs font-semibold uppercase tracking-wider">
             <Link href="/terms" className="hover:text-gray-300 transition-colors">
               Terms & Conditions
