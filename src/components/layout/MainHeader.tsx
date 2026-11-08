@@ -89,7 +89,7 @@ export default function MainHeader() {
             className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto object-contain select-none pb-2 inline-block opacity-90 mix-blend-multiply"
           />
         </Link>
-        <div className="w-full max-w-4xl border-t border-[#dfcfc2] mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-700 font-sans">
+        <div className="w-full max-w-4xl border-t-2 border-primary-green mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-800 font-sans">
           <span>A Quarterly Magazine</span>
           <span>October–December 2026 • Issue 1, Vol. 1</span>
           <span>For Future-Proof Business</span>
