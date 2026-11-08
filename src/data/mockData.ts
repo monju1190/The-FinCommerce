@@ -533,11 +533,32 @@ export const recentEditions: MagazineEdition[] = [
     "issueNumber": "Issue 1, Volume 1 (Maiden Issue)",
     "registrationNo": "Registration No. 48/2026",
     "subtitle": "Waterlogging in Dhaka: Justification for Integrated Planning Approach",
-    "imageUrl": "/magazine/oct-dec/cover.jpg",
+    "imageUrl": "/magazine/oct-dec/tsv-oct-dec-2026-cover.jpg",
     "pdfPreviewUrl": "https://drive.google.com/file/d/1Pzc1wr1ZvIEprpthOiMDiO_ovx__8ecC/preview",
     "pdfViewUrl": "https://drive.google.com/file/d/1Pzc1wr1ZvIEprpthOiMDiO_ovx__8ecC/view?usp=drivesdk",
     "pdfDownloadUrl": "https://drive.google.com/uc?export=download&id=1Pzc1wr1ZvIEprpthOiMDiO_ovx__8ecC"
   }
+];
+
+export interface MagazineAd {
+  id: string;
+  page: number;
+  imageUrl: string;
+  title: string;
+  tag: string;
+  edition: string;
+}
+
+export const magazineAds: MagazineAd[] = [
+  { id: "ad-p1", page: 1, imageUrl: "/magazine/oct-dec/ads/ad_page_1.jpg", title: "Inside Front Cover Partner", tag: "Premium Partner", edition: "October–December 2026" },
+  { id: "ad-p31", page: 31, imageUrl: "/magazine/oct-dec/ads/ad_page_31.jpg", title: "Standards & Governance Partner", tag: "Featured Brand", edition: "October–December 2026" },
+  { id: "ad-p41", page: 41, imageUrl: "/magazine/oct-dec/ads/ad_page_41.jpg", title: "Sustainable Finance Partner", tag: "Strategic Sponsor", edition: "October–December 2026" },
+  { id: "ad-p47", page: 47, imageUrl: "/magazine/oct-dec/ads/ad_page_47.jpg", title: "Corporate ESG Playbook Partner", tag: "Corporate Leader", edition: "October–December 2026" },
+  { id: "ad-p65", page: 65, imageUrl: "/magazine/oct-dec/ads/ad_page_65.jpg", title: "Green Manufacturing & Operations Partner", tag: "Industry Partner", edition: "October–December 2026" },
+  { id: "ad-p73", page: 73, imageUrl: "/magazine/oct-dec/ads/ad_page_73.jpg", title: "Heritage & Ecosystems Partner", tag: "Culture Sponsor", edition: "October–December 2026" },
+  { id: "ad-p76", page: 76, imageUrl: "/magazine/oct-dec/ads/ad_page_76.jpg", title: "Global Outlook Partner", tag: "International Sponsor", edition: "October–December 2026" },
+  { id: "ad-p117", page: 117, imageUrl: "/magazine/oct-dec/ads/ad_page_117.jpg", title: "Health & Wellbeing Partner", tag: "Healthcare Partner", edition: "October–December 2026" },
+  { id: "ad-p133", page: 133, imageUrl: "/magazine/oct-dec/ads/ad_page_133.jpg", title: "Bilateral Trade & Excellence Partner", tag: "Honored Partner", edition: "October–December 2026" }
 ];
 
 export const teamMembers = [

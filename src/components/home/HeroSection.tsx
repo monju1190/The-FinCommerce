@@ -10,7 +10,7 @@ const slides = [
     tag: "OCTOBER–DECEMBER 2026 • COVER STORY",
     title: "Waterlogging in Dhaka: Integrated Management Required",
     desc: "Waterlogging is not merely a shortage of drains or pumps; it is a citywide hydrological and urban-planning challenge requiring a catchment-based master plan.",
-    img: "/magazine/oct-dec/cover.jpg",
+    img: "/magazine/oct-dec/tsv-oct-dec-2026-cover.jpg",
     category: "COVER STORY",
     link: "/news/waterlogging-in-dhaka-integrated-management"
   },
@@ -152,7 +152,7 @@ export default function HeroSection() {
 
           {/* Right Image Card */}
           <div className="w-full lg:w-1/2 relative z-10 flex justify-center lg:justify-end items-center">
-            <div className="relative w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[430px] aspect-[1238/1620] overflow-hidden rounded-lg shadow-2xl border border-white/15 bg-[#0b101e]">
+            <div className="relative w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[430px] aspect-[1238/1620] overflow-hidden rounded-lg shadow-2xl border border-white/15 bg-[#0b101e]">
               {slides.map((slide, idx) => (
                 <div
                   key={idx}

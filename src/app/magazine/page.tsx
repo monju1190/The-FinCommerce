@@ -1,11 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { recentEditions, magazineData, magazinePdfLinks } from "@/data/mockData";
-import { FaBookOpen, FaDownload, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
+import { recentEditions, magazineData, magazinePdfLinks, magazineAds, MagazineAd } from "@/data/mockData";
+import { FaBookOpen, FaDownload, FaExternalLinkAlt, FaArrowRight, FaExpand, FaTimes } from "react-icons/fa";
 
 export default function MagazineArchivePage() {
   const [showLiveReader, setShowLiveReader] = useState(false);
+  const [selectedAd, setSelectedAd] = useState<MagazineAd | null>(null);
   const currentIssue = recentEditions[0];
 
   return (
@@ -203,6 +204,84 @@ export default function MagazineArchivePage() {
               </section>
             ))}
           </div>
+
+          {/* Official Issue Advertisers & Commercial Partners Showcase */}
+          <div className="mt-20 pt-12 border-t-2 border-primary-green">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+              <div>
+                <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest block mb-2">
+                  Official Issue Advertisers & Commercial Partners
+                </span>
+                <h3 className="text-3xl md:text-4xl font-extrabold font-display text-gray-900">
+                  Featured Advertisements in Print
+                </h3>
+              </div>
+              <p className="text-gray-600 text-xs sm:text-sm max-w-md font-sans">
+                Full-page commercial partners, institutional sponsors, and corporate brand advertisements appearing across the October–December 2026 maiden issue.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+              {magazineAds.map((ad, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setSelectedAd(ad)}
+                  className="group bg-[#f8ebe3] p-3 sm:p-4 rounded-2xl border border-[#dfcfc2] hover:border-primary-green hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between"
+                >
+                  <div className="overflow-hidden rounded-xl border border-[#d2c0b2] bg-white aspect-[3/4] mb-3 relative">
+                    <img
+                      src={ad.imageUrl}
+                      alt={ad.title}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1 backdrop-blur-2xs">
+                      <FaExpand size={12} />
+                      <span>View Ad</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-wider text-[#16a34a] mb-1">
+                      <span>{ad.tag}</span>
+                      <span className="text-gray-500 font-bold">P.{ad.page}</span>
+                    </div>
+                    <p className="text-xs font-bold font-display text-gray-900 line-clamp-1 group-hover:text-primary-green transition-colors">
+                      {ad.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Ad Modal */}
+          {selectedAd && (
+            <div
+              onClick={() => setSelectedAd(null)}
+              className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8 cursor-pointer"
+            >
+              <div
+                onClick={(e) => e.stopPropagation()}
+                className="relative max-w-3xl max-h-[92vh] bg-white rounded-2xl p-3 sm:p-5 shadow-2xl flex flex-col"
+              >
+                <button
+                  onClick={() => setSelectedAd(null)}
+                  className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center shadow-lg hover:bg-gray-700 transition-colors cursor-pointer z-10"
+                  aria-label="Close"
+                >
+                  <FaTimes size={14} />
+                </button>
+                <img
+                  src={selectedAd.imageUrl}
+                  alt={selectedAd.title}
+                  className="w-full h-auto max-h-[82vh] object-contain mx-auto rounded-lg"
+                />
+                <div className="pt-3 text-center text-xs font-bold text-gray-700">
+                  {selectedAd.title} • October–December 2026 Print Edition (Page {selectedAd.page})
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </main>

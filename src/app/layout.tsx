@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MainHeader from "@/components/layout/MainHeader";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "The Sustainability Voice - Environment & Climate Action",
@@ -21,6 +22,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

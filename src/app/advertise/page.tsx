@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHandshake, FaBullhorn, FaChartLine, FaRegStar, FaBookOpen } from "react-icons/fa";
+import { magazineAds } from "@/data/mockData";
 
 export default function AdvertisePage() {
   return (
@@ -154,6 +155,46 @@ export default function AdvertisePage() {
                 <li>Corporate Profile</li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* Real Print Placements from Maiden Issue */}
+        <section className="max-w-6xl mx-auto pt-8 border-t border-gray-300">
+          <div className="text-center mb-12">
+            <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest block mb-2">
+              Publication Proof of Quality
+            </span>
+            <h2 className="text-3xl font-extrabold font-display text-gray-900 mb-4">
+              Featured Advertisements in Print Edition
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+              Sample commercial placements and institutional sponsor positions from the October–December 2026 issue.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            {magazineAds.slice(0, 8).map((ad, idx) => (
+              <div
+                key={idx}
+                className="bg-[#f8ebe3] p-3 sm:p-4 rounded-2xl border border-[#dfcfc2] shadow-sm flex flex-col justify-between"
+              >
+                <div className="overflow-hidden rounded-xl border border-[#d2c0b2] bg-white aspect-[3/4] mb-3 relative">
+                  <img
+                    src={ad.imageUrl}
+                    alt={ad.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-black uppercase tracking-wider text-[#16a34a] block mb-0.5">
+                    Print Page {ad.page}
+                  </span>
+                  <p className="text-xs font-bold font-display text-gray-900 truncate">
+                    {ad.title}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

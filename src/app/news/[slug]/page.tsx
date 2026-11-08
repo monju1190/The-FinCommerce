@@ -3,6 +3,7 @@ import { magazineData, magazinePdfLinks, recentEditions } from "@/data/mockData"
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaBookOpen, FaDownload } from "react-icons/fa";
+import MagazineAdBanner from "@/components/shared/MagazineAdBanner";
 
 export default async function NewsPage({
   params,
@@ -153,6 +154,9 @@ export default async function NewsPage({
               </a>
             </div>
           </div>
+
+          {/* Sponsored Partner from Print Edition */}
+          <MagazineAdBanner variant="sidebar" adPage={47} />
 
           {/* Related Stories */}
           <div className="bg-[#fff8f3] p-6 rounded-2xl border border-[#dfcfc2] shadow-sm">
