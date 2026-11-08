@@ -26,7 +26,7 @@ export default function SecuritySection() {
               <img
                 alt="A Suffocated Buriganga"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="/magazine/oct-dec/media/OK_Bangladesh_River_Without_Oxygen_Sustainability_/image5.jpg"
+                src="/magazine/oct-dec/pdf-images/p25_img2_2370x1550.jpeg"
               />
             </div>
             <div className="mt-4">
@@ -54,11 +54,11 @@ export default function SecuritySection() {
             href="/news/the-deltas-edge-ecological-balance-wildlife-human-survival"
             className="group cursor-pointer pb-6 mb-6 border-b border-gray-300"
           >
-            <div className="overflow-hidden mb-3 relative w-full aspect-[16/10] bg-gray-100 rounded-sm">
+            <div className="overflow-hidden mb-3 relative w-full aspect-[16/10] bg-gray-900 rounded-sm">
               <img
                 alt="The Delta's Edge"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src="/magazine/oct-dec/pdf-images/p127_img1_2475x1277.jpeg"
+                src="/magazine/oct-dec/pdf-images/p126_img1_2100x1172.jpeg"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
@@ -76,11 +76,11 @@ export default function SecuritySection() {
             href="/news/the-kingfishers-of-bangladesh-twelve-species"
             className="group cursor-pointer pb-6 mb-6 border-b border-gray-300"
           >
-            <div className="overflow-hidden mb-3 relative w-full aspect-[16/10] bg-gray-100 rounded-sm">
+            <div className="overflow-hidden mb-3 relative w-full aspect-[16/10] bg-gray-900 rounded-sm">
               <img
                 alt="The Kingfishers of Bangladesh"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src="/magazine/oct-dec/pdf-images/p130_img3_560x370.jpeg"
+                src="/magazine/oct-dec/pdf-images/p128_img1_963x1035.jpeg"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">

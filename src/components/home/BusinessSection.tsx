@@ -22,11 +22,11 @@ export default function BusinessSection() {
             href="/news/beyond-the-plaque-green-certification-to-green-operations"
             className="group cursor-pointer flex flex-col h-full"
           >
-            <div className="overflow-hidden mb-4 relative w-full flex-1 min-h-[260px] sm:min-h-[360px] lg:min-h-[400px] bg-gray-100 rounded-sm">
+            <div className="overflow-hidden mb-4 relative w-full flex-1 min-h-[260px] sm:min-h-[360px] lg:min-h-[400px] bg-gray-900 rounded-sm">
               <img
                 alt="Beyond the Plaque: LEED Factories in Bangladesh"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="/magazine/oct-dec/pdf-images/p98_img1_2084x1018.jpeg"
+                src="/magazine/oct-dec/pdf-images/p60_img1_1376x768.jpeg"
               />
             </div>
             <div className="mt-4">

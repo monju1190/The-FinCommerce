@@ -53,7 +53,7 @@ export default async function CategoryArchivePage({
   const categoryArticles = [...primaryArticles, ...secondaryArticles];
 
   return (
-    <main className="bg-white text-gray-900 min-h-screen">
+    <main className="bg-[var(--color-ft-pink)] text-gray-900 min-h-screen">
       {/* Category Hero */}
       <div className="relative h-[42vh] min-h-[320px] flex items-center justify-center">
         <img
@@ -110,9 +110,9 @@ export default async function CategoryArchivePage({
               <Link
                 href={`/news/${article.slug}`}
                 key={idx}
-                className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all"
+                className="group flex flex-col bg-[#fff8f3] rounded-2xl overflow-hidden border border-[#dfcfc2] shadow-sm hover:shadow-xl transition-all"
               >
-                <div className="overflow-hidden h-60 relative">
+                <div className="overflow-hidden h-60 relative bg-gray-900">
                   <img
                     src={article.imageUrl}
                     alt={article.title}
@@ -123,14 +123,14 @@ export default async function CategoryArchivePage({
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors">
+                  <h3 className="text-xl font-bold font-display mb-3 leading-snug group-hover:text-primary-green transition-colors text-gray-900">
                     {article.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">
+                  <p className="text-gray-700 text-sm mb-4 line-clamp-3 flex-1 font-display leading-relaxed">
                     {article.subtitle}
                   </p>
-                  <div className="flex items-center justify-between text-xs font-bold text-gray-400 pt-4 border-t border-gray-100">
-                    <span className="text-gray-700 truncate max-w-[65%]">
+                  <div className="flex items-center justify-between text-xs font-bold text-gray-500 pt-4 border-t border-[#dfcfc2]">
+                    <span className="text-gray-800 truncate max-w-[65%]">
                       {article.author}
                     </span>
                     <span>{article.date}</span>

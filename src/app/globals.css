@@ -3,9 +3,9 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary-green: #1a4d2e; /* Warm dark stone to match pink -> Deep pine green */
-  --color-primary-light: #44403c;
-  --color-ft-pink: #c5dfc0; /* Even stronger soft green background */
+  --color-primary-green: #1a4d2e; /* Deep pine forest green */
+  --color-primary-light: #2d6a4f;
+  --color-ft-pink: #faede5; /* Authentic newspaper creamy pink broadsheet background */
 
   --font-sans: "Source Serif 4", serif;
   --font-display: "Playfair Display", serif;
@@ -21,8 +21,8 @@
 }
 
 :root {
-  --background: #c5dfc0; /* Even stronger soft green background */
-  --foreground: #111827; /* gray-900 */
+  --background: #faede5; /* Authentic newspaper creamy pink tone */
+  --foreground: #111827; /* Deep printer's ink black */
 }
 
 body {

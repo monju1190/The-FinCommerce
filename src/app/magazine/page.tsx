@@ -9,27 +9,27 @@ export default function MagazineArchivePage() {
   const currentIssue = recentEditions[0];
 
   return (
-    <main className="bg-gray-50 text-gray-900 min-h-screen pt-12 pb-24">
+    <main className="bg-[var(--color-ft-pink)] text-gray-900 min-h-screen pt-12 pb-24">
       <div className="container mx-auto px-4 md:px-12">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-3 block">
+          <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest mb-3 block">
             The Sustainability Voice • Digital Edition
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 font-display tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 font-display tracking-tight text-gray-900">
             {currentIssue.month}
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-700 font-display">
             {currentIssue.issueNumber} • {currentIssue.registrationNo}
           </p>
         </div>
 
         {/* Featured Maiden Issue Showcase */}
-        <div className="bg-white rounded-[2rem] p-6 md:p-12 shadow-xl border border-gray-100 mb-16">
+        <div className="bg-[#f8ebe3] rounded-[2rem] p-6 md:p-12 shadow-sm border border-[#dfcfc2] mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Cover Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-[#0b101e] group">
+              <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-[#d2c0b2] bg-[#0b101e] group">
                 <img
                   src={currentIssue.imageUrl}
                   alt={currentIssue.month}
@@ -48,7 +48,7 @@ export default function MagazineArchivePage() {
                 {currentIssue.subtitle}
               </h2>
 
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed font-display">
                 Explore the inaugural quarterly edition of <strong>The Sustainability Voice</strong>—featuring 19 sections and 33 in-depth articles on Dhaka&apos;s integrated stormwater master plan, Bangladesh Bank&apos;s decarbonisation financing, the Carbon Corridor, HREDD export readiness, LEED manufacturing operations, sustainable agriculture, and delta wildlife conservation.
               </p>
 
@@ -56,7 +56,7 @@ export default function MagazineArchivePage() {
               <div className="flex flex-wrap gap-4 pt-2">
                 <button
                   onClick={() => setShowLiveReader(!showLiveReader)}
-                  className="flex items-center space-x-3 bg-primary-green text-white px-7 py-4 rounded-xl font-bold hover:bg-primary-light transition-all shadow-lg cursor-pointer"
+                  className="flex items-center space-x-3 bg-primary-green text-white px-7 py-4 rounded-xl font-bold hover:bg-primary-light transition-all shadow-lg cursor-pointer text-xs uppercase tracking-wider"
                 >
                   <FaBookOpen />
                   <span>{showLiveReader ? "Hide Live PDF Reader" : "Live Read Full Magazine"}</span>
@@ -66,7 +66,7 @@ export default function MagazineArchivePage() {
                   href={magazinePdfLinks.downloadUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-3 bg-gray-900 text-white px-7 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all shadow-lg"
+                  className="flex items-center space-x-3 bg-gray-900 text-white px-7 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all shadow-lg text-xs uppercase tracking-wider"
                 >
                   <FaDownload />
                   <span>Download Soft Copy (PDF)</span>
@@ -76,14 +76,14 @@ export default function MagazineArchivePage() {
                   href={magazinePdfLinks.viewUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 bg-gray-100 text-gray-800 px-5 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all border border-gray-200"
+                  className="flex items-center space-x-2 bg-[#fff8f3] text-gray-800 px-5 py-4 rounded-xl font-bold hover:bg-white transition-all border border-[#dfcfc2] text-xs uppercase tracking-wider"
                 >
                   <FaExternalLinkAlt size={14} />
                   <span>Open in Google Drive</span>
                 </a>
               </div>
 
-              <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-6 text-xs font-bold uppercase tracking-wider text-gray-500">
+              <div className="pt-4 border-t border-[#dfcfc2] flex flex-wrap gap-6 text-xs font-bold uppercase tracking-wider text-gray-600">
                 <span>Managing Editor: Shaquib Quoreshi</span>
                 <span>•</span>
                 <span>Editor & Publisher: Md. Nazrul Islam Chowdhury</span>
@@ -154,15 +154,15 @@ export default function MagazineArchivePage() {
 
           <div className="space-y-16">
             {magazineData.map((section, idx) => (
-              <section key={idx} className="bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100">
-                <div className="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+              <section key={idx} className="bg-[#f8ebe3] rounded-3xl p-6 md:p-10 shadow-sm border border-[#dfcfc2]">
+                <div className="flex justify-between items-center mb-8 border-b border-[#dfcfc2] pb-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 rounded-full bg-primary-green"></div>
                     <h3 className="text-2xl md:text-3xl font-bold font-display text-gray-900">
                       {section.title}
                     </h3>
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-600">
                     {section.articles.length} {section.articles.length === 1 ? "Article" : "Articles"}
                   </span>
                 </div>
@@ -172,10 +172,10 @@ export default function MagazineArchivePage() {
                     <Link
                       href={`/news/${article.slug}`}
                       key={articleIdx}
-                      className="group flex flex-col sm:flex-row sm:items-center gap-6 bg-gray-50/70 hover:bg-white rounded-2xl p-4 hover:shadow-xl transition-all border border-gray-100"
+                      className="group flex flex-col sm:flex-row sm:items-center gap-6 bg-[#fff8f3] hover:bg-white rounded-2xl p-4 hover:shadow-xl transition-all border border-[#dfcfc2]"
                     >
                       <div className="sm:w-2/5 flex-shrink-0">
-                        <div className="rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[4/3] w-full relative bg-gray-100">
+                        <div className="rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[4/3] w-full relative bg-gray-900 border border-[#dfcfc2]">
                           <img
                             src={article.imageUrl}
                             alt={article.title}
@@ -184,16 +184,16 @@ export default function MagazineArchivePage() {
                         </div>
                       </div>
                       <div className="sm:w-3/5 flex flex-col justify-center">
-                        <span className="text-primary-green text-xs font-bold uppercase mb-2 tracking-wider">
+                        <span className="text-[#16a34a] text-xs font-black uppercase mb-2 tracking-wider">
                           {article.category}
                         </span>
-                        <h4 className="text-lg md:text-xl font-bold mb-2 leading-snug group-hover:text-primary-green transition-colors font-display">
+                        <h4 className="text-lg md:text-xl font-bold mb-2 leading-snug group-hover:text-primary-green transition-colors font-display text-gray-900">
                           {article.title}
                         </h4>
-                        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                        <p className="text-gray-700 text-sm mb-4 line-clamp-3 font-display leading-relaxed">
                           {article.subtitle}
                         </p>
-                        <p className="text-xs font-bold text-gray-800 mt-auto">
+                        <p className="text-xs font-bold text-gray-800 mt-auto font-display">
                           By {article.author}
                         </p>
                       </div>

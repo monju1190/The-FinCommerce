@@ -26,13 +26,13 @@ export default function MagazineSection() {
         </Link>
       </div>
 
-      <div className="bg-gray-50 border border-gray-200 p-6 md:p-10">
+      <div className="bg-[#f8ebe3] border border-[#dfcfc2] rounded-2xl p-6 md:p-10 shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left: Official Cover */}
           <div className="lg:col-span-4 flex flex-col items-center">
             <Link
               href={`/magazine/${currentIssue.slug}`}
-              className="group block w-full max-w-[310px] overflow-hidden border border-gray-300 shadow-xl bg-[#0b101e] rounded-sm"
+              className="group block w-full max-w-[310px] overflow-hidden border border-[#d2c0b2] shadow-xl bg-[#0b101e] rounded-sm"
             >
               <img
                 alt={`Magazine Cover ${currentIssue.month}`}
@@ -90,8 +90,8 @@ export default function MagazineSection() {
             </div>
 
             {/* Quick Section Jump Grid */}
-            <div className="pt-4 border-t border-gray-200">
-              <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 block mb-3">
+            <div className="pt-4 border-t border-[#dfcfc2]">
+              <span className="text-[10px] font-black uppercase tracking-widest text-gray-600 block mb-3">
                 Featured Sections in This Issue
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -101,7 +101,7 @@ export default function MagazineSection() {
                     <Link
                       key={idx}
                       href={`/news/${firstArt.slug}`}
-                      className="group bg-white p-3.5 border border-gray-200 hover:border-primary-green transition-colors flex flex-col justify-between"
+                      className="group bg-[#fff8f3] p-3.5 border border-[#e3d3c7] hover:border-primary-green transition-colors flex flex-col justify-between rounded-lg shadow-2xs"
                     >
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-[10px] font-black uppercase tracking-widest text-[#16a34a]">

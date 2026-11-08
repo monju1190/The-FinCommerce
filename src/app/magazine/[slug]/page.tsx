@@ -18,31 +18,31 @@ export default function SingleMagazinePage({
   return (
     <main className="container mx-auto px-4 md:px-12 py-12 min-h-screen">
       {/* Magazine Header */}
-      <div className="flex flex-col lg:flex-row gap-12 items-center bg-gray-50 p-8 md:p-14 rounded-[2rem] mb-12 shadow-inner border border-gray-200">
+      <div className="flex flex-col lg:flex-row gap-12 items-center bg-[#f8ebe3] p-8 md:p-14 rounded-[2rem] mb-12 shadow-sm border border-[#dfcfc2]">
         <div className="w-full max-w-[340px] lg:w-1/3 flex-shrink-0">
           <img
             src={currentEdition.imageUrl}
             alt={currentEdition.month}
-            className="w-full rounded-2xl shadow-2xl border border-gray-200"
+            className="w-full rounded-2xl shadow-2xl border border-[#d2c0b2] bg-[#0b101e] object-contain"
           />
         </div>
         <div className="lg:w-2/3">
-          <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-3 block">
+          <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest mb-3 block">
             {currentEdition.issueNumber || "Digital Edition"} • {currentEdition.registrationNo}
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 font-display tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 font-display tracking-tight text-gray-900">
             {currentEdition.month}
           </h1>
           <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 font-display">
             Cover Story: {currentEdition.subtitle}
           </h2>
-          <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-2xl">
+          <p className="text-gray-700 mb-8 text-lg leading-relaxed max-w-2xl font-display">
             Read the complete October–December 2026 maiden issue of <strong>The Sustainability Voice</strong> online using the live interactive reader below, download the full high-resolution PDF soft copy, or browse every individual article by section.
           </p>
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => setShowLiveReader(!showLiveReader)}
-              className="flex items-center space-x-3 bg-primary-green text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-light transition-colors text-base shadow-lg cursor-pointer"
+              className="flex items-center space-x-3 bg-primary-green text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-light transition-colors text-xs uppercase tracking-wider shadow-lg cursor-pointer"
             >
               <FaBookOpen />
               <span>{showLiveReader ? "Hide Live PDF Reader" : "Live Read Magazine PDF"}</span>
@@ -51,7 +51,7 @@ export default function SingleMagazinePage({
               href={magazinePdfLinks.downloadUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-800 transition-colors text-base shadow-lg"
+              className="flex items-center space-x-3 bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-800 transition-colors text-xs uppercase tracking-wider shadow-lg"
             >
               <FaDownload />
               <span>Download Soft Copy (PDF)</span>
@@ -60,10 +60,10 @@ export default function SingleMagazinePage({
               href={magazinePdfLinks.viewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-white text-gray-800 px-6 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors text-base border border-gray-300"
+              className="flex items-center space-x-2 bg-[#fff8f3] text-gray-800 px-6 py-4 rounded-xl font-bold hover:bg-white transition-colors text-xs uppercase tracking-wider border border-[#dfcfc2]"
             >
               <FaExternalLinkAlt size={14} />
-              <span>Open in Drive</span>
+              <span>Drive Viewer</span>
             </a>
           </div>
         </div>
@@ -134,10 +134,10 @@ export default function SingleMagazinePage({
               <Link
                 href={`/news/${article.slug}`}
                 key={articleIdx}
-                className="group flex flex-col md:flex-row md:items-center gap-6 bg-white rounded-2xl p-4 hover:shadow-xl transition-shadow border border-gray-100"
+                className="group flex flex-col md:flex-row md:items-center gap-6 bg-[#fff8f3] hover:bg-white rounded-2xl p-4 hover:shadow-xl transition-all border border-[#dfcfc2]"
               >
                 <div className="md:w-2/5 flex-shrink-0">
-                  <div className="rounded-xl overflow-hidden aspect-[16/10] md:aspect-[4/3] w-full bg-gray-100">
+                  <div className="rounded-xl overflow-hidden aspect-[16/10] md:aspect-[4/3] w-full bg-gray-900 border border-[#dfcfc2]">
                     <img
                       src={article.imageUrl}
                       alt={article.title}
@@ -146,16 +146,16 @@ export default function SingleMagazinePage({
                   </div>
                 </div>
                 <div className="md:w-3/5 flex flex-col justify-center">
-                  <span className="text-primary-green text-xs font-bold uppercase mb-2">
+                  <span className="text-[#16a34a] text-xs font-black uppercase mb-2 tracking-wider">
                     {article.category}
                   </span>
-                  <h3 className="text-xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors font-display">
+                  <h3 className="text-xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors font-display text-gray-900">
                     {article.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-700 text-sm mb-4 line-clamp-3 font-display leading-relaxed">
                     {article.subtitle}
                   </p>
-                  <p className="text-xs font-bold text-gray-700 mt-auto">
+                  <p className="text-xs font-bold text-gray-800 mt-auto font-display">
                     By {article.author}
                   </p>
                 </div>
