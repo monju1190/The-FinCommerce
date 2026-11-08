@@ -2,58 +2,153 @@ import React from "react";
 import { teamMembers } from "@/data/mockData";
 
 export default function EditorialBoardPage() {
+  const managingEditor = teamMembers[0];
+  const panelMembers = teamMembers.slice(1);
+
   return (
-    <main className="text-gray-900 min-h-screen">
+    <main className="text-gray-900 min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-primary-green">
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl pt-16">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
-            Our Editorial Board
+        <div className="relative z-10 text-center px-4 max-w-4xl pt-12">
+          <span className="text-[#8DC63F] text-xs font-bold uppercase tracking-widest mb-3 block">
+            The Sustainability Voice • Registration No. 48/2026
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight font-display">
+            Editorial Panel
           </h1>
           <p className="text-lg md:text-xl text-gray-200 font-light">
-            The minds behind The Sustainability Voice.
+            The minds behind Bangladesh&apos;s First Sustainable Business Magazine.
           </p>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 md:px-12 py-20">
-        <section id="team" className="mb-24">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
+      <div className="container mx-auto px-4 md:px-12 py-20 space-y-20">
+        {/* Managing Editor Spotlight */}
+        <section id="team">
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-3 block">
               Leadership
             </span>
-            <h2 className="text-4xl font-bold mb-6">Meet the Board</h2>
-            <p className="text-gray-600 leading-relaxed">
-              Our editorial board consists of seasoned veterans and sustainability professionals dedicated to advancing informed dialogue on environment, climate change, and responsible business.
-            </p>
+            <h2 className="text-4xl font-bold mb-4 font-display">Managing Editor</h2>
           </div>
-          
+
           <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
-            {/* Left: Rectangular Image */}
             <div className="w-full md:w-2/5 flex-shrink-0">
-              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] relative bg-gray-100">
                 <img
-                  src={teamMembers[0].imageUrl}
-                  alt={teamMembers[0].name}
+                  src={managingEditor.imageUrl}
+                  alt={managingEditor.name}
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            
-            {/* Right: Text and Visionary Statement */}
+
             <div className="w-full md:w-3/5 text-left">
               <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 font-display">
-                {teamMembers[0].name}
+                {managingEditor.name}
               </h3>
               <p className="text-[#16a34a] font-bold uppercase tracking-widest text-sm mb-6">
-                {teamMembers[0].role}
+                {managingEditor.role}
               </p>
-              
+
               <div className="relative">
-                <svg className="absolute -top-4 -left-6 w-12 h-12 text-gray-200 transform -scale-x-100" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
-                <p className="text-gray-700 text-xl md:text-2xl font-light italic leading-relaxed relative z-10 pl-6 border-l-4 border-[#16a34a]">
-                  "Sustainability is no longer a peripheral corporate initiative; it is the core engine of future-proof growth. Our mission is to illuminate the path forward, ensuring that business success and environmental stewardship go hand in hand."
+                <p className="text-gray-700 text-lg md:text-xl font-light italic leading-relaxed relative z-10 pl-6 border-l-4 border-[#16a34a]">
+                  &ldquo;As Bangladesh stands on the cusp of transformative economic milestones—most notably its upcoming LDC graduation—Environmental, Social, and Governance (ESG) issues are a business reality now, and critically important for future-proof growth.&rdquo;
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Members of the Editorial Panel */}
+        <section>
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-3 block">
+              Editorial Governance
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
+              Publisher, Editorial Panel & Creative Leadership
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Bringing together globally recognized scholars, sustainability practitioners, financial experts, and creative leaders.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {panelMembers.map((member, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-shadow"
+              >
+                <div>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-14 h-14 rounded-full bg-primary-green text-white flex items-center justify-center font-bold text-xl font-display flex-shrink-0 overflow-hidden">
+                      {member.name.charAt(0)}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold font-display text-gray-900">
+                        {member.name}
+                      </h3>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#16a34a]">
+                        {member.role}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Support Team & Publication Imprint */}
+        <section className="max-w-5xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <span className="text-primary-green text-xs font-bold uppercase tracking-widest block mb-2">
+                Operations & Design
+              </span>
+              <h3 className="text-2xl font-bold font-display mb-4">Support Team</h3>
+              <ul className="space-y-3 text-gray-700 text-sm">
+                <li className="flex justify-between border-b border-gray-100 pb-2">
+                  <span className="font-bold">Syed Latif Hossain</span>
+                  <span className="text-gray-500">Art Director</span>
+                </li>
+                <li className="flex justify-between border-b border-gray-100 pb-2">
+                  <span className="font-bold">Mahidul Haque</span>
+                  <span className="text-gray-500">Design</span>
+                </li>
+                <li className="flex justify-between border-b border-gray-100 pb-2">
+                  <span className="font-bold">Manisha Nabi Sonar</span>
+                  <span className="text-gray-500">Social Media</span>
+                </li>
+                <li className="flex justify-between pb-2">
+                  <span className="font-bold">Minhaz Hossain</span>
+                  <span className="text-gray-500">Business Development</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="text-primary-green text-xs font-bold uppercase tracking-widest block mb-2">
+                Imprint & Colophon
+              </span>
+              <h3 className="text-2xl font-bold font-display mb-4">Publication Details</h3>
+              <div className="space-y-2 text-sm text-gray-600 leading-relaxed">
+                <p>
+                  <strong>Published by:</strong> Md. Nazrul Islam Chowdhury, Editor and Publisher
+                </p>
+                <p>
+                  <strong>Office:</strong> Shop-18, Level-5, Azimpur Aadhunik Nagar Market, Azimpur, Lalbagh, Dhaka-1205
+                </p>
+                <p>
+                  <strong>Printed by:</strong> Redaz Printers & Packages, 314/D, Elephant Road, Dhaka
+                </p>
+                <p>
+                  <strong>Edition:</strong> October–December 2026, Issue 1, Volume 1 • Registration No. 48/2026
                 </p>
               </div>
             </div>

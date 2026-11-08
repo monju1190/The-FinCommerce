@@ -4,30 +4,35 @@ import Link from "next/link";
 export default function CompanySection() {
   const companies = [
     {
-      name: "Rahimafrooz Renewable",
-      title: "Leading solar provider expands footprint to rural Bangladesh",
-      desc: "Aiming to connect 1 million more homes, the company continues its drive toward bringing clean energy to off-grid communities.",
-      img: "/images/company1.png"
+      name: "FRONTRUNNER • EPYLLION GROUP",
+      title: "Epyllion Group: Moving From Basic Compliance to Measurable ESG Leadership",
+      desc: "Employing over 24,000 people across 12 enterprises, DGM Mohammad Shah Alam speaks to TSV on LEED facilities, circularity, and publishing their first GRI-aligned ESG Report.",
+      img: "/magazine/oct-dec/photos/epyllion-main.jpg",
+      slug: "epyllion-group-championing-esg-beyond-compliance"
     },
     {
-      name: "Walton Eco-Tech",
-      title: "Walton announces new line of highly energy-efficient appliances",
-      desc: "The new series promises to significantly reduce household carbon footprints and electricity consumption across the country.",
-      img: "/images/company2.png"
+      name: "AGRICULTURE • SYNGENTA BANGLADESH",
+      title: "From Salinity to Sustainability: How Syngenta’s GoGrow Is Rebuilding Coastal Livelihoods",
+      desc: "Managing Director Hedayet Ullah details how salt-tolerant crop diversification, freshwater reservoirs, and vermicompost enterprises are transforming farming in Shyamnagar.",
+      img: "/magazine/oct-dec/photos/syngenta-crop.jpg",
+      slug: "from-salinity-to-sustainability-syngenta-gogrow-coastal-bangladesh"
     },
     {
-      name: "Beximco Pharma",
-      title: "Beximco commits to zero-waste manufacturing by 2030",
-      desc: "Setting a new standard for sustainable healthcare in South Asia, the company unveils its comprehensive eco-strategy.",
-      img: "/images/caompany3.png"
+      name: "ESG AWARD • 32 COMPANIES RECOGNIZED",
+      title: "Verifiable Impact: Inside Bangladesh’s Inaugural ESG Excellence Awards",
+      desc: "32 companies and three individuals were honored across 20 evidence-based categories anchored in IFRS S1/S2, GRI Standards, UNGC, and SBTi frameworks.",
+      img: "/magazine/oct-dec/photos/esg-award-gold-1.jpg",
+      slug: "verifiable-impact-bangladesh-inaugural-esg-excellence-awards"
     }
   ];
 
   return (
     <section className="mb-16 mt-8" data-purpose="company-category-section">
       <div className="flex justify-between items-end mb-6 border-b-4 border-gray-900 pb-2">
-        <h2 className="text-4xl font-black font-display tracking-tight text-gray-900">Companies</h2>
-        <Link href="/category/companies">
+        <h2 className="text-4xl font-black font-display tracking-tight text-gray-900">
+          Frontrunner & Spotlights
+        </h2>
+        <Link href="/category/frontrunner">
           <span className="text-gray-900 text-xs font-bold uppercase cursor-pointer hover:underline tracking-widest">
             View All
           </span>
@@ -36,8 +41,12 @@ export default function CompanySection() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {companies.map((company, idx) => (
-          <Link href={`/news/company-${idx}`} key={idx} className="group cursor-pointer flex flex-col h-full border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 md:pr-8 last:border-0 last:pr-0">
-            <div className="overflow-hidden mb-4 relative w-full aspect-[4/3] border border-gray-200">
+          <Link
+            href={`/news/${company.slug}`}
+            key={idx}
+            className="group cursor-pointer flex flex-col h-full border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 md:pr-8 last:border-0 last:pr-0"
+          >
+            <div className="overflow-hidden mb-4 relative w-full aspect-[4/3] border border-gray-200 bg-gray-100">
               <img
                 alt={company.name}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

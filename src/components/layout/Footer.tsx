@@ -39,10 +39,10 @@ export default function Footer() {
             <div>
               <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-6">Menu</h4>
               <ul className="space-y-4 text-gray-300 text-[15px]">
-                <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-                <li><Link href="/about-us" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/magazine" className="hover:text-white transition-colors">Magazine</Link></li>
+                <li><Link href="/news" className="hover:text-white transition-colors">News & Stories</Link></li>
+                <li><Link href="/category" className="hover:text-white transition-colors">Sections</Link></li>
                 <li><Link href="/advertise" className="hover:text-white transition-colors">Advertising</Link></li>
-                <li><Link href="/categories" className="hover:text-white transition-colors">Categories</Link></li>
               </ul>
             </div>
 
@@ -58,10 +58,11 @@ export default function Footer() {
 
             {/* Column 3 */}
             <div>
-              <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-6">Resources</h4>
+              <h4 className="text-white text-xs font-semibold uppercase tracking-wider mb-6">Oct–Dec 2026 Issue</h4>
               <ul className="space-y-4 text-gray-300 text-[15px]">
-                <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/magazine#live-reader" className="hover:text-white transition-colors">Live Read PDF</Link></li>
+                <li><a href="https://drive.google.com/uc?export=download&id=1Pzc1wr1ZvIEprpthOiMDiO_ovx__8ecC" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Download Soft Copy</a></li>
+                <li><Link href="/blog" className="hover:text-white transition-colors">Columns & Perspectives</Link></li>
                 <li><Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
               </ul>
             </div>
@@ -71,8 +72,8 @@ export default function Footer() {
         {/* Divider with overlapping button */}
         <div className="relative w-full border-t border-white/20 mb-8">
           <div className="absolute right-0 top-0 -translate-y-1/2 bg-[#121212] pl-6">
-            <Link href="/get-started" className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors">
-              Get Started
+            <Link href="/magazine" className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors">
+              Read Issue 1
             </Link>
           </div>
         </div>
@@ -98,7 +99,7 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-gray-300 transition-colors">
               Terms & Conditions
             </Link>
-            <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">
+            <Link href="/terms" className="hover:text-gray-300 transition-colors">
               Privacy Policy
             </Link>
           </div>

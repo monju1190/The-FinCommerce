@@ -3,7 +3,6 @@ import Link from "next/link";
 import { magazineData } from "@/data/mockData";
 
 export default function BlogIndexPage() {
-  // Using all articles as mock blog posts for now
   const allPosts = magazineData.flatMap((section) => section.articles);
 
   return (
@@ -12,19 +11,14 @@ export default function BlogIndexPage() {
         <div className="flex flex-col md:flex-row justify-between items-end border-b border-gray-200 pb-8 mb-12">
           <div className="max-w-2xl">
             <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
-              Editorial Blog
+              Editorial & Essays • October–December 2026
             </span>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Latest Thinking</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 font-display">
+              Latest Thinking
+            </h1>
             <p className="text-xl text-gray-500">
-              Op-eds, quick takes, and behind-the-scenes insights from our editorial team.
+              In-depth essays, policy analyses, and executive perspectives from The Sustainability Voice contributors.
             </p>
-          </div>
-          <div className="mt-8 md:mt-0">
-            <input
-              type="text"
-              placeholder="Search blogs..."
-              className="bg-gray-50 border border-gray-200 rounded-full px-6 py-3 w-64 focus:outline-none focus:border-primary-green transition-colors"
-            />
           </div>
         </div>
 
@@ -32,32 +26,45 @@ export default function BlogIndexPage() {
           {/* Main Feed */}
           <div className="lg:col-span-8 space-y-12">
             {allPosts.map((post, idx) => (
-              <article key={idx} className="flex flex-col md:flex-row gap-8 group border-b border-gray-100 pb-12">
+              <article
+                key={idx}
+                className="flex flex-col md:flex-row gap-8 group border-b border-gray-100 pb-12"
+              >
                 <div className="md:w-1/3 flex-shrink-0">
-                  <div className="rounded-2xl overflow-hidden h-48 relative">
+                  <Link href={`/news/${post.slug}`} className="block rounded-2xl overflow-hidden h-48 relative bg-gray-100">
                     <img
                       src={post.imageUrl}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                  </div>
+                  </Link>
                 </div>
                 <div className="md:w-2/3 flex flex-col justify-center">
                   <span className="text-primary-green text-xs font-bold uppercase mb-2">
                     {post.category}
                   </span>
                   <Link href={`/news/${post.slug}`}>
-                    <h2 className="text-2xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors">
+                    <h2 className="text-2xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors font-display">
                       {post.title}
                     </h2>
                   </Link>
-                  <p className="text-gray-500 mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
                     {post.subtitle}
                   </p>
                   <div className="flex items-center space-x-3 mt-auto">
-                    <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
-                       <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2uL1AJ4fWgqC8W1CjI1Yf8ji-5abe3aYsxy7muXhYEjUrL3Eg07JLHKlPjvhiPBff9njqF4LJpKjnrTzyhvfgCict_WF6RUWxCdD_28cTUrKruAg9D5UlhLIj5t7bMO_EmpXz6Eeirk9VjAinbpsmpHC_jTILATtn6aqLxpQOoACbCwEqNn4VdZs3F1Hf-35laWGV79hPMltxFCtBGQEgMS5hz75Uh0tRfTiVy9hHa6EYs0sWaDE" alt={post.author} className="w-full h-full object-cover" />
-                    </div>
+                    {post.authorImage ? (
+                      <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                        <img
+                          src={post.authorImage}
+                          alt={post.author}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-8 h-8 rounded-full bg-primary-green text-white flex items-center justify-center font-bold text-xs">
+                        {post.author.charAt(0)}
+                      </div>
+                    )}
                     <div className="text-xs">
                       <p className="font-bold">{post.author}</p>
                       <p className="text-gray-400">{post.date}</p>
@@ -66,35 +73,38 @@ export default function BlogIndexPage() {
                 </div>
               </article>
             ))}
-            
-            {/* Pagination Mock */}
-            <div className="flex justify-center space-x-2 pt-8">
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">1</button>
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">2</button>
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">3</button>
-              <span className="flex items-center justify-center px-2">...</span>
-              <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary-green hover:text-white transition-colors">8</button>
-            </div>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-4 space-y-10">
-            {/* Newsletter */}
             <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-              <h3 className="text-xl font-bold mb-4">The Weekly Briefing</h3>
-              <p className="text-gray-500 text-sm mb-6">Get our best editorial pieces delivered straight to your inbox every Sunday.</p>
-              <input type="email" placeholder="Your email address" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 mb-4 focus:outline-none focus:border-primary-green" />
-              <button className="w-full bg-black text-white font-bold py-3 rounded-xl hover:bg-primary-green transition-colors">Subscribe</button>
+              <h3 className="text-xl font-bold mb-4 font-display">The Quarterly Briefing</h3>
+              <p className="text-gray-500 text-sm mb-6">
+                Get our latest sustainability insights and digital editions delivered straight to your inbox.
+              </p>
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 mb-4 focus:outline-none focus:border-primary-green"
+              />
+              <button className="w-full bg-primary-green text-white font-bold py-3 rounded-xl hover:bg-primary-light transition-colors">
+                Subscribe
+              </button>
             </div>
 
-            {/* Popular Tags */}
             <div>
-              <h3 className="text-lg font-bold mb-4 border-b border-gray-200 pb-2">Popular Tags</h3>
+              <h3 className="text-lg font-bold mb-4 border-b border-gray-200 pb-2 font-display">
+                Issue Sections
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {["Economy", "AI", "Elections", "Climate", "Op-Ed", "Tech", "Global"].map((tag) => (
-                  <span key={tag} className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold cursor-pointer hover:bg-primary-green hover:text-white transition-colors">
-                    {tag}
-                  </span>
+                {magazineData.map((sec) => (
+                  <Link
+                    key={sec.title}
+                    href={`/news/${sec.articles[0].slug}`}
+                    className="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-bold cursor-pointer hover:bg-primary-green hover:text-white transition-colors"
+                  >
+                    {sec.title}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -104,4 +114,3 @@ export default function BlogIndexPage() {
     </main>
   );
 }
-

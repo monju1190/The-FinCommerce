@@ -5,8 +5,10 @@ export default function SecuritySection() {
   return (
     <section className="mb-16" data-purpose="security-category">
       <div className="flex justify-between items-end mb-6 border-b-4 border-gray-900 pb-2">
-        <h2 className="text-4xl font-black font-display tracking-tight text-gray-900">Security</h2>
-        <Link href="/category/security">
+        <h2 className="text-4xl font-black font-display tracking-tight text-gray-900">
+          Cities, Wildlife & Health
+        </h2>
+        <Link href="/category/sustainable-cities">
           <span className="text-gray-900 text-xs font-bold uppercase cursor-pointer hover:underline tracking-widest">
             View All
           </span>
@@ -14,30 +16,33 @@ export default function SecuritySection() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-12">
-        {/* Main Security Story */}
+        {/* Main Sustainable Cities Story */}
         <div className="lg:col-span-8 flex flex-col h-full border-r-0 lg:border-r border-gray-300 lg:pr-8">
-          <Link href="/news/details" className="group cursor-pointer flex flex-col h-full">
-            <div className="overflow-hidden mb-4 relative w-full flex-1 min-h-[450px]">
+          <Link
+            href="/news/a-suffocated-buriganga-existential-threat-for-dhaka"
+            className="group cursor-pointer flex flex-col h-full"
+          >
+            <div className="overflow-hidden mb-4 relative w-full flex-1 min-h-[450px] bg-gray-100">
               <img
-                alt="Security Main"
+                alt="A Suffocated Buriganga"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="/images/security.png"
+                src="/magazine/oct-dec/media/OK_Bangladesh_River_Without_Oxygen_Sustainability_/image5.jpg"
               />
             </div>
             <div className="mt-4">
               <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest mb-2 block">
-                Network
+                Sustainable Cities • River Restoration
               </span>
-              <h3 className="text-4xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
-                The Pulse of Bangladesh's Green Economy and Enterprise
+              <h3 className="text-3xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
+                A Suffocated Buriganga: An Existential Threat for Dhaka
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
-                As cyber threats evolve, local enterprises are adopting robust security protocols to protect their green tech infrastructure and smart grids from potential disruptions.
+                In winter the Buriganga carries 0.63 milligrams of oxygen per litre—an eighth of what a river needs to keep a fish alive. The government has mapped the 224 outlets discharging into the Buriganga and Turag; what it needs next is an enforceable deadline.
               </p>
               <div className="flex items-center space-x-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
-                <span>By Shaquib Quareshi</span>
+                <span>By Rifat Hossain</span>
                 <span>&bull;</span>
-                <span>9d ago</span>
+                <span>Executive Director, Institute for Public Systems, Geneva</span>
               </div>
             </div>
           </Link>
@@ -45,60 +50,69 @@ export default function SecuritySection() {
 
         {/* Sidebar List */}
         <div className="lg:col-span-4 flex flex-col">
-          <Link href="/news/details" className="group cursor-pointer pb-6 mb-6 border-b border-gray-300">
-            <div className="overflow-hidden mb-3 relative w-full h-40">
+          <Link
+            href="/news/the-deltas-edge-ecological-balance-wildlife-human-survival"
+            className="group cursor-pointer pb-6 mb-6 border-b border-gray-300"
+          >
+            <div className="overflow-hidden mb-3 relative w-full h-40 bg-gray-100">
               <img
-                alt="security item"
+                alt="The Delta's Edge"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNddQEbjHqSkNo7DVagXtGkS-HXKL_OWmo6uDFAxzlTmw-GtLw9LEB2sE4E9e_MfNiKB6CrYb-7Ngbw9419fHx3px7qVvj17tngiyIX7q634UMWzjDNmvv31GWLD0-dflVQe_KH-EEvWlAj3p6nrcn3GLOqCzpUWLjc933l7LsBSrQNnaM2FG1Yupk4FlM8nIjQFPTsiusBdMLb6bYj4C3iJs2MsmUM5yFG34BIknt4xy16Ja4BlU"
+                src="/magazine/oct-dec/media/OK_Delta_s_Edge_Shamim_Ahmed/image2.jpg"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
-              Virtual Reality
+              Wildlife Conservation
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              AI in Wildlife Conservation
+              The Delta’s Edge: Negotiating Ecological Balance, Wildlife, and Human Survival
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
-              15d ago
+              By Shamim Ahmed
             </div>
           </Link>
 
-          <Link href="/news/details" className="group cursor-pointer pb-6 mb-6 border-b border-gray-300">
-            <div className="overflow-hidden mb-3 relative w-full h-40">
+          <Link
+            href="/news/the-kingfishers-of-bangladesh-twelve-species"
+            className="group cursor-pointer pb-6 mb-6 border-b border-gray-300"
+          >
+            <div className="overflow-hidden mb-3 relative w-full h-40 bg-gray-100">
               <img
-                alt="security item"
+                alt="The Kingfishers of Bangladesh"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeJnk9VxMUUTRu8-RYAxZbBYWI9oIeNT7t5UJ3XpzHVErceBMRl-ejl2t0nS17IHrBJp4lUoLNtOv2GcucgFC2D7w6VBxWrWCyKpnJMwW8B6AgYPy_wiO7SMcs8HRKB7z1-WbYrXqSWHCB_eAar4EHuowzIRLASZ5ghZe8iJ_T66EyZruperWPGPUTOAgUYvai67o3tcobFtCCwWNMIlWWsJeWseVQ80QrbIj1C2aOUtUtururGxI"
+                src="/magazine/oct-dec/photos/kingfisher-common.jpg"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
-              Trips
+              Wildlife • Biodiversity
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Sustainable Tourism in Sylhet
+              The Kingfishers of Bangladesh: Twelve Species Across the Delta
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
-              20d ago
+              By Shahriar Shabab et al.
             </div>
           </Link>
 
-          <Link href="/news/details" className="group cursor-pointer pb-6 mb-6">
-            <div className="overflow-hidden mb-3 relative w-full h-40">
+          <Link
+            href="/news/living-well-health-in-an-unequal-world-longevity-blueprint"
+            className="group cursor-pointer pb-6 mb-6"
+          >
+            <div className="overflow-hidden mb-3 relative w-full h-40 bg-gray-100">
               <img
-                alt="security item"
+                alt="Living Well by Hari Nair"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4IxIsYXVF0iI2-WlUQEGum6k1pA8gbljoLjoYsGdaBW96CIG2CNTzpX-P4E7DtCR9Q8OqT0NNQ61qNN_w7HhnJfaknFzAr-YW6Vb47JJZthGg-lhwYNrl0B7oKtw-kXTtgI5Nm0-YkPgYH6T26zuQOXP-H2JbQgOsXuNwRp8XnysY9OJKbIt1ByedbTwuSyECRuVXhMOXxqBbc9SElw-lyYnrJkhcGEAhKcKUo5FqblOTgIsosJU"
+                src="/magazine/oct-dec/media/OK_Living_Well_by_Hari_Nair/image2.png"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-2 block">
-              AI Powered
+              Health & Longevity
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Smart Security for Solar Farms
+              Living Well: Health in an Unequal World — High-Tech Hype vs. Sustainable Science
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
-              23d ago
+              By Hari Nair PhD
             </div>
           </Link>
         </div>
