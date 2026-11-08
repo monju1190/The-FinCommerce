@@ -5,7 +5,7 @@
 @theme {
   --color-primary-green: #1a4d2e; /* Deep pine forest green */
   --color-primary-light: #2d6a4f;
-  --color-ft-pink: #faede5; /* Authentic newspaper creamy pink broadsheet background */
+  --color-ft-pink: #c5dfc0; /* Soft green signature background */
 
   --font-sans: "Source Serif 4", serif;
   --font-display: "Playfair Display", serif;
@@ -21,7 +21,7 @@
 }
 
 :root {
-  --background: #faede5; /* Authentic newspaper creamy pink tone */
+  --background: #c5dfc0; /* Restored signature greenish background */
   --foreground: #111827; /* Deep printer's ink black */
 }
 
