@@ -31,7 +31,7 @@ export default function DualGridSection() {
             UN SDG Report 2026
           </span>
           <h3 className="text-2xl font-bold font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug mb-2">
-            Bangladesh at the Crossroads: The UN Sustainable Development Goals Report 2026
+            Bangladesh at the Crossroads
           </h3>
           <p className="text-gray-600 text-sm font-display mb-2">
             One of Asia’s fastest SDG improvers and the world’s leader in green garment factories—yet ranked 110th of 169 with crucial policy choices ahead of LDC graduation.
@@ -51,7 +51,7 @@ export default function DualGridSection() {
               Labor & Climate Adaptation
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              Climate Change and Decent Work: Case Example from Ivory Coast
+              Climate Change And Decent Work: Protecting Ivorian Workers From Heat and Extreme Risks
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               By Abel Karno, ITCILO Alumnus
@@ -66,7 +66,7 @@ export default function DualGridSection() {
               Asia-Pacific Policy
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              The Balance Sheet of Development: Policy Priorities for Sustainability in the Asia-Pacific Region
+              The Balance Sheet of Development
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               By Mozaharul Alam, UNEP Asia-Pacific
@@ -157,7 +157,7 @@ export default function DualGridSection() {
               Waste Management • UNIDO
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              Plastic Waste Management in Bangladesh: Making ‘Extended Producer Responsibility’ Work
+              Making the ‘Extended Producer Responsibility’ Work
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               UNIDO Country Office, Bangladesh
@@ -172,7 +172,7 @@ export default function DualGridSection() {
               Circular Economy • TMSS
             </span>
             <h4 className="font-bold text-lg font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors leading-snug">
-              Transforming Waste into Hope: How TMSS Is Shaping the Waste Collection Business
+              How TMSS is Shaping the Future of the Waste Collection Business
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
               By Sadia Mehrun Shawan, TMSS

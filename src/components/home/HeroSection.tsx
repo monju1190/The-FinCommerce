@@ -8,7 +8,7 @@ import { magazinePdfLinks } from "@/data/mockData";
 const slides = [
   {
     tag: "OCTOBER–DECEMBER 2026 • COVER STORY",
-    title: "Waterlogging in Dhaka: Integrated Management Required",
+    title: "Waterlogging in Dhaka Integrated Management Required",
     desc: "Waterlogging is not merely a shortage of drains or pumps; it is a citywide hydrological and urban-planning challenge requiring a catchment-based master plan.",
     img: "/magazine/oct-dec/tsv-oct-dec-2026-cover.jpg",
     category: "COVER STORY",
@@ -24,7 +24,7 @@ const slides = [
   },
   {
     tag: "OCTOBER–DECEMBER 2026 • HOME & THE WORLD",
-    title: "Bangladesh at the Crossroads: UN SDG Report 2026",
+    title: "Bangladesh at the Crossroads",
     desc: "Bangladesh is one of Asia’s fastest SDG improvers and the world’s leader in green garment factories—yet critical policy gaps remain ahead of LDC graduation.",
     img: "/magazine/oct-dec/pdf-images/p85_img4_1054x618.jpeg",
     category: "HOME & THE WORLD",
@@ -32,7 +32,7 @@ const slides = [
   },
   {
     tag: "OCTOBER–DECEMBER 2026 • INDUSTRY PRACTICES",
-    title: "Beyond the Plaque: From Green Certification to Green Operations",
+    title: "Beyond the Plaque: From Green Certification to Green Operations in the Bangladeshi Textile and Garments Industry",
     desc: "With 349 LEED-certified factories, Bangladesh leads the world in green buildings. Now the textile sector must embed lean management and daily operational sustainability.",
     img: "/magazine/oct-dec/pdf-images/p98_img1_2084x1018.jpeg",
     category: "INDUSTRY PRACTICES",
@@ -40,7 +40,7 @@ const slides = [
   },
   {
     tag: "OCTOBER–DECEMBER 2026 • AGRICULTURE",
-    title: "From the Sands of Arabia to the Rivers of Bengal",
+    title: "From the Sands of Arabia to the Rivers of Bengal: Building Shared Resilience in Sustainable Agriculture and the Food–Water Security Nexus",
     desc: "Dr. Turki Faisal Al Rasheed explores how Saudi Arabia and Bangladesh can build shared resilience in sustainable agriculture and the Food–Water Security Nexus.",
     img: "/magazine/oct-dec/photos/solar-irrigation.jpg",
     category: "AGRICULTURE",

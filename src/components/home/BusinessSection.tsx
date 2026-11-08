@@ -59,7 +59,7 @@ export default function BusinessSection() {
               Rule Book • Export Readiness
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              From Audit to Accountability: Strengthening Bangladesh’s Export Competitiveness through HREDD
+              From Audit to Accountability Strengthening Bangladesh’s Export Competitiveness through HREDD
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
               Global buyers now demand active identification, prevention, and remediation of human rights and environmental risks across entire supply chains.
@@ -78,7 +78,7 @@ export default function BusinessSection() {
               Governance • Boardroom Strategy
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              The Governance Gap: Why Sustainability Needs to Reach the Boardroom
+              The Governance Gap
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
               Closing the gap between corporate sustainability pledges and daily procurement decisions requires structural board-level oversight.
@@ -97,7 +97,7 @@ export default function BusinessSection() {
               Hospitality • Industry Practices
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Radisson Blu Chattogram Bay View: Luxury Meets Solitude in Responsible Hospitality
+              Radisson Blu Chattogram Bay View
             </h4>
             <p className="text-gray-600 text-sm font-display mb-3 line-clamp-2">
               Advancing ESG principles through energy efficiency, responsible resource management, and community engagement in Bangladesh&apos;s hospitality sector.

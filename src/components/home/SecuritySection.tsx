@@ -34,7 +34,7 @@ export default function SecuritySection() {
                 Sustainable Cities • River Restoration
               </span>
               <h3 className="text-3xl md:text-5xl font-bold mt-1 mb-4 leading-tight font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors">
-                A Suffocated Buriganga: An Existential Threat for Dhaka
+                A Suffocated Buriganga
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6 font-display">
                 In winter the Buriganga carries 0.63 milligrams of oxygen per litre—an eighth of what a river needs to keep a fish alive. The government has mapped the 224 outlets discharging into the Buriganga and Turag; what it needs next is an enforceable deadline.
@@ -65,7 +65,7 @@ export default function SecuritySection() {
               Wildlife Conservation
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              The Delta’s Edge: Negotiating Ecological Balance, Wildlife, and Human Survival
+              The Delta’s Edge
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               By Shamim Ahmed
@@ -87,7 +87,7 @@ export default function SecuritySection() {
               Wildlife • Biodiversity
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              The Kingfishers of Bangladesh: Twelve Species Across the Delta
+              The Kingfishers of Bangladesh
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
               By Rehana Begum, Shahariar Shabab & Golam Kibria

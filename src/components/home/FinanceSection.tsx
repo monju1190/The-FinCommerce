@@ -56,7 +56,7 @@ export default function FinanceSection() {
               CENTRAL BANK POLICY
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              Decarbonisation Financing in Bangladesh: The Evolving Role of Bangladesh Bank
+              Decarbonisation Financing in Bangladesh
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
               From green banking guidelines to climate risk management and GSSS bonds, how the central bank catalyzes low-carbon transition finance.
@@ -74,7 +74,7 @@ export default function FinanceSection() {
               CAPITAL MARKET REFORM
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              The Sustainable Finance Blueprint: Coordinated Regulation in Bangladesh
+              The Sustainable Finance Blueprint
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
               Turning rooftop solar arrays, cleaner dyeing lines, and recycling ventures into liquid, verifiable capital market securities.
@@ -92,7 +92,7 @@ export default function FinanceSection() {
               PLAYBOOK • ESG RATINGS
             </span>
             <h4 className="font-bold text-xl leading-snug font-display text-gray-900 group-hover:text-[#1a2c5a] transition-colors mb-2">
-              ESG Ratings: How Corporates Are Rated and Why It Matters
+              How Corporates are Rated and Why that Matters
             </h4>
             <p className="text-gray-600 text-sm font-display line-clamp-2 mb-3">
               Understanding how global rating agencies evaluate non-financial corporate performance, double materiality, and sustainability risk.

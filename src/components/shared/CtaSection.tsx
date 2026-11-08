@@ -91,7 +91,7 @@ export default function CtaSection() {
             >
               <img
                 src="/magazine/oct-dec/photos/waterlogging-2.jpg"
-                alt="Waterlogging in Dhaka: Integrated Management Required"
+                alt="Waterlogging in Dhaka Integrated Management Required"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#090b14]/90 via-[#090b14]/30 to-transparent"></div>
@@ -100,7 +100,7 @@ export default function CtaSection() {
                   Cover Story
                 </span>
                 <h3 className="text-white text-xl sm:text-2xl font-bold font-display tracking-tight leading-snug">
-                  Waterlogging in Dhaka: Integrated Management Required
+                  Waterlogging in Dhaka Integrated Management Required
                 </h3>
               </div>
             </Link>

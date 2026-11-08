@@ -11,16 +11,17 @@ export default async function NewsPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const effectiveSlug = slug === "bonbibi-and-humbaba-ancient-guardians-of-the-forest" ? "bonbibi" : slug;
 
   const allArticles = magazineData.flatMap((s) => s.articles);
-  const article = allArticles.find((a) => a.slug === slug);
+  const article = allArticles.find((a) => a.slug === effectiveSlug);
 
   if (!article) {
     notFound();
   }
 
   const relatedArticles = allArticles
-    .filter((a) => a.slug !== slug)
+    .filter((a) => a.slug !== effectiveSlug)
     .slice(0, 4);
 
   const currentIssue = recentEditions[0];

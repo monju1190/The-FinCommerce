@@ -5,28 +5,28 @@ export default function BankingSection() {
   const articles = [
     {
       tag: "STANDARDS • IFRS 9",
-      title: "The Accounting Rule That's Secretly a Technology Story",
+      title: "The Accounting Rule, that’s Secretly a Technology Story",
       desc: "Why IFRS 9—often viewed as the most compliance-heavy rule in banking—might actually be a financial institution's smartest technology and risk investment.",
       author: "By Masihul Huq Chowdhury",
       slug: "the-accounting-rule-thats-secretly-a-technology-story-ifrs9"
     },
     {
       tag: "PLAYBOOK • RATINGS",
-      title: "ESG Ratings: How Corporates Are Rated and Why It Matters",
+      title: "How Corporates are Rated and Why that Matters",
       desc: "A comprehensive guide to how rating agencies assess environmental, social, and governance risks and why methodologies diverge.",
       author: "By Alusch H. Amoghli",
       slug: "esg-ratings-how-corporates-are-rated-and-why-it-matters"
     },
     {
       tag: "PLAYBOOK • REGULATION",
-      title: "The Sustainable Finance Blueprint: Coordinated Regulation in Bangladesh",
+      title: "The Sustainable Finance Blueprint",
       desc: "Building the institutional machinery that turns green projects into tradable securities with verified records of delivery.",
       author: "By Enamul Hafiz Latifee",
       slug: "sustainable-finance-blueprint-coordinated-regulation-bangladesh"
     },
     {
       tag: "CENTRAL BANKING",
-      title: "Decarbonisation Financing in Bangladesh: Role of Bangladesh Bank",
+      title: "Decarbonisation Financing in Bangladesh",
       desc: "How green banking guidelines, refinance schemes, and climate risk management frameworks are shaping low-carbon finance.",
       author: "By Md. Kamrul Hasan",
       slug: "decarbonisation-financing-in-bangladesh-evolving-role-of-bangladesh-bank"

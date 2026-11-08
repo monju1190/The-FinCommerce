@@ -5,14 +5,14 @@ export default function CompanySection() {
   const companies = [
     {
       name: "FRONTRUNNER • EPYLLION GROUP",
-      title: "Epyllion Group: Moving From Basic Compliance to Measurable ESG Leadership",
+      title: "Epyllion Group: Championing ESG",
       desc: "Employing over 24,000 people across 12 enterprises, DGM Mohammad Shah Alam speaks to TSV on LEED facilities, circularity, and publishing their first GRI-aligned ESG Report.",
       img: "/magazine/oct-dec/photos/epyllion-main.jpg",
       slug: "epyllion-group-championing-esg-beyond-compliance"
     },
     {
       name: "AGRICULTURE • SYNGENTA BANGLADESH",
-      title: "From Salinity to Sustainability: How Syngenta’s GoGrow Is Rebuilding Coastal Livelihoods",
+      title: "From Salinity to Sustainability",
       desc: "Managing Director Hedayet Ullah details how salt-tolerant crop diversification, freshwater reservoirs, and vermicompost enterprises are transforming farming in Shyamnagar.",
       img: "/magazine/oct-dec/photos/syngenta-crop.jpg",
       slug: "from-salinity-to-sustainability-syngenta-gogrow-coastal-bangladesh"
