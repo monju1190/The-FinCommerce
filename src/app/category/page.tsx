@@ -4,7 +4,7 @@ import { categories } from "@/data/mockData";
 
 export default function CategoryIndexPage() {
   // Display primary magazine section categories without legacy alias duplicates
-  const primaryCategories = categories.slice(0, 14);
+  const primaryCategories = categories.slice(0, 18);
 
   return (
     <main className="bg-white text-gray-900 min-h-screen pt-12 pb-24">

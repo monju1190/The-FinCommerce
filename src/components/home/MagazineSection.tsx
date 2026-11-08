@@ -32,11 +32,11 @@ export default function MagazineSection() {
           <div className="lg:col-span-4 flex flex-col items-center">
             <Link
               href={`/magazine/${currentIssue.slug}`}
-              className="group block w-full max-w-[300px] overflow-hidden border border-gray-300 shadow-xl bg-white"
+              className="group block w-full max-w-[310px] overflow-hidden border border-gray-300 shadow-xl bg-[#0b101e] rounded-sm"
             >
               <img
                 alt={`Magazine Cover ${currentIssue.month}`}
-                className="w-full h-auto aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-auto object-contain block group-hover:scale-[1.02] transition-transform duration-500"
                 src={currentIssue.imageUrl}
               />
             </Link>

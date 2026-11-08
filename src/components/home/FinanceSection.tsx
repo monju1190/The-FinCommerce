@@ -22,11 +22,11 @@ export default function FinanceSection() {
             href="/news/the-carbon-corridor-unlocking-green-investment-for-bangladesh"
             className="group cursor-pointer flex flex-col h-full"
           >
-            <div className="overflow-hidden mb-5 relative w-full aspect-[16/9] shadow-md border border-gray-200 bg-gray-100">
+            <div className="overflow-hidden mb-5 relative w-full aspect-[16/9] shadow-md border border-gray-200 bg-gray-100 rounded-sm">
               <img
                 alt="The Carbon Corridor"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="/magazine/oct-dec/media/OK_Article-The_Carbon_Corridor_Unlocking_Chinese_G/image3.png"
+                src="/magazine/oct-dec/pdf-images/p42_img1_2516x1851.jpeg"
               />
             </div>
             <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-3 block">
@@ -41,7 +41,7 @@ export default function FinanceSection() {
             <div className="flex items-center space-x-2 text-xs font-bold text-gray-500 uppercase tracking-wider mt-auto">
               <span>By Mostafa Monira Firdouse</span>
               <span>&bull;</span>
-              <span>CEO, Carbon Valuation Services Ltd., Hong Kong</span>
+              <span>ESG, Climate &amp; Sustainable Investment Lead, Innovision Consulting</span>
             </div>
           </Link>
         </div>

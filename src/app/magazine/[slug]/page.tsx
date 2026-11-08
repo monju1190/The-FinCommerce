@@ -134,10 +134,10 @@ export default function SingleMagazinePage({
               <Link
                 href={`/news/${article.slug}`}
                 key={articleIdx}
-                className="group flex flex-col md:flex-row gap-6 bg-white rounded-2xl p-4 hover:shadow-xl transition-shadow border border-gray-100"
+                className="group flex flex-col md:flex-row md:items-center gap-6 bg-white rounded-2xl p-4 hover:shadow-xl transition-shadow border border-gray-100"
               >
                 <div className="md:w-2/5 flex-shrink-0">
-                  <div className="rounded-xl overflow-hidden h-48 md:h-full bg-gray-100">
+                  <div className="rounded-xl overflow-hidden aspect-[16/10] md:aspect-[4/3] w-full bg-gray-100">
                     <img
                       src={article.imageUrl}
                       alt={article.title}

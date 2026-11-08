@@ -29,11 +29,11 @@ export default function MagazineArchivePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Cover Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 group">
+              <div className="relative w-full max-w-[380px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-[#0b101e] group">
                 <img
                   src={currentIssue.imageUrl}
                   alt={currentIssue.month}
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-auto object-contain block group-hover:scale-[1.02] transition-transform duration-700"
                 />
               </div>
             </div>
@@ -172,10 +172,10 @@ export default function MagazineArchivePage() {
                     <Link
                       href={`/news/${article.slug}`}
                       key={articleIdx}
-                      className="group flex flex-col sm:flex-row gap-6 bg-gray-50/70 hover:bg-white rounded-2xl p-4 hover:shadow-xl transition-all border border-gray-100"
+                      className="group flex flex-col sm:flex-row sm:items-center gap-6 bg-gray-50/70 hover:bg-white rounded-2xl p-4 hover:shadow-xl transition-all border border-gray-100"
                     >
                       <div className="sm:w-2/5 flex-shrink-0">
-                        <div className="rounded-xl overflow-hidden h-48 sm:h-full min-h-[160px] relative bg-gray-200">
+                        <div className="rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[4/3] w-full relative bg-gray-100">
                           <img
                             src={article.imageUrl}
                             alt={article.title}

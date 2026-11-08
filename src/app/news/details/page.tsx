@@ -61,11 +61,11 @@ export default function NewsDetailsPage() {
 
         {/* Featured Image */}
         <figure className="mb-12">
-          <div className="w-full h-[400px] md:h-[500px] relative rounded-2xl overflow-hidden">
+          <div className="w-full relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-200 shadow-lg">
             <img
               src={article.imageUrl}
               alt={article.title}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-auto max-h-[680px] object-contain mx-auto block"
             />
           </div>
         </figure>

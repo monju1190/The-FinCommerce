@@ -20,11 +20,11 @@ export default function DualGridSection() {
 
         {/* Featured Card */}
         <Link href="/news/bangladesh-at-the-crossroads-un-sdg-report-2026" className="group cursor-pointer mb-6">
-          <div className="overflow-hidden mb-3 relative w-full h-[250px] bg-gray-100">
+          <div className="overflow-hidden mb-3 relative w-full aspect-[16/9] bg-gray-100 rounded-sm">
             <img
               alt="Bangladesh at the Crossroads"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              src="/magazine/oct-dec/media/OK_Bangladesh_at_the_Crossroads_Nurunnabi/image13.png"
+              src="/magazine/oct-dec/pdf-images/p85_img4_1054x618.jpeg"
             />
           </div>
           <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">
@@ -111,11 +111,11 @@ export default function DualGridSection() {
 
         {/* Featured Tech Card */}
         <Link href="/news/the-semiconductor-race-can-bangladesh-catch-up" className="group cursor-pointer mb-6">
-          <div className="overflow-hidden mb-3 relative w-full h-[250px] bg-gray-100">
+          <div className="overflow-hidden mb-3 relative w-full aspect-[16/9] bg-gray-100 rounded-sm">
             <img
               alt="The Semiconductor Race"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              src="/magazine/oct-dec/photos/tech-1.png"
+              src="/magazine/oct-dec/pdf-images/p69_img1_2515x1230.jpeg"
             />
           </div>
           <span className="text-[#16a34a] text-[10px] font-black uppercase tracking-widest mb-1 block mt-2">

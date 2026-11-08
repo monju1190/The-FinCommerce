@@ -64,12 +64,12 @@ export default async function NewsPage({
       </div>
 
       {/* Featured Image */}
-      <div className="container mx-auto max-w-5xl -mt-10 px-4 mb-16">
-        <div className="rounded-2xl overflow-hidden shadow-2xl h-[350px] md:h-[560px] bg-gray-100">
+      <div className="container mx-auto max-w-5xl -mt-10 px-4 mb-12 md:mb-16">
+        <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-50 border border-gray-200">
           <img
             src={article.imageUrl}
             alt={article.title}
-            className="w-full h-full object-cover"
+            className="w-full h-auto max-h-[680px] object-contain mx-auto block"
           />
         </div>
       </div>
