@@ -3,6 +3,7 @@ import "./globals.css";
 import MainHeader from "@/components/layout/MainHeader";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import CopyProtection from "@/components/shared/CopyProtection";
 
 export const metadata: Metadata = {
   title: "The Sustainability Voice - Environment & Climate Action",
@@ -16,13 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="text-gray-900 min-h-screen flex flex-col">
+      <body className="text-gray-900 min-h-screen flex flex-col bg-[#F7F5F0] antialiased selection:bg-black selection:text-[#F7F5F0]">
+        <div className="paper-grain-overlay" aria-hidden="true" />
         <MainHeader />
         <div className="flex-1">
           {children}
         </div>
         <Footer />
         <ScrollToTop />
+        <CopyProtection />
       </body>
     </html>
   );

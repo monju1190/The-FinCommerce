@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { FaBookOpen, FaDownload, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
+import { FaBookOpen, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
 import { recentEditions, magazinePdfLinks, magazineData } from "@/data/mockData";
 
 export default function MagazineSection() {
@@ -21,7 +21,7 @@ export default function MagazineSection() {
         </div>
         <Link href="/magazine/october-december-2026">
           <span className="text-gray-900 text-xs font-bold uppercase cursor-pointer hover:underline tracking-widest">
-            Live Read / Download
+            Digital Edition
           </span>
         </Link>
       </div>
@@ -70,22 +70,13 @@ export default function MagazineSection() {
                 <span>Live Read Full Magazine</span>
               </Link>
               <a
-                href={magazinePdfLinks.downloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-gray-900 text-white px-6 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-gray-800 transition-colors shadow-md"
-              >
-                <FaDownload size={14} />
-                <span>Download Soft Copy (PDF)</span>
-              </a>
-              <a
                 href={magazinePdfLinks.viewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-white text-gray-900 border border-gray-300 px-5 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-gray-100 transition-colors"
+                className="flex items-center space-x-2 bg-white text-gray-900 border border-gray-300 px-5 py-3.5 font-bold text-xs uppercase tracking-wider hover:bg-gray-100 transition-colors shadow-xs"
               >
                 <FaExternalLinkAlt size={12} />
-                <span>Open PDF in Drive</span>
+                <span>Open in Drive Reader</span>
               </a>
             </div>
 

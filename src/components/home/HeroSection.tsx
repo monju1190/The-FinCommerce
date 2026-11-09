@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaArrowRight, FaBookOpen, FaDownload } from "react-icons/fa6";
+import { FaArrowRight, FaBookOpen } from "react-icons/fa6";
 import { magazinePdfLinks } from "@/data/mockData";
 
 const slides = [
@@ -107,15 +107,6 @@ export default function HeroSection() {
                       <FaBookOpen size={12} />
                       <span>Live Read Issue</span>
                     </Link>
-                    <a
-                      href={magazinePdfLinks.downloadUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 bg-transparent hover:bg-white/5 border border-white/20 text-white px-4 py-2.5 lg:px-5 lg:py-3.5 font-medium text-xs lg:text-sm transition-colors"
-                    >
-                      <FaDownload size={12} />
-                      <span>Download PDF</span>
-                    </a>
                   </div>
                 </div>
               ))}

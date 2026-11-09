@@ -2,8 +2,9 @@ import React from "react";
 import { magazineData, magazinePdfLinks, recentEditions } from "@/data/mockData";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaBookOpen, FaDownload } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa";
 import MagazineAdBanner from "@/components/shared/MagazineAdBanner";
+import ArticleShareBar from "@/components/shared/ArticleShareBar";
 
 export default async function NewsPage({
   params,
@@ -27,36 +28,36 @@ export default async function NewsPage({
   const currentIssue = recentEditions[0];
 
   return (
-    <main className="bg-[var(--color-ft-pink)] text-gray-900 pb-20 min-h-screen">
-      {/* Hero Header */}
-      <div className="bg-[#f5e4da] border-b border-[#dfcfc2] py-12 md:py-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+    <main className="bg-[#F7F5F0] text-[#111111] pb-24 min-h-screen antialiased">
+      {/* Editorial Breadcrumb & Header */}
+      <div className="border-b border-black/15 bg-white py-12 md:py-16 px-4">
+        <div className="master-container max-w-4xl text-center">
           <Link href={`/category/${article.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
-            <span className="text-[#16a34a] font-black uppercase tracking-widest text-xs mb-4 inline-block cursor-pointer hover:underline">
+            <span className="text-[#D92B2B] font-mono font-bold uppercase tracking-[0.2em] text-xs mb-4 inline-block hover:underline">
               {article.category} • {article.date}
             </span>
           </Link>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-5 leading-[1.15] font-display text-gray-900">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-[1.12] font-display text-[#111111] uppercase tracking-tight">
             {article.title}
           </h1>
-          <p className="text-lg md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed font-display">
-            {article.subtitle}
+          <p className="text-base sm:text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed font-serif italic measure-readable">
+            &ldquo;{article.subtitle}&rdquo;
           </p>
-          <div className="flex items-center justify-center space-x-4">
+          <div className="inline-flex items-center justify-center space-x-4 border-t border-black/15 pt-4">
             {article.authorImage ? (
               <img
                 alt={article.author}
                 src={article.authorImage}
-                className="w-14 h-14 rounded-full shadow-md object-cover border-2 border-[#dfcfc2]"
+                className="w-12 h-12 rounded-none object-cover border border-black/20"
               />
             ) : (
-              <div className="w-14 h-14 rounded-full shadow-md bg-primary-green text-white flex items-center justify-center font-bold text-xl">
+              <div className="w-12 h-12 rounded-none bg-[#111111] text-[#F7F5F0] flex items-center justify-center font-bold text-lg font-mono">
                 {article.author.charAt(0)}
               </div>
             )}
-            <div className="text-left">
-              <p className="font-bold text-base text-gray-900 font-display">By {article.author}</p>
-              <p className="text-xs text-gray-600">
+            <div className="text-left font-mono">
+              <p className="font-bold text-sm text-[#111111] uppercase">By {article.author}</p>
+              <p className="text-[11px] text-gray-500 uppercase tracking-wider">
                 {article.authorRole ? `${article.authorRole} • ` : ""}
                 {article.date}
               </p>
@@ -66,57 +67,33 @@ export default async function NewsPage({
       </div>
 
       {/* Featured Image */}
-      <div className="container mx-auto max-w-5xl px-4 mt-8 mb-12 md:mb-16">
-        <div className="rounded-2xl overflow-hidden shadow-xl bg-[#fff8f3] border border-[#dfcfc2] p-2 md:p-3">
+      <div className="master-container max-w-5xl mt-10 mb-12 md:mb-16">
+        <div className="border border-black/15 bg-white p-2 sm:p-3 relative">
           <img
             src={article.imageUrl}
             alt={article.title}
-            className="w-full h-auto max-h-[680px] object-contain mx-auto block rounded-xl"
+            className="w-full h-auto max-h-[680px] object-contain mx-auto block"
           />
         </div>
       </div>
 
       {/* Article Content & Sidebar */}
-      <div className="container mx-auto max-w-6xl px-4 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="master-container max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Social Share Sidebar */}
-        <div className="lg:col-span-1 flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 items-center pt-2">
-          <a
-            href="https://www.facebook.com/sustainabilityvoice"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full border border-[#d2c0b2] bg-[#fff8f3] flex items-center justify-center text-gray-600 hover:text-primary-green hover:border-primary-green transition-colors"
-            aria-label="Share on Facebook"
-          >
-            <FaFacebookF />
-          </a>
-          <a
-            href="#"
-            className="w-10 h-10 rounded-full border border-[#d2c0b2] bg-[#fff8f3] flex items-center justify-center text-gray-600 hover:text-primary-green hover:border-primary-green transition-colors"
-            aria-label="Share on Twitter"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/the-sustainability-voice/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full border border-[#d2c0b2] bg-[#fff8f3] flex items-center justify-center text-gray-600 hover:text-primary-green hover:border-primary-green transition-colors"
-            aria-label="Share on LinkedIn"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="mailto:editor@sustainabilityvoice.com"
-            className="w-10 h-10 rounded-full border border-[#d2c0b2] bg-[#fff8f3] flex items-center justify-center text-gray-600 hover:text-primary-green hover:border-primary-green transition-colors"
-            aria-label="Share via Email"
-          >
-            <FaEnvelope />
-          </a>
+        <div className="lg:col-span-1 pt-2 flex justify-center lg:justify-start">
+          <ArticleShareBar title={article.title} slug={article.slug} vertical />
         </div>
 
         {/* Main Content */}
-        <div className="lg:col-span-7 prose prose-lg max-w-none font-display text-gray-900 leading-relaxed">
-          <div dangerouslySetInnerHTML={{ __html: article.content }} />
+        <div className="lg:col-span-7 prose prose-lg max-w-none font-serif text-[#111111] leading-relaxed">
+          <article
+            data-protected="true"
+            className="article-body no-copy select-none text-justify"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
+
+          {/* Bottom Article Share Bar */}
+          <ArticleShareBar title={article.title} slug={article.slug} />
         </div>
 
         {/* Right Sidebar: Issue PDF & Related Articles */}
@@ -142,17 +119,8 @@ export default async function NewsPage({
                 className="w-full bg-primary-green text-white font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary-light transition-colors shadow-md"
               >
                 <FaBookOpen size={13} />
-                <span>Live Read Full Issue</span>
+                <span>Explore Volume 01</span>
               </Link>
-              <a
-                href={magazinePdfLinks.downloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-gray-900 text-white font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors shadow-md"
-              >
-                <FaDownload size={13} />
-                <span>Download Soft Copy (PDF)</span>
-              </a>
             </div>
           </div>
 

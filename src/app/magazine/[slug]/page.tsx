@@ -1,169 +1,135 @@
-"use client";
-import React, { use, useState } from "react";
+import React from "react";
+import { recentEditions, magazineData } from "@/data/mockData";
+import { notFound } from "next/navigation";
 import Link from "next/link";
-import { magazineData, recentEditions, magazinePdfLinks } from "@/data/mockData";
-import { FaBookOpen, FaDownload, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
 
-export default function SingleMagazinePage({
+export default async function MagazineDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = use(params);
-  const [showLiveReader, setShowLiveReader] = useState(true);
+  const { slug } = await params;
+  const currentEdition = recentEditions.find((e) => e.slug === slug);
 
-  const currentEdition =
-    recentEditions.find((ed) => ed.slug === slug) || recentEditions[0];
+  if (!currentEdition) {
+    notFound();
+  }
+
+  const allArticles = magazineData.flatMap((s) => s.articles);
 
   return (
-    <main className="container mx-auto px-4 md:px-12 py-12 min-h-screen">
-      {/* Magazine Header */}
-      <div className="flex flex-col lg:flex-row gap-12 items-center bg-[#f8ebe3] p-8 md:p-14 rounded-[2rem] mb-12 shadow-sm border border-[#dfcfc2]">
-        <div className="w-full max-w-[340px] lg:w-1/3 flex-shrink-0">
-          <img
-            src={currentEdition.imageUrl}
-            alt={currentEdition.month}
-            className="w-full rounded-2xl shadow-2xl border border-[#d2c0b2] bg-[#0b101e] object-contain"
-          />
+    <main className="bg-[#F7F5F0] text-[#111111] min-h-screen py-10 md:py-16 antialiased">
+      <div className="master-container space-y-12">
+        {/* Breadcrumb Navigation */}
+        <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-widest">
+          <Link
+            href="/magazine"
+            className="inline-flex items-center gap-2 text-gray-700 hover:text-[#D92B2B] transition-colors"
+          >
+            <FaArrowLeft size={10} />
+            <span>All Editions</span>
+          </Link>
+          <span className="text-gray-500">{currentEdition.registrationNo}</span>
         </div>
-        <div className="lg:w-2/3">
-          <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest mb-3 block">
-            {currentEdition.issueNumber || "Digital Edition"} • {currentEdition.registrationNo}
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 font-display tracking-tight text-gray-900">
-            {currentEdition.month}
-          </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 font-display">
-            Cover Story: {currentEdition.subtitle}
-          </h2>
-          <p className="text-gray-700 mb-8 text-lg leading-relaxed max-w-2xl font-display">
-            Read the complete October–December 2026 maiden issue of <strong>The Sustainability Voice</strong> online using the live interactive reader below, download the full high-resolution PDF soft copy, or browse every individual article by section.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <button
-              onClick={() => setShowLiveReader(!showLiveReader)}
-              className="flex items-center space-x-3 bg-primary-green text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-light transition-colors text-xs uppercase tracking-wider shadow-lg cursor-pointer"
-            >
-              <FaBookOpen />
-              <span>{showLiveReader ? "Hide Live PDF Reader" : "Live Read Magazine PDF"}</span>
-            </button>
-            <a
-              href={magazinePdfLinks.downloadUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-3 bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-800 transition-colors text-xs uppercase tracking-wider shadow-lg"
-            >
-              <FaDownload />
-              <span>Download Soft Copy (PDF)</span>
-            </a>
-            <a
-              href={magazinePdfLinks.viewUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-[#fff8f3] text-gray-800 px-6 py-4 rounded-xl font-bold hover:bg-white transition-colors text-xs uppercase tracking-wider border border-[#dfcfc2]"
-            >
-              <FaExternalLinkAlt size={14} />
-              <span>Drive Viewer</span>
-            </a>
+
+        {/* Edition Hero Spotlight */}
+        <div className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* Cover Frame */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full max-w-[340px] border border-black/15 bg-[#111111] p-2 relative group">
+                <img
+                  src={currentEdition.imageUrl}
+                  alt={currentEdition.month}
+                  className="w-full h-auto object-contain block transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+              </div>
+            </div>
+
+            {/* Edition Metadata */}
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center gap-2 border border-[#1a4d2e] text-[#1a4d2e] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
+                <span>★ {currentEdition.issueNumber}</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display leading-tight text-[#111111]">
+                {currentEdition.month}
+              </h1>
+
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-serif measure-readable">
+                {currentEdition.subtitle}
+              </p>
+
+              <div className="pt-4 border-t border-black/15 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono text-gray-600 uppercase tracking-wider">
+                <span>The Sustainability Voice</span>
+                <span>•</span>
+                <span>{allArticles.length} Digital Articles</span>
+                <span>•</span>
+                <span>Quarterly Edition</span>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Issue Sections and Articles */}
+        <div className="space-y-12">
+          {magazineData.map((section, idx) => (
+            <section key={idx} className="border border-black/15 bg-white p-6 sm:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-black/15 gap-2">
+                <div className="flex items-center gap-3">
+                  <span className="text-xs font-mono text-[#D92B2B] font-bold">
+                    {(idx + 1).toString().padStart(2, "0")}
+                  </span>
+                  <h2 className="text-2xl font-bold font-display uppercase text-[#111111]">
+                    {section.title}
+                  </h2>
+                </div>
+                <span className="text-xs font-mono uppercase tracking-wider text-gray-500">
+                  [{section.articles.length} {section.articles.length === 1 ? "Article" : "Articles"}]
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {section.articles.map((article, artIdx) => (
+                  <Link
+                    key={artIdx}
+                    href={`/news/${article.slug}`}
+                    className="group flex flex-col sm:flex-row gap-5 p-4 border border-black/10 hover:border-black transition-colors bg-[#F7F5F0]"
+                  >
+                    <div className="w-full sm:w-36 aspect-[16/10] sm:aspect-square flex-shrink-0 overflow-hidden border border-black/15 bg-gray-200">
+                      <img
+                        src={article.imageUrl}
+                        alt={article.title}
+                        className="w-full h-full object-cover print-grayscale transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex-1 flex flex-col justify-between">
+                      <div>
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                          {article.category}
+                        </span>
+                        <h3 className="text-base font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-snug line-clamp-2">
+                          {article.title}
+                        </h3>
+                        <p className="text-xs font-serif text-gray-600 line-clamp-2 mt-1.5">
+                          {article.subtitle}
+                        </p>
+                      </div>
+                      <div className="pt-2 mt-2 border-t border-black/10 text-[10px] font-mono text-gray-500 uppercase flex justify-between">
+                        <span>By {article.author}</span>
+                        <span className="font-bold text-[#111111] group-hover:text-[#D92B2B]">
+                          Read →
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
       </div>
-
-      {/* Live Embedded PDF Reader */}
-      {showLiveReader && (
-        <section className="mb-16 bg-white p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-200">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <div>
-              <span className="text-primary-green text-xs font-bold uppercase tracking-widest block mb-1">
-                Interactive Soft Copy
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold font-display">
-                Live Magazine Reader — {currentEdition.month}
-              </h2>
-            </div>
-            <div className="flex gap-3">
-              <a
-                href={magazinePdfLinks.viewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold uppercase tracking-wider bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2.5 rounded-lg flex items-center gap-2"
-              >
-                <FaExternalLinkAlt size={12} />
-                <span>Full Screen</span>
-              </a>
-              <a
-                href={magazinePdfLinks.downloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold uppercase tracking-wider bg-primary-green text-white px-4 py-2.5 rounded-lg flex items-center gap-2"
-              >
-                <FaDownload size={12} />
-                <span>Download PDF</span>
-              </a>
-            </div>
-          </div>
-
-          <div className="w-full h-[82vh] min-h-[650px] rounded-2xl overflow-hidden border border-gray-300 bg-gray-900">
-            <iframe
-              src={magazinePdfLinks.previewUrl}
-              title={`The Sustainability Voice - ${currentEdition.month}`}
-              className="w-full h-full border-0"
-              allow="autoplay"
-            />
-          </div>
-        </section>
-      )}
-
-      {/* Sections */}
-      {magazineData.map((section, idx) => (
-        <section key={idx} className="mb-16">
-          <div className="flex justify-between items-center mb-8 border-b border-gray-200">
-            <div className="flex items-center space-x-3 pb-2 border-b-2 border-primary-green">
-              <div className="w-2 h-2 rounded-full bg-primary-green"></div>
-              <h2 className="text-3xl font-bold font-display">{section.title}</h2>
-            </div>
-            <Link href="/news">
-              <span className="text-primary-green text-xs font-bold uppercase cursor-pointer hover:underline">
-                View All
-              </span>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {section.articles.map((article, articleIdx) => (
-              <Link
-                href={`/news/${article.slug}`}
-                key={articleIdx}
-                className="group flex flex-col md:flex-row md:items-center gap-6 bg-[#fff8f3] hover:bg-white rounded-2xl p-4 hover:shadow-xl transition-all border border-[#dfcfc2]"
-              >
-                <div className="md:w-2/5 flex-shrink-0">
-                  <div className="rounded-xl overflow-hidden aspect-[16/10] md:aspect-[4/3] w-full bg-gray-900 border border-[#dfcfc2]">
-                    <img
-                      src={article.imageUrl}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-                <div className="md:w-3/5 flex flex-col justify-center">
-                  <span className="text-[#16a34a] text-xs font-black uppercase mb-2 tracking-wider">
-                    {article.category}
-                  </span>
-                  <h3 className="text-xl font-bold mb-3 leading-snug group-hover:text-primary-green transition-colors font-display text-gray-900">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-3 font-display leading-relaxed">
-                    {article.subtitle}
-                  </p>
-                  <p className="text-xs font-bold text-gray-800 mt-auto font-display">
-                    By {article.author}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      ))}
     </main>
   );
 }

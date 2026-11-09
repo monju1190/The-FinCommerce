@@ -1,25 +1,35 @@
 import React from "react";
-import { categories, magazineData, magazinePdfLinks } from "@/data/mockData";
+import { categories, magazineData } from "@/data/mockData";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const relatedCategoryGroups: Record<string, string[]> = {
   "top-stories": ["top stories", "culture & myth", "editorial"],
-  "industry-practices": ["industry practices", "rule book", "governance", "frontrunner"],
-  "sustainable-finance": ["sustainable finance", "friends in need", "standards"],
-  "standards": ["standards", "sustainable finance", "playbook"],
+  "industry-practices": ["industry practices", "rmg & textile", "rule book", "governance", "frontrunner"],
+  "rmg-and-textile": ["rmg & textile", "industry practices"],
+  "sustainable-finance": ["sustainable finance", "capital market", "friends in need", "standards"],
+  "capital-market": ["capital market", "sustainable finance"],
+  "standards": ["standards", "energy & power", "sustainable finance", "playbook"],
+  "energy-and-power": ["energy & power", "standards", "sustainable finance"],
   "home-and-the-world": ["home & the world"],
   "playbook": ["playbook", "standards", "rule book"],
   "frontrunner": ["frontrunner", "esg award", "industry practices"],
+  "esg": ["esg", "esg award", "frontrunner", "standards"],
   "esg-award": ["esg award", "frontrunner"],
-  "sustainable-cities": ["sustainable cities", "top stories", "waste management"],
+  "sustainable-cities": ["sustainable cities", "sustainable city", "top stories", "waste management"],
+  "sustainable-city": ["sustainable city", "sustainable cities", "waste management"],
+  "circular-economy": ["circular economy", "waste management", "industry practices"],
   "agriculture": ["agriculture", "sustainable cities"],
   "technology": ["technology", "playbook"],
-  "waste-management": ["waste management", "sustainable cities"],
-  "friends-in-need": ["friends in need", "sustainable finance"],
+  "waste-management": ["waste management", "circular economy", "sustainable cities"],
+  "friends-in-need": ["friends in need", "friend in need", "sustainable finance"],
+  "friend-in-need": ["friend in need", "friends in need", "sustainable finance"],
   "rule-book": ["rule book", "governance", "industry practices"],
   "governance": ["governance", "rule book", "industry practices"],
-  "wildlife": ["wildlife", "culture & myth"],
+  "wildlife": ["wildlife", "wild life & biodiversity", "culture & myth"],
+  "wildlife-and-biodiversity": ["wild life & biodiversity", "wildlife", "culture & myth"],
+  "wild-life-and-biodiversity": ["wild life & biodiversity", "wildlife", "culture & myth"],
   "culture-and-myth": ["culture & myth", "wildlife"],
   "health": ["health", "wildlife"],
 };
@@ -53,87 +63,79 @@ export default async function CategoryArchivePage({
   const categoryArticles = [...primaryArticles, ...secondaryArticles];
 
   return (
-    <main className="bg-[var(--color-ft-pink)] text-gray-900 min-h-screen">
-      {/* Category Hero */}
-      <div className="relative h-[42vh] min-h-[320px] flex items-center justify-center">
-        <img
-          src={categoryInfo.imageUrl}
-          alt={categoryInfo.name}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/75"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <span className="text-primary-green text-xs font-extrabold uppercase tracking-widest mb-3 block">
-            The Sustainability Voice • Oct–Dec 2026 Section
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
-            {categoryInfo.name}
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6">
-            {categoryInfo.description}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/magazine#live-reader"
-              className="inline-flex items-center gap-2 bg-primary-green hover:bg-green-700 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-              Live Read Full Issue
+    <main className="bg-[#F7F5F0] text-[#111111] min-h-screen antialiased">
+      {/* Category Broadside Header */}
+      <div className="border-b border-black/15 bg-white py-12 md:py-16">
+        <div className="master-container">
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] mb-3">
+            <Link href="/" className="hover:underline flex items-center gap-1">
+              <FaArrowLeft size={10} />
+              <span>Main Broadside</span>
             </Link>
-            <a
-              href={magazinePdfLinks.downloadUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Download PDF
-            </a>
+            <span>/</span>
+            <span>Section Archive</span>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
+                {categoryInfo.name}
+              </h1>
+              <p className="text-base sm:text-lg text-gray-700 font-serif measure-readable mt-2">
+                {categoryInfo.description}
+              </p>
+            </div>
+            <div className="text-left md:text-right">
+              <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
+                VOLUME 01 REPERTOIRE
+              </span>
+              <span className="text-sm font-mono text-[#D92B2B] font-bold">
+                [{categoryArticles.length} {categoryArticles.length === 1 ? "Article" : "Articles"}]
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-12 py-16">
+      <div className="master-container py-12 md:py-16">
         {categoryArticles.length === 0 ? (
-          <div className="text-center py-20">
-            <h2 className="text-3xl font-bold text-gray-400">
-              No articles found in this section.
+          <div className="text-center py-20 border border-black/15 bg-white p-8">
+            <h2 className="text-2xl font-bold font-display text-gray-400">
+              No articles registered in this section yet.
             </h2>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categoryArticles.map((article, idx) => (
               <Link
                 href={`/news/${article.slug}`}
                 key={idx}
-                className="group flex flex-col bg-[#fff8f3] rounded-2xl overflow-hidden border border-[#dfcfc2] shadow-sm hover:shadow-xl transition-all"
+                className="group flex flex-col bg-white border border-black/15 hover:border-black transition-colors"
               >
-                <div className="overflow-hidden h-60 relative bg-gray-900">
+                <div className="aspect-[16/10] overflow-hidden bg-gray-200 border-b border-black/15 relative">
                   <img
                     src={article.imageUrl}
                     alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover print-grayscale transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4 bg-primary-green text-white px-3 py-1 text-xs font-bold uppercase rounded-md shadow-lg">
+                  <div className="absolute top-3 left-3 bg-[#111111] text-[#F7F5F0] px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest">
                     {article.category}
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold font-display mb-3 leading-snug group-hover:text-primary-green transition-colors text-gray-900">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-3 flex-1 font-display leading-relaxed">
-                    {article.subtitle}
-                  </p>
-                  <div className="flex items-center justify-between text-xs font-bold text-gray-500 pt-4 border-t border-[#dfcfc2]">
-                    <span className="text-gray-800 truncate max-w-[65%]">
-                      {article.author}
+                <div className="p-6 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold font-display mb-2 leading-snug group-hover:text-[#D92B2B] transition-colors text-[#111111]">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm mb-4 line-clamp-3 font-serif leading-relaxed">
+                      {article.subtitle}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-gray-500 pt-3 border-t border-black/10">
+                    <span className="truncate max-w-[65%]">By {article.author}</span>
+                    <span className="font-bold text-[#111111] group-hover:text-[#D92B2B]">
+                      Read →
                     </span>
-                    <span>{article.date}</span>
                   </div>
                 </div>
               </Link>

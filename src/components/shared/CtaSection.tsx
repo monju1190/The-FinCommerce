@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaArrowRight, FaBookOpen } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function CtaSection() {
   const [subscribed, setSubscribed] = useState(false);
@@ -13,102 +13,60 @@ export default function CtaSection() {
       setSubscribed(true);
     }
   };
+
   return (
-    <div className="w-full py-12 md:py-16 space-y-16 md:space-y-24" data-purpose="cta-and-magazine">
-      
-      {/* 1. Newsletter Subscription Card */}
-      <section className="bg-primary-green rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-xl border border-black/10">
-        <div className="max-w-3xl mx-auto">
-          <span className="text-[#8DC63F] text-xs font-black uppercase tracking-widest block mb-3">
-            Stay Informed With The Sustainability Voice
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-display leading-tight tracking-tight">
-            Unlock <span className="text-[#8DC63F]">Unlimited Access</span> to Sustainable Business Insights
-          </h2>
-          <p className="text-gray-200 text-sm sm:text-base mb-8 max-w-xl mx-auto leading-relaxed">
-            Get quarterly executive briefings, ESG market intelligence, and policy dispatches delivered straight to your inbox.
-          </p>
-          <div className="flex justify-center">
+    <section className="py-14 sm:py-20 border-b border-black/15" data-purpose="newsletter-broadside">
+      <div className="border border-black/15 bg-white p-8 sm:p-12 md:p-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <div className="lg:col-span-7 space-y-4">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] font-bold">
+              <span>★ THE EDITORIAL DISPATCH</span>
+              <span>•</span>
+              <span>QUARTERLY INTELLIGENCE</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display uppercase tracking-tight text-[#111111] leading-tight">
+              Direct Briefings on Sustainable Industry &amp; Policy
+            </h2>
+
+            <p className="text-base sm:text-lg font-serif text-gray-700 measure-readable leading-relaxed">
+              Receive quarterly executive analysis, national ESG policy updates, and decarbonisation finance reports delivered straight from the editorial desk.
+            </p>
+          </div>
+
+          <div className="lg:col-span-5">
             {subscribed ? (
-              <div className="bg-white/10 border border-[#8DC63F] text-[#8DC63F] px-8 py-4 rounded-full font-bold text-sm">
-                ✓ Thank you for subscribing to The Sustainability Voice!
+              <div className="border border-[#1a4d2e] bg-[#F7F5F0] p-6 text-center text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold">
+                ✓ Your address is registered for the Volume 01 dispatch.
               </div>
             ) : (
-              <form
-                onSubmit={handleSubscribe}
-                className="flex flex-col sm:flex-row w-full max-w-lg items-center gap-3"
-              >
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your corporate email address"
-                  className="bg-white/10 border border-white/20 shadow-inner rounded-full px-6 py-3.5 w-full outline-none focus:border-[#8DC63F] text-sm text-white placeholder-gray-300 transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="bg-white text-primary-green hover:bg-[#8DC63F] hover:text-gray-900 px-8 py-3.5 rounded-full font-bold text-sm whitespace-nowrap transition-colors w-full sm:w-auto shadow-md cursor-pointer"
-                >
-                  Subscribe Now
-                </button>
+              <form onSubmit={handleSubscribe} className="space-y-3">
+                <div className="flex flex-col sm:flex-row border border-black/20 focus-within:border-black transition-colors bg-[#F7F5F0]">
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter corporate email..."
+                    className="p-3.5 sm:p-4 text-xs font-mono uppercase tracking-wider text-[#111111] bg-transparent outline-none flex-1 placeholder-gray-500"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#111111] text-[#F7F5F0] hover:bg-[#D92B2B] px-6 py-3.5 text-xs font-mono uppercase tracking-wider font-bold transition-colors shrink-0 cursor-pointer"
+                  >
+                    Subscribe →
+                  </button>
+                </div>
+                <p className="text-[10px] font-mono uppercase text-gray-500">
+                  Zero spam. Published quarterly in alignment with print release.
+                </p>
               </form>
             )}
           </div>
-        </div>
-      </section>
-
-      {/* 2. In The Magazine Spotlight Card */}
-      <section className="bg-[#f8ebe3] border border-[#dfcfc2] rounded-3xl p-8 sm:p-12 shadow-sm">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          <div className="lg:col-span-6 flex flex-col justify-center">
-            <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest mb-3 block">
-              In The Magazine • Issue 1, Volume 1
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-5 font-display leading-[1.15] tracking-tight">
-              First Bangladeshi Sustainable Business Magazine
-            </h2>
-            <p className="text-gray-700 text-base mb-6 leading-relaxed font-display">
-              Our contributors—from globally renowned scholars and industry veterans to emerging practitioners—report from the frontlines of ESG, sustainable finance, urban planning, and ecological stewardship.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/magazine/october-december-2026"
-                className="inline-flex items-center gap-2 bg-primary-green hover:bg-primary-light text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-lg transition-colors shadow-md group"
-              >
-                <FaBookOpen size={14} />
-                <span>Read the October–December 2026 Issue</span>
-                <FaArrowRight className="transition-transform group-hover:translate-x-1" size={12} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="lg:col-span-6 w-full">
-            <Link
-              href="/news/waterlogging-in-dhaka-integrated-management"
-              className="block relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-xl group border border-[#dfcfc2] bg-gray-900"
-            >
-              <img
-                src="/magazine/oct-dec/photos/waterlogging-2.jpg"
-                alt="Waterlogging in Dhaka Integrated Management Required"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090b14]/90 via-[#090b14]/30 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <span className="bg-[#8DC63F] text-gray-900 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-sm mb-2 inline-block">
-                  Cover Story
-                </span>
-                <h3 className="text-white text-xl sm:text-2xl font-bold font-display tracking-tight leading-snug">
-                  Waterlogging in Dhaka Integrated Management Required
-                </h3>
-              </div>
-            </Link>
-          </div>
 
         </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
   );
 }

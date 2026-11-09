@@ -575,63 +575,63 @@ export const magazineAds: MagazineAd[] = [
 export const teamMembers = [
   {
     "name": "Shaquib Quoreshi",
-    "role": "Managing Editor",
-    "imageUrl": "/editorial board/managingeditor.png",
-    "bio": "Managing Editor of The Sustainability Voice, leading editorial strategy and advancing evidence-based dialogue on ESG, climate resilience, and responsible business."
-  },
-  {
-    "name": "Md. Nazrul Islam Chowdhury",
-    "role": "Editor and Publisher",
-    "imageUrl": "/magazine/oct-dec/photos/editorial-collage.png",
-    "bio": "Editor and Publisher of The Sustainability Voice (Registration No. 48/2026)."
+    "role": "Chief Editor & Managing Editor",
+    "imageUrl": "/editorial board/managingeditor.png"
   },
   {
     "name": "Professor Dr. Mohammad Nurunnabi",
     "role": "Member, Editorial Panel",
-    "imageUrl": "/magazine/oct-dec/pdf-images/p77_img10_225x225.jpeg",
-    "bio": "UNESCO Chair on Education for Sustainable Development, Green Skills and Climate Actions; Founding Director of the Center for Sustainability and Climate at Prince Sultan University; Academic Visitor at St Antony's College, Oxford."
+    "imageUrl": "/magazine/oct-dec/pdf-images/p77_img10_225x225.jpeg"
   },
   {
     "name": "Alusch H. Amoghli",
     "role": "Member, Editorial Panel",
-    "imageUrl": "/magazine/oct-dec/pdf-images/p48_img1_410x471.jpeg",
-    "bio": "International executive with 25+ years of experience across Europe and Asia in hospitality development, M&A, and ESG strategy; ESG Champion within Accor’s ENA Development organization."
+    "imageUrl": "/magazine/oct-dec/pdf-images/p48_img1_410x471.jpeg"
   },
   {
     "name": "Mostafa Monira Firdouse",
     "role": "Member, Editorial Panel",
-    "imageUrl": "/magazine/oct-dec/pdf-images/p42_img2_474x559.jpeg",
-    "bio": "Sustainability and climate finance specialist leading Innovision Consulting’s ESG, Climate & Sustainable Investment portfolio across Bangladesh and the region."
+    "imageUrl": "/magazine/oct-dec/pdf-images/p42_img2_474x559.jpeg"
   },
   {
     "name": "Mohammad Monower Hossain",
     "role": "Member, Editorial Panel",
-    "imageUrl": "/magazine/oct-dec/pdf-images/p104_img1_683x1024.jpeg",
-    "bio": "Head of Sustainability at TEAM Group and former Joint Secretary at BGMEA with over 17 years of sustainability, policy advocacy, and responsible business leadership."
+    "imageUrl": "/magazine/oct-dec/pdf-images/p104_img1_683x1024.jpeg"
   },
   {
     "name": "Enamul Hafiz Latifee",
     "role": "Member, Editorial Panel",
-    "imageUrl": "/magazine/oct-dec/pdf-images/p53_img1_390x428.jpeg",
-    "bio": "Chief Research Officer at A&J Corporation; trade, development, and innovation economist."
+    "imageUrl": "/magazine/oct-dec/pdf-images/p53_img1_390x428.jpeg"
   },
   {
     "name": "Md. Abu Raihan",
     "role": "Member, Editorial Panel",
-    "imageUrl": "",
-    "bio": "Member of the Editorial Panel at The Sustainability Voice."
+    "imageUrl": ""
   },
   {
     "name": "Shah Ikthiar Alam",
     "role": "Member, Editorial Panel",
-    "imageUrl": "",
-    "bio": "Member of the Editorial Panel at The Sustainability Voice."
+    "imageUrl": ""
   },
   {
     "name": "Syed Latif Hossain",
     "role": "Art Director",
-    "imageUrl": "",
-    "bio": "Art Director of The Sustainability Voice, overseeing visual identity, layout architecture, and creative direction."
+    "imageUrl": ""
+  },
+  {
+    "name": "Mahidul Haque",
+    "role": "Design Assistant",
+    "imageUrl": ""
+  },
+  {
+    "name": "Manisha Nabi Sonar",
+    "role": "Social Media",
+    "imageUrl": ""
+  },
+  {
+    "name": "Minhaz Hossain",
+    "role": "Business Development",
+    "imageUrl": ""
   }
 ];
 
@@ -816,5 +816,53 @@ export const categories = [
     "name": "Home & The World",
     "description": "Human rights, decent work, health, and social sustainability.",
     "imageUrl": "/magazine/oct-dec/pdf-images/p88_img1_1269x547.jpeg"
+  },
+  {
+    "slug": "rmg-and-textile",
+    "name": "RMG & Textile",
+    "description": "From LEED certification to daily lean green operations across Bangladesh apparel manufacturing.",
+    "imageUrl": "/magazine/oct-dec/pdf-images/p60_img1_1376x768.jpeg"
+  },
+  {
+    "slug": "energy-and-power",
+    "name": "Energy & Power",
+    "description": "Decarbonisation financing, renewable energy transition, and grid decarbonization policies.",
+    "imageUrl": "/magazine/oct-dec/pdf-images/p38_img1_1437x852.jpeg"
+  },
+  {
+    "slug": "circular-economy",
+    "name": "Circular Economy",
+    "description": "Extended Producer Responsibility (EPR), plastic circularity, and closed-loop waste supply chains.",
+    "imageUrl": "/magazine/oct-dec/media/OK_UNIDO_EPR/image1.jpg"
+  },
+  {
+    "slug": "sustainable-city",
+    "name": "Sustainable City",
+    "description": "Integrated urban drainage, river ecosystem restoration, and resilient urban planning.",
+    "imageUrl": "/magazine/oct-dec/photos/waterlogging-2.jpg"
+  },
+  {
+    "slug": "wildlife-and-biodiversity",
+    "name": "Wild Life & Biodiversity",
+    "description": "Delta wildlife conservation, Sundarbans guardians, and avian biodiversity.",
+    "imageUrl": "/magazine/oct-dec/pdf-images/p130_img3_560x370.jpeg"
+  },
+  {
+    "slug": "wild-life-and-biodiversity",
+    "name": "Wild Life & Biodiversity",
+    "description": "Delta wildlife conservation, Sundarbans guardians, and avian biodiversity.",
+    "imageUrl": "/magazine/oct-dec/pdf-images/p130_img3_560x370.jpeg"
+  },
+  {
+    "slug": "capital-market",
+    "name": "Capital Market",
+    "description": "Decarbonisation financing, green bonds, central bank directives, and sustainable investments.",
+    "imageUrl": "/magazine/oct-dec/photos/bangladesh-bank-hero.jpg"
+  },
+  {
+    "slug": "friend-in-need",
+    "name": "Friend In Need",
+    "description": "Denmark–Bangladesh bilateral green partnership, PaCT textile innovation, and offshore wind development.",
+    "imageUrl": "/magazine/oct-dec/photos/denmark-signing.jpg"
   }
 ];

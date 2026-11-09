@@ -1,0 +1,183 @@
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { recentEditions, magazineData } from "@/data/mockData";
+import { FaArrowRight } from "react-icons/fa6";
+
+export default function InauguralMonolith() {
+  const currentIssue = recentEditions[0];
+  const allArticles = magazineData.flatMap((s) => s.articles);
+
+  // 4 Flagship Cover Stories for Volume 01
+  const flagshipSlugs = [
+    "waterlogging-in-dhaka-integrated-management",
+    "beyond-the-plaque-green-certification-to-green-operations",
+    "the-carbon-corridor-unlocking-green-investment-for-bangladesh",
+    "setting-the-sail-journey-of-the-sustainability-voice",
+  ];
+
+  const flagshipStories = flagshipSlugs
+    .map((slug) => allArticles.find((a) => a.slug === slug))
+    .filter(Boolean);
+
+  const [activeIdx, setActiveIdx] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  const storyRefs = useRef<(HTMLElement | null)[]>([]);
+
+  // Auto-slide effect on all devices (especially phones)
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveIdx((prev) => (prev + 1) % flagshipStories.length);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [isPaused, flagshipStories.length]);
+
+  const selectStory = (idx: number) => {
+    setActiveIdx(idx);
+    const targetElement = storyRefs.current[idx];
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  };
+
+  const currentStory = flagshipStories[activeIdx];
+  const activeImage = currentStory ? currentStory.imageUrl : currentIssue.imageUrl;
+  const activeKicker = currentStory
+    ? `CHAPTER ${(activeIdx + 1).toString().padStart(2, "0")} • ${currentStory.category}`
+    : "VOLUME 01 • MAIDEN QUARTERLY";
+
+  return (
+    <section
+      className="border-b border-black/15 pb-14 sm:pb-20 pt-7 sm:pt-9 md:pt-11 lg:pt-14"
+      data-purpose="inaugural-monolith"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* 12-Column Grid Split 5 : 7 (Starts directly under header without redundant strip) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        {/* Left Column (5 Cols — Signature Pine Green Background) */}
+        <div className="lg:col-span-5 lg:sticky lg:top-20 h-fit space-y-4">
+          <div className="border border-[#143b23] bg-[#1a4d2e] text-[#F7F5F0] p-5 sm:p-7 shadow-xl relative group overflow-hidden">
+            
+            {/* Visual Frame: Full-bleed object-cover with ZERO gap above or below */}
+            <div className="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden border border-white/20 bg-black/40 relative shadow-inner">
+              <img
+                src={activeImage}
+                alt="Volume 01 Showcase"
+                key={activeImage}
+                className="w-full h-full object-cover transition-all duration-700 ease-out animate-fadeIn"
+              />
+              <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-xs text-[#8DC63F] px-2.5 py-1 text-[10px] font-mono tracking-widest uppercase border border-white/10">
+                {activeKicker}
+              </div>
+            </div>
+
+            {/* Interactive Story Dots (Circles) */}
+            <div className="flex items-center justify-center gap-2.5 py-3 border-b border-white/15">
+              {flagshipStories.map((s, dotIdx) => {
+                const isActive = activeIdx === dotIdx;
+                return (
+                  <button
+                    key={dotIdx}
+                    type="button"
+                    onClick={() => selectStory(dotIdx)}
+                    aria-label={`Switch to story ${dotIdx + 1}: ${s?.title}`}
+                    className={`transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? "w-7 h-2.5 rounded-full bg-[#8DC63F]"
+                        : "w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/80"
+                    }`}
+                  />
+                );
+              })}
+            </div>
+
+            {/* Edition Note in Crisp White & Light Green */}
+            <div className="pt-3 space-y-2">
+              <div className="flex items-center justify-between text-[11px] font-mono text-white/70 uppercase">
+                <span>The Sustainability Voice</span>
+                <span className="text-[#8DC63F] font-bold">Issue 01, Vol. 01</span>
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold font-display text-white leading-snug">
+                {currentStory?.title || currentIssue.subtitle}
+              </h3>
+              <p className="text-xs sm:text-sm text-white/80 font-serif leading-relaxed line-clamp-3">
+                &ldquo;This magazine is born out of passion—advancing informed dialogue on climate resilience, industrial transformation, and ESG governance in Bangladesh.&rdquo;
+              </p>
+              <div className="pt-2 border-t border-white/15 flex items-center justify-between text-[11px] font-mono uppercase text-white/70">
+                <span className="text-[#8DC63F] font-bold">— Shaquib Quoreshi, Managing Editor</span>
+                <Link
+                  href="/magazine"
+                  className="text-white hover:text-[#8DC63F] underline font-bold inline-flex items-center gap-1"
+                >
+                  <span>All Sections →</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column (7 Cols — Scrollable Top Stories) */}
+        <div className="lg:col-span-7 space-y-0 divide-y divide-black/15 border-t lg:border-t-0 border-b border-black/15">
+          {flagshipStories.map((story, idx) => {
+            if (!story) return null;
+            const chapterNum = (idx + 1).toString().padStart(2, "0");
+            const isSelected = activeIdx === idx;
+
+            return (
+              <article
+                key={story.slug}
+                ref={(el) => {
+                  storyRefs.current[idx] = el;
+                }}
+                onMouseEnter={() => setActiveIdx(idx)}
+                className={`py-6 sm:py-8 first:pt-0 last:pb-4 group cursor-pointer transition-colors ${
+                  isSelected ? "bg-black/[0.02]" : ""
+                }`}
+              >
+                <div className="flex items-baseline justify-between gap-4 mb-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl sm:text-3xl font-mono font-bold text-[#D92B2B]">
+                      {chapterNum}
+                    </span>
+                    <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-gray-500 font-semibold">
+                      {story.category}
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-gray-400 uppercase tracking-wider shrink-0">
+                    06 MIN READ
+                  </span>
+                </div>
+
+                <Link href={`/news/${story.slug}`} className="block">
+                  <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-[1.18] mb-3">
+                    {story.title}
+                  </h2>
+                </Link>
+
+                <p className="text-sm sm:text-base text-gray-700 font-serif leading-relaxed line-clamp-3 mb-4 measure-readable">
+                  {story.subtitle}
+                </p>
+
+                <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-3 border-t border-black/10">
+                  <span className="font-semibold text-[#111111]">
+                    By {story.author} {story.authorRole ? `(${story.authorRole})` : ""}
+                  </span>
+                  <Link
+                    href={`/news/${story.slug}`}
+                    className="inline-flex items-center gap-1.5 font-bold text-[#111111] group-hover:text-[#D92B2B] transition-colors"
+                  >
+                    <span>Read Full Story</span>
+                    <FaArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

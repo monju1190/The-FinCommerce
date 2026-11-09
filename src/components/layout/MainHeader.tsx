@@ -78,18 +78,18 @@ export default function MainHeader() {
   return (
     <>
       {/* Masthead */}
-      <div className="w-full text-center pt-6 pb-4 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative overflow-hidden">
+      <div className="w-full text-center pt-3 pb-2 px-4 bg-[var(--color-ft-pink)] flex flex-col items-center justify-center relative overflow-hidden">
         <Link href="/">
           <Image
             src="/logo.png"
             alt="The Sustainability Voice"
-            width={400}
-            height={128}
+            width={340}
+            height={90}
             priority
-            className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto object-contain select-none pb-2 inline-block opacity-90 mix-blend-multiply"
+            className="h-10 sm:h-14 md:h-16 lg:h-20 w-auto object-contain select-none pb-1 inline-block opacity-90 mix-blend-multiply"
           />
         </Link>
-        <div className="w-full max-w-4xl border-t-2 border-primary-green mt-2 flex items-center justify-between pt-2 text-[8px] md:text-[10px] font-bold tracking-widest uppercase text-gray-800 font-sans">
+        <div className="w-full max-w-4xl border-t border-primary-green mt-1 flex items-center justify-between pt-1.5 text-[8px] md:text-[9px] font-bold tracking-widest uppercase text-gray-800 font-sans">
           <span>A Quarterly Magazine</span>
           <span>October–December 2026 • Issue 1, Vol. 1</span>
           <span>For Future-Proof Business</span>
@@ -98,39 +98,27 @@ export default function MainHeader() {
 
       {/* Navbar */}
       <nav className="sticky top-0 left-0 w-full z-40 bg-primary-green text-white border-y border-black/20 shadow-md">
-        <div className="w-full flex items-center justify-between px-4 md:px-12 py-3.5 max-w-[1400px] mx-auto">
-          {/* Mobile Left: Brand Icon */}
-          <div className="md:hidden flex-1">
+        <div className="w-full flex items-center justify-between px-4 md:px-8 lg:px-12 py-2 max-w-[1500px] mx-auto">
+          {/* Mobile Left / Desktop Left Brand Accent */}
+          <div className="flex items-center">
             <Link
               href="/"
-              className={`text-xl font-black uppercase tracking-wider whitespace-nowrap ${playfair.className}`}
+              className={`text-lg md:text-xl font-black uppercase tracking-wider whitespace-nowrap ${playfair.className}`}
             >
               <span className="text-[#8DC63F]">TSV</span>
             </Link>
           </div>
 
-          {/* Desktop Left: Search Button */}
-          <div className="hidden md:flex flex-1 items-center" data-purpose="search-container">
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              aria-label="Search"
-              className="text-white/80 hover:text-white transition-all flex items-center space-x-2 text-xs font-bold tracking-widest uppercase bg-black/20 hover:bg-black/30 border border-white/20 rounded-full px-4 py-2"
-            >
-              <FaSearch size={12} className="text-[#8DC63F]" />
-              <span>Search 33 Articles...</span>
-            </button>
-          </div>
-
           {/* Center: Menu Links (Desktop) */}
           <div
-            className="flex-none hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-bold tracking-widest uppercase"
+            className="hidden md:flex items-center space-x-5 lg:space-x-7 text-xs font-bold tracking-widest uppercase"
             data-purpose="main-menu"
           >
             <Link href="/" className="hover:text-gray-300 transition-colors">
               Home
             </Link>
             <Link href="/magazine" className="hover:text-gray-300 transition-colors">
-              Magazine (PDF)
+              Digital Edition
             </Link>
 
             <div
@@ -189,17 +177,18 @@ export default function MainHeader() {
             </Link>
           </div>
 
-          {/* Mobile Right: Search & Hamburger */}
-          <div className="flex-1 flex justify-end items-center space-x-3">
+          {/* Right: Search & Socials & Mobile Hamburger */}
+          <div className="flex items-center space-x-2.5">
             <button
               aria-label="Open Search"
-              className="text-white/80 hover:text-white transition-colors p-2"
+              className="text-white hover:text-[#8DC63F] transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider bg-white/10 hover:bg-white/20 border border-white/20 px-3 py-1.5 cursor-pointer"
               onClick={() => setIsSearchOpen(true)}
             >
-              <FaSearch size={16} />
+              <FaSearch size={12} className="text-[#8DC63F]" />
+              <span className="hidden sm:inline">Search</span>
             </button>
 
-            <div className="hidden md:flex justify-end items-center space-x-4 ml-2" data-purpose="social-links">
+            <div className="hidden lg:flex items-center space-x-3 pl-2 border-l border-white/20" data-purpose="social-links">
               <a
                 href="https://www.facebook.com/sustainabilityvoice"
                 target="_blank"
@@ -207,7 +196,7 @@ export default function MainHeader() {
                 className="text-white/80 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
-                <FaFacebookF size={14} />
+                <FaFacebookF size={13} />
               </a>
               <a
                 href="https://www.linkedin.com/company/the-sustainability-voice/"
@@ -216,12 +205,12 @@ export default function MainHeader() {
                 className="text-white/80 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <FaLinkedinIn size={14} />
+                <FaLinkedinIn size={13} />
               </a>
             </div>
 
             <button
-              className="md:hidden text-white/80 hover:text-white focus:outline-none p-2"
+              className="md:hidden text-white/80 hover:text-white focus:outline-none p-1.5"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
             >
@@ -247,14 +236,14 @@ export default function MainHeader() {
               className="flex items-center justify-center gap-2 bg-black/25 text-white border border-white/20 rounded-xl px-4 py-3 text-xs tracking-wider"
             >
               <FaSearch size={12} className="text-[#8DC63F]" />
-              <span>Search 33 Articles...</span>
+              <span>Search 34 Articles...</span>
             </button>
 
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">
               Home
             </Link>
             <Link href="/magazine" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">
-              Magazine (PDF)
+              Digital Edition
             </Link>
             <Link href="/news" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">
               All Articles

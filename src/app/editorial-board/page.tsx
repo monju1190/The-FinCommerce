@@ -1,122 +1,146 @@
 import React from "react";
 import { teamMembers } from "@/data/mockData";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa6";
 
 export default function EditorialBoardPage() {
-  const managingEditor = teamMembers[0];
-  const panelMembers = teamMembers.slice(1);
+  const chiefEditor = teamMembers[0];
+  const allMembers = teamMembers.slice(1);
 
   return (
-    <main className="text-gray-900 min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-primary-green">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl pt-12">
-          <span className="text-[#8DC63F] text-xs font-bold uppercase tracking-widest mb-3 block">
-            The Sustainability Voice • Registration No. 48/2026
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight font-display">
-            Editorial Panel
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 font-light">
-            The minds behind Bangladesh&apos;s First Sustainable Business Magazine.
-          </p>
+    <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
+      {/* Editorial Masthead Bar */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+        <div className="master-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
+                <span>TSV MASTHEAD</span>
+                <span>•</span>
+                <span>REG. NO. 48/2026</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold font-display tracking-tight text-[#111111] uppercase">
+                Editorial Board
+              </h1>
+            </div>
+            <div className="text-right md:text-left">
+              <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
+                VOLUME 01 • ISSUE 01
+              </span>
+              <span className="text-sm font-serif text-gray-700 italic">
+                October–December 2026 Edition
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 md:px-12 py-20 space-y-20">
-        {/* Managing Editor Spotlight */}
-        <section id="team">
-          <div className="text-center mb-12 max-w-2xl mx-auto">
-            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-3 block">
-              Leadership
-            </span>
-            <h2 className="text-4xl font-bold mb-4 font-display">Managing Editor</h2>
-          </div>
+      <div className="master-container py-14 space-y-16">
+        {/* Navigation Back */}
+        <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-widest">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-gray-700 hover:text-[#D92B2B] transition-colors"
+          >
+            <FaArrowLeft size={10} />
+            <span>Back to Main Broadside</span>
+          </Link>
+          <span className="text-gray-500">12 Officers &amp; Fellows of the Press</span>
+        </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
-            <div className="w-full md:w-2/5 flex-shrink-0">
-              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] relative bg-gray-100">
+        {/* 1. Chief Editor & Managing Editor (Grand Spotlight) */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* Portrait Frame */}
+            <div className="lg:col-span-4 flex justify-center">
+              <div className="w-full max-w-[280px] sm:max-w-[320px] aspect-[4/5] border border-black/15 bg-[#F7F5F0] overflow-hidden relative group">
                 <img
-                  src={managingEditor.imageUrl}
-                  alt={managingEditor.name}
-                  className="w-full h-full object-cover"
+                  src={chiefEditor.imageUrl}
+                  alt={chiefEditor.name}
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>
 
-            <div className="w-full md:w-3/5 text-left">
-              <span className="text-[#16a34a] font-bold uppercase tracking-widest text-xs block mb-2">
-                Editorial • Issue 1, Volume 1 (Oct.–Dec. 2026)
-              </span>
-              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 font-display">
-                Setting the Sail — The Journey of The Sustainability Voice
-              </h3>
-              <p className="text-gray-500 font-semibold text-sm mb-6">
-                By {managingEditor.name}, {managingEditor.role}
+            {/* Editorial Title & Byline */}
+            <div className="lg:col-span-8 space-y-4">
+              <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
+                <span>★ Editorial Direction</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-[#111111] leading-tight">
+                {chiefEditor.name}
+              </h2>
+
+              <p className="text-base sm:text-lg font-mono uppercase tracking-wider text-[#1a4d2e] font-bold">
+                {chiefEditor.role}
               </p>
 
-              <div className="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed border-l-4 border-[#16a34a] pl-6">
-                <p>
-                  This magazine, like most enterprises of adventurous kind, is born out of passion. There is no sponsor, no investor to foot the bills, but there is hard work, lengthy planning, and careful organization of resources at hand, which made it possible to publish this maiden issue of <em>The Sustainability Voice</em>.
-                </p>
-                <p>
-                  Unsurprisingly, there are quite a number of people around us who share our passion for sustainability, and have contributed to the contents of this magazine. We are grateful to our contributors — from globally known intellectuals and industry veterans to freshers in the job. Though not planned that way, it turned out that none of the contributors for the maiden issue is a professional writer! The editorial team is also novice when it comes to professional editing. Photos used in this issue are mostly captured by amateur photographers, and graphics designs used here are generated by fresh designers and free versions of generative chat applications. But it is precisely this authentic, unvarnished drive that gives our publication its true heartbeat.
-                </p>
-                <p>
-                  As Bangladesh stands on the cusp of transformative economic milestones—most notably its upcoming LDC graduation—the old ways of doing business are no longer sufficient. Today, environmental standards dictate export market access, labor practices shape supply chain resilience, and energy efficiency directly impacts the bottom line. In short, Environmental, Social, and Governance (ESG) issues are a business reality now, and critically important for a future-proof growth.
-                </p>
-                <p>
-                  Ultimately, this magazine belongs to you—our readers, leaders, changemakers, and the youths. We leave its contents to your thoughtful critique and praise, remaining entirely open to your ideas as we strive to evolve. The journey toward a sustainable future has begun, and the pleasure of sharing it with you is entirely ours.
-                </p>
+              <div className="pt-4 border-t border-black/15 flex flex-wrap gap-x-8 gap-y-2 text-xs font-mono text-gray-600 uppercase tracking-wider">
+                <span>The Sustainability Voice</span>
+                <span>•</span>
+                <span>Publication Governance</span>
+                <span>•</span>
+                <span>Dhaka, Bangladesh</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Members of the Editorial Panel */}
+        {/* 2. Editorial Panel & Support Team (Uniform Broadsheet Grid: Image, Name, Role) */}
         <section>
-          <div className="text-center mb-12 max-w-2xl mx-auto">
-            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-3 block">
-              Editorial Governance
+          <div className="flex items-center justify-between pb-4 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                MEMBERS OF THE BOARD &amp; OPERATIONS
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Officers of the Press
+              </h3>
+            </div>
+            <span className="text-xs font-mono text-gray-500 hidden sm:block">
+              {allMembers.length} Appointed Members
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">
-              Publisher, Editorial Panel & Creative Leadership
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Bringing together globally recognized scholars, sustainability practitioners, financial experts, and creative leaders.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {panelMembers.map((member, idx) => (
+          {/* 12-Column Broadsheet Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {allMembers.map((member, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-shadow"
+                className="border border-black/15 bg-white p-5 flex flex-col justify-between group hover:border-black transition-colors"
               >
                 <div>
-                  <div className="flex items-center space-x-4 mb-4">
+                  {/* Portrait Frame */}
+                  <div className="aspect-[4/5] w-full border border-black/15 bg-[#F7F5F0] overflow-hidden mb-4 relative">
                     {member.imageUrl ? (
                       <img
                         src={member.imageUrl}
                         alt={member.name}
-                        className="w-16 h-16 rounded-full object-cover border-2 border-primary-green flex-shrink-0"
+                        className="w-full h-full object-cover object-top print-grayscale transition-all duration-500 group-hover:scale-105"
                       />
                     ) : (
-                      <div className="w-16 h-16 rounded-full bg-primary-green text-white flex items-center justify-center font-bold text-xl font-display flex-shrink-0 overflow-hidden">
-                        {member.name.charAt(0)}
+                      <div className="w-full h-full flex flex-col items-center justify-center bg-[#F7F5F0] text-[#111111] border border-dashed border-black/20 p-4">
+                        <span className="text-4xl font-display font-light text-gray-400">
+                          {member.name.charAt(0)}
+                        </span>
+                        <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase mt-2">
+                          TSV Fellow
+                        </span>
                       </div>
                     )}
-                    <div>
-                      <h3 className="text-xl font-bold font-display text-gray-900">
-                        {member.name}
-                      </h3>
-                      <p className="text-xs font-bold uppercase tracking-wider text-[#16a34a]">
-                        {member.role}
-                      </p>
-                    </div>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {member.bio}
+
+                  {/* Name */}
+                  <h4 className="text-lg font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-snug">
+                    {member.name}
+                  </h4>
+                </div>
+
+                {/* Designation / Role */}
+                <div className="pt-3 mt-3 border-t border-black/10">
+                  <p className="text-[11px] font-mono uppercase tracking-wider text-gray-600 font-semibold line-clamp-2">
+                    {member.role}
                   </p>
                 </div>
               </div>
@@ -124,53 +148,46 @@ export default function EditorialBoardPage() {
           </div>
         </section>
 
-        {/* Support Team & Publication Imprint */}
-        <section className="max-w-5xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-200">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-              <span className="text-primary-green text-xs font-bold uppercase tracking-widest block mb-2">
-                Operations & Design
+        {/* 3. Broadsheet Colophon / Publication Imprint */}
+        <section className="border-t-2 border-black pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-xs font-mono">
+            <div className="md:col-span-4 space-y-2">
+              <span className="text-[10px] uppercase tracking-widest text-[#D92B2B] block">
+                [COLOPHON &amp; IMPRINT]
               </span>
-              <h3 className="text-2xl font-bold font-display mb-4">Support Team</h3>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex justify-between border-b border-gray-100 pb-2">
-                  <span className="font-bold">Syed Latif Hossain</span>
-                  <span className="text-gray-500">Art Director</span>
-                </li>
-                <li className="flex justify-between border-b border-gray-100 pb-2">
-                  <span className="font-bold">Mahidul Haque</span>
-                  <span className="text-gray-500">Design Assistant</span>
-                </li>
-                <li className="flex justify-between border-b border-gray-100 pb-2">
-                  <span className="font-bold">Manisha Nabi Sonar</span>
-                  <span className="text-gray-500">Social Media</span>
-                </li>
-                <li className="flex justify-between pb-2">
-                  <span className="font-bold">Minhaz Hossain</span>
-                  <span className="text-gray-500">Business Development</span>
-                </li>
-              </ul>
+              <p className="font-bold text-[#111111] text-sm font-display">
+                The Sustainability Voice
+              </p>
+              <p className="text-gray-600 leading-relaxed font-sans">
+                A quarterly journal and broadsheet magazine published in Dhaka, Bangladesh. Dedicated to sustainable business strategy, climate resilience, and industrial policy.
+              </p>
             </div>
 
-            <div>
-              <span className="text-primary-green text-xs font-bold uppercase tracking-widest block mb-2">
-                Imprint & Colophon
+            <div className="md:col-span-4 space-y-2">
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 block">
+                [REGISTERED OFFICE &amp; PRESS]
               </span>
-              <h3 className="text-2xl font-bold font-display mb-4">Publication Details</h3>
-              <div className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                <p>
-                  <strong>Published by:</strong> Md. Nazrul Islam Chowdhury, Editor and Publisher
-                </p>
-                <p>
-                  <strong>Office:</strong> Shop-18, Level-5, Azimpur Aadhunik Nagar Market, Azimpur, Lalbagh, Dhaka-1205
-                </p>
-                <p>
-                  <strong>Printed by:</strong> Redaz Printers & Packages, 314/D, Elephant Road, Dhaka
-                </p>
-                <p>
-                  <strong>Edition:</strong> October–December 2026, Issue 1, Volume 1 • Registration No. 48/2026
-                </p>
-              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Shop-18, Level-5, Azimpur Aadhunik Nagar Market, Azimpur, Lalbagh, Dhaka-1205.
+              </p>
+              <p className="text-gray-600">
+                Printed by: Redaz Printers &amp; Packages, 314/D Elephant Road, Dhaka.
+              </p>
+            </div>
+
+            <div className="md:col-span-4 space-y-2">
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 block">
+                [DISPATCH &amp; CORRESPONDENCE]
+              </span>
+              <p className="text-gray-700">
+                Editorial Desk: <span className="text-[#111111] font-semibold">editor@sustainabilityvoice.com</span>
+              </p>
+              <p className="text-gray-700">
+                Direct Line: <span className="text-[#111111] font-semibold">+880 1713 039784</span>
+              </p>
+              <p className="text-gray-500">
+                Quarterly Print Run: Registration No. 48/2026
+              </p>
             </div>
           </div>
         </section>

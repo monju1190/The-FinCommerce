@@ -1,70 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
   --color-primary-green: #1a4d2e; /* Deep pine forest green */
   --color-primary-light: #2d6a4f;
-  --color-ft-pink: #c5dfc0; /* Soft green signature background */
+  --color-primary-dark: #0f301d;
+  --color-paper: #F7F5F0; /* Warm Newsprint / Archival Off-White */
+  --color-ft-pink: #F7F5F0;
+  --color-ink: #111111; /* Deep Charcoal Black */
+  --color-slate-muted: #555555;
+  --color-crimson: #D92B2B; /* Editorial Accent */
 
-  --font-sans: "Source Serif 4", serif;
-  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-display: "Playfair Display", "Newsreader", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-kicker: "Cinzel", "Playfair Display", Georgia, serif;
 }
 
 @layer base {
-  body {
-    font-family: var(--font-sans);
+  :root {
+    --background: #F7F5F0; /* Archival Newsprint */
+    --foreground: #111111; /* Printer's Ink Charcoal */
+    --border-hairline: rgba(17, 17, 17, 0.15);
   }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
   h1, h2, h3, h4, h5, h6, .masthead-title {
     font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  /* Fluid typography clamp utilities */
+  .text-fluid-hero {
+    font-size: clamp(2.25rem, 5vw + 0.5rem, 4.75rem);
+    line-height: 1.05;
+  }
+  .text-fluid-display {
+    font-size: clamp(1.75rem, 3.5vw + 0.25rem, 3.25rem);
+    line-height: 1.1;
+  }
+  .text-fluid-headline {
+    font-size: clamp(1.25rem, 2vw + 0.25rem, 2rem);
+    line-height: 1.2;
+  }
+  .text-fluid-subhead {
+    font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+    line-height: 1.4;
   }
 }
 
-:root {
-  --background: #c5dfc0; /* Restored signature greenish background */
-  --foreground: #111827; /* Deep printer's ink black */
+/* Master Container: 1600px Max-Width with Fluid Padding */
+.master-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 3.5vw, 4rem);
+  padding-right: clamp(1rem, 3.5vw, 4rem);
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--background);
-  color: var(--foreground);
+/* Exposed Hairline Grid Borders */
+.border-hairline {
+  border-color: rgba(17, 17, 17, 0.15);
+}
+.border-hairline-t {
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+}
+.border-hairline-b {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+.border-hairline-l {
+  border-left: 1px solid rgba(17, 17, 17, 0.15);
+}
+.border-hairline-r {
+  border-right: 1px solid rgba(17, 17, 17, 0.15);
 }
 
-.glass-overlay {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
+/* Zero Radius & Zero Drop Shadow Enforcement (Swiss Brutalist Rule) */
+.sharp-edge {
+  border-radius: 0px !important;
 }
 
-.primary-green {
-  color: var(--color-primary-green);
+/* Line length control: 60ch - 70ch */
+.measure-readable {
+  max-width: 65ch;
 }
 
-.bg-primary-green {
-  background-color: var(--color-primary-green);
+/* Editorial Justified Paragraphs on Article Reading */
+.article-body p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
-.border-primary-green {
-  border-color: var(--color-primary-green);
+/* Editorial Drop-Cap */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.5em;
+  line-height: 0.78;
+  margin-right: 0.18em;
+  margin-bottom: -0.05em;
+  font-weight: 700;
+  color: #111111;
 }
 
-.card-shadow {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+/* Full Vibrant Color by Default */
+.print-grayscale {
+  filter: none !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .print-grayscale,
+.print-grayscale:hover {
+  filter: none !important;
 }
 
-/* Custom scrollbar for a cleaner look */
+/* Contained Inner-Frame Image Hover Zoom */
+.broadsheet-frame {
+  overflow: hidden;
+  position: relative;
+}
+.broadsheet-frame img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .broadsheet-frame img {
+  transform: scale(1.04);
+}
+
+/* Bento Instant High-Contrast Invert on Hover */
+.bento-cell {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.bento-cell:hover {
+  background-color: #111111 !important;
+}
+.bento-cell:hover h3,
+.bento-cell:hover h4,
+.bento-cell:hover p,
+.bento-cell:hover .bento-text {
+  color: #F7F5F0 !important;
+}
+.bento-cell:hover .bento-subtext {
+  color: #a0a0a0 !important;
+}
+.bento-cell:hover .bento-accent {
+  color: #D92B2B !important;
+}
+.bento-cell:hover .bento-border {
+  border-color: rgba(247, 245, 240, 0.2) !important;
+}
+
+/* Subtle Fixed Paper Grain Overlay (3% Opacity) */
+.paper-grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Copy Protection - prevent selection on article bodies */
+.no-copy,
+article,
+.article-body,
+[data-protected="true"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Crisp Clean Scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #EFECE6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
+  background: #11111130;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #11111160;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -3,7 +3,7 @@ import React, { useState, useMemo, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { magazineData, magazinePdfLinks } from "@/data/mockData";
-import { FaBolt, FaBookOpen, FaDownload, FaSearch, FaTimes } from "react-icons/fa";
+import { FaBolt, FaBookOpen, FaSearch, FaTimes } from "react-icons/fa";
 
 function NewsContent() {
   const searchParams = useSearchParams();
@@ -82,21 +82,12 @@ function NewsContent() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/magazine/october-december-2026"
-              className="flex items-center gap-2 bg-primary-green text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-lg hover:bg-primary-light transition-colors shadow-sm"
+              href="/magazine"
+              className="flex items-center gap-2 bg-[#111111] hover:bg-[#D92B2B] text-white text-xs font-mono uppercase tracking-wider px-4 py-2.5 transition-colors"
             >
               <FaBookOpen size={12} />
-              <span>Live Read Issue PDF</span>
+              <span>Volume 01 Index</span>
             </Link>
-            <a
-              href={magazinePdfLinks.downloadUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-900 text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-lg hover:bg-gray-800 transition-colors shadow-sm"
-            >
-              <FaDownload size={12} />
-              <span>Download PDF</span>
-            </a>
           </div>
         </div>
 
