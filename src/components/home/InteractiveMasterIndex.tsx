@@ -9,7 +9,7 @@ export default function InteractiveMasterIndex() {
 
   const sections = magazineData.map((sec, i) => {
     const slugMap: Record<string, string> = {
-      "Cover Story": "sustainable-cities",
+      "Cover Story": "cover-story",
       "Editorial": "editorial",
       "Industry Practices": "industry-practices",
       "Sustainable Finance": "sustainable-finance",
@@ -18,6 +18,7 @@ export default function InteractiveMasterIndex() {
       "Frontrunner": "frontrunner",
       "Sustainable Cities": "sustainable-cities",
       "Agriculture": "agriculture",
+      "Friends in Need": "friends-in-need",
       "Friends In Need": "friends-in-need",
       "Technology": "technology",
       "Home & The World": "home-and-the-world",
@@ -28,6 +29,7 @@ export default function InteractiveMasterIndex() {
       "Wildlife": "wildlife",
       "Culture & Myth": "culture-and-myth",
       "ESG Award": "esg-award",
+      "Top Stories": "top-stories",
     };
 
     return {
@@ -52,13 +54,11 @@ export default function InteractiveMasterIndex() {
             Volume 01 Compendium
           </h2>
           <p className="text-xs sm:text-sm font-serif text-gray-600 mt-1">
-            Browse all curated editorial dossiers across the maiden print &amp; digital broadsheet.
+            Browse all 18 editorial sections across the maiden print &amp; digital broadsheet.
           </p>
         </div>
 
-        <span className="text-xs font-mono uppercase tracking-widest text-gray-500 hidden sm:block">
-          Complete Directory [16 Sections]
-        </span>
+
       </div>
 
       {/* 12-Column Split: 8 Cols Ledger : 4 Cols Dynamic Preview */}

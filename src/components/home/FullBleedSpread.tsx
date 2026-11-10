@@ -40,8 +40,39 @@ export default function FullBleedSpread({
           </span>
         </div>
 
-        {/* 12-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        {/* Mobile Phone View (< sm) — New Yorker Critics Row Layout (Image on Right) */}
+        <div className="sm:hidden p-4 border border-white/20 bg-white/5">
+          <Link
+            href={`/news/${article.slug}`}
+            className="flex items-center justify-between gap-3.5 group"
+          >
+            <div className="flex-1 pr-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
+                {article.category}
+              </span>
+              <h3 className="text-base font-bold font-display leading-snug line-clamp-2 mb-1.5 text-white group-hover:text-[#D92B2B] transition-colors">
+                {article.title}
+              </h3>
+              <p className="text-xs font-serif line-clamp-2 leading-relaxed mb-2 text-gray-300">
+                {article.subtitle}
+              </p>
+              <span className="text-[11px] font-mono uppercase text-gray-400 block">
+                By {article.author}
+              </span>
+            </div>
+
+            <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-white/20 bg-gray-900 overflow-hidden relative">
+              <img
+                src={article.imageUrl}
+                alt={article.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </Link>
+        </div>
+
+        {/* Desktop / Tablet Grid (sm: and above) — 12-Column Layout */}
+        <div className="hidden sm:grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Visual Frame (7 Cols) */}
           <div className="lg:col-span-7">
             <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-white/20 bg-gray-900 relative group">

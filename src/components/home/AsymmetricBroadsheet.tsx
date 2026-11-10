@@ -51,13 +51,47 @@ export default function AsymmetricBroadsheet({
           href={`/category/${categorySlug}`}
           className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-[#111111] hover:text-[#D92B2B] transition-colors shrink-0 font-bold"
         >
-          <span>View Section Dossier ({articles.length})</span>
+          <span>View Section ({articles.length})</span>
           <FaArrowRight size={10} />
         </Link>
       </div>
 
-      {/* 12-Column Split: 7 Cols Lead Story : 5 Cols Stack */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      {/* Mobile Phone View (< sm) — New Yorker Critics Row Layout (Image on Right) */}
+      <div className="sm:hidden divide-y divide-black/15 bg-white border border-black/15 p-4 space-y-4">
+        {articles.map((art, idx) => (
+          <Link
+            key={art.slug}
+            href={`/news/${art.slug}`}
+            className="flex items-center justify-between gap-3.5 pt-4 first:pt-0 group"
+          >
+            <div className="flex-1 pr-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
+                {art.category}
+              </span>
+              <h3 className="text-base font-bold font-display text-[#111111] group-hover:text-[#D92B2B] leading-snug line-clamp-2 mb-1.5 transition-colors">
+                {art.title}
+              </h3>
+              <p className="text-xs font-serif text-gray-700 line-clamp-2 leading-relaxed mb-2">
+                {art.subtitle}
+              </p>
+              <span className="text-[11px] font-mono uppercase text-gray-500 block">
+                By {art.author}
+              </span>
+            </div>
+
+            <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-black/15 bg-gray-200 overflow-hidden relative">
+              <img
+                src={art.imageUrl}
+                alt={art.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Desktop / Tablet Grid (sm: and above) — 12-Column Split: 7 Cols Lead Story : 5 Cols Stack */}
+      <div className="hidden sm:grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* Left Column (7 Cols — Flagship Lead Story) */}
         <div className="lg:col-span-7 flex flex-col justify-between">
           <Link href={`/news/${leadArticle.slug}`} className="group block">

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { recentEditions, magazineData } from "@/data/mockData";
+import { recentEditions, magazineData, NewsArticle } from "@/data/mockData";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function InauguralMonolith() {
@@ -13,12 +13,12 @@ export default function InauguralMonolith() {
     "waterlogging-in-dhaka-integrated-management",
     "beyond-the-plaque-green-certification-to-green-operations",
     "the-carbon-corridor-unlocking-green-investment-for-bangladesh",
-    "setting-the-sail-journey-of-the-sustainability-voice",
+    "from-salinity-to-sustainability-syngenta-gogrow-coastal-bangladesh",
   ];
 
   const flagshipStories = flagshipSlugs
     .map((slug) => allArticles.find((a) => a.slug === slug))
-    .filter(Boolean);
+    .filter((a): a is NewsArticle => Boolean(a));
 
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
@@ -61,17 +61,44 @@ export default function InauguralMonolith() {
         <div className="lg:col-span-5 lg:sticky lg:top-20 h-fit space-y-4">
           <div className="border border-[#143b23] bg-[#1a4d2e] text-[#F7F5F0] p-5 sm:p-7 shadow-xl relative group overflow-hidden">
             
-            {/* Visual Frame: Full-bleed object-cover with ZERO gap above or below */}
+            {/* Visual Frame: Butter-smooth Crossfade Animation with ZERO gap */}
             <div className="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden border border-white/20 bg-black/40 relative shadow-inner">
-              <img
-                src={activeImage}
-                alt="Volume 01 Showcase"
-                key={activeImage}
-                className="w-full h-full object-cover transition-all duration-700 ease-out animate-fadeIn"
-              />
-              <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-xs text-[#8DC63F] px-2.5 py-1 text-[10px] font-mono tracking-widest uppercase border border-white/10">
-                {activeKicker}
-              </div>
+              {flagshipStories.map((story, i) => {
+                const isCurrent = activeIdx === i;
+                return (
+                  <div
+                    key={story.slug}
+                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                      isCurrent
+                        ? "opacity-100 scale-100 z-10"
+                        : "opacity-0 scale-105 z-0 pointer-events-none"
+                    }`}
+                  >
+                    <img
+                      src={story.imageUrl}
+                      alt={story.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              })}
+
+              {/* Crossfading Chapter Kicker */}
+              {flagshipStories.map((story, i) => {
+                const isCurrent = activeIdx === i;
+                return (
+                  <div
+                    key={`kicker-${story.slug}`}
+                    className={`absolute top-3 left-3 bg-black/85 backdrop-blur-xs text-[#8DC63F] px-2.5 py-1 text-[10px] font-mono tracking-widest uppercase border border-white/10 transition-all duration-700 ${
+                      isCurrent
+                        ? "opacity-100 translate-y-0 z-20"
+                        : "opacity-0 -translate-y-1 z-0 pointer-events-none"
+                    }`}
+                  >
+                    CHAPTER {(i + 1).toString().padStart(2, "0")} • {story.category}
+                  </div>
+                );
+              })}
             </div>
 
             {/* Interactive Story Dots (Circles) */}
@@ -84,7 +111,7 @@ export default function InauguralMonolith() {
                     type="button"
                     onClick={() => selectStory(dotIdx)}
                     aria-label={`Switch to story ${dotIdx + 1}: ${s?.title}`}
-                    className={`transition-all duration-300 cursor-pointer ${
+                    className={`transition-all duration-500 cursor-pointer ${
                       isActive
                         ? "w-7 h-2.5 rounded-full bg-[#8DC63F]"
                         : "w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/80"
@@ -94,15 +121,32 @@ export default function InauguralMonolith() {
               })}
             </div>
 
-            {/* Edition Note in Crisp White & Light Green */}
+            {/* Edition Note in Crisp White & Light Green with Smooth Crossfading Title */}
             <div className="pt-3 space-y-2">
               <div className="flex items-center justify-between text-[11px] font-mono text-white/70 uppercase">
                 <span>The Sustainability Voice</span>
                 <span className="text-[#8DC63F] font-bold">Issue 01, Vol. 01</span>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold font-display text-white leading-snug">
-                {currentStory?.title || currentIssue.subtitle}
-              </h3>
+
+              {/* Smooth Crossfading Headline */}
+              <div className="relative min-h-[3.5rem] flex items-center">
+                {flagshipStories.map((story, i) => {
+                  const isCurrent = activeIdx === i;
+                  return (
+                    <h3
+                      key={`headline-${story.slug}`}
+                      className={`text-lg sm:text-xl font-bold font-display text-white leading-snug transition-all duration-700 ease-in-out ${
+                        isCurrent
+                          ? "opacity-100 translate-y-0 relative z-10"
+                          : "opacity-0 translate-y-2 absolute inset-x-0 pointer-events-none z-0"
+                      }`}
+                    >
+                      {story.title}
+                    </h3>
+                  );
+                })}
+              </div>
+
               <p className="text-xs sm:text-sm text-white/80 font-serif leading-relaxed line-clamp-3">
                 &ldquo;This magazine is born out of passion—advancing informed dialogue on climate resilience, industrial transformation, and ESG governance in Bangladesh.&rdquo;
               </p>
@@ -133,8 +177,8 @@ export default function InauguralMonolith() {
                   storyRefs.current[idx] = el;
                 }}
                 onMouseEnter={() => setActiveIdx(idx)}
-                className={`py-6 sm:py-8 first:pt-0 last:pb-4 group cursor-pointer transition-colors ${
-                  isSelected ? "bg-black/[0.02]" : ""
+                className={`py-6 sm:py-8 px-5 sm:px-7 -mx-5 sm:-mx-7 group cursor-pointer transition-all duration-300 ${
+                  isSelected ? "bg-black/[0.04]" : "hover:bg-black/[0.02]"
                 }`}
               >
                 <div className="flex items-baseline justify-between gap-4 mb-2">
@@ -151,19 +195,32 @@ export default function InauguralMonolith() {
                   </span>
                 </div>
 
-                <Link href={`/news/${story.slug}`} className="block">
-                  <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-[1.18] mb-3">
-                    {story.title}
-                  </h2>
-                </Link>
+                <div className="flex sm:block items-center justify-between gap-3.5">
+                  <div className="flex-1 pr-1">
+                    <Link href={`/news/${story.slug}`} className="block">
+                      <h2 className="text-xl sm:text-3xl md:text-[32px] font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-[1.18] mb-2 sm:mb-3 line-clamp-2 sm:line-clamp-none">
+                        {story.title}
+                      </h2>
+                    </Link>
 
-                <p className="text-sm sm:text-base text-gray-700 font-serif leading-relaxed line-clamp-3 mb-4 measure-readable">
-                  {story.subtitle}
-                </p>
+                    <p className="text-xs sm:text-base text-gray-700 font-serif leading-relaxed line-clamp-2 sm:line-clamp-3 mb-3 sm:mb-4 measure-readable">
+                      {story.subtitle}
+                    </p>
+                  </div>
+
+                  {/* Compact Right Thumbnail for Phone View */}
+                  <div className="sm:hidden w-24 xs:w-28 aspect-[4/3] shrink-0 border border-black/15 bg-gray-200 overflow-hidden relative">
+                    <img
+                      src={story.imageUrl}
+                      alt={story.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
 
                 <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-3 border-t border-black/10">
                   <span className="font-semibold text-[#111111]">
-                    By {story.author} {story.authorRole ? `(${story.authorRole})` : ""}
+                    By {story.author}
                   </span>
                   <Link
                     href={`/news/${story.slug}`}

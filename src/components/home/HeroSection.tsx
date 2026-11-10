@@ -18,7 +18,7 @@ const slides = [
     tag: "OCTOBER–DECEMBER 2026 • SUSTAINABLE FINANCE",
     title: "The Carbon Corridor: Unlocking Green Investment for Bangladesh",
     desc: "How high-integrity carbon markets, Article 6 mechanisms, and cross-border green investment corridors can finance Bangladesh's industrial decarbonisation.",
-    img: "/magazine/oct-dec/photos/bangladesh-bank-hero.jpg",
+    img: "/magazine/oct-dec/pdf-images/p46_img1_2375x1378.jpeg",
     category: "SUSTAINABLE FINANCE",
     link: "/news/the-carbon-corridor-unlocking-green-investment-for-bangladesh"
   },
@@ -42,7 +42,7 @@ const slides = [
     tag: "OCTOBER–DECEMBER 2026 • AGRICULTURE",
     title: "From the Sands of Arabia to the Rivers of Bengal: Building Shared Resilience in Sustainable Agriculture and the Food–Water Security Nexus",
     desc: "Dr. Turki Faisal Al Rasheed explores how Saudi Arabia and Bangladesh can build shared resilience in sustainable agriculture and the Food–Water Security Nexus.",
-    img: "/magazine/oct-dec/photos/solar-irrigation.jpg",
+    img: "/magazine/oct-dec/pdf-images/p15_img1_2518x1669.jpeg",
     category: "AGRICULTURE",
     link: "/news/from-the-sands-of-arabia-to-the-rivers-of-bengal"
   }

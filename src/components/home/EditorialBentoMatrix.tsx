@@ -33,9 +33,7 @@ export default function EditorialBentoMatrix({ articles }: EditorialBentoMatrixP
           </p>
         </div>
 
-        <span className="text-xs font-mono uppercase tracking-widest text-gray-500 hidden sm:block">
-          Multi-Domain Matrix [05 Units]
-        </span>
+
       </div>
 
       {/* 12-Column Multi-Row Bento Puzzle Grid */}

@@ -6,8 +6,8 @@ export default function AdvertisePage() {
   return (
     <main className="text-gray-900 min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-primary-green pt-24 pb-32 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2uL1AJ4fWgqC8W1CjI1Yf8ji-5abe3aYsxy7muXhYEjUrL3Eg07JLHKlPjvhiPBff9njqF4LJpKjnrTzyhvfgCict_WF6RUWxCdD_28cTUrKruAg9D5UlhLIj5t7bMO_EmpXz6Eeirk9VjAinbpsmpHC_jTILATtn6aqLxpQOoACbCwEqNn4VdZs3F1Hf-35laWGV79hPMltxFCtBGQEgMS5hz75Uh0tRfTiVy9hHa6EYs0sWaDE')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+      <section className="relative bg-[#0f3d26] pt-24 pb-32 px-4 overflow-hidden border-b-2 border-black">
+        <div className="absolute inset-0 bg-[url('/magazine/oct-dec/cover.jpg')] bg-cover bg-center mix-blend-overlay opacity-25"></div>
         <div className="container mx-auto relative z-10 text-center max-w-4xl">
           <span className="text-white/80 text-sm font-bold uppercase tracking-widest mb-4 block">
             Corporate Partnership & Advertisement

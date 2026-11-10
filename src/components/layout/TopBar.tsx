@@ -26,25 +26,7 @@ export default function TopBar() {
           </a>
         </div>
         <div className="flex items-center space-x-1 cursor-pointer">
-          <img
-            alt="US Flag"
-            className="w-4 h-3"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs-fbqk8Xssm4LU_D61PKurpoexE7_fqJ8E3Ox50th-JDRenH2NCHgz_f8KV_2H5385BbL7RAfzzoM6eq7V6Xeg4hxjNCCXyJZj20ETeSdzZjvo-9m9RcxdwVTeCcN1ie0JflPNBGBuMJ8TDBXwXnQOw500B1aGAbVa5oDjs6KMlCG3IGUMaeWzBN9A3HE0RnM4i1TcOdhpfMzGDI_OaTMvbvFGXIT3P1lrjHM2gfkqIHcqIzx-Pc"
-          />
-          <span>Eng</span>
-          <svg
-            className="w-3 h-3"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 9l-7 7-7-7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            ></path>
-          </svg>
+          <span className="text-xs font-mono font-bold">EN</span>
         </div>
       </div>
     </div>

@@ -70,17 +70,16 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="w-full flex-grow min-h-[16rem] bg-gray-200 rounded-2xl overflow-hidden relative mt-auto">
-              {/* Map Placeholder */}
+            <div className="w-full flex-grow min-h-[16rem] bg-gray-900 border border-black/15 overflow-hidden relative mt-auto">
               <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 
-                alt="Map location" 
-                className="w-full h-full object-cover opacity-60 mix-blend-multiply"
+                src="/magazine/oct-dec/photos/waterlogging-1.jpg" 
+                alt="Dhaka location" 
+                className="w-full h-full object-cover opacity-60"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white px-4 py-2 rounded-lg shadow-md font-bold text-sm text-primary-green flex items-center space-x-2">
-                  <FaMapMarkerAlt className="text-[#16a34a]" />
-                  <span>Dhaka, Bangladesh</span>
+                <div className="bg-white px-4 py-2 border border-black/20 font-bold text-sm text-[#111111] flex items-center space-x-2 shadow-sm">
+                  <FaMapMarkerAlt className="text-[#D92B2B]" />
+                  <span>Dhaka-1205, Bangladesh</span>
                 </div>
               </div>
             </div>

@@ -9,13 +9,13 @@ const relatedCategoryGroups: Record<string, string[]> = {
   "industry-practices": ["industry practices", "rmg & textile", "rule book", "governance", "frontrunner"],
   "rmg-and-textile": ["rmg & textile", "industry practices"],
   "sustainable-finance": ["sustainable finance", "capital market", "friends in need", "standards"],
-  "capital-market": ["capital market", "sustainable finance"],
+  "capital-market": ["capital market", "sustainable finance", "playbook"],
   "standards": ["standards", "energy & power", "sustainable finance", "playbook"],
   "energy-and-power": ["energy & power", "standards", "sustainable finance"],
   "home-and-the-world": ["home & the world"],
   "playbook": ["playbook", "standards", "rule book"],
   "frontrunner": ["frontrunner", "esg award", "industry practices"],
-  "esg": ["esg", "esg award", "frontrunner", "standards"],
+  "esg": ["esg", "esg award", "frontrunner", "standards", "playbook"],
   "esg-award": ["esg award", "frontrunner"],
   "sustainable-cities": ["sustainable cities", "sustainable city", "top stories", "waste management"],
   "sustainable-city": ["sustainable city", "sustainable cities", "waste management"],
@@ -32,6 +32,8 @@ const relatedCategoryGroups: Record<string, string[]> = {
   "wild-life-and-biodiversity": ["wild life & biodiversity", "wildlife", "culture & myth"],
   "culture-and-myth": ["culture & myth", "wildlife"],
   "health": ["health", "wildlife"],
+  "cover-story": ["cover story", "sustainable cities"],
+  "editorial": ["editorial"],
 };
 
 export default async function CategoryArchivePage({

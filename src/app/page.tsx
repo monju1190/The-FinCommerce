@@ -4,7 +4,9 @@ import InauguralMonolith from "@/components/home/InauguralMonolith";
 import AsymmetricBroadsheet from "@/components/home/AsymmetricBroadsheet";
 import StaggeredDualSplit from "@/components/home/StaggeredDualSplit";
 import FullBleedSpread from "@/components/home/FullBleedSpread";
-import EditorialBentoMatrix from "@/components/home/EditorialBentoMatrix";
+import BroadsheetSpotlight from "@/components/home/BroadsheetSpotlight";
+import EditorialListSection from "@/components/home/EditorialListSection";
+import EditorialCarouselSection from "@/components/home/EditorialCarouselSection";
 import InteractiveMasterIndex from "@/components/home/InteractiveMasterIndex";
 import EditorialCursor from "@/components/home/EditorialCursor";
 import CtaSection from "@/components/shared/CtaSection";
@@ -20,112 +22,196 @@ export default function Home() {
     return slugs.map((s) => getArticle(s)).filter((a): a is NewsArticle => Boolean(a));
   };
 
-  // 1. RMG & Textile Articles (Module 2 - 4 articles)
+  // 1. RMG & Textile / Industry Practices (2 articles)
   const rmgArticles = getArticles([
     "beyond-the-plaque-green-certification-to-green-operations",
-    "epyllion-group-championing-esg-beyond-compliance",
-    "from-audit-to-accountability-export-competitiveness-hredd",
     "sustainability-practices-radisson-blu-chattogram",
   ]);
 
-  // 2. Sustainable City Articles (Module 3 - 2 articles)
+  // 2. Frontrunner — Corporate ESG Pioneer (1 article)
+  const frontrunnerArticle = getArticle(
+    "epyllion-group-championing-esg-beyond-compliance"
+  );
+
+  // 3. Rule Book — Compliance & HREDD (1 article)
+  const ruleBookArticle = getArticle(
+    "from-audit-to-accountability-export-competitiveness-hredd"
+  );
+
+  // 4. Sustainable City (2 articles)
   const cityArticles = getArticles([
     "a-suffocated-buriganga-existential-threat-for-dhaka",
     "ramna-green-critters-of-dhakas-shrinking-urban-space",
   ]);
 
-  // 3. Capital Market & Finance Articles (Module 2 - 3 articles)
-  const capitalArticles = getArticles([
-    "the-carbon-corridor-unlocking-green-investment-for-bangladesh",
-    "sustainable-finance-blueprint-coordinated-regulation-bangladesh",
+  // 5. Capital Market & Sustainable Finance (1 article)
+  const capitalArticle = getArticle(
+    "the-carbon-corridor-unlocking-green-investment-for-bangladesh"
+  );
+
+  // 6. Standards (IFRS 9 & Decarbonisation Financing / Energy & Power) (2 articles)
+  const standardsArticles = getArticles([
+    "the-accounting-rule-thats-secretly-a-technology-story-ifrs9",
     "decarbonisation-financing-in-bangladesh-evolving-role-of-bangladesh-bank",
   ]);
 
-  // 4. Governance Article (Module 4 - 1 article)
+  // 7. Playbook — ESG Ratings & Policy (2 articles)
+  const playbookArticles = getArticles([
+    "esg-ratings-how-corporates-are-rated-and-why-it-matters",
+    "sustainable-finance-blueprint-coordinated-regulation-bangladesh",
+  ]);
+
+  // 8. Governance (1 article)
   const governanceArticle = getArticle(
     "the-governance-gap-why-sustainability-needs-to-reach-the-boardroom"
   );
 
-  // 5. Agriculture Articles (Module 3 - 2 articles)
+  // 9. Agriculture (2 articles)
   const agriArticles = getArticles([
     "from-the-sands-of-arabia-to-the-rivers-of-bengal",
     "from-salinity-to-sustainability-syngenta-gogrow-coastal-bangladesh",
   ]);
 
-  // 6. Technology Articles (Module 3 - 2 articles)
+  // 10. Technology (2 articles)
   const techArticles = getArticles([
     "the-semiconductor-race-can-bangladesh-catch-up",
     "ai-infrastructure-closing-the-environmental-clearance-gap",
   ]);
 
-  // 7. Health Article (Module 4 - 1 article)
+  // 11. Health & Human Wellbeing (1 article)
   const healthArticle = getArticle(
     "living-well-health-in-an-unequal-world-longevity-blueprint"
   );
 
-  // 8. Wildlife Articles (Module 3 - 2 articles)
+  // 12. Wild Life & Biodiversity (2 articles)
   const wildlifeArticles = getArticles([
     "the-deltas-edge-ecological-balance-wildlife-human-survival",
     "the-kingfishers-of-bangladesh-twelve-species",
   ]);
 
-  // 9. Bento Articles (Module 5)
-  const bentoArticles = {
-    standards: getArticle("the-accounting-rule-thats-secretly-a-technology-story-ifrs9"),
-    playbook: getArticle("esg-ratings-how-corporates-are-rated-and-why-it-matters"),
-    circular: getArticle("plastic-waste-management-bangladesh-extended-producer-responsibility"),
-    award: getArticle("verifiable-impact-bangladesh-inaugural-esg-excellence-awards"),
-    climate: getArticle("bangladesh-national-sustainability-news-solar-duties-climate-finance"),
-  };
+  // 13. Circular Economy & Waste Management (2 articles)
+  const circularArticles = getArticles([
+    "plastic-waste-management-bangladesh-extended-producer-responsibility",
+    "transforming-waste-into-hope-tmss-waste-collection-business",
+  ]);
 
-  // 10. Culture & Myth Articles (Module 3 - 2 articles)
+  // 14. Culture & Myth (2 articles)
   const mythArticles = getArticles(["bonbibi", "humbaba"]);
 
-  // 11. Friend In Need Article (Module 4 - 1 article)
-  const friendArticle = getArticle("denmark-bangladesh-lasting-partnership-greener-turn");
+  // 15. Home & The World (3 articles)
+  const homeWorldArticles = getArticles([
+    "bangladesh-at-the-crossroads-un-sdg-report-2026",
+    "climate-change-and-decent-work-ivory-coast",
+    "the-balance-sheet-of-development-asia-pacific-sustainability",
+  ]);
+
+  // 16. ESG Award (1 article)
+  const esgAwardArticle = getArticle(
+    "verifiable-impact-bangladesh-inaugural-esg-excellence-awards"
+  );
+
+  // 17. Friend In Need (1 article)
+  const friendArticle = getArticle(
+    "denmark-bangladesh-lasting-partnership-greener-turn"
+  );
+
+  // 18. Top Stories & Global Briefings (4 articles)
+  const topStoriesArticles = getArticles([
+    "bangladesh-national-sustainability-news-solar-duties-climate-finance",
+    "global-top-stories-eu-unsold-clothing-ban-german-renewables",
+    "global-business-strategy-rice-methane-credits-green-innovation",
+    "global-policy-regulation-europe-crop-yields-japan-flood-resilience",
+  ]);
 
   return (
     <main className="master-container pb-16 antialiased">
       {/* Magnetic "READ" Cursor Indicator (Desktop Only) */}
       <EditorialCursor />
 
-      {/* MODULE 1: The Inaugural Monolith (Volume 01 Hero Spotlight) */}
+      {/* 1. COVER STORY & VOLUME 01 HERO SPOTLIGHT */}
       <InauguralMonolith />
 
-      {/* MODULE 2: The Asymmetric Broadsheet — RMG & Textile (4 Articles) */}
-      <AsymmetricBroadsheet
+      {/* 2. RMG & TEXTILE / INDUSTRY PRACTICES (2 Articles) */}
+      <StaggeredDualSplit
         sectionNumber="02"
         sectionTitle="RMG &amp; Textile"
-        kicker="MANUFACTURING &amp; SUPPLY CHAIN GOVERNANCE"
-        categorySlug="industry-practices"
+        kicker="MANUFACTURING &amp; GREEN OPERATIONS"
+        categorySlug="rmg-and-textile"
         articles={rmgArticles}
-        description="Transitioning from 349 LEED green factory certifications to daily lean operations, HREDD compliance, and worker equity."
+        description="Transitioning from 349 LEED green factory certifications to daily lean manufacturing operations and sustainable hospitality."
       />
 
-      {/* MODULE 3: The Staggered Dual-Split — Sustainable City (2 Articles) */}
+      {/* 3. FRONTRUNNER — Corporate ESG Pioneer (1 Article) */}
+      {frontrunnerArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="03"
+          sectionTitle="Frontrunner"
+          kicker="CORPORATE ESG PIONEER"
+          categorySlug="frontrunner"
+          article={frontrunnerArticle}
+          theme="light"
+        />
+      )}
+
+      {/* 4. RULE BOOK — Export Compliance & Due Diligence (1 Article) */}
+      {ruleBookArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="04"
+          sectionTitle="Rule Book"
+          kicker="HREDD &amp; DUE DILIGENCE MANDATE"
+          categorySlug="rule-book"
+          article={ruleBookArticle}
+          theme="light"
+          imageOnRight={true}
+        />
+      )}
+
+      {/* 5. SUSTAINABLE CITY (2 Articles) */}
       <StaggeredDualSplit
-        sectionNumber="03"
+        sectionNumber="05"
         sectionTitle="Sustainable City"
         kicker="URBAN HYDROLOGY &amp; ECOLOGICAL SANCTUARIES"
-        categorySlug="sustainable-cities"
+        categorySlug="sustainable-city"
         articles={cityArticles}
         description="A suffocated Buriganga river meets Dhaka's shrinking urban biodiversity in Ramna Park."
       />
 
-      {/* MODULE 2: The Asymmetric Broadsheet — Capital Market (3 Articles) */}
-      <AsymmetricBroadsheet
-        sectionNumber="04"
-        sectionTitle="Capital Market &amp; Sustainable Finance"
-        kicker="TRANSITION ARCHITECTURE &amp; CARBON TRADING"
-        categorySlug="sustainable-finance"
-        articles={capitalArticles}
-        description="Article 6 carbon corridors, central bank green refinance schemes, and coordinated financial regulation."
+      {/* 6. CAPITAL MARKET & SUSTAINABLE FINANCE (1 Article) */}
+      {capitalArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="06"
+          sectionTitle="Capital Market"
+          kicker="TRANSITION ARCHITECTURE &amp; CARBON TRADING"
+          categorySlug="capital-market"
+          article={capitalArticle}
+          theme="light"
+        />
+      )}
+
+      {/* 7. STANDARDS — Technology & Decarbonisation (2 Articles — The Critics New Yorker List Style) */}
+      <EditorialListSection
+        sectionNumber="07"
+        title="Standards"
+        kicker="FINANCIAL REGULATION &amp; ENERGY TRANSITION"
+        categorySlug="standards"
+        articles={standardsArticles}
+        description="The hidden technology revolution inside IFRS 9 banking rules and central bank decarbonisation financing."
       />
 
-      {/* MODULE 4: Full-Bleed Magazine Spread — Governance (1 Article) */}
+      {/* 8. PLAYBOOK — ESG Ratings & Policy (2 Articles — The Critics New Yorker List Style) */}
+      <EditorialListSection
+        sectionNumber="08"
+        title="Playbook"
+        kicker="EXECUTIVE FRAMEWORKS &amp; ESG RATINGS"
+        categorySlug="playbook"
+        articles={playbookArticles}
+        description="Inside corporate ESG rating methodologies and the coordinated regulatory blueprint for sustainable finance."
+      />
+
+      {/* 9. GOVERNANCE (1 Article — Full-Bleed Dark Spread) */}
       {governanceArticle && (
         <FullBleedSpread
-          sectionNumber="05"
+          sectionNumber="09"
           sectionTitle="Governance"
           kicker="BOARDROOM OVERSIGHT &amp; FIDUCIARY DUTY"
           categorySlug="governance"
@@ -133,9 +219,9 @@ export default function Home() {
         />
       )}
 
-      {/* MODULE 3: The Staggered Dual-Split — Agriculture (2 Articles) */}
+      {/* 10. AGRICULTURE (2 Articles) */}
       <StaggeredDualSplit
-        sectionNumber="06"
+        sectionNumber="10"
         sectionTitle="Agriculture"
         kicker="FOOD–WATER SECURITY &amp; SALINITY ADAPTATION"
         categorySlug="agriculture"
@@ -143,9 +229,9 @@ export default function Home() {
         description="From the desert sands of Arabia to the coastal rivers of Bengal: climate-smart farming and salinity-resistant crops."
       />
 
-      {/* MODULE 3: The Staggered Dual-Split — Technology (2 Articles) */}
+      {/* 11. TECHNOLOGY (2 Articles) */}
       <StaggeredDualSplit
-        sectionNumber="07"
+        sectionNumber="11"
         sectionTitle="Technology"
         kicker="SEMICONDUCTORS &amp; AI CLEARANCE MODERNIZATION"
         categorySlug="technology"
@@ -153,10 +239,10 @@ export default function Home() {
         description="Can Bangladesh build domestic semiconductor capacity while accelerating green data-center approvals through AI?"
       />
 
-      {/* MODULE 4: Full-Bleed Magazine Spread — Health & Longevity (1 Article) */}
+      {/* 12. HEALTH & HUMAN WELLBEING (1 Article — Full-Bleed Spread) */}
       {healthArticle && (
         <FullBleedSpread
-          sectionNumber="08"
+          sectionNumber="12"
           sectionTitle="Health &amp; Human Wellbeing"
           kicker="LONGEVITY SCIENCE &amp; HEALTH EQUITY"
           categorySlug="health"
@@ -164,22 +250,29 @@ export default function Home() {
         />
       )}
 
-      {/* MODULE 3: The Staggered Dual-Split — Wild Life & Biodiversity (2 Articles) */}
+      {/* 13. WILD LIFE & BIODIVERSITY (2 Articles) */}
       <StaggeredDualSplit
-        sectionNumber="09"
+        sectionNumber="13"
         sectionTitle="Wild Life &amp; Biodiversity"
         kicker="DELTA CONSERVATION &amp; COEXISTENCE"
-        categorySlug="wildlife"
+        categorySlug="wild-life-and-biodiversity"
         articles={wildlifeArticles}
         description="Documenting the 12 delta kingfishers of Bangladesh alongside elephant and tiger conservation along the Sundarbans edge."
       />
 
-      {/* MODULE 5: The Editorial Bento Matrix — Standards, ESG Ratings & Circularity */}
-      <EditorialBentoMatrix articles={bentoArticles} />
-
-      {/* MODULE 3: The Staggered Dual-Split — Culture & Myth (2 Articles) */}
+      {/* 14. CIRCULAR ECONOMY & WASTE MANAGEMENT (2 Articles) */}
       <StaggeredDualSplit
-        sectionNumber="10"
+        sectionNumber="14"
+        sectionTitle="Circular Economy"
+        kicker="EXTENDED PRODUCER RESPONSIBILITY &amp; ZERO WASTE"
+        categorySlug="circular-economy"
+        articles={circularArticles}
+        description="Making Extended Producer Responsibility (EPR) enforceable and scaling community-based plastic recovery."
+      />
+
+      {/* 15. CULTURE & MYTH (2 Articles) */}
+      <StaggeredDualSplit
+        sectionNumber="15"
         sectionTitle="Culture &amp; Myth"
         kicker="ANCIENT ECOLOGICAL GUARDIANS"
         categorySlug="culture-and-myth"
@@ -187,21 +280,54 @@ export default function Home() {
         description="The folklore of Bonbibi in the Sundarbans and Humbaba in Mesopotamia as enduring metaphors for ecological boundaries."
       />
 
-      {/* MODULE 4: Full-Bleed Magazine Spread — Friend In Need (1 Article) */}
+      {/* 16. HOME & THE WORLD (3 Articles — Asymmetric Broadsheet with 1 Flagship + 2 Stack) */}
+      <AsymmetricBroadsheet
+        sectionNumber="16"
+        sectionTitle="Home &amp; The World"
+        kicker="GLOBAL POLICY &amp; SDG REPORTING"
+        categorySlug="home-and-the-world"
+        articles={homeWorldArticles}
+        description="UN SDG progress at the crossroads, heat stress among cocoa workers in Côte d'Ivoire, and the regional development balance sheet."
+      />
+
+      {/* 17. ESG AWARD (1 Article) */}
+      {esgAwardArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="17"
+          sectionTitle="ESG Award"
+          kicker="EVIDENCE-BASED RECOGNITION"
+          categorySlug="esg-award"
+          article={esgAwardArticle}
+          theme="light"
+        />
+      )}
+
+      {/* 18. FRIEND IN NEED (1 Article — Full-Bleed Spread) */}
       {friendArticle && (
         <FullBleedSpread
-          sectionNumber="11"
+          sectionNumber="18"
           sectionTitle="Friend In Need"
           kicker="BILATERAL CLIMATE DIPLOMACY"
-          categorySlug="friends-in-need"
+          categorySlug="friend-in-need"
           article={friendArticle}
         />
       )}
 
-      {/* MODULE 6: Interactive 16-Section Directory (The Master Index) */}
+      {/* 19. TOP STORIES / GLOBAL BRIEFINGS (Horizontal Swipeable Carousel with Dots — The Atlantic / Today's Mix Style) */}
+      <EditorialCarouselSection
+        sectionNumber="19"
+        title="Today's Global Briefings"
+        kicker="REAL-TIME INTELLIGENCE"
+        categorySlug="top-stories"
+        articles={topStoriesArticles}
+        motifTitle="Top Stories &amp; Dispatch"
+        description="National solar tariff policies, European textile destruction bans, and carbon credit market disruptions."
+      />
+
+      {/* 20. MASTER DIRECTORY & COMPENDIUM */}
       <InteractiveMasterIndex />
 
-      {/* Editorial Dispatch Newsletter */}
+      {/* EDITORIAL DISPATCH NEWSLETTER */}
       <CtaSection />
     </main>
   );
