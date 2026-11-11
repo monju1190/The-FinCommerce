@@ -1,147 +1,366 @@
 import React from "react";
-import { FaEye, FaBullseye, FaProjectDiagram, FaGlobe, FaLeaf, FaHandsHelping, FaNewspaper } from "react-icons/fa";
+import Link from "next/link";
+import { FaEye, FaBullseye, FaArrowLeft, FaArrowRight, FaShieldAlt } from "react-icons/fa";
 
 export default function AboutUsPage() {
+  const pillars = [
+    {
+      num: "01",
+      title: "Business Integration",
+      deck: "C-Suite Action & Commercial Value",
+      desc: "Practical, executive-level strategies to transition enterprises from mere reactive compliance toward measurable, value-driven corporate operations and long-term resilience."
+    },
+    {
+      num: "02",
+      title: "Policy Advocacy",
+      deck: "Public-Private Legislative Dialogue",
+      desc: "A constructive, evidence-based forum bridging private sector ground realities with public regulatory design, financial incentives, and sustainable national industrial policies."
+    },
+    {
+      num: "03",
+      title: "Rooted in Bangladesh, Reaching the World",
+      deck: "Global Supply Chain Alignment",
+      desc: "Highlighting homegrown innovation, delta adaptation, and regional enterprise dynamics while aligning with international ESG disclosure frameworks and bilateral climate partnerships."
+    }
+  ];
+
+  const editorialDomains = [
+    "Sustainability & Climate Action",
+    "ESG & Responsible Business",
+    "Green & Sustainable Finance",
+    "Circular Economy & Waste Management",
+    "Renewable Energy & Energy Transition",
+    "Corporate Sustainability & Governance",
+    "Carbon Emissions & Decarbonisation",
+    "Environment & Biodiversity",
+    "Sustainable Agriculture & Food Security",
+    "Decent Work & Inclusive Growth",
+    "Green Technology & Innovation",
+    "Sustainable Cities & Communities",
+    "Blue Economy & Ocean Sustainability",
+    "Human Rights & Social Sustainability",
+    "Resource Efficiency & Sustainable Production",
+    "Pollution Prevention & Clean Industry",
+    "Deforestation & Ecosystem Protection"
+  ];
+
+  const audienceQuadrants = [
+    {
+      group: "Executive Leadership",
+      kicker: "SECTOR 01",
+      members: [
+        "Corporate Leaders & Board Members",
+        "CEOs & Chief Sustainability Officers",
+        "Industry Association Chairs & Directors"
+      ]
+    },
+    {
+      group: "Capital & Regulation",
+      kicker: "SECTOR 02",
+      members: [
+        "Policymakers, Regulators & Ministries",
+        "Bankers & Sustainable Finance Teams",
+        "Institutional Investors & Asset Managers"
+      ]
+    },
+    {
+      group: "Science & Practice",
+      kicker: "SECTOR 03",
+      members: [
+        "ESG & Climate Technical Professionals",
+        "Environmental Engineers & Auditors",
+        "Academics, Researchers & Think Tanks"
+      ]
+    },
+    {
+      group: "Global Development",
+      kicker: "SECTOR 04",
+      members: [
+        "International Development Partners",
+        "Bilateral Diplomatic Missions",
+        "NGOs, Social Enterprises & Advocates"
+      ]
+    }
+  ];
+
   return (
-    <main className="text-gray-900 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-primary-green">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl pt-16">
-          <span className="text-white/80 text-sm font-bold uppercase tracking-widest mb-4 block">
-            About The Sustainability Voice
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight font-display">
-            A platform for ideas.<br />A voice for sustainability.<br />For Future-proof Business.
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
-            We are dedicated to advancing informed dialogue on sustainability, environment, climate change, and responsible business, bringing together leaders and practitioners to explore the challenges shaping a sustainable future.
-          </p>
+    <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
+      {/* 1. EDITORIAL MASTHEAD BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+        <div className="master-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
+                <span>TSV ARCHIVAL DOSSIER</span>
+                <span>•</span>
+                <span>FOUNDING CHARTER</span>
+                <span>•</span>
+                <span>DHAKA, BANGLADESH</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
+                A Platform for Ideas. A Voice for Sustainability.
+              </h1>
+            </div>
+            <div className="text-left md:text-right flex-shrink-0">
+              <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
+                VOLUME 01 • EST. 2026
+              </span>
+              <span className="text-sm font-serif text-gray-700 italic block">
+                Quarterly Print &amp; Digital Broadside
+              </span>
+            </div>
+          </div>
+
+          {/* Quick Ledger Sub-Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Broadside</span>
+            </Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+              <span>Circulation: National &amp; Global</span>
+              <span>•</span>
+              <span>Editorial Desk: Dhaka-1205</span>
+              <span>•</span>
+              <span>Reg. No. 48/2026</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 md:px-12 py-20 space-y-24">
-        
-        {/* Vision & Mission */}
-        <section id="vision-mission" className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-stretch">
-          <div className="bg-gray-50 p-10 md:p-16 rounded-[2rem] border border-gray-100 shadow-sm flex flex-col justify-center">
-            <FaEye className="text-4xl text-primary-green mb-6" />
-            <h2 className="text-3xl font-extrabold mb-6 font-display">Our Vision</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Shaping the future of Business and Policy through actionable sustainability insights across Bangladesh and the global market.
+      {/* 2. MAIN EDITORIAL CONTENT */}
+      <div className="master-container py-12 md:py-16 space-y-16">
+
+        {/* Lead Proposition Deck */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
+          <div className="max-w-4xl space-y-6">
+            <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
+              <span>★ The Publication Charter</span>
+            </div>
+            <p className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-[#111111] leading-relaxed">
+              We are dedicated to advancing informed dialogue on sustainability, climate transition, environmental governance, and responsible corporate enterprise—bringing together industry decision-makers, policymakers, and researchers to address the structural challenges shaping our shared economic future.
             </p>
-          </div>
-          <div className="bg-primary-green text-white p-10 md:p-16 rounded-[2rem] shadow-xl flex flex-col justify-center">
-            <FaBullseye className="text-4xl text-white/80 mb-6" />
-            <h2 className="text-3xl font-extrabold mb-6 font-display">Our Mission</h2>
-            <p className="text-white/90 text-lg leading-relaxed font-light">
-              To champion ESG integration across business and governance by delivering high-impact journalism, evidence-based policy analysis, and diverse industry perspectives that inspire informed decision-making towards achieving Sustainability in Bangladesh and on the global stage.
+            <p className="text-base text-gray-600 leading-relaxed font-sans">
+              As Bangladesh navigates LDC graduation, tightening export due diligence directives (including EU CSDDD and CBAM), and escalating climate risks across our river systems and coastlines, reliable facts and analytical clarity are paramount. The Sustainability Voice exists to turn compliance hurdles into competitive advantages.
             </p>
           </div>
         </section>
 
-        {/* Core Pillars */}
-        <section id="core-pillars" className="max-w-6xl mx-auto pb-8">
-          <div className="text-center mb-16">
-            <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
-              Our Foundation
-            </span>
-            <h2 className="text-4xl font-extrabold mb-6 font-display">Core Pillars Alignment</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              To support our vision and mission, our publication anchors its content around three main pillars:
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <div className="w-16 h-16 bg-primary-light/10 text-primary-green rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaProjectDiagram size={24} />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Business Integration</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Practical, C-suite actionable strategies to transition from reactive compliance towards Value-driven Business.
-              </p>
-            </div>
-            <div className="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <div className="w-16 h-16 bg-primary-light/10 text-primary-green rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaHandsHelping size={24} />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Policy Advocacy</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                A constructive forum to bridge private sector insights with public policy design for Future-proof growth.
-              </p>
-            </div>
-            <div className="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-lg hover:shadow-xl transition-shadow text-center">
-              <div className="w-16 h-16 bg-primary-light/10 text-primary-green rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaGlobe size={24} />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Rooted in Bangladesh,<br/>Reaching the World</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mt-2">
-                Bridging Homegrown Innovation and enterprise dynamics with international ESG frameworks.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Editorial Focus */}
-        <section id="editorial-focus" className="bg-gray-50 rounded-[3rem] p-12 md:p-20 border border-gray-100">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
-                Topics We Cover
+        {/* 3. VISION & MISSION DUAL BROADSHEET LEDGER */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                INSTITUTIONAL DOCTRINE • SECTION 01
               </span>
-              <h2 className="text-4xl font-extrabold mb-6 font-display">Our Editorial Focus</h2>
-              <p className="text-gray-600 text-lg">
-                The Sustainability Voice covers the most important sustainability issues shaping Bangladesh and the world, creating a powerful platform for organizations, brands and leaders committed to a sustainable future.
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Vision &amp; Mission
+              </h2>
             </div>
-            
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "Sustainability & Climate Action", "ESG & Responsible Business", 
-                "Green & Sustainable Finance", "Circular Economy & Waste Management", 
-                "Renewable Energy & Energy Transition", "Corporate Sustainability & Governance", 
-                "Carbon Emissions & Decarbonisation", "Environment & Biodiversity", 
-                "Sustainable Agriculture & Food Security", "Decent Work & Inclusive Growth", 
-                "Green Technology & Innovation", "Sustainable Cities & Communities", 
-                "Blue Economy & Ocean Sustainability", "Human Rights & Social Sustainability", 
-                "Resource Efficiency & Sustainable Production", "Pollution Prevention & Clean Industry", 
-                "Deforestation & Ecosystem Protection"
-              ].map((topic, i) => (
-                <span key={i} className="px-5 py-3 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm hover:border-primary-green hover:text-primary-green transition-colors cursor-default">
-                  {topic}
-                </span>
-              ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
+            {/* Vision */}
+            <div className="p-8 sm:p-12 flex flex-col justify-between space-y-8">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono uppercase tracking-widest text-gray-500">
+                    STATEMENT // 01
+                  </span>
+                  <FaEye className="text-xl text-[#1a4d2e]" />
+                </div>
+                <h3 className="text-3xl font-extrabold font-display text-[#111111]">
+                  Our Vision
+                </h3>
+                <p className="text-xl sm:text-2xl font-serif italic text-gray-800 leading-snug pt-2">
+                  “Shaping the future of Business and Policy through actionable sustainability insights across Bangladesh and the global market.”
+                </p>
+              </div>
+              <div className="border-t border-black/10 pt-6 text-sm text-gray-600 leading-relaxed">
+                We envision an industrial and institutional ecosystem where environmental stewardship and corporate profitability reinforce one another, establishing Bangladesh as a global benchmark for clean manufacturing and ethical trade.
+              </div>
+            </div>
+
+            {/* Mission */}
+            <div className="p-8 sm:p-12 bg-[#142d1f] text-white flex flex-col justify-between space-y-8">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#34d399]">
+                    STATEMENT // 02
+                  </span>
+                  <FaBullseye className="text-xl text-[#34d399]" />
+                </div>
+                <h3 className="text-3xl font-extrabold font-display text-white">
+                  Our Mission
+                </h3>
+                <p className="text-xl sm:text-2xl font-serif italic text-white/95 leading-snug pt-2">
+                  “To champion ESG integration across business and governance by delivering high-impact journalism, evidence-based policy analysis, and diverse industry perspectives.”
+                </p>
+              </div>
+              <div className="border-t border-white/15 pt-6 text-sm text-gray-300 leading-relaxed">
+                By maintaining uncompromised editorial independence and factual rigor, we empower decision-makers to implement credible ESG metrics, safeguard worker wellbeing, and mobilize green capital toward resilient infrastructure.
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Who We Reach */}
-        <section id="audience" className="max-w-5xl mx-auto text-center mb-12">
-           <span className="text-primary-green text-sm font-bold uppercase tracking-widest mb-4 block">
-              Our Audience
+        {/* 4. CORE PILLARS ALIGNMENT */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                OPERATIONAL FRAMEWORK • SECTION 02
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Core Pillars Alignment
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              Tri-Axis Architecture
             </span>
-            <h2 className="text-4xl font-extrabold mb-12 font-display">Who We Reach</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-left">
-              {[
-                "Corporate Leaders & Board Members",
-                "CEOs & Business Executives",
-                "Policymakers & Regulators",
-                "Bankers & Financial Professionals",
-                "ESG & Climate Professionals",
-                "Conscious Consumers",
-                "International Organisations",
-                "NGOs & Social Enterprises",
-                "Development Partners",
-                "Academics & Think Tanks",
-                "Investors & Asset Managers",
-                "Industry Association Leaders"
-              ].map((audience, idx) => (
-                <div key={idx} className="flex items-start space-x-3">
-                  <FaNewspaper className="text-primary-green mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm font-medium leading-snug">{audience}</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
+            {pillars.map((pillar) => (
+              <div key={pillar.num} className="p-8 sm:p-10 flex flex-col justify-between space-y-6">
+                <div className="space-y-3">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B]">
+                    PILLAR {pillar.num}
+                  </span>
+                  <h3 className="text-2xl font-extrabold font-display text-[#111111] leading-tight">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs font-mono uppercase tracking-wider text-gray-500">
+                    {pillar.deck}
+                  </p>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed pt-4 border-t border-black/10">
+                  {pillar.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. EDITORIAL FOCUS (17 ARCHIVAL DOMAINS) */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                SYSTEMIC SCOPE • SECTION 03
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Editorial Focus &amp; Coverage Areas
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              17 Priority Desks
+            </span>
+          </div>
+
+          <div className="border border-black/15 bg-white p-6 sm:p-10 mb-6">
+            <p className="text-base sm:text-lg text-gray-700 font-serif leading-relaxed max-w-4xl mb-8">
+              The Sustainability Voice deploys dedicated coverage across 17 distinct operational domains—ensuring multi-disciplinary scrutiny of environmental economics, climate vulnerability, and commercial transformation:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/15 border border-black/15">
+              {editorialDomains.map((domain, idx) => (
+                <div
+                  key={domain}
+                  className="bg-white p-4 sm:p-5 hover:bg-[#F7F5F0] transition-colors flex items-start gap-4"
+                >
+                  <span className="text-xs font-mono font-bold text-[#D92B2B] flex-shrink-0 pt-0.5">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-sm font-semibold text-gray-900 leading-snug">
+                    {domain}
+                  </span>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* 6. WHO WE REACH (STAKEHOLDER DIRECTORY) */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                DISPATCH AUDIENCE • SECTION 04
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Who We Reach
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              Cross-Sector Circulation
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-black/15 bg-white divide-y sm:divide-y-0 divide-black/15">
+            {audienceQuadrants.map((quadrant, i) => (
+              <div
+                key={quadrant.group}
+                className={`p-6 sm:p-8 space-y-4 ${i > 0 ? "sm:border-l border-black/15" : ""}`}
+              >
+                <div>
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
+                    {quadrant.kicker}
+                  </span>
+                  <h3 className="text-lg font-extrabold font-display text-[#111111]">
+                    {quadrant.group}
+                  </h3>
+                </div>
+                <ul className="space-y-3 pt-4 border-t border-black/10">
+                  {quadrant.members.map((member) => (
+                    <li key={member} className="text-xs sm:text-sm text-gray-700 flex items-start gap-2.5 leading-snug">
+                      <span className="text-[#1a4d2e] font-mono font-bold text-xs">▪</span>
+                      <span>{member}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 7. PUBLISHING COLOPHON & NAVIGATION FOOTNOTE */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold">
+              <FaShieldAlt />
+              <span>Independent Editorial Governance</span>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif">
+              The Sustainability Voice operates under strict separation between editorial decision-making and commercial sponsorship. For details on masthead officers, submission protocols, or terms of dispatch:
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
+            <Link
+              href="/editorial-board"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Editorial Board</span>
+              <FaArrowRight size={10} />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Contact Bureau</span>
+              <FaArrowRight size={10} />
+            </Link>
+            <Link
+              href="/terms"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Terms of Dispatch</span>
+              <FaArrowRight size={10} />
+            </Link>
+          </div>
         </section>
 
       </div>

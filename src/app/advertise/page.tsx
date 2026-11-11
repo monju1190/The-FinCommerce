@@ -1,184 +1,358 @@
 import React from "react";
-import { FaHandshake, FaBullhorn, FaChartLine, FaRegStar, FaBookOpen } from "react-icons/fa";
+import Link from "next/link";
+import { FaHandshake, FaBullhorn, FaChartLine, FaRegStar, FaBookOpen, FaArrowLeft, FaArrowRight, FaFileInvoiceDollar } from "react-icons/fa";
 import { magazineAds } from "@/data/mockData";
 
 export default function AdvertisePage() {
+  const whyPartner = [
+    {
+      num: "01",
+      icon: <FaBullhorn />,
+      title: "Targeted C-Suite Visibility",
+      desc: "Position your brand directly before corporate boards, factory owners, policymakers, and institutional sustainability directors in Bangladesh and abroad."
+    },
+    {
+      num: "02",
+      icon: <FaHandshake />,
+      title: "Verifiable ESG Credentials",
+      desc: "Showcase concrete operational milestones—from LEED Platinum certifications to water-recycling innovations—within an evidence-based editorial framework."
+    },
+    {
+      num: "03",
+      icon: <FaRegStar />,
+      title: "Institutional Brand Equity",
+      desc: "Associate your corporate identity with Bangladesh's premier independent broadside dedicated exclusively to long-term climate resilience and ethical governance."
+    },
+    {
+      num: "04",
+      icon: <FaBookOpen />,
+      title: "Executive Thought Leadership",
+      desc: "Contribute expert perspectives, white papers, and leadership analyses addressing EU CSDDD, carbon tariffs, and green finance architecture."
+    },
+    {
+      num: "05",
+      icon: <FaChartLine />,
+      title: "High-Caliber Network Engagement",
+      desc: "Engage commercial banks, central bankers, multilateral development partners, trade associations, and researchers across all four quarterly cycles."
+    }
+  ];
+
   return (
-    <main className="text-gray-900 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-[#0f3d26] pt-24 pb-32 px-4 overflow-hidden border-b-2 border-black">
-        <div className="absolute inset-0 bg-[url('/magazine/oct-dec/cover.jpg')] bg-cover bg-center mix-blend-overlay opacity-25"></div>
-        <div className="container mx-auto relative z-10 text-center max-w-4xl">
-          <span className="text-white/80 text-sm font-bold uppercase tracking-widest mb-4 block">
-            Corporate Partnership & Advertisement
-          </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 font-display tracking-tight">
-            Put Your Brand Where Sustainability Matters
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
-            Your brand. Your sustainability story. A wider audience.
-          </p>
+    <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
+      {/* 1. EDITORIAL MASTHEAD BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+        <div className="master-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
+                <span>TSV COMMERCIAL LEDGER</span>
+                <span>•</span>
+                <span>RATE CARD &amp; SPONSORSHIP</span>
+                <span>•</span>
+                <span>REG. NO. 48/2026</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
+                Put Your Brand Where Sustainability Matters
+              </h1>
+            </div>
+            <div className="text-left md:text-right flex-shrink-0">
+              <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
+                COMMERCIAL INVENTORY
+              </span>
+              <span className="text-sm font-serif text-gray-700 italic block">
+                Quarterly Print &amp; Digital Placements
+              </span>
+            </div>
+          </div>
+
+          {/* Quick Ledger Sub-Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Broadside</span>
+            </Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+              <span>Circulation: Executive &amp; Institutional</span>
+              <span>•</span>
+              <span>Inquiries: +880 17 4225 4805</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 md:px-12 py-20 space-y-24">
-        
-        {/* Why Partner With Us */}
-        <section className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold mb-4 font-display">Why Partner With Us?</h2>
-            <p className="text-gray-600 text-lg">
-              Association with The Sustainability Voice provides organizations with an opportunity to:
+      {/* 2. MAIN EDITORIAL CONTENT */}
+      <div className="master-container py-12 md:py-16 space-y-16">
+
+        {/* Lead Proposition Deck */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
+          <div className="max-w-4xl space-y-6">
+            <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
+              <span>★ The Strategic Value Proposition</span>
+            </div>
+            <p className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-[#111111] leading-relaxed">
+              Your brand. Your sustainability journey. An influential audience of corporate leaders, policymakers, bankers, and international buyers shaping the transition economy.
+            </p>
+            <p className="text-base text-gray-600 leading-relaxed font-sans">
+              Association with The Sustainability Voice provides organizations with a credible platform to articulate substantive ESG investments, transition roadmaps, and environmental stewardship without the risk of greenwashing.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: <FaBullhorn />, title: "Build Visibility", desc: "Position your organization before a professional audience interested in sustainability, business and responsible development." },
-              { icon: <FaHandshake />, title: "Showcase Commitment", desc: "Demonstrate your organization’s commitment to sustainability, ESG, and positive environmental and social impact." },
-              { icon: <FaRegStar />, title: "Strengthen Reputation", desc: "Associate your corporate brand with an emerging platform dedicated to sustainability and responsible business." },
-              { icon: <FaBookOpen />, title: "Share Expertise", desc: "Provide perspectives, insights and thought leadership on issues relevant to your industry and stakeholders." },
-              { icon: <FaChartLine />, title: "Engage Key Stakeholders", desc: "Reach business leaders, policymakers, regulators, professionals, academics and development practitioners." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-                <div className="text-primary-green text-3xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+        </section>
+
+        {/* 3. WHY PARTNER WITH US */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                STRATEGIC ENGAGEMENT • SECTION 01
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Why Partner With The Sustainability Voice?
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              5 Core Strategic Advantages
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/15 border border-black/15">
+            {whyPartner.map((item) => (
+              <div
+                key={item.num}
+                className="bg-white p-6 sm:p-8 flex flex-col justify-between space-y-4 hover:bg-[#F7F5F0] transition-colors"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-[#D92B2B]">
+                      ADVANTAGE // {item.num}
+                    </span>
+                    <div className="text-gray-700 text-lg">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold font-display text-[#111111] leading-snug">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif pt-3 border-t border-black/10">
+                  {item.desc}
+                </p>
               </div>
             ))}
+
+            {/* Inquiries Callout Tile */}
+            <div className="bg-[#142d1f] text-white p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div className="space-y-2">
+                <span className="text-xs font-mono font-bold text-[#34d399] uppercase tracking-widest">
+                  BESPOKE PARTNERSHIPS
+                </span>
+                <h3 className="text-xl font-bold font-display text-white">
+                  Corporate Storytelling &amp; Custom Dossiers
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-300 font-serif leading-relaxed">
+                We design custom C-suite interviews, sustainability factory profiles, and roundtable symposia aligned with global disclosure standards.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white px-4 py-2 text-xs font-mono uppercase tracking-widest transition-colors w-fit"
+              >
+                <span>Inquire With Desk</span>
+                <FaArrowRight size={10} />
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* Pricing Tables */}
-        <section className="max-w-5xl mx-auto bg-white border border-gray-200 rounded-[2rem] shadow-sm overflow-hidden">
-          <div className="bg-gray-50 p-10 border-b border-gray-200 text-center">
-            <h2 className="text-3xl font-extrabold font-display">Advertising Rates</h2>
-            <p className="text-gray-500 mt-2">Rates are indicative and may be customized depending on placement and volume.</p>
+        {/* 4. PRICING & RATE CARD (BROADSHEET LEDGER) */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                STATUTORY RATE CARD • SECTION 02
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Print &amp; Digital Advertising Rates
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              Indicative Card Rates (BDT)
+            </span>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-10 bg-white">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
             {/* Premium Positions */}
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold mb-6 text-primary-green uppercase tracking-wider text-sm">Premium Positions</h3>
-              <ul className="space-y-4">
-                <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">Back Cover</span>
-                  <span className="font-bold">BDT 150,000</span>
-                </li>
-                <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">Inside Front Cover</span>
-                  <span className="font-bold">BDT 100,000</span>
-                </li>
-                <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">Inside Back Cover</span>
-                  <span className="font-bold">BDT 80,000</span>
-                </li>
-                <li className="flex justify-between items-center py-2">
-                  <span className="font-medium">Facing Editorial Page</span>
-                  <span className="font-bold">BDT 70,000</span>
-                </li>
-              </ul>
+            <div className="p-6 sm:p-10 space-y-6">
+              <div className="border-b border-black/15 pb-4">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
+                  CATEGORY A
+                </span>
+                <h3 className="text-xl font-extrabold font-display text-[#111111]">
+                  Premium Broadsheet Positions
+                </h3>
+                <p className="text-xs font-mono text-gray-500 mt-1 uppercase tracking-wider">
+                  Guaranteed High-Impact Cover &amp; Editorial Facing Placements
+                </p>
+              </div>
+
+              <div className="divide-y divide-black/10">
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Back Cover (Full Spread Color)</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Exterior Archival Page</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 150,000</span>
+                </div>
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Inside Front Cover (IFC)</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">First Impression Facing TOC</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 100,000</span>
+                </div>
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Inside Back Cover (IBC)</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Terminal Issue Spread</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 80,000</span>
+                </div>
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Facing Editorial / Masthead</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Prime Editorial Proximity</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 70,000</span>
+                </div>
+              </div>
             </div>
-            
+
             {/* Standard Positions */}
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold mb-6 text-primary-green uppercase tracking-wider text-sm">Standard Positions</h3>
-              <ul className="space-y-4">
-                <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">Full Page</span>
-                  <span className="font-bold">BDT 60,000</span>
-                </li>
-                <li className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">Half Page</span>
-                  <span className="font-bold">BDT 50,000</span>
-                </li>
-                <li className="flex justify-between items-center py-2">
-                  <span className="font-medium">Quarter Page</span>
-                  <span className="font-bold">BDT 40,000</span>
-                </li>
-              </ul>
+            <div className="p-6 sm:p-10 space-y-6">
+              <div className="border-b border-black/15 pb-4">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#1a4d2e] block mb-1">
+                  CATEGORY B
+                </span>
+                <h3 className="text-xl font-extrabold font-display text-[#111111]">
+                  Standard Interior Positions
+                </h3>
+                <p className="text-xs font-mono text-gray-500 mt-1 uppercase tracking-wider">
+                  Regular Thematic Section Placements
+                </p>
+              </div>
+
+              <div className="divide-y divide-black/10">
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Full Page Color (Interior)</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Section Run of Paper</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 60,000</span>
+                </div>
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Half Page Horizontal / Vertical</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Contextual Column Insertion</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 50,000</span>
+                </div>
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Quarter Page Grid Placement</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Briefings &amp; Directory Quadrant</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#111111]">BDT 40,000</span>
+                </div>
+                <div className="py-3.5 flex justify-between items-center">
+                  <div className="space-y-0.5">
+                    <span className="text-sm font-bold font-display text-[#111111] block">Digital Edition Inclusion</span>
+                    <span className="text-[11px] font-mono text-gray-500 uppercase">Interactive Linkage &amp; PDF Embed</span>
+                  </div>
+                  <span className="text-sm font-mono font-bold text-[#1a4d2e]">Included Complimentary</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Multi-Issue & Annual Partner */}
-        <section className="max-w-6xl mx-auto space-y-12">
-          
-          <div className="bg-primary-green text-white p-10 md:p-14 rounded-[2rem] shadow-xl">
-            <span className="text-white/80 text-sm font-bold uppercase tracking-widest mb-4 block">
-              Be Seen Throughout The Year
-            </span>
-            <h2 className="text-3xl font-extrabold mb-8 font-display">Multi-Issue Advertising</h2>
-            <p className="text-white/90 mb-8 leading-relaxed max-w-2xl">
-              For organizations seeking consistent visibility, we offer preferential rates for advance bookings.
+        {/* 5. MULTI-ISSUE & ANNUAL CORPORATE PARTNER */}
+        <section className="grid grid-cols-1 md:grid-cols-2 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
+          {/* Annual Partner Package */}
+          <div className="p-6 sm:p-10 space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B]">
+                STRATEGIC RETAINER // 01
+              </span>
+              <h3 className="text-2xl font-extrabold font-display text-[#111111]">
+                Annual Corporate Partner
+              </h3>
+              <p className="text-base font-mono font-bold text-[#1a4d2e]">
+                4 ISSUES • 12 MONTHS • BDT 300,000
+              </p>
+            </div>
+            <p className="text-sm text-gray-600 font-serif leading-relaxed">
+              Your organization represented continuously throughout the entire publishing calendar. Includes a Full-Page color placement in all four consecutive print editions, prominent corporate brand attribution in the Annual Partner register, and 60 complimentary archival copies per issue.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-black/20 p-6 rounded-xl border border-white/10">
-                <div className="text-sm font-bold text-white/70 mb-2">2-ISSUE</div>
-                <div className="text-lg mb-4">Any 2 consecutive</div>
-                <span className="font-bold bg-white text-primary-green px-4 py-2 rounded-full text-sm">5% Discount</span>
-              </div>
-              <div className="bg-black/20 p-6 rounded-xl border border-white/10">
-                <div className="text-sm font-bold text-white/70 mb-2">3-ISSUE</div>
-                <div className="text-lg mb-4">Any 3 consecutive</div>
-                <span className="font-bold bg-white text-primary-green px-4 py-2 rounded-full text-sm">10% Discount</span>
-              </div>
-              <div className="bg-black/20 p-6 rounded-xl border border-white/10">
-                <div className="text-sm font-bold text-white/70 mb-2">4-ISSUE</div>
-                <div className="text-lg mb-4">Full year / 4 issues</div>
-                <span className="font-bold bg-white text-primary-green px-4 py-2 rounded-full text-sm">15% Discount</span>
-              </div>
-            </div>
-            <div className="text-sm text-white/80 bg-black/10 p-6 rounded-xl">
-              <span className="font-bold text-white mr-2">Benefits include:</span>
-              Preferential rates, Priority advertisement placement, Consistent brand visibility, Complimentary copies, Priority access to partnership opportunities.
-            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            <div className="bg-gray-50 p-10 rounded-[2rem] border border-gray-100 flex-1">
-              <h2 className="text-2xl font-extrabold mb-4 font-display">Annual Corporate Partner</h2>
-              <p className="text-primary-green font-bold text-xl mb-4">4 ISSUES | 12 MONTHS | BDT 300,000</p>
-              <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                Your brand. All year. One strategic association. Includes Full-page advertisement in all four issues, corporate logo/name in the Annual Partner recognition section, opportunity to nominate senior executives for interviews, and 60 complimentary copies.
+          {/* Multi-Issue Volume Discounts */}
+          <div className="p-6 sm:p-10 space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B]">
+                VOLUME COMMITMENTS // 02
+              </span>
+              <h3 className="text-2xl font-extrabold font-display text-[#111111]">
+                Advance Booking Incentives
+              </h3>
+              <p className="text-xs font-mono uppercase tracking-wider text-gray-500">
+                Preferential Rates for Multi-Edition Commitments
               </p>
             </div>
-            <div className="bg-gray-50 p-10 rounded-[2rem] border border-gray-100 flex-1">
-              <h2 className="text-2xl font-extrabold mb-4 font-display">Corporate Storytelling</h2>
-              <p className="text-primary-green font-bold text-xl mb-4">BDT 200,000+</p>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Communicate your sustainability journey beyond advertising through:
-              </p>
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                <li>Executive Interview (Leadership conversation)</li>
-                <li>Sustainability Profile (Strategy & Impact)</li>
-                <li>Expert Perspective (Commentary by a subject-matter expert)</li>
-                <li>Corporate Profile</li>
-              </ul>
+            <div className="grid grid-cols-3 gap-px bg-black/15 border border-black/15">
+              <div className="bg-[#F7F5F0] p-4 text-center">
+                <span className="text-xs font-mono uppercase text-gray-600 block">2 Issues</span>
+                <span className="text-lg font-mono font-bold text-[#111111]">5% OFF</span>
+              </div>
+              <div className="bg-[#F7F5F0] p-4 text-center">
+                <span className="text-xs font-mono uppercase text-gray-600 block">3 Issues</span>
+                <span className="text-lg font-mono font-bold text-[#111111]">10% OFF</span>
+              </div>
+              <div className="bg-[#F7F5F0] p-4 text-center">
+                <span className="text-xs font-mono uppercase text-gray-600 block">4 Issues</span>
+                <span className="text-lg font-mono font-bold text-[#1a4d2e]">15% OFF</span>
+              </div>
             </div>
+            <p className="text-xs text-gray-500 font-serif">
+              Multi-issue retainers lock in rate cards and guarantee priority position assignment across subsequent quarters.
+            </p>
           </div>
         </section>
 
-        {/* Real Print Placements from Maiden Issue */}
-        <section className="max-w-6xl mx-auto pt-8 border-t border-gray-300">
-          <div className="text-center mb-12">
-            <span className="text-[#16a34a] text-xs font-black uppercase tracking-widest block mb-2">
-              Publication Proof of Quality
+        {/* 6. SAMPLE PRINT PLACEMENTS FROM MAIDEN ISSUE */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                PUBLICATION SPECIMENS • SECTION 03
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Featured Advertisements in Print Edition
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              Volume 01 Specimen Archive
             </span>
-            <h2 className="text-3xl font-extrabold font-display text-gray-900 mb-4">
-              Featured Advertisements in Print Edition
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-              Sample commercial placements and institutional sponsor positions from the October–December 2026 issue.
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-black/15 border border-black/15">
             {magazineAds.slice(0, 8).map((ad, idx) => (
               <div
                 key={idx}
-                className="bg-[#f8ebe3] p-3 sm:p-4 rounded-2xl border border-[#dfcfc2] shadow-sm flex flex-col justify-between"
+                className="bg-white p-4 flex flex-col justify-between space-y-3 hover:bg-[#F7F5F0] transition-colors"
               >
-                <div className="overflow-hidden rounded-xl border border-[#d2c0b2] bg-white aspect-[3/4] mb-3 relative">
+                <div className="border border-black/15 bg-white aspect-[3/4] overflow-hidden flex items-center justify-center p-2">
                   <img
                     src={ad.imageUrl}
                     alt={ad.title}
@@ -186,15 +360,44 @@ export default function AdvertisePage() {
                   />
                 </div>
                 <div>
-                  <span className="text-[10px] font-black uppercase tracking-wider text-[#16a34a] block mb-0.5">
-                    Print Page {ad.page}
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#D92B2B] block">
+                    Page {ad.page}
                   </span>
-                  <p className="text-xs font-bold font-display text-gray-900 truncate">
+                  <p className="text-xs font-bold font-display text-[#111111] truncate mt-0.5">
                     {ad.title}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 7. PUBLISHING COLOPHON & NAVIGATION FOOTNOTE */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 font-bold">
+              <FaFileInvoiceDollar />
+              <span>Commercial Booking Protocol • Desk of Business Development</span>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif">
+              All commercial engagements are executed in accordance with TSV statutory guidelines. To reserve an insertion or request technical production specs:
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#111111] text-white hover:bg-[#D92B2B] px-5 py-3 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Transmit Booking Inquiry</span>
+              <FaArrowRight size={10} />
+            </Link>
+            <Link
+              href="/terms"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-5 py-3 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Terms of Dispatch</span>
+              <FaArrowRight size={10} />
+            </Link>
           </div>
         </section>
 

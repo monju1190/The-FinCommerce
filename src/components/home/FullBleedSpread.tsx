@@ -10,6 +10,7 @@ interface FullBleedSpreadProps {
   kicker: string;
   categorySlug: string;
   article: NewsArticle;
+  bgColor?: string;
 }
 
 export default function FullBleedSpread({
@@ -18,12 +19,13 @@ export default function FullBleedSpread({
   kicker,
   categorySlug,
   article,
+  bgColor = "bg-[#111111]",
 }: FullBleedSpreadProps) {
   if (!article) return null;
 
   return (
     <section
-      className="my-16 sm:my-24 -mx-4 sm:-mx-6 md:-mx-12 bg-[#111111] text-[#F7F5F0] border-y-2 border-black relative overflow-hidden"
+      className={`my-16 sm:my-24 -mx-4 sm:-mx-6 md:-mx-12 ${bgColor} text-[#F7F5F0] border-y-2 border-black relative overflow-hidden transition-colors`}
       data-purpose={`full-bleed-${categorySlug}`}
     >
       <div className="master-container py-16 sm:py-24">

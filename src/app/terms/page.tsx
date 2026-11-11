@@ -1,82 +1,271 @@
 import React from "react";
-import { FaShieldAlt, FaBalanceScale } from "react-icons/fa";
+import Link from "next/link";
+import { FaShieldAlt, FaBalanceScale, FaArrowLeft, FaCheckCircle, FaFileContract, FaArrowRight } from "react-icons/fa";
 
 export default function TermsPage() {
   const terms = [
-    "All advertisements and partnerships are subject to availability and written confirmation.",
-    "Rates may vary depending on placement, volume and customized requirements.",
-    "Partnership benefits will be confirmed in writing.",
-    "Advertisements must comply with applicable laws and the magazine’s advertising policies.",
-    "The magazine reserves the right to decline advertisements or partnerships inconsistent with applicable law, public interest or editorial standards.",
-    "Advertisers are responsible for the accuracy and legality of claims made in their advertisements.",
-    "Corporate partnership does not confer editorial control or influence.",
-    "Interviews, features and expert contributions are subject to editorial selection and fact-checking.",
-    "Applicable taxes, duties or statutory charges, if any, shall be borne by the advertiser/partner.",
-    "Customized strategic partnerships may be subject to a separate written agreement.",
-    "Advertisement artwork must be supplied within the specified deadline and technical requirements.",
-    "Payment and cancellation terms will be specified in the advertisement booking confirmation or partnership agreement.",
-    "Advertisement fees are subject to all applicable taxes."
+    {
+      num: "01",
+      clause: "Availability & Written Confirmation",
+      text: "All advertisements, advertorial insertions, and corporate partnerships are strictly subject to inventory availability, editorial calendar alignment, and formal written confirmation by the publisher."
+    },
+    {
+      num: "02",
+      clause: "Rate Adjustments & Placement Scales",
+      text: "Advertising rates may vary depending on section prominence, placement quadrant, total volume commitments, and customized multi-channel production requirements."
+    },
+    {
+      num: "03",
+      clause: "Contractual Partnership Governance",
+      text: "All commercial partnership benefits, print run allocations, executive distribution lists, and complimentary copies will be confirmed in an executed written agreement."
+    },
+    {
+      num: "04",
+      clause: "Statutory Law & Advertising Standards",
+      text: "All commercial content must strictly comply with applicable laws of the People's Republic of Bangladesh, fair trade practices, and the publication’s internal ethical advertising codes."
+    },
+    {
+      num: "05",
+      clause: "Editorial Right of Refusal",
+      text: "The Sustainability Voice reserves the absolute right to decline, cancel, or suspend any advertisement or partnership inconsistent with public interest, greenwashing prohibitions, or editorial integrity."
+    },
+    {
+      num: "06",
+      clause: "Advertiser Truth & Legal Liability",
+      text: "Advertisers assume full legal and factual responsibility for the accuracy of claims, certifications, ESG disclosures, trademarks, and copyright permissions contained in their creative materials."
+    },
+    {
+      num: "07",
+      clause: "Zero Editorial Influence Doctrine",
+      text: "Corporate partnership, paid advertising, or sponsorship confers no authority, right of prior review, or influence over independent editorial reporting, investigations, or opinion columns."
+    },
+    {
+      num: "08",
+      clause: "Independent Fact-Checking & Verification",
+      text: "All interviews, industry features, guest commentaries, and contributed technical articles remain strictly subject to rigorous editorial selection, independent fact-checking, and styling revisions."
+    },
+    {
+      num: "09",
+      clause: "Statutory Duties, Taxes & Levies",
+      text: "All statutory duties, VAT, withholding taxes, or municipal charges applicable to commercial bookings shall be borne exclusively by the contracting advertiser or sponsoring partner."
+    },
+    {
+      num: "10",
+      clause: "Customized Strategic Agreements",
+      text: "Specialized initiatives, such as bespoke industry roundtables, custom research dossiers, or annual corporate partnerships, shall be governed by distinct supplementary written instruments."
+    },
+    {
+      num: "11",
+      clause: "Technical Specifications & Deadlines",
+      text: "Print-ready artwork, typography vectors, and high-resolution digital assets must be supplied in compliance with TSV technical specifications before established editorial close deadlines."
+    },
+    {
+      num: "12",
+      clause: "Payment Schedules & Cancellation Terms",
+      text: "Settlement schedules, advance booking retainers, and cancellation conditions will be detailed in the formal booking confirmation. Cancellations after print production commences remain non-refundable."
+    },
+    {
+      num: "13",
+      clause: "Statutory Fiscal Compliance",
+      text: "All stated rate cards and commercial invoices remain subject to prevailing statutory taxation and revenue regulations governing print and electronic publishing in Bangladesh."
+    }
   ];
 
   return (
-    <main className="text-gray-900 min-h-screen pb-24">
-      {/* Immersive Header */}
-      <div className="bg-primary-green text-white pt-24 pb-32 px-4 relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-12 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-white/60 text-sm font-bold uppercase tracking-widest mb-4 block">
-              Legal & Editorial
-            </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 font-display tracking-tight">Policies & Guidelines</h1>
-            <p className="text-xl text-white/80 leading-relaxed font-light">
-              Transparency, credibility, and standards at The Sustainability Voice.
-            </p>
+    <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
+      {/* 1. EDITORIAL MASTHEAD BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+        <div className="master-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
+                <span>TSV STATUTORY CHARTER</span>
+                <span>•</span>
+                <span>LEGAL &amp; EDITORIAL PROTOCOLS</span>
+                <span>•</span>
+                <span>REG. NO. 48/2026</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
+                Terms of Dispatch &amp; Editorial Policies
+              </h1>
+            </div>
+            <div className="text-left md:text-right flex-shrink-0">
+              <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
+                STATUTORY COMPLIANCE
+              </span>
+              <span className="text-sm font-serif text-gray-700 italic block">
+                13 Codified Articles • Dhaka, 2026
+              </span>
+            </div>
+          </div>
+
+          {/* Quick Ledger Sub-Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Broadside</span>
+            </Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+              <span>Doctrine: Independent Press</span>
+              <span>•</span>
+              <span>Separation: Church &amp; State</span>
+              <span>•</span>
+              <span>Legal Jurisdiction: Bangladesh</span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container mx-auto px-4 md:px-12 -mt-16 relative z-20 space-y-12">
-        
-        {/* Editorial Promise */}
-        <section className="max-w-4xl mx-auto bg-white rounded-[2rem] p-10 md:p-14 shadow-xl border border-gray-100">
-          <div className="flex items-center space-x-4 mb-8">
-            <div className="bg-primary-light/10 p-4 rounded-full text-primary-green">
-              <FaShieldAlt size={28} />
+      {/* 2. MAIN EDITORIAL CONTENT */}
+      <div className="master-container py-12 md:py-16 space-y-16">
+
+        {/* 2. THE CORE EDITORIAL PROMISE (DOCTRINE OF INDEPENDENCE) */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-14 space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/15">
+            <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
+              <span>★ The Editorial Separation Doctrine</span>
             </div>
-            <h2 className="text-3xl font-extrabold font-display">Our Editorial Promise</h2>
+            <span className="text-xs font-mono uppercase tracking-wider text-gray-500">
+              PLEDGE OF INSTITUTIONAL INTEGRITY
+            </span>
           </div>
-          <h3 className="text-lg font-bold text-gray-800 mb-4 tracking-widest uppercase">INDEPENDENT. INFORMED. RESPONSIBLE.</h3>
-          <div className="space-y-4 text-gray-600 leading-relaxed">
-            <p>The credibility of The Sustainability Voice is fundamental to our mission.</p>
-            <p className="font-bold text-gray-900">Advertising is advertising. Editorial is editorial.</p>
-            <p>
-              Corporate advertising, sponsorship or partnership does not provide any right to control, approve, modify or influence independent editorial content, reporting, analysis or opinions.
+
+          <div className="max-w-4xl space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display text-[#111111] leading-tight">
+              Advertising is advertising. Editorial is editorial.
+            </h2>
+            <p className="text-lg sm:text-xl font-serif italic text-gray-800 leading-relaxed">
+              “The credibility of The Sustainability Voice is fundamental to our journalistic mission. Corporate advertising, sponsorship, or strategic commercial partnership does not confer any right to control, approve, modify, or influence independent editorial reporting, technical ESG ratings, or investigative commentary.”
             </p>
-            <p>
-              Any paid, sponsored or promotional content accepted for publication will be appropriately identified in accordance with the magazine’s editorial policy.
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-black/10 text-sm text-gray-700 leading-relaxed font-sans">
+              <p>
+                Any paid, sponsored, or promotional content accepted for publication is strictly identified and demarcated in accordance with our transparency standards. We maintain a firm wall between commercial accounts and our editorial desk to guarantee objective coverage of national climate policy and corporate performance.
+              </p>
+              <p>
+                This uncompromising separation protects the authentic reputational value of our commercial partners: readers, regulators, and international buyers know that praise earned in our pages is backed by evidence, not purchased influence.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. THE 13 STATUTORY CLAUSES */}
+        <section>
+          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                STATUTORY ARTICLES • 01 — 13
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+                Conditions of Commercial &amp; Editorial Dispatch
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
+              Binding Engagement Rules
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/15 border border-black/15">
+            {terms.map((item) => (
+              <div
+                key={item.num}
+                className="bg-white p-6 sm:p-8 flex flex-col justify-between space-y-4 hover:bg-[#F7F5F0] transition-colors"
+              >
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-[#D92B2B]">
+                      ARTICLE // {item.num}
+                    </span>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400">
+                      TSV-TERMS-2026
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold font-display text-[#111111] leading-snug">
+                    {item.clause}
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed font-serif pt-3 border-t border-black/10">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 4. VERIFICATION, CONFLICT OF INTEREST & CORRECTIONS */}
+        <section className="grid grid-cols-1 md:grid-cols-3 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
+          <div className="p-6 sm:p-8 space-y-3">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold block">
+              01 / FACT-CHECKING PROTOCOL
+            </span>
+            <h4 className="text-base font-bold font-display text-[#111111]">
+              Verification of ESG Data
+            </h4>
+            <p className="text-xs sm:text-sm text-gray-600 font-serif leading-relaxed">
+              Energy consumption statistics, carbon footprint reductions, and LEED operational data cited in articles are cross-referenced against official audits, regulatory filings, and academic datasets prior to publication.
             </p>
-            <p>
-              This separation enables our partners to gain meaningful visibility while protecting the credibility and independence of the publication.
+          </div>
+
+          <div className="p-6 sm:p-8 space-y-3">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold block">
+              02 / CONFLICT OF INTEREST
+            </span>
+            <h4 className="text-base font-bold font-display text-[#111111]">
+              Author Disclosures
+            </h4>
+            <p className="text-xs sm:text-sm text-gray-600 font-serif leading-relaxed">
+              All contributing journalists, guest columnists, and academic fellows are required to declare any direct consulting relationships, board memberships, or financial interests associated with companies analyzed in their text.
+            </p>
+          </div>
+
+          <div className="p-6 sm:p-8 space-y-3">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold block">
+              03 / CORRECTIONS &amp; RETRACTIONS
+            </span>
+            <h4 className="text-base font-bold font-display text-[#111111]">
+              Commitment to Accuracy
+            </h4>
+            <p className="text-xs sm:text-sm text-gray-600 font-serif leading-relaxed">
+              When factual errors occur, The Sustainability Voice publishes prompt and prominent corrections across both print and digital editions. Readers and subjects may request review via our editorial desk.
             </p>
           </div>
         </section>
 
-        {/* Terms & Conditions */}
-        <section className="max-w-4xl mx-auto bg-white rounded-[2rem] p-10 md:p-14 shadow-xl border border-gray-100">
-          <div className="flex items-center space-x-4 mb-8">
-            <div className="bg-primary-light/10 p-4 rounded-full text-primary-green">
-              <FaBalanceScale size={28} />
+        {/* 5. PUBLISHING COLOPHON & NAVIGATION FOOTNOTE */}
+        <section className="border border-black/15 bg-white p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 font-bold">
+              <FaBalanceScale />
+              <span>Publisher's Legal Governance • Dhaka, Bangladesh</span>
             </div>
-            <h2 className="text-3xl font-extrabold font-display">Terms & Conditions</h2>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif">
+              For commercial rate inquiries, advertorial specs, or partnership proposals governed by these statutory policies:
+            </p>
           </div>
-          
-          <div className="space-y-4 text-gray-600">
-            {terms.map((term, index) => (
-              <div key={index} className="flex items-start">
-                <span className="font-bold text-primary-green mr-4 min-w-[24px]">{index + 1}.</span>
-                <p className="leading-relaxed">{term}</p>
-              </div>
-            ))}
+          <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
+            <Link
+              href="/advertise"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Advertising Rates</span>
+              <FaArrowRight size={10} />
+            </Link>
+            <Link
+              href="/editorial-board"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Editorial Board</span>
+              <FaArrowRight size={10} />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
+            >
+              <span>Contact Desk</span>
+              <FaArrowRight size={10} />
+            </Link>
           </div>
         </section>
 

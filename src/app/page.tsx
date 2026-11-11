@@ -208,7 +208,7 @@ export default function Home() {
         description="Inside corporate ESG rating methodologies and the coordinated regulatory blueprint for sustainable finance."
       />
 
-      {/* 9. GOVERNANCE (1 Article — Full-Bleed Dark Spread) */}
+      {/* 9. GOVERNANCE (1 Article — Full-Bleed Deep Forest Green Spread) */}
       {governanceArticle && (
         <FullBleedSpread
           sectionNumber="09"
@@ -216,6 +216,7 @@ export default function Home() {
           kicker="BOARDROOM OVERSIGHT &amp; FIDUCIARY DUTY"
           categorySlug="governance"
           article={governanceArticle}
+          bgColor="bg-[#1e382b]"
         />
       )}
 
@@ -239,7 +240,7 @@ export default function Home() {
         description="Can Bangladesh build domestic semiconductor capacity while accelerating green data-center approvals through AI?"
       />
 
-      {/* 12. HEALTH & HUMAN WELLBEING (1 Article — Full-Bleed Spread) */}
+      {/* 12. HEALTH & HUMAN WELLBEING (1 Article — Full-Bleed Deeper Pine Green Spread) */}
       {healthArticle && (
         <FullBleedSpread
           sectionNumber="12"
@@ -247,6 +248,7 @@ export default function Home() {
           kicker="LONGEVITY SCIENCE &amp; HEALTH EQUITY"
           categorySlug="health"
           article={healthArticle}
+          bgColor="bg-[#142d1f]"
         />
       )}
 
@@ -302,7 +304,7 @@ export default function Home() {
         />
       )}
 
-      {/* 18. FRIEND IN NEED (1 Article — Full-Bleed Spread) */}
+      {/* 18. FRIEND IN NEED (1 Article — Full-Bleed Dark Nocturnal Evergreen Spread) */}
       {friendArticle && (
         <FullBleedSpread
           sectionNumber="18"
@@ -310,6 +312,7 @@ export default function Home() {
           kicker="BILATERAL CLIMATE DIPLOMACY"
           categorySlug="friend-in-need"
           article={friendArticle}
+          bgColor="bg-[#0b2015]"
         />
       )}
 
