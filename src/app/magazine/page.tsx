@@ -15,20 +15,24 @@ export default function MagazineArchivePage() {
         
         {/* Masthead Header */}
         <div className="border-b border-black/15 pb-8">
+          <div className="mb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
+              <span>← Back to Main Page</span>
+            </Link>
+          </div>
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
-                <span>DIGITAL EDITION ARCHIVE</span>
-                <span>•</span>
-                <span>VOL. 01 COMPLETE REPERTOIRE</span>
-              </div>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
                 {currentIssue.month}
               </h1>
             </div>
             <div className="text-left md:text-right">
               <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
-                {currentIssue.issueNumber} • {currentIssue.registrationNo}
+                {currentIssue.issueNumber}
               </span>
               <span className="text-sm font-serif italic text-gray-700">
                 Quarterly Broadsheet &amp; Journal of Sustainability
@@ -91,7 +95,7 @@ export default function MagazineArchivePage() {
         <div id="table-of-contents" className="scroll-mt-12">
           <div className="flex items-center justify-between pb-4 mb-8 border-b-2 border-[#111111]">
             <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#1a4d2e] font-bold block mb-1">
                 SYSTEMATIC REPERTOIRE
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
@@ -109,7 +113,7 @@ export default function MagazineArchivePage() {
                 {/* Section Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-black/15 gap-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-mono text-[#D92B2B] font-bold">
+                    <span className="text-xs font-mono text-gray-400 font-bold">
                       {(idx + 1).toString().padStart(2, "0")}
                     </span>
                     <h3 className="text-2xl font-bold font-display uppercase text-[#111111]">
@@ -138,10 +142,10 @@ export default function MagazineArchivePage() {
                       </div>
                       <div className="flex-1 flex flex-col justify-between">
                         <div>
-                          <span className="text-[10px] font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-[#1a4d2e] font-bold block mb-1">
                             {article.category}
                           </span>
-                          <h4 className="text-base font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-snug line-clamp-2">
+                          <h4 className="text-base font-bold font-display text-[#111111] group-hover:text-[#1a4d2e] transition-colors leading-snug line-clamp-2">
                             {article.title}
                           </h4>
                           <p className="text-xs font-serif text-gray-600 line-clamp-2 mt-1.5">
@@ -150,7 +154,7 @@ export default function MagazineArchivePage() {
                         </div>
                         <div className="pt-2 mt-2 border-t border-black/10 text-[10px] font-mono text-gray-500 uppercase flex justify-between">
                           <span>By {article.author}</span>
-                          <span className="font-bold text-[#111111] group-hover:text-[#D92B2B]">
+                          <span className="font-bold text-[#111111] group-hover:text-[#1a4d2e]">
                             Read Story →
                           </span>
                         </div>
@@ -167,7 +171,7 @@ export default function MagazineArchivePage() {
         <section className="border-t-2 border-black pt-12">
           <div className="flex items-center justify-between pb-4 mb-6 border-b border-black/15">
             <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#1a4d2e] font-bold block mb-1">
                 CORPORATE PATRONS &amp; ADVERTISERS
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
@@ -193,7 +197,7 @@ export default function MagazineArchivePage() {
                     className="w-full h-full object-cover print-grayscale transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <span className="text-[9px] font-mono text-[#D92B2B] font-bold block uppercase">
+                <span className="text-[9px] font-mono text-[#1a4d2e] font-bold block uppercase">
                   Page {ad.page}
                 </span>
                 <span className="text-[10px] font-sans text-[#111111] font-semibold line-clamp-1 block">
@@ -221,7 +225,7 @@ export default function MagazineArchivePage() {
               >
                 <FaTimes size={18} />
               </button>
-              <div className="text-xs font-mono uppercase text-[#D92B2B] mb-1">
+              <div className="text-xs font-mono uppercase text-[#1a4d2e] font-bold mb-1">
                 Print Page {selectedAd.page} • {selectedAd.tag}
               </div>
               <h4 className="text-xl font-bold font-display text-[#111111] mb-4">

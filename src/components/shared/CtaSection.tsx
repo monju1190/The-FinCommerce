@@ -20,8 +20,8 @@ export default function CtaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <div className="lg:col-span-7 space-y-4">
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] font-bold">
-              <span>★ THE EDITORIAL DISPATCH</span>
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] font-bold">
+              <span>EDITORIAL DISPATCH</span>
               <span>•</span>
               <span>QUARTERLY INTELLIGENCE</span>
             </div>

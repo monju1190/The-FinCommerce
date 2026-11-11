@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaShieldAlt, FaBalanceScale, FaArrowLeft, FaCheckCircle, FaFileContract, FaArrowRight } from "react-icons/fa";
+import { FaBalanceScale, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function TermsPage() {
   const terms = [
@@ -73,18 +73,21 @@ export default function TermsPage() {
 
   return (
     <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
-      {/* 1. EDITORIAL MASTHEAD BAR */}
-      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+      {/* 1. EDITORIAL HEADER BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-10 md:py-14">
         <div className="master-container">
+          <div className="mb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Page</span>
+            </Link>
+          </div>
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
-                <span>TSV STATUTORY CHARTER</span>
-                <span>•</span>
-                <span>LEGAL &amp; EDITORIAL PROTOCOLS</span>
-                <span>•</span>
-                <span>REG. NO. 48/2026</span>
-              </div>
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
                 Terms of Dispatch &amp; Editorial Policies
               </h1>
@@ -98,41 +101,14 @@ export default function TermsPage() {
               </span>
             </div>
           </div>
-
-          {/* Quick Ledger Sub-Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
-            >
-              <FaArrowLeft size={10} />
-              <span>Back to Main Broadside</span>
-            </Link>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-              <span>Doctrine: Independent Press</span>
-              <span>•</span>
-              <span>Separation: Church &amp; State</span>
-              <span>•</span>
-              <span>Legal Jurisdiction: Bangladesh</span>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* 2. MAIN EDITORIAL CONTENT */}
       <div className="master-container py-12 md:py-16 space-y-16">
 
-        {/* 2. THE CORE EDITORIAL PROMISE (DOCTRINE OF INDEPENDENCE) */}
+        {/* 2. THE CORE EDITORIAL PROMISE */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-14 space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/15">
-            <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
-              <span>★ The Editorial Separation Doctrine</span>
-            </div>
-            <span className="text-xs font-mono uppercase tracking-wider text-gray-500">
-              PLEDGE OF INSTITUTIONAL INTEGRITY
-            </span>
-          </div>
-
           <div className="max-w-4xl space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display text-[#111111] leading-tight">
               Advertising is advertising. Editorial is editorial.
@@ -153,18 +129,10 @@ export default function TermsPage() {
 
         {/* 3. THE 13 STATUTORY CLAUSES */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                STATUTORY ARTICLES • 01 — 13
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Conditions of Commercial &amp; Editorial Dispatch
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              Binding Engagement Rules
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Conditions of Commercial &amp; Editorial Dispatch
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/15 border border-black/15">
@@ -175,11 +143,8 @@ export default function TermsPage() {
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-[#D92B2B]">
-                      ARTICLE // {item.num}
-                    </span>
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400">
-                      TSV-TERMS-2026
+                    <span className="text-xs font-mono font-bold text-gray-400">
+                      Clause {item.num}
                     </span>
                   </div>
                   <h3 className="text-lg font-bold font-display text-[#111111] leading-snug">
@@ -198,7 +163,7 @@ export default function TermsPage() {
         <section className="grid grid-cols-1 md:grid-cols-3 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
           <div className="p-6 sm:p-8 space-y-3">
             <span className="text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold block">
-              01 / FACT-CHECKING PROTOCOL
+              Fact-Checking Protocol
             </span>
             <h4 className="text-base font-bold font-display text-[#111111]">
               Verification of ESG Data
@@ -210,7 +175,7 @@ export default function TermsPage() {
 
           <div className="p-6 sm:p-8 space-y-3">
             <span className="text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold block">
-              02 / CONFLICT OF INTEREST
+              Conflict of Interest
             </span>
             <h4 className="text-base font-bold font-display text-[#111111]">
               Author Disclosures
@@ -222,7 +187,7 @@ export default function TermsPage() {
 
           <div className="p-6 sm:p-8 space-y-3">
             <span className="text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold block">
-              03 / CORRECTIONS &amp; RETRACTIONS
+              Corrections &amp; Retractions
             </span>
             <h4 className="text-base font-bold font-display text-[#111111]">
               Commitment to Accuracy
@@ -233,7 +198,7 @@ export default function TermsPage() {
           </div>
         </section>
 
-        {/* 5. PUBLISHING COLOPHON & NAVIGATION FOOTNOTE */}
+        {/* 5. NAVIGATION FOOTNOTE */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 font-bold">

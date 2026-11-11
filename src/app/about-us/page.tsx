@@ -47,7 +47,6 @@ export default function AboutUsPage() {
   const audienceQuadrants = [
     {
       group: "Executive Leadership",
-      kicker: "SECTOR 01",
       members: [
         "Corporate Leaders & Board Members",
         "CEOs & Chief Sustainability Officers",
@@ -56,7 +55,6 @@ export default function AboutUsPage() {
     },
     {
       group: "Capital & Regulation",
-      kicker: "SECTOR 02",
       members: [
         "Policymakers, Regulators & Ministries",
         "Bankers & Sustainable Finance Teams",
@@ -65,7 +63,6 @@ export default function AboutUsPage() {
     },
     {
       group: "Science & Practice",
-      kicker: "SECTOR 03",
       members: [
         "ESG & Climate Technical Professionals",
         "Environmental Engineers & Auditors",
@@ -74,7 +71,6 @@ export default function AboutUsPage() {
     },
     {
       group: "Global Development",
-      kicker: "SECTOR 04",
       members: [
         "International Development Partners",
         "Bilateral Diplomatic Missions",
@@ -85,18 +81,21 @@ export default function AboutUsPage() {
 
   return (
     <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
-      {/* 1. EDITORIAL MASTHEAD BAR */}
-      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+      {/* 1. EDITORIAL HEADER BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-10 md:py-14">
         <div className="master-container">
+          <div className="mb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Page</span>
+            </Link>
+          </div>
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
-                <span>TSV ARCHIVAL DOSSIER</span>
-                <span>•</span>
-                <span>FOUNDING CHARTER</span>
-                <span>•</span>
-                <span>DHAKA, BANGLADESH</span>
-              </div>
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
                 A Platform for Ideas. A Voice for Sustainability.
               </h1>
@@ -110,24 +109,6 @@ export default function AboutUsPage() {
               </span>
             </div>
           </div>
-
-          {/* Quick Ledger Sub-Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
-            >
-              <FaArrowLeft size={10} />
-              <span>Back to Main Broadside</span>
-            </Link>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-              <span>Circulation: National &amp; Global</span>
-              <span>•</span>
-              <span>Editorial Desk: Dhaka-1205</span>
-              <span>•</span>
-              <span>Reg. No. 48/2026</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -137,9 +118,6 @@ export default function AboutUsPage() {
         {/* Lead Proposition Deck */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
           <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
-              <span>★ The Publication Charter</span>
-            </div>
             <p className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-[#111111] leading-relaxed">
               We are dedicated to advancing informed dialogue on sustainability, climate transition, environmental governance, and responsible corporate enterprise—bringing together industry decision-makers, policymakers, and researchers to address the structural challenges shaping our shared economic future.
             </p>
@@ -151,15 +129,10 @@ export default function AboutUsPage() {
 
         {/* 3. VISION & MISSION DUAL BROADSHEET LEDGER */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                INSTITUTIONAL DOCTRINE • SECTION 01
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Vision &amp; Mission
-              </h2>
-            </div>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Vision &amp; Mission
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
@@ -167,15 +140,15 @@ export default function AboutUsPage() {
             <div className="p-8 sm:p-12 flex flex-col justify-between space-y-8">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono uppercase tracking-widest text-gray-500">
-                    STATEMENT // 01
+                  <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
+                    OUR VISION
                   </span>
                   <FaEye className="text-xl text-[#1a4d2e]" />
                 </div>
-                <h3 className="text-3xl font-extrabold font-display text-[#111111]">
-                  Our Vision
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#111111]">
+                  Future of Business &amp; Policy
                 </h3>
-                <p className="text-xl sm:text-2xl font-serif italic text-gray-800 leading-snug pt-2">
+                <p className="text-lg sm:text-xl font-serif italic text-gray-800 leading-snug pt-2">
                   “Shaping the future of Business and Policy through actionable sustainability insights across Bangladesh and the global market.”
                 </p>
               </div>
@@ -185,18 +158,18 @@ export default function AboutUsPage() {
             </div>
 
             {/* Mission */}
-            <div className="p-8 sm:p-12 bg-[#142d1f] text-white flex flex-col justify-between space-y-8">
+            <div className="p-8 sm:p-12 bg-[#1b4332] text-white flex flex-col justify-between space-y-8">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono uppercase tracking-widest text-[#34d399]">
-                    STATEMENT // 02
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#8DC63F]">
+                    OUR MISSION
                   </span>
-                  <FaBullseye className="text-xl text-[#34d399]" />
+                  <FaBullseye className="text-xl text-[#8DC63F]" />
                 </div>
-                <h3 className="text-3xl font-extrabold font-display text-white">
-                  Our Mission
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-white">
+                  Evidence-Based Impact
                 </h3>
-                <p className="text-xl sm:text-2xl font-serif italic text-white/95 leading-snug pt-2">
+                <p className="text-lg sm:text-xl font-serif italic text-white/95 leading-snug pt-2">
                   “To champion ESG integration across business and governance by delivering high-impact journalism, evidence-based policy analysis, and diverse industry perspectives.”
                 </p>
               </div>
@@ -209,26 +182,18 @@ export default function AboutUsPage() {
 
         {/* 4. CORE PILLARS ALIGNMENT */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                OPERATIONAL FRAMEWORK • SECTION 02
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Core Pillars Alignment
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              Tri-Axis Architecture
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Core Pillars Alignment
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
             {pillars.map((pillar) => (
               <div key={pillar.num} className="p-8 sm:p-10 flex flex-col justify-between space-y-6">
                 <div className="space-y-3">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B]">
-                    PILLAR {pillar.num}
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#1a4d2e]">
+                    {pillar.num}
                   </span>
                   <h3 className="text-2xl font-extrabold font-display text-[#111111] leading-tight">
                     {pillar.title}
@@ -245,20 +210,12 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        {/* 5. EDITORIAL FOCUS (17 ARCHIVAL DOMAINS) */}
+        {/* 5. EDITORIAL FOCUS */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                SYSTEMIC SCOPE • SECTION 03
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Editorial Focus &amp; Coverage Areas
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              17 Priority Desks
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Editorial Focus &amp; Coverage Areas
+            </h2>
           </div>
 
           <div className="border border-black/15 bg-white p-6 sm:p-10 mb-6">
@@ -272,7 +229,7 @@ export default function AboutUsPage() {
                   key={domain}
                   className="bg-white p-4 sm:p-5 hover:bg-[#F7F5F0] transition-colors flex items-start gap-4"
                 >
-                  <span className="text-xs font-mono font-bold text-[#D92B2B] flex-shrink-0 pt-0.5">
+                  <span className="text-xs font-mono font-bold text-gray-400 flex-shrink-0 pt-0.5">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                   <span className="text-sm font-semibold text-gray-900 leading-snug">
@@ -284,20 +241,12 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        {/* 6. WHO WE REACH (STAKEHOLDER DIRECTORY) */}
+        {/* 6. WHO WE REACH */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                DISPATCH AUDIENCE • SECTION 04
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Who We Reach
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              Cross-Sector Circulation
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Who We Reach
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-black/15 bg-white divide-y sm:divide-y-0 divide-black/15">
@@ -307,9 +256,6 @@ export default function AboutUsPage() {
                 className={`p-6 sm:p-8 space-y-4 ${i > 0 ? "sm:border-l border-black/15" : ""}`}
               >
                 <div>
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
-                    {quadrant.kicker}
-                  </span>
                   <h3 className="text-lg font-extrabold font-display text-[#111111]">
                     {quadrant.group}
                   </h3>
@@ -327,7 +273,7 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        {/* 7. PUBLISHING COLOPHON & NAVIGATION FOOTNOTE */}
+        {/* 7. NAVIGATION FOOTNOTE */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#1a4d2e] font-bold">
@@ -335,7 +281,7 @@ export default function AboutUsPage() {
               <span>Independent Editorial Governance</span>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif">
-              The Sustainability Voice operates under strict separation between editorial decision-making and commercial sponsorship. For details on masthead officers, submission protocols, or terms of dispatch:
+              The Sustainability Voice operates under strict separation between editorial decision-making and commercial sponsorship.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 flex-shrink-0">

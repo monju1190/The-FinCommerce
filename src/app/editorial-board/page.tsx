@@ -10,15 +10,20 @@ export default function EditorialBoardPage() {
   return (
     <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
       {/* Editorial Masthead Bar */}
-      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-10 md:py-14">
         <div className="master-container">
+          <div className="mb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Page</span>
+            </Link>
+          </div>
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
-                <span>TSV MASTHEAD</span>
-                <span>•</span>
-                <span>REG. NO. 48/2026</span>
-              </div>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold font-display tracking-tight text-[#111111] uppercase">
                 Editorial Board
               </h1>
@@ -36,16 +41,10 @@ export default function EditorialBoardPage() {
       </section>
 
       <div className="master-container py-14 space-y-16">
-        {/* Navigation Back */}
-        <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-widest">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-gray-700 hover:text-[#D92B2B] transition-colors"
-          >
-            <FaArrowLeft size={10} />
-            <span>Back to Main Broadside</span>
-          </Link>
-          <span className="text-gray-500">12 Officers &amp; Fellows of the Press</span>
+        {/* Officers Count Header */}
+        <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-widest text-gray-500">
+          <span>Editorial Council</span>
+          <span>12 Officers &amp; Fellows of the Press</span>
         </div>
 
         {/* 1. Chief Editor & Managing Editor (Grand Spotlight) */}
@@ -64,9 +63,9 @@ export default function EditorialBoardPage() {
 
             {/* Editorial Title & Byline */}
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
-                <span>★ Editorial Direction</span>
-              </div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#1a4d2e] font-bold block">
+                Editorial Direction
+              </span>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-[#111111] leading-tight">
                 {chiefEditor.name}
@@ -91,9 +90,6 @@ export default function EditorialBoardPage() {
         <section>
           <div className="flex items-center justify-between pb-4 mb-6 border-b border-black/15">
             <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                MEMBERS OF THE BOARD &amp; OPERATIONS
-              </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
                 Officers of the Press
               </h3>
@@ -132,7 +128,7 @@ export default function EditorialBoardPage() {
                   </div>
 
                   {/* Name */}
-                  <h4 className="text-lg font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-snug">
+                  <h4 className="text-lg font-bold font-display text-[#111111] group-hover:text-[#1a4d2e] transition-colors leading-snug">
                     {member.name}
                   </h4>
                 </div>
@@ -152,7 +148,7 @@ export default function EditorialBoardPage() {
         <section className="border-t-2 border-black pt-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-xs font-mono">
             <div className="md:col-span-4 space-y-2">
-              <span className="text-[10px] uppercase tracking-widest text-[#D92B2B] block">
+              <span className="text-[10px] uppercase tracking-widest text-[#1a4d2e] font-bold block">
                 [COLOPHON &amp; IMPRINT]
               </span>
               <p className="font-bold text-[#111111] text-sm font-display">

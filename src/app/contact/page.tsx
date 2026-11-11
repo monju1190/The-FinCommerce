@@ -26,18 +26,21 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
-      {/* 1. EDITORIAL MASTHEAD BAR */}
-      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+      {/* 1. EDITORIAL HEADER BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-10 md:py-14">
         <div className="master-container">
+          <div className="mb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Page</span>
+            </Link>
+          </div>
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
-                <span>EDITORIAL DISPATCH</span>
-                <span>•</span>
-                <span>BUREAU INQUIRIES</span>
-                <span>•</span>
-                <span>DHAKA-1205</span>
-              </div>
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
                 Contact the Editorial Desk
               </h1>
@@ -51,22 +54,6 @@ export default function ContactPage() {
               </span>
             </div>
           </div>
-
-          {/* Quick Ledger Sub-Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
-            >
-              <FaArrowLeft size={10} />
-              <span>Back to Main Broadside</span>
-            </Link>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-              <span>Direct Telephony: +880 17 4225 4805</span>
-              <span>•</span>
-              <span>Email: editor@sustainabilityvoice.com</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -78,9 +65,6 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-8">
             <div className="border border-black/15 bg-white p-6 sm:p-8 space-y-8">
               <div className="border-b border-black/15 pb-4">
-                <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                  OFFICE OF THE PUBLISHER
-                </span>
                 <h2 className="text-2xl font-extrabold font-display text-[#111111]">
                   Bureau Headquarters
                 </h2>
@@ -145,7 +129,7 @@ export default function ContactPage() {
 
               {/* Whistleblower & Confidentiality Notice */}
               <div className="border-t border-black/15 pt-5 text-xs text-gray-600 font-serif leading-relaxed bg-[#F7F5F0] p-4 border border-black/10">
-                <span className="font-mono uppercase font-bold text-[#D92B2B] block mb-1">
+                <span className="font-mono uppercase font-bold text-[#1a4d2e] block mb-1">
                   Confidential Sources:
                 </span>
                 Whistleblower disclosures, investigative story leads, and corporate environmental reports are handled under strict journalistic confidentiality and data protection.
@@ -164,7 +148,7 @@ export default function ContactPage() {
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="bg-white border border-black/20 px-3 py-2 flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2 font-mono font-bold text-[#111111]">
-                      <FaMapMarkerAlt className="text-[#D92B2B]" />
+                      <FaMapMarkerAlt className="text-[#1a4d2e]" />
                       <span>DHAKA-1205, BANGLADESH</span>
                     </div>
                     <span className="text-[10px] font-mono text-gray-500 hidden sm:inline-block">
@@ -180,11 +164,8 @@ export default function ContactPage() {
           <div className="lg:col-span-7">
             <div className="border border-black/15 bg-white p-6 sm:p-10 md:p-12 space-y-8">
               <div className="border-b border-black/15 pb-4">
-                <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest mb-3">
-                  <span>FORM TSV-COMM-01</span>
-                </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-[#111111]">
-                  Transmit a Dispatch
+                  Send a Message to the Bureau
                 </h2>
                 <p className="text-xs font-mono uppercase tracking-wider text-gray-500 mt-1">
                   Deliver an inquiry to our editorial board or partnership team
@@ -197,7 +178,7 @@ export default function ContactPage() {
                     <FaCheck size={20} />
                   </div>
                   <h3 className="text-xl font-bold font-display text-[#1a4d2e]">
-                    Dispatch Received
+                    Message Received
                   </h3>
                   <p className="text-sm text-gray-700 font-serif max-w-md mx-auto">
                     Your correspondence has been logged into the editorial docket. An officer of the desk will respond within one business day.
@@ -209,7 +190,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-mono font-bold uppercase tracking-wider text-gray-700 mb-2">
-                        First Name <span className="text-[#D92B2B]">*</span>
+                        First Name *
                       </label>
                       <input
                         type="text"
@@ -222,7 +203,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block text-xs font-mono font-bold uppercase tracking-wider text-gray-700 mb-2">
-                        Last Name <span className="text-[#D92B2B]">*</span>
+                        Last Name *
                       </label>
                       <input
                         type="text"
@@ -238,7 +219,7 @@ export default function ContactPage() {
                   {/* Email */}
                   <div>
                     <label className="block text-xs font-mono font-bold uppercase tracking-wider text-gray-700 mb-2">
-                      Corporate / Institutional Email <span className="text-[#D92B2B]">*</span>
+                      Corporate / Institutional Email *
                     </label>
                     <input
                       type="email"
@@ -253,7 +234,7 @@ export default function ContactPage() {
                   {/* Subject Custom Dropdown */}
                   <div className="relative">
                     <label className="block text-xs font-mono font-bold uppercase tracking-wider text-gray-700 mb-2">
-                      Dispatch Subject / Category <span className="text-[#D92B2B]">*</span>
+                      Subject Category *
                     </label>
                     <div 
                       onClick={() => setIsSelectOpen(!isSelectOpen)}
@@ -286,7 +267,7 @@ export default function ContactPage() {
                   {/* Message */}
                   <div>
                     <label className="block text-xs font-mono font-bold uppercase tracking-wider text-gray-700 mb-2">
-                      Dispatch Message / Statement <span className="text-[#D92B2B]">*</span>
+                      Message *
                     </label>
                     <textarea
                       rows={6}
@@ -301,14 +282,14 @@ export default function ContactPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-[#111111] hover:bg-[#D92B2B] text-white font-mono uppercase tracking-widest text-xs py-4 px-8 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full bg-[#111111] hover:bg-[#1a4d2e] text-white font-mono uppercase tracking-widest text-xs py-4 px-8 transition-colors flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <FaPaperPlane size={11} />
-                    <span>Transmit Dispatch to Desk</span>
+                    <span>Send Message to Bureau</span>
                   </button>
 
                   <p className="text-[11px] text-gray-500 font-mono text-center">
-                    All communications are processed under journalistic privilege and TSV editorial confidentiality standards.
+                    All communications are processed under journalistic confidentiality standards.
                   </p>
                 </form>
               )}
@@ -317,27 +298,19 @@ export default function ContactPage() {
 
         </div>
 
-        {/* 3. FREQUENTLY ASKED QUESTIONS (BROADSHEET EDITORIAL LEDGER) */}
+        {/* 3. FREQUENTLY ASKED QUESTIONS */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                BUREAU PROTOCOLS • SECTION 02
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Frequently Asked Questions
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              Archival Guidance
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Frequently Asked Questions
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
             {faqs.map((faq, idx) => (
               <div key={idx} className="p-8 sm:p-10 space-y-3">
-                <span className="text-xs font-mono font-bold text-[#D92B2B]">
-                  Q // 0{idx + 1}
+                <span className="text-xs font-mono font-bold text-gray-400">
+                  Question {idx + 1}
                 </span>
                 <h3 className="text-lg font-bold font-display text-[#111111] leading-snug">
                   {faq.question}

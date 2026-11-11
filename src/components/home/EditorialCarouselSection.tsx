@@ -63,7 +63,7 @@ export default function EditorialCarouselSection({
       <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-8 border-b-2 border-[#111111] gap-4">
         <div>
           {kicker && (
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] mb-1 font-bold">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
               <span>{kicker}</span>
             </div>
           )}

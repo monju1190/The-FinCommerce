@@ -22,15 +22,15 @@ export default async function MagazineDetailPage({
     <main className="bg-[#F7F5F0] text-[#111111] min-h-screen py-10 md:py-16 antialiased">
       <div className="master-container space-y-12">
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-widest">
+        <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-wider">
           <Link
             href="/magazine"
-            className="inline-flex items-center gap-2 text-gray-700 hover:text-[#D92B2B] transition-colors"
+            className="inline-flex items-center gap-2 text-gray-700 hover:text-black transition-colors font-bold"
           >
             <FaArrowLeft size={10} />
-            <span>All Editions</span>
+            <span>Back to All Editions</span>
           </Link>
-          <span className="text-gray-500">{currentEdition.registrationNo}</span>
+          <span className="text-gray-500">{currentEdition.issueNumber}</span>
         </div>
 
         {/* Edition Hero Spotlight */}

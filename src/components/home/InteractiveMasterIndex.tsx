@@ -47,7 +47,7 @@ export default function InteractiveMasterIndex() {
       {/* Broadside Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-10 border-b-2 border-[#111111] gap-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] mb-1 font-bold">
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
             <span>VOLUME 01 COMPENDIUM • MASTER DIRECTORY</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
@@ -81,7 +81,7 @@ export default function InteractiveMasterIndex() {
                   href={`/category/${sec.slug}`}
                   className="flex items-baseline gap-4 sm:gap-6 flex-1"
                 >
-                  <span className="text-sm font-mono font-bold text-[#D92B2B] shrink-0">
+                  <span className="text-sm font-mono font-bold text-gray-400 shrink-0">
                     {indexStr}
                   </span>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-display uppercase text-[#111111] group-hover:text-[#D92B2B] transition-colors tracking-tight">
@@ -110,7 +110,7 @@ export default function InteractiveMasterIndex() {
         <div className="lg:col-span-4 lg:sticky lg:top-24 hidden lg:block">
           {activeSection?.sampleArticle && (
             <div className="border border-black/15 bg-white p-5 space-y-4">
-              <div className="flex items-center justify-between text-[11px] font-mono uppercase text-[#D92B2B] font-bold pb-2 border-b border-black/10">
+              <div className="flex items-center justify-between text-[11px] font-mono uppercase text-[#1a4d2e] font-bold pb-2 border-b border-black/10">
                 <span>SECTION PREVIEW</span>
                 <span>[{activeSection.count} STORIES]</span>
               </div>
@@ -140,7 +140,7 @@ export default function InteractiveMasterIndex() {
                 <span className="text-gray-500">By {activeSection.sampleArticle.author}</span>
                 <Link
                   href={`/category/${activeSection.slug}`}
-                  className="font-bold text-[#D92B2B] hover:underline"
+                  className="font-bold text-[#1a4d2e] hover:underline"
                 >
                   Enter Section →
                 </Link>

@@ -41,7 +41,7 @@ export default function BroadsheetSpotlight({
         }`}
       >
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] mb-1 font-bold">
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
             <span>{kicker}</span>
           </div>
           <h2
@@ -71,7 +71,7 @@ export default function BroadsheetSpotlight({
           className="flex items-center justify-between gap-3.5 group"
         >
           <div className="flex-1 pr-1">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#1a4d2e] block mb-1">
               {article.category}
             </span>
             <h3

@@ -39,18 +39,21 @@ export default function AdvertisePage() {
 
   return (
     <main className="min-h-screen bg-[#F7F5F0] text-[#111111] antialiased">
-      {/* 1. EDITORIAL MASTHEAD BAR */}
-      <section className="border-b border-black/15 bg-[#F7F5F0] py-12 md:py-16">
+      {/* 1. EDITORIAL HEADER BAR */}
+      <section className="border-b border-black/15 bg-[#F7F5F0] py-10 md:py-14">
         <div className="master-container">
+          <div className="mb-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
+              <FaArrowLeft size={10} />
+              <span>Back to Main Page</span>
+            </Link>
+          </div>
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
             <div>
-              <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#D92B2B] mb-2">
-                <span>TSV COMMERCIAL LEDGER</span>
-                <span>•</span>
-                <span>RATE CARD &amp; SPONSORSHIP</span>
-                <span>•</span>
-                <span>REG. NO. 48/2026</span>
-              </div>
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-[#111111] uppercase max-w-4xl leading-tight">
                 Put Your Brand Where Sustainability Matters
               </h1>
@@ -64,22 +67,6 @@ export default function AdvertisePage() {
               </span>
             </div>
           </div>
-
-          {/* Quick Ledger Sub-Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs font-mono uppercase tracking-wider text-gray-600">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-gray-800 hover:text-[#D92B2B] transition-colors"
-            >
-              <FaArrowLeft size={10} />
-              <span>Back to Main Broadside</span>
-            </Link>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-              <span>Circulation: Executive &amp; Institutional</span>
-              <span>•</span>
-              <span>Inquiries: +880 17 4225 4805</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -89,9 +76,6 @@ export default function AdvertisePage() {
         {/* Lead Proposition Deck */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
           <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 border border-[#D92B2B] text-[#D92B2B] px-3 py-1 text-[11px] font-mono uppercase tracking-widest">
-              <span>★ The Strategic Value Proposition</span>
-            </div>
             <p className="text-xl sm:text-2xl md:text-3xl font-display font-medium text-[#111111] leading-relaxed">
               Your brand. Your sustainability journey. An influential audience of corporate leaders, policymakers, bankers, and international buyers shaping the transition economy.
             </p>
@@ -103,18 +87,10 @@ export default function AdvertisePage() {
 
         {/* 3. WHY PARTNER WITH US */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                STRATEGIC ENGAGEMENT • SECTION 01
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Why Partner With The Sustainability Voice?
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              5 Core Strategic Advantages
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Why Partner With The Sustainability Voice?
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/15 border border-black/15">
@@ -125,8 +101,8 @@ export default function AdvertisePage() {
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-[#D92B2B]">
-                      ADVANTAGE // {item.num}
+                    <span className="text-xs font-mono font-bold text-gray-400">
+                      {item.num}
                     </span>
                     <div className="text-gray-700 text-lg">
                       {item.icon}
@@ -143,9 +119,9 @@ export default function AdvertisePage() {
             ))}
 
             {/* Inquiries Callout Tile */}
-            <div className="bg-[#142d1f] text-white p-6 sm:p-8 flex flex-col justify-between space-y-4">
+            <div className="bg-[#1b4332] text-white p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold text-[#34d399] uppercase tracking-widest">
+                <span className="text-xs font-mono font-bold text-[#8DC63F] uppercase tracking-widest">
                   BESPOKE PARTNERSHIPS
                 </span>
                 <h3 className="text-xl font-bold font-display text-white">
@@ -166,34 +142,23 @@ export default function AdvertisePage() {
           </div>
         </section>
 
-        {/* 4. PRICING & RATE CARD (BROADSHEET LEDGER) */}
+        {/* 4. PRICING & RATE CARD */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                STATUTORY RATE CARD • SECTION 02
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Print &amp; Digital Advertising Rates
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              Indicative Card Rates (BDT)
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Print &amp; Digital Advertising Rates
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 border border-black/15 bg-white divide-y md:divide-y-0 md:divide-x divide-black/15">
             {/* Premium Positions */}
             <div className="p-6 sm:p-10 space-y-6">
               <div className="border-b border-black/15 pb-4">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
-                  CATEGORY A
-                </span>
                 <h3 className="text-xl font-extrabold font-display text-[#111111]">
                   Premium Broadsheet Positions
                 </h3>
                 <p className="text-xs font-mono text-gray-500 mt-1 uppercase tracking-wider">
-                  Guaranteed High-Impact Cover &amp; Editorial Facing Placements
+                  Cover &amp; Editorial Facing Placements
                 </p>
               </div>
 
@@ -221,7 +186,7 @@ export default function AdvertisePage() {
                 </div>
                 <div className="py-3.5 flex justify-between items-center">
                   <div className="space-y-0.5">
-                    <span className="text-sm font-bold font-display text-[#111111] block">Facing Editorial / Masthead</span>
+                    <span className="text-sm font-bold font-display text-[#111111] block">Facing Editorial Page</span>
                     <span className="text-[11px] font-mono text-gray-500 uppercase">Prime Editorial Proximity</span>
                   </div>
                   <span className="text-sm font-mono font-bold text-[#111111]">BDT 70,000</span>
@@ -232,9 +197,6 @@ export default function AdvertisePage() {
             {/* Standard Positions */}
             <div className="p-6 sm:p-10 space-y-6">
               <div className="border-b border-black/15 pb-4">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#1a4d2e] block mb-1">
-                  CATEGORY B
-                </span>
                 <h3 className="text-xl font-extrabold font-display text-[#111111]">
                   Standard Interior Positions
                 </h3>
@@ -282,8 +244,8 @@ export default function AdvertisePage() {
           {/* Annual Partner Package */}
           <div className="p-6 sm:p-10 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B]">
-                STRATEGIC RETAINER // 01
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-gray-400">
+                ANNUAL COMMITMENT
               </span>
               <h3 className="text-2xl font-extrabold font-display text-[#111111]">
                 Annual Corporate Partner
@@ -300,8 +262,8 @@ export default function AdvertisePage() {
           {/* Multi-Issue Volume Discounts */}
           <div className="p-6 sm:p-10 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D92B2B]">
-                VOLUME COMMITMENTS // 02
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-gray-400">
+                VOLUME DISCOUNTS
               </span>
               <h3 className="text-2xl font-extrabold font-display text-[#111111]">
                 Advance Booking Incentives
@@ -330,20 +292,12 @@ export default function AdvertisePage() {
           </div>
         </section>
 
-        {/* 6. SAMPLE PRINT PLACEMENTS FROM MAIDEN ISSUE */}
+        {/* 6. SAMPLE PRINT PLACEMENTS */}
         <section>
-          <div className="flex items-center justify-between pb-3 mb-6 border-b border-black/15">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D92B2B] block mb-1">
-                PUBLICATION SPECIMENS • SECTION 03
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
-                Featured Advertisements in Print Edition
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest hidden sm:inline-block">
-              Volume 01 Specimen Archive
-            </span>
+          <div className="pb-3 mb-6 border-b border-black/15">
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight uppercase text-[#111111]">
+              Featured Advertisements in Print Edition
+            </h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-black/15 border border-black/15">
@@ -360,7 +314,7 @@ export default function AdvertisePage() {
                   />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#D92B2B] block">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400 block">
                     Page {ad.page}
                   </span>
                   <p className="text-xs font-bold font-display text-[#111111] truncate mt-0.5">
@@ -372,7 +326,7 @@ export default function AdvertisePage() {
           </div>
         </section>
 
-        {/* 7. PUBLISHING COLOPHON & NAVIGATION FOOTNOTE */}
+        {/* 7. NAVIGATION FOOTNOTE */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 font-bold">
@@ -380,20 +334,20 @@ export default function AdvertisePage() {
               <span>Commercial Booking Protocol • Desk of Business Development</span>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif">
-              All commercial engagements are executed in accordance with TSV statutory guidelines. To reserve an insertion or request technical production specs:
+              All commercial engagements are executed in accordance with TSV statutory guidelines. To reserve an insertion:
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#111111] text-white hover:bg-[#D92B2B] px-5 py-3 text-xs font-mono uppercase tracking-widest transition-colors"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#111111] text-white hover:bg-[#1a4d2e] px-5 py-3 text-xs font-mono uppercase tracking-widest transition-colors"
             >
               <span>Transmit Booking Inquiry</span>
               <FaArrowRight size={10} />
             </Link>
             <Link
               href="/terms"
-              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-5 py-3 text-xs font-mono uppercase tracking-widest transition-colors"
+              className="inline-flex items-center gap-2 border border-black/20 hover:border-black bg-[#F7F5F0] hover:bg-black hover:text-white px-4 py-2.5 text-xs font-mono uppercase tracking-widest transition-colors"
             >
               <span>Terms of Dispatch</span>
               <FaArrowRight size={10} />

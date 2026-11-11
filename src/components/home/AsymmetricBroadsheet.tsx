@@ -34,7 +34,7 @@ export default function AsymmetricBroadsheet({
       {/* Section Broadside Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-8 border-b-2 border-[#111111] gap-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] mb-1 font-bold">
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
             <span>{kicker}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
@@ -65,7 +65,7 @@ export default function AsymmetricBroadsheet({
             className="flex items-center justify-between gap-3.5 pt-4 first:pt-0 group"
           >
             <div className="flex-1 pr-1">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#D92B2B] block mb-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#1a4d2e] block mb-1">
                 {art.category}
               </span>
               <h3 className="text-base font-bold font-display text-[#111111] group-hover:text-[#D92B2B] leading-snug line-clamp-2 mb-1.5 transition-colors">

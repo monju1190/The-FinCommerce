@@ -3,6 +3,7 @@ import { magazineData, magazinePdfLinks, recentEditions } from "@/data/mockData"
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { FaBookOpen } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
 import MagazineAdBanner from "@/components/shared/MagazineAdBanner";
 import ArticleShareBar from "@/components/shared/ArticleShareBar";
 
@@ -30,10 +31,20 @@ export default async function NewsPage({
   return (
     <main className="bg-[#F7F5F0] text-[#111111] pb-24 min-h-screen antialiased">
       {/* Editorial Breadcrumb & Header */}
-      <div className="border-b border-black/15 bg-white py-12 md:py-16 px-4">
+      <div className="border-b border-black/15 bg-white py-10 md:py-14 px-4">
+        <div className="master-container max-w-4xl mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+          >
+            <FaArrowLeft size={10} />
+            <span>Back to Main Page</span>
+          </Link>
+        </div>
+
         <div className="master-container max-w-4xl text-center">
           <Link href={`/category/${article.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
-            <span className="text-[#D92B2B] font-mono font-bold uppercase tracking-[0.2em] text-xs mb-4 inline-block hover:underline">
+            <span className="text-[#1a4d2e] font-mono font-bold uppercase tracking-[0.2em] text-xs mb-4 inline-block hover:underline">
               {article.category} • {article.date}
             </span>
           </Link>

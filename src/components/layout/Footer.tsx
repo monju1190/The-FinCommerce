@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10 lg:gap-12 xl:gap-16 w-full lg:w-auto">
             {/* Column 1 */}
             <div>
-              <h4 className="text-white text-xs font-mono font-bold uppercase tracking-widest mb-4 text-[#D92B2B]">
+              <h4 className="text-[#8DC63F] text-xs font-mono font-bold uppercase tracking-widest mb-4">
                 Publication
               </h4>
               <ul className="space-y-2.5 text-gray-400 text-xs sm:text-sm font-serif">
@@ -49,7 +49,7 @@ export default function Footer() {
 
             {/* Column 2 */}
             <div>
-              <h4 className="text-white text-xs font-mono font-bold uppercase tracking-widest mb-4 text-[#D92B2B]">
+              <h4 className="text-[#8DC63F] text-xs font-mono font-bold uppercase tracking-widest mb-4">
                 Company
               </h4>
               <ul className="space-y-2.5 text-gray-400 text-xs sm:text-sm font-serif">
@@ -61,13 +61,13 @@ export default function Footer() {
 
             {/* Column 3 */}
             <div className="col-span-2 sm:col-span-1">
-              <h4 className="text-white text-xs font-mono font-bold uppercase tracking-widest mb-4 text-[#D92B2B]">
+              <h4 className="text-[#8DC63F] text-xs font-mono font-bold uppercase tracking-widest mb-4">
                 Volume 01
               </h4>
               <ul className="space-y-2.5 text-gray-400 text-xs sm:text-sm font-serif">
                 <li><span className="text-white font-mono text-xs">Quarterly Release</span></li>
                 <li><span className="text-gray-400 text-xs">October–December 2026</span></li>
-                <li><span className="text-gray-500 text-[11px] font-mono">Reg. No. 48/2026</span></li>
+                <li><span className="text-gray-400 text-xs">Dhaka, Bangladesh</span></li>
               </ul>
             </div>
           </div>

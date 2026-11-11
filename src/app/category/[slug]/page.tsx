@@ -67,15 +67,16 @@ export default async function CategoryArchivePage({
   return (
     <main className="bg-[#F7F5F0] text-[#111111] min-h-screen antialiased">
       {/* Category Broadside Header */}
-      <div className="border-b border-black/15 bg-white py-12 md:py-16">
+      <div className="border-b border-black/15 bg-white py-10 md:py-14">
         <div className="master-container">
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#D92B2B] mb-3">
-            <Link href="/" className="hover:underline flex items-center gap-1">
+          <div className="mb-4">
+            <Link 
+              href="/" 
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 hover:text-black transition-colors font-bold"
+            >
               <FaArrowLeft size={10} />
-              <span>Main Broadside</span>
+              <span>Back to Main Page</span>
             </Link>
-            <span>/</span>
-            <span>Section Archive</span>
           </div>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
@@ -88,11 +89,8 @@ export default async function CategoryArchivePage({
               </p>
             </div>
             <div className="text-left md:text-right">
-              <span className="text-xs font-mono uppercase tracking-widest text-gray-500 block">
-                VOLUME 01 REPERTOIRE
-              </span>
-              <span className="text-sm font-mono text-[#D92B2B] font-bold">
-                [{categoryArticles.length} {categoryArticles.length === 1 ? "Article" : "Articles"}]
+              <span className="text-sm font-mono text-[#1a4d2e] font-bold">
+                {categoryArticles.length} {categoryArticles.length === 1 ? "Article" : "Articles"}
               </span>
             </div>
           </div>

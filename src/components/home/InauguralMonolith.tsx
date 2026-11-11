@@ -183,7 +183,7 @@ export default function InauguralMonolith() {
               >
                 <div className="flex items-baseline justify-between gap-4 mb-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl sm:text-3xl font-mono font-bold text-[#D92B2B]">
+                    <span className="text-2xl sm:text-3xl font-mono font-bold text-[#1a4d2e]">
                       {chapterNum}
                     </span>
                     <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-gray-500 font-semibold">
@@ -224,7 +224,7 @@ export default function InauguralMonolith() {
                   </span>
                   <Link
                     href={`/news/${story.slug}`}
-                    className="inline-flex items-center gap-1.5 font-bold text-[#111111] group-hover:text-[#D92B2B] transition-colors"
+                    className="inline-flex items-center gap-1.5 font-bold text-[#111111] group-hover:text-[#1a4d2e] transition-colors"
                   >
                     <span>Read Full Story</span>
                     <FaArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
