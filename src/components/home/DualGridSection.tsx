@@ -84,7 +84,7 @@ export default function DualGridSection() {
               Bangladesh Slashes Solar Import Duties to 1% & Mobilizes Climate Finance
             </h4>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-2">
-              By Md. Nazrul Islam Chowdhury
+              By National Desk
             </div>
           </Link>
         </div>

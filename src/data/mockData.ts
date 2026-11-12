@@ -493,7 +493,7 @@ export const magazineData: MagazineSectionData[] = [
         "slug": "bangladesh-national-sustainability-news-solar-duties-climate-finance",
         "title": "National Briefing: Bangladesh Slashes Solar Import Duties to 1% & Mobilizes Climate Finance",
         "subtitle": "Key national developments: 1% solar import duty exemption, Tk 10.50 rooftop solar feed-in tariff, climate finance project pipelines, and municipal waste-to-energy readiness.",
-        "author": "Md. Nazrul Islam Chowdhury",
+        "author": "National Desk",
         "authorRole": "National News Desk",
         "date": "October–December 2026",
         "category": "Top Stories",

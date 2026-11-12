@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { magazineData } from "@/data/mockData";
 import { FaArrowRight } from "react-icons/fa6";
@@ -7,40 +7,93 @@ import { FaArrowRight } from "react-icons/fa6";
 export default function InteractiveMasterIndex() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(0);
 
-  const sections = magazineData.map((sec, i) => {
-    const slugMap: Record<string, string> = {
-      "Cover Story": "cover-story",
-      "Editorial": "editorial",
-      "Industry Practices": "industry-practices",
-      "Sustainable Finance": "sustainable-finance",
-      "Standards": "standards",
-      "Playbook": "playbook",
-      "Frontrunner": "frontrunner",
-      "Sustainable Cities": "sustainable-cities",
-      "Agriculture": "agriculture",
-      "Friends in Need": "friends-in-need",
-      "Friends In Need": "friends-in-need",
-      "Technology": "technology",
-      "Home & The World": "home-and-the-world",
-      "Rule Book": "rule-book",
-      "Governance": "governance",
-      "Waste Management": "waste-management",
-      "Health": "health",
-      "Wildlife": "wildlife",
-      "Culture & Myth": "culture-and-myth",
-      "ESG Award": "esg-award",
-      "Top Stories": "top-stories",
-    };
+  const allArticles = useMemo(() => {
+    return magazineData.flatMap((s) => s.articles);
+  }, []);
 
-    return {
-      title: sec.title,
-      slug: slugMap[sec.title] || sec.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-      count: sec.articles.length,
-      sampleArticle: sec.articles[0],
-    };
-  });
+  const masterSections = useMemo(() => {
+    const list = [
+      {
+        title: "ESG",
+        slug: "esg",
+        filterCategories: ["esg", "frontrunner", "esg award"]
+      },
+      {
+        title: "RMG & Textile",
+        slug: "rmg-and-textile",
+        filterCategories: ["rmg & textile", "industry practices", "rule book"]
+      },
+      {
+        title: "Agriculture",
+        slug: "agriculture",
+        filterCategories: ["agriculture"]
+      },
+      {
+        title: "Energy & Power",
+        slug: "energy-and-power",
+        filterCategories: ["energy & power", "standards"]
+      },
+      {
+        title: "Circular Economy",
+        slug: "circular-economy",
+        filterCategories: ["circular economy", "waste management"]
+      },
+      {
+        title: "Sustainable City",
+        slug: "sustainable-city",
+        filterCategories: ["sustainable city", "sustainable cities", "cover story"]
+      },
+      {
+        title: "Health",
+        slug: "health",
+        filterCategories: ["health"]
+      },
+      {
+        title: "Technology",
+        slug: "technology",
+        filterCategories: ["technology"]
+      },
+      {
+        title: "Governance",
+        slug: "governance",
+        filterCategories: ["governance", "rule book"]
+      },
+      {
+        title: "Wild Life & Biodiversity",
+        slug: "wild-life-and-biodiversity",
+        filterCategories: ["wild life & biodiversity", "wildlife"]
+      },
+      {
+        title: "Capital Market",
+        slug: "capital-market",
+        filterCategories: ["capital market", "sustainable finance", "playbook"]
+      },
+      {
+        title: "Friend In Need",
+        slug: "friend-in-need",
+        filterCategories: ["friend in need", "friends in need"]
+      },
+      {
+        title: "Culture & Myth",
+        slug: "culture-and-myth",
+        filterCategories: ["culture & myth"]
+      }
+    ];
 
-  const activeSection = hoveredIdx !== null ? sections[hoveredIdx] : sections[0];
+    return list.map((item) => {
+      const matched = allArticles.filter((art) =>
+        item.filterCategories.some((cat) => art.category.toLowerCase().includes(cat))
+      );
+      return {
+        title: item.title,
+        slug: item.slug,
+        count: matched.length > 0 ? matched.length : 1,
+        sampleArticle: matched[0] || allArticles[0],
+      };
+    });
+  }, [allArticles]);
+
+  const activeSection = hoveredIdx !== null ? masterSections[hoveredIdx] : masterSections[0];
 
   return (
     <section className="border-b border-black/15 pb-20 pt-10" data-purpose="master-section-index">
@@ -54,18 +107,16 @@ export default function InteractiveMasterIndex() {
             Volume 01 Compendium
           </h2>
           <p className="text-xs sm:text-sm font-serif text-gray-600 mt-1">
-            Browse all 18 editorial sections across the maiden print &amp; digital broadsheet.
+            Browse all 13 core editorial sections across the maiden print &amp; digital broadsheet.
           </p>
         </div>
-
-
       </div>
 
       {/* 12-Column Split: 8 Cols Ledger : 4 Cols Dynamic Preview */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         {/* Left Column (8 Cols — Stacked Broadsheet Ledger) */}
         <div className="lg:col-span-8 divide-y divide-black/15 border-t border-b border-black/15">
-          {sections.map((sec, idx) => {
+          {masterSections.map((sec, idx) => {
             const indexStr = (idx + 1).toString().padStart(2, "0");
             const isHovered = hoveredIdx === idx;
 
@@ -84,7 +135,7 @@ export default function InteractiveMasterIndex() {
                   <span className="text-sm font-mono font-bold text-gray-400 shrink-0">
                     {indexStr}
                   </span>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-display uppercase text-[#111111] group-hover:text-[#D92B2B] transition-colors tracking-tight">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-display uppercase text-[#111111] group-hover:text-[#1a4d2e] transition-colors tracking-tight">
                     {sec.title}
                   </h3>
                 </Link>
@@ -152,4 +203,3 @@ export default function InteractiveMasterIndex() {
     </section>
   );
 }
-

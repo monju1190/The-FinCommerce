@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#06150d] text-white pt-16 md:pt-20 pb-0 overflow-hidden relative font-sans border-t-2 border-black" data-purpose="site-footer">
+    <footer className="bg-[#1a4d2e] text-white pt-16 md:pt-20 pb-0 overflow-hidden relative font-sans border-t-2 border-black" data-purpose="site-footer">
       <div className="master-container relative z-10">
 
         {/* Top Section */}
@@ -110,7 +110,7 @@ export default function Footer() {
 
       {/* Giant Footer Watermark */}
       <div className="w-full text-center flex justify-center select-none pointer-events-none relative z-0">
-        <span className="text-[11vw] font-bold tracking-tight leading-[0.75] text-[#0d2618] block translate-y-3 whitespace-nowrap uppercase font-display">
+        <span className="text-[11vw] font-bold tracking-tight leading-[0.75] text-black/15 block translate-y-3 whitespace-nowrap uppercase font-display">
           the sustainability voice
         </span>
       </div>

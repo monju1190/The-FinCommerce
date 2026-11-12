@@ -121,7 +121,7 @@ export default function InauguralMonolith() {
               })}
             </div>
 
-            {/* Edition Note in Crisp White & Light Green with Smooth Crossfading Title */}
+            {/* Edition Note in Crisp White & Light Green with Smooth Crossfading Title & Reporter Info */}
             <div className="pt-3 space-y-2">
               <div className="flex items-center justify-between text-[11px] font-mono text-white/70 uppercase">
                 <span>The Sustainability Voice</span>
@@ -141,22 +141,57 @@ export default function InauguralMonolith() {
                           : "opacity-0 translate-y-2 absolute inset-x-0 pointer-events-none z-0"
                       }`}
                     >
-                      {story.title}
+                      <Link href={`/news/${story.slug}`} className="hover:text-[#8DC63F] transition-colors">
+                        {story.title}
+                      </Link>
                     </h3>
                   );
                 })}
               </div>
 
-              <p className="text-xs sm:text-sm text-white/80 font-serif leading-relaxed line-clamp-3">
-                &ldquo;This magazine is born out of passion—advancing informed dialogue on climate resilience, industrial transformation, and ESG governance in Bangladesh.&rdquo;
-              </p>
+              {/* Smooth Crossfading Article Excerpt / 1-2 Lines */}
+              <div className="relative min-h-[4rem] sm:min-h-[4.25rem] flex items-start overflow-hidden">
+                {flagshipStories.map((story, i) => {
+                  const isCurrent = activeIdx === i;
+                  return (
+                    <p
+                      key={`excerpt-${story.slug}`}
+                      className={`text-xs sm:text-sm text-white/85 font-serif leading-relaxed line-clamp-3 transition-all duration-700 ease-in-out ${
+                        isCurrent
+                          ? "opacity-100 translate-y-0 relative z-10"
+                          : "opacity-0 translate-y-2 absolute inset-x-0 pointer-events-none z-0"
+                      }`}
+                    >
+                      {story.subtitle}
+                    </p>
+                  );
+                })}
+              </div>
+
+              {/* Smooth Crossfading Reporter Name & Read Story Link */}
               <div className="pt-2 border-t border-white/15 flex items-center justify-between text-[11px] font-mono uppercase text-white/70">
-                <span className="text-[#8DC63F] font-bold">— Shaquib Quoreshi, Managing Editor</span>
+                <div className="relative flex-1 h-5 overflow-hidden">
+                  {flagshipStories.map((story, i) => {
+                    const isCurrent = activeIdx === i;
+                    return (
+                      <span
+                        key={`author-${story.slug}`}
+                        className={`text-[#8DC63F] font-bold tracking-wide transition-all duration-700 ease-in-out truncate absolute inset-x-0 ${
+                          isCurrent
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-2 pointer-events-none"
+                        }`}
+                      >
+                        By {story.author}
+                      </span>
+                    );
+                  })}
+                </div>
                 <Link
-                  href="/magazine"
-                  className="text-white hover:text-[#8DC63F] underline font-bold inline-flex items-center gap-1"
+                  href={currentStory ? `/news/${currentStory.slug}` : "/magazine"}
+                  className="text-white hover:text-[#8DC63F] underline font-bold inline-flex items-center gap-1 shrink-0 ml-2"
                 >
-                  <span>All Sections →</span>
+                  <span>Read Story →</span>
                 </Link>
               </div>
             </div>

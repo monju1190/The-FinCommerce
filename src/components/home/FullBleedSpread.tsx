@@ -19,7 +19,7 @@ export default function FullBleedSpread({
   kicker,
   categorySlug,
   article,
-  bgColor = "bg-[#111111]",
+  bgColor = "bg-[#1a4d2e]",
 }: FullBleedSpreadProps) {
   if (!article) return null;
 
