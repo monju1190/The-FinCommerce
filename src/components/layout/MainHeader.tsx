@@ -91,7 +91,6 @@ export default function MainHeader() {
         </Link>
         <div className="w-full max-w-4xl border-t border-primary-green mt-1 flex items-center justify-between pt-1.5 text-[8px] md:text-[9px] font-bold tracking-widest uppercase text-gray-800 font-sans">
           <span>A Quarterly Magazine</span>
-          <span>October–December 2026 • Issue 1, Vol. 1</span>
           <span>For Future-Proof Business</span>
         </div>
       </div>
