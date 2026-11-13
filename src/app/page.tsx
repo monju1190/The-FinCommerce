@@ -27,26 +27,26 @@ export default function Home() {
     "verifiable-impact-bangladesh-inaugural-esg-excellence-awards",
   ]);
 
-  // 2. RMG & Textile (2 articles)
-  const rmgArticles = getArticles([
+  // 2. Industry Practice (2 articles: Beyond the Plaque & Radisson Blu)
+  const industryArticles = getArticles([
     "beyond-the-plaque-green-certification-to-green-operations",
     "sustainability-practices-radisson-blu-chattogram",
   ]);
 
-  // 3. Agriculture (2 articles)
+  // 3. Agriculture (2 articles: Sands of Arabia & Salinity to Sustainability)
   const agriArticles = getArticles([
     "from-the-sands-of-arabia-to-the-rivers-of-bengal",
     "from-salinity-to-sustainability-syngenta-gogrow-coastal-bangladesh",
   ]);
 
-  // 4. Energy & Power (2 articles: Decarbonisation Financing & IFRS 9 Transition)
-  const energyArticles = getArticles([
+  // 4. Standards (2 articles: Decarbonisation Financing & IFRS 9 Technology Story)
+  const standardsArticles = getArticles([
     "decarbonisation-financing-in-bangladesh-evolving-role-of-bangladesh-bank",
     "the-accounting-rule-thats-secretly-a-technology-story-ifrs9",
   ]);
 
-  // 5. Circular Economy (2 articles: EPR & TMSS Waste Collection)
-  const circularArticles = getArticles([
+  // 5. Waste Management (2 articles: EPR & TMSS Waste Collection)
+  const wasteArticles = getArticles([
     "plastic-waste-management-bangladesh-extended-producer-responsibility",
     "transforming-waste-into-hope-tmss-waste-collection-business",
   ]);
@@ -57,7 +57,7 @@ export default function Home() {
     "ramna-green-critters-of-dhakas-shrinking-urban-space",
   ]);
 
-  // 7. Health (1 article — Full Bleed Fresh Leaf/Tiya Green Spread)
+  // 7. Health (1 article — World-Class Feature Spread)
   const healthArticle = getArticle(
     "living-well-health-in-an-unequal-world-longevity-blueprint"
   );
@@ -68,7 +68,7 @@ export default function Home() {
     "ai-infrastructure-closing-the-environmental-clearance-gap",
   ]);
 
-  // 9. Governance (1 article — Full Bleed Medium Forest Green Spread)
+  // 9. Governance (1 article — World-Class Feature Spread)
   const governanceArticle = getArticle(
     "the-governance-gap-why-sustainability-needs-to-reach-the-boardroom"
   );
@@ -79,18 +79,34 @@ export default function Home() {
     "the-kingfishers-of-bangladesh-twelve-species",
   ]);
 
-  // 11. Capital Market (1 article: Carbon Corridor)
-  const capitalArticle = getArticle(
-    "the-carbon-corridor-unlocking-green-investment-for-bangladesh"
-  );
+  // 11. Sustainable Finance (2 articles: Carbon Corridor & Sustainable Finance Blueprint)
+  const sustainableFinanceArticles = getArticles([
+    "the-carbon-corridor-unlocking-green-investment-for-bangladesh",
+    "sustainable-finance-blueprint-coordinated-regulation-bangladesh",
+  ]);
 
-  // 12. Friend In Need (1 article — Full Bleed Deep Nocturnal Pine Spread)
+  // 12. Friend In Need (1 article — World-Class Feature Spread)
   const friendArticle = getArticle(
     "denmark-bangladesh-lasting-partnership-greener-turn"
   );
 
   // 13. Culture & Myth (2 articles: Bonbibi & Humbaba)
   const mythArticles = getArticles(["bonbibi", "humbaba"]);
+
+  // 14. Frontrunner (1 article: Epyllion Group TSV Interview)
+  const frontrunnerArticle = getArticle(
+    "epyllion-group-championing-esg-beyond-compliance"
+  );
+
+  // 15. Energy & Power (1 article: Accelerating Clean Energy)
+  const energyArticle = getArticle(
+    "accelerating-clean-energy-transition-grid-modernization-bangladesh"
+  );
+
+  // 16. Circular Economy (1 article: Closing the Loop)
+  const circularArticle = getArticle(
+    "closing-the-loop-circular-economy-industrial-symbiosis-bangladesh"
+  );
 
   // Global Briefings / Real-Time Dispatch (4 articles)
   const topStoriesArticles = getArticles([
@@ -118,13 +134,13 @@ export default function Home() {
         description="From Epyllion Group's GRI-aligned factory sustainability to Bangladesh's inaugural evidence-based ESG Excellence Awards."
       />
 
-      {/* 2. RMG & TEXTILE (2 Articles) */}
+      {/* 2. INDUSTRY PRACTICE (2 Articles) */}
       <StaggeredDualSplit
         sectionNumber="02"
-        sectionTitle="RMG &amp; Textile"
+        sectionTitle="Industry Practice"
         kicker="MANUFACTURING &amp; GREEN OPERATIONS"
-        categorySlug="rmg-and-textile"
-        articles={rmgArticles}
+        categorySlug="industry-practices"
+        articles={industryArticles}
         description="Transitioning from 349 LEED green factory certifications to daily lean manufacturing operations and sustainable hospitality."
       />
 
@@ -138,23 +154,23 @@ export default function Home() {
         description="From the desert sands of Arabia to the coastal rivers of Bengal: climate-smart farming and salinity-resistant crops."
       />
 
-      {/* 4. ENERGY & POWER (2 Articles) */}
+      {/* 4. STANDARDS (2 Articles: Banking Standards & IFRS 9 Transition) */}
       <EditorialListSection
         sectionNumber="04"
-        title="Energy &amp; Power"
-        kicker="GRID TRANSITION &amp; DECARBONISATION FINANCING"
-        categorySlug="energy-and-power"
-        articles={energyArticles}
-        description="The hidden technology revolution inside IFRS 9 banking rules and central bank decarbonisation financing."
+        title="Standards"
+        kicker="BANKING STANDARDS &amp; RISK MONITORING"
+        categorySlug="standards"
+        articles={standardsArticles}
+        description="The hidden technology revolution inside IFRS 9 banking rules alongside central bank decarbonisation financing."
       />
 
-      {/* 5. CIRCULAR ECONOMY (2 Articles) */}
+      {/* 5. WASTE MANAGEMENT (2 Articles: EPR & Waste Infrastructure) */}
       <StaggeredDualSplit
         sectionNumber="05"
-        sectionTitle="Circular Economy"
+        sectionTitle="Waste Management"
         kicker="EXTENDED PRODUCER RESPONSIBILITY &amp; ZERO WASTE"
-        categorySlug="circular-economy"
-        articles={circularArticles}
+        categorySlug="waste-management"
+        articles={wasteArticles}
         description="Making Extended Producer Responsibility (EPR) enforceable and scaling community-based plastic recovery."
       />
 
@@ -168,7 +184,7 @@ export default function Home() {
         description="A suffocated Buriganga river meets Dhaka's shrinking urban biodiversity in Ramna Park."
       />
 
-      {/* 7. HEALTH (1 Article — Full-Bleed Signature Pine Green Spread) */}
+      {/* 7. HEALTH (1 Article — World-Class Feature Spread) */}
       {healthArticle && (
         <FullBleedSpread
           sectionNumber="07"
@@ -176,7 +192,7 @@ export default function Home() {
           kicker="LONGEVITY SCIENCE &amp; HEALTH EQUITY"
           categorySlug="health"
           article={healthArticle}
-          bgColor="bg-[#1a4d2e]"
+          description="Examining public health inequalities, preventative medicine, and the structural determinants of community longevity."
         />
       )}
 
@@ -190,7 +206,7 @@ export default function Home() {
         description="Can Bangladesh build domestic semiconductor capacity while accelerating green data-center approvals through AI?"
       />
 
-      {/* 9. GOVERNANCE (1 Article — Full-Bleed Signature Pine Green Spread) */}
+      {/* 9. GOVERNANCE (1 Article — World-Class Feature Spread) */}
       {governanceArticle && (
         <FullBleedSpread
           sectionNumber="09"
@@ -198,7 +214,7 @@ export default function Home() {
           kicker="BOARDROOM OVERSIGHT &amp; FIDUCIARY DUTY"
           categorySlug="governance"
           article={governanceArticle}
-          bgColor="bg-[#1a4d2e]"
+          description="Why corporate sustainability cannot remain confined to CSR departments and must be directed by board fiduciary oversight."
         />
       )}
 
@@ -212,19 +228,17 @@ export default function Home() {
         description="Documenting the 12 delta kingfishers of Bangladesh alongside elephant and tiger conservation along the Sundarbans edge."
       />
 
-      {/* 11. CAPITAL MARKET (1 Article) */}
-      {capitalArticle && (
-        <BroadsheetSpotlight
-          sectionNumber="11"
-          sectionTitle="Capital Market"
-          kicker="TRANSITION ARCHITECTURE &amp; GREEN FINANCE"
-          categorySlug="capital-market"
-          article={capitalArticle}
-          theme="light"
-        />
-      )}
+      {/* 11. SUSTAINABLE FINANCE (2 Articles: Carbon Corridor & Sustainable Finance Blueprint) */}
+      <StaggeredDualSplit
+        sectionNumber="11"
+        sectionTitle="Sustainable Finance"
+        kicker="TRANSITION ARCHITECTURE &amp; GREEN CAPITAL"
+        categorySlug="sustainable-finance"
+        articles={sustainableFinanceArticles}
+        description="Unlocking high-integrity carbon corridors and institutional capital markets to finance industrial decarbonisation."
+      />
 
-      {/* 12. FRIEND IN NEED (1 Article — Full-Bleed Signature Pine Green Spread) */}
+      {/* 12. FRIEND IN NEED (1 Article — World-Class Feature Spread) */}
       {friendArticle && (
         <FullBleedSpread
           sectionNumber="12"
@@ -232,7 +246,7 @@ export default function Home() {
           kicker="BILATERAL CLIMATE DIPLOMACY"
           categorySlug="friend-in-need"
           article={friendArticle}
-          bgColor="bg-[#1a4d2e]"
+          description="Denmark and Bangladesh forge a pioneering bilateral partnership spanning offshore wind, PaCT, and agri-food resilience."
         />
       )}
 
@@ -245,6 +259,43 @@ export default function Home() {
         articles={mythArticles}
         description="The folklore of Bonbibi in the Sundarbans and Humbaba in Mesopotamia as enduring metaphors for ecological boundaries."
       />
+
+      {/* 14. FRONTRUNNER (1 Article — Exclusive TSV Interview Spotlight) */}
+      {frontrunnerArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="14"
+          sectionTitle="Frontrunner"
+          kicker="TSV INTERVIEW &amp; CORPORATE LEADERSHIP"
+          categorySlug="frontrunner"
+          article={frontrunnerArticle}
+          theme="light"
+        />
+      )}
+
+      {/* 15. ENERGY & POWER (1 Article — Grid Modernization & Renewables) */}
+      {energyArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="15"
+          sectionTitle="Energy &amp; Power"
+          kicker="RENEWABLE TRANSITION &amp; CLEAN ENERGY"
+          categorySlug="energy-and-power"
+          article={energyArticle}
+          theme="light"
+          imageOnRight={true}
+        />
+      )}
+
+      {/* 16. CIRCULAR ECONOMY (1 Article — Sobar Niche / Closed-Loop Systems) */}
+      {circularArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="16"
+          sectionTitle="Circular Economy"
+          kicker="INDUSTRIAL SYMBIOSIS &amp; CLOSED-LOOP SYSTEMS"
+          categorySlug="circular-economy"
+          article={circularArticle}
+          theme="light"
+        />
+      )}
 
       {/* TOP STORIES / GLOBAL BRIEFINGS */}
       <EditorialCarouselSection

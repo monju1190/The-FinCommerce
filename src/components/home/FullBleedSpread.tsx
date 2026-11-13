@@ -10,6 +10,7 @@ interface FullBleedSpreadProps {
   kicker: string;
   categorySlug: string;
   article: NewsArticle;
+  description?: string;
   bgColor?: string;
 }
 
@@ -19,51 +20,72 @@ export default function FullBleedSpread({
   kicker,
   categorySlug,
   article,
-  bgColor = "bg-[#1a4d2e]",
+  description,
+  bgColor = "bg-[#EADBCC]",
 }: FullBleedSpreadProps) {
   if (!article) return null;
 
+  const authorDisplay = article.author.toLowerCase().includes("interview")
+    ? article.author
+    : article.author.startsWith("By ")
+    ? article.author
+    : `By ${article.author}`;
+
   return (
     <section
-      className={`my-16 sm:my-24 -mx-4 sm:-mx-6 md:-mx-12 ${bgColor} text-[#F7F5F0] border-y-2 border-black relative overflow-hidden transition-colors duration-500`}
-      data-purpose={`full-bleed-${categorySlug}`}
+      className={`my-14 sm:my-20 -mx-4 sm:-mx-6 md:-mx-12 ${bgColor} text-[#111111] border-y-2 border-black relative overflow-hidden transition-colors duration-500`}
+      data-purpose={`spotlight-${categorySlug}`}
     >
-      <div className="master-container py-16 sm:py-24">
-        {/* Header Kicker */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-6 mb-12 border-b border-white/20 gap-4">
-          <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-[#8DC63F]"></span>
-            <span className="text-xs font-mono tracking-[0.25em] uppercase text-[#8DC63F] font-bold">
-              {kicker}
-            </span>
+      <div className="master-container py-14 sm:py-20">
+        {/* Broadside Section Header — Prominently Highlighting Section Name */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-8 sm:mb-12 border-b-2 border-black/20 gap-4">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
+              <span>{sectionNumber}. {sectionTitle}</span>
+              <span>•</span>
+              <span>{kicker}</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
+              {sectionTitle}
+            </h2>
+            {description && (
+              <p className="text-xs sm:text-sm font-serif text-gray-700 mt-1 measure-readable">
+                {description}
+              </p>
+            )}
           </div>
-          <span className="text-xs font-mono text-white/70 uppercase tracking-widest">
-            {sectionTitle} • Volume 01
-          </span>
+
+          <Link
+            href={`/category/${categorySlug}`}
+            className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-[#111111] hover:text-[#D92B2B] transition-colors shrink-0 font-bold"
+          >
+            <span>View Section</span>
+            <FaArrowRight size={10} />
+          </Link>
         </div>
 
-        {/* Mobile Phone View (< sm) — Centered Thumbnail Row Layout */}
-        <div className="sm:hidden p-4 border border-white/20 bg-black/20">
+        {/* Mobile Phone View (< sm) — New Yorker Critics Row Layout */}
+        <div className="sm:hidden bg-[#F7F5F0] border border-black/20 p-4 shadow-sm">
           <Link
             href={`/news/${article.slug}`}
             className="flex items-center justify-between gap-3.5 group"
           >
             <div className="flex-1 pr-1">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#8DC63F] block mb-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#1a4d2e] block mb-1">
                 {article.category}
               </span>
-              <h3 className="text-base font-bold font-display leading-snug line-clamp-2 mb-1.5 text-white group-hover:text-[#8DC63F] transition-colors">
+              <h3 className="text-base font-bold font-display text-[#111111] group-hover:text-[#D92B2B] leading-snug line-clamp-2 mb-1.5 transition-colors">
                 {article.title}
               </h3>
-              <p className="text-xs font-serif line-clamp-2 leading-relaxed mb-2 text-gray-200">
+              <p className="text-xs font-serif text-gray-700 line-clamp-2 leading-relaxed mb-2">
                 {article.subtitle}
               </p>
-              <span className="text-[11px] font-mono uppercase text-gray-300 block">
-                By {article.author}
+              <span className="text-[11px] font-mono uppercase text-gray-600 block font-semibold">
+                {authorDisplay}
               </span>
             </div>
 
-            <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-white/20 bg-black overflow-hidden relative">
+            <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-black/20 bg-white overflow-hidden relative">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -73,43 +95,49 @@ export default function FullBleedSpread({
           </Link>
         </div>
 
-        {/* Desktop / Tablet Grid (sm: and above) — 12-Column Layout */}
+        {/* Desktop / Tablet Grid (sm: and above) — World-Class Feature Dossier */}
         <div className="hidden sm:grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Visual Frame (7 Cols) */}
           <div className="lg:col-span-7">
-            <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-white/20 bg-black relative group">
-              <img
-                src={article.imageUrl}
-                alt={article.title}
-                className="w-full h-full object-cover opacity-95 transition-transform duration-700 group-hover:scale-104"
-              />
-              <div className="absolute top-4 left-4 bg-black/85 backdrop-blur-xs text-[#8DC63F] border border-white/20 px-3 py-1 text-[10px] font-mono tracking-widest uppercase">
-                {article.category}
+            <Link href={`/news/${article.slug}`} className="block">
+              <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/20 bg-white p-2 relative group/img shadow-sm">
+                <div className="w-full h-full overflow-hidden relative">
+                  <img
+                    src={article.imageUrl}
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-104"
+                  />
+                  <div className="absolute top-3 left-3 bg-black/90 backdrop-blur-xs text-[#8DC63F] border border-black/20 px-3 py-1 text-[10px] font-mono tracking-widest uppercase font-bold">
+                    {article.category}
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Right Editorial Dossier (5 Cols) */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="inline-block border border-white/20 px-3 py-1 text-[11px] font-mono tracking-widest uppercase text-white/80 bg-black/20">
-              {sectionTitle} • Volume 01
+          <div className="lg:col-span-5 space-y-5">
+            <div className="inline-block border border-black/20 bg-black/[0.04] px-3 py-1 text-[11px] font-mono tracking-widest uppercase text-gray-700 font-semibold">
+              Volume 01 • Feature Spread
             </div>
 
-            <Link href={`/news/${article.slug}`} className="block group">
-              <h3 className="text-2xl sm:text-3xl md:text-5xl font-extrabold font-display leading-[1.12] text-white group-hover:text-[#8DC63F] transition-colors">
+            <Link href={`/news/${article.slug}`} className="block group/title">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display leading-[1.15] text-[#111111] group-hover/title:text-[#D92B2B] transition-colors">
                 {article.title}
               </h3>
             </Link>
 
-            <blockquote className="border-l-2 border-[#8DC63F] pl-4 italic font-serif text-base sm:text-lg text-gray-200 leading-relaxed">
+            <blockquote className="border-l-3 border-[#1a4d2e] pl-4 italic font-serif text-base sm:text-lg text-gray-800 leading-relaxed">
               &ldquo;{article.subtitle}&rdquo;
             </blockquote>
 
-            <div className="pt-4 border-t border-white/20 flex items-center justify-between text-xs font-mono text-gray-300 uppercase">
-              <span>By {article.author}</span>
+            <div className="pt-4 border-t border-black/20 flex items-center justify-between text-xs font-mono uppercase">
+              <span className="font-semibold text-gray-700">
+                {authorDisplay}
+              </span>
               <Link
                 href={`/news/${article.slug}`}
-                className="inline-flex items-center gap-2 bg-[#F7F5F0] text-[#111111] hover:bg-[#8DC63F] hover:text-black px-5 py-3 font-bold transition-colors uppercase tracking-wider"
+                className="inline-flex items-center gap-2 bg-[#111111] text-[#F7F5F0] hover:bg-[#1a4d2e] px-5 py-2.5 font-bold transition-colors uppercase tracking-wider text-xs font-mono"
               >
                 <span>Read Full Feature</span>
                 <FaArrowRight size={10} />

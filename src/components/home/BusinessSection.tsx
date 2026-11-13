@@ -103,7 +103,7 @@ export default function BusinessSection() {
               Advancing ESG principles through energy efficiency, responsible resource management, and community engagement in Bangladesh&apos;s hospitality sector.
             </p>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-auto">
-              Radisson Blu Chattogram Bay View
+              By TSV Desk
             </div>
           </Link>
 

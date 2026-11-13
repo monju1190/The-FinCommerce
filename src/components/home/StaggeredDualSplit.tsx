@@ -75,7 +75,11 @@ export default function StaggeredDualSplit({
                 {art.subtitle}
               </p>
               <span className="text-[11px] font-mono uppercase text-gray-500 block">
-                By {art.author}
+                {art.author.toLowerCase().includes("interview")
+                  ? art.author
+                  : art.author.startsWith("By ")
+                  ? art.author
+                  : `By ${art.author}`}
               </span>
             </div>
 
@@ -92,7 +96,7 @@ export default function StaggeredDualSplit({
 
       {/* Desktop / Tablet Grid (sm: and above) — 12-Column Split: 6 Cols : 6 Cols */}
       <div className="hidden sm:grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:divide-x lg:divide-black/15">
-        {/* Left Column (6 Cols — Portrait 4:5 Visual Weight) */}
+        {/* Left Column (6 Cols — Landscape Visual Weight Matching Right) */}
         <div className="lg:col-span-6 lg:pr-8 flex flex-col justify-between group">
           <div>
             <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-500 mb-3">
@@ -101,7 +105,7 @@ export default function StaggeredDualSplit({
             </div>
 
             <Link href={`/news/${leftArticle.slug}`} className="block">
-              <div className="aspect-[4/5] sm:aspect-[3/4] w-full overflow-hidden border border-black/15 bg-gray-200 mb-6 relative">
+              <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
                 <img
                   src={leftArticle.imageUrl}
                   alt={leftArticle.title}
@@ -121,7 +125,11 @@ export default function StaggeredDualSplit({
 
           <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-4 border-t border-black/10">
             <span className="font-semibold text-[#111111]">
-              By {leftArticle.author}
+              {leftArticle.author.toLowerCase().includes("interview")
+                ? leftArticle.author
+                : leftArticle.author.startsWith("By ")
+                ? leftArticle.author
+                : `By ${leftArticle.author}`}
             </span>
             <Link
               href={`/news/${leftArticle.slug}`}
@@ -132,8 +140,8 @@ export default function StaggeredDualSplit({
           </div>
         </div>
 
-        {/* Right Column (6 Cols — Landscape 16:9 Visual Weight + 60px Desktop Offset) */}
-        <div className="lg:col-span-6 lg:pl-8 lg:pt-16 flex flex-col justify-between group">
+        {/* Right Column (6 Cols — Symmetrical Landscape Visual Weight, Baseline Aligned) */}
+        <div className="lg:col-span-6 lg:pl-8 flex flex-col justify-between group">
           <div>
             <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-500 mb-3">
               <span className="text-[#1a4d2e] font-bold">{rightArticle.category}</span>
@@ -141,7 +149,7 @@ export default function StaggeredDualSplit({
             </div>
 
             <Link href={`/news/${rightArticle.slug}`} className="block">
-              <div className="aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-6 relative">
+              <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
                 <img
                   src={rightArticle.imageUrl}
                   alt={rightArticle.title}
@@ -161,7 +169,11 @@ export default function StaggeredDualSplit({
 
           <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-4 border-t border-black/10">
             <span className="font-semibold text-[#111111]">
-              By {rightArticle.author}
+              {rightArticle.author.toLowerCase().includes("interview")
+                ? rightArticle.author
+                : rightArticle.author.startsWith("By ")
+                ? rightArticle.author
+                : `By ${rightArticle.author}`}
             </span>
             <Link
               href={`/news/${rightArticle.slug}`}

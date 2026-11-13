@@ -85,7 +85,13 @@ export default function EditorialListSection({
                   {art.subtitle}
                 </p>
                 <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono uppercase text-gray-500">
-                  <span className="text-[#111111] font-medium">By {art.author}</span>
+                  <span className="text-[#111111] font-medium">
+                    {art.author.toLowerCase().includes("interview")
+                      ? art.author
+                      : art.author.startsWith("By ")
+                      ? art.author
+                      : `By ${art.author}`}
+                  </span>
                   {art.date && (
                     <>
                       <span className="hidden sm:inline">•</span>

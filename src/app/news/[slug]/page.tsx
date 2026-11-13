@@ -67,9 +67,19 @@ export default async function NewsPage({
               </div>
             )}
             <div className="text-left font-mono">
-              <p className="font-bold text-sm text-[#111111] uppercase">By {article.author}</p>
+              <p className="font-bold text-sm text-[#111111] uppercase">
+                {article.author.toLowerCase().includes("interview")
+                  ? article.author
+                  : article.author.startsWith("By ")
+                  ? article.author
+                  : `By ${article.author}`}
+              </p>
               <p className="text-[11px] text-gray-500 uppercase tracking-wider">
-                {article.authorRole ? `${article.authorRole} • ` : ""}
+                {article.author.toLowerCase().includes("interview")
+                  ? ""
+                  : article.authorRole
+                  ? `${article.authorRole} • `
+                  : ""}
                 {article.date}
               </p>
             </div>

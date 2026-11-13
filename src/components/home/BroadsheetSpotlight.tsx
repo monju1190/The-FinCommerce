@@ -154,7 +154,13 @@ export default function BroadsheetSpotlight({
               isDark ? "border-white/20 text-gray-400" : "border-black/10 text-gray-600"
             }`}
           >
-            <span className="font-semibold">By {article.author}</span>
+            <span className="font-semibold">
+              {article.author.toLowerCase().includes("interview")
+                ? article.author
+                : article.author.startsWith("By ")
+                ? article.author
+                : `By ${article.author}`}
+            </span>
             <Link
               href={`/news/${article.slug}`}
               className={`inline-flex items-center gap-1.5 font-bold transition-colors uppercase tracking-wider ${

@@ -47,7 +47,7 @@ export default function EditorialBoardPage() {
           <span>12 Officers &amp; Fellows of the Press</span>
         </div>
 
-        {/* 1. Chief Editor & Managing Editor (Grand Spotlight) */}
+        {/* 1. Managing Editor (Grand Spotlight) */}
         <section className="border border-black/15 bg-white p-6 sm:p-10 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
             {/* Portrait Frame */}
