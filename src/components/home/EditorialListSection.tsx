@@ -11,6 +11,7 @@ export interface EditorialArticle {
   author: string;
   category: string;
   imageUrl: string;
+  coverImageUrl?: string;
   date?: string;
 }
 
@@ -104,7 +105,7 @@ export default function EditorialListSection({
               {/* Right Thumbnail Image — The Critics New Yorker Style (Sharp Frame) */}
               <div className="w-24 xs:w-28 sm:w-36 md:w-48 aspect-[4/3] overflow-hidden bg-gray-100 border border-black/15 relative shrink-0">
                 <img
-                  src={art.imageUrl}
+                  src={art.coverImageUrl || art.imageUrl}
                   alt={art.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

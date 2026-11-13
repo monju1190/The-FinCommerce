@@ -183,7 +183,7 @@ export default function InteractiveMasterIndex() {
 
               <div className="aspect-[16/10] overflow-hidden border border-black/15 bg-gray-200 relative">
                 <img
-                  src={activeSection.sampleArticle.imageUrl}
+                  src={activeSection.sampleArticle.coverImageUrl || activeSection.sampleArticle.imageUrl}
                   alt={activeSection.sampleArticle.title}
                   key={activeSection.sampleArticle.slug}
                   className="w-full h-full object-cover animate-fadeIn transition-transform duration-700 hover:scale-105"

@@ -87,7 +87,7 @@ export default function FullBleedSpread({
 
             <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-black/20 bg-white overflow-hidden relative">
               <img
-                src={article.imageUrl}
+                src={article.coverImageUrl || article.imageUrl}
                 alt={article.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -103,7 +103,7 @@ export default function FullBleedSpread({
               <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/20 bg-white p-2 relative group/img shadow-sm">
                 <div className="w-full h-full overflow-hidden relative">
                   <img
-                    src={article.imageUrl}
+                    src={article.coverImageUrl || article.imageUrl}
                     alt={article.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-104"
                   />

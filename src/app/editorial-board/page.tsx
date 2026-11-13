@@ -74,14 +74,6 @@ export default function EditorialBoardPage() {
               <p className="text-base sm:text-lg font-mono uppercase tracking-wider text-[#1a4d2e] font-bold">
                 {chiefEditor.role}
               </p>
-
-              <div className="pt-4 border-t border-black/15 flex flex-wrap gap-x-8 gap-y-2 text-xs font-mono text-gray-600 uppercase tracking-wider">
-                <span>The Sustainability Voice</span>
-                <span>•</span>
-                <span>Publication Governance</span>
-                <span>•</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
             </div>
           </div>
         </section>

@@ -122,7 +122,7 @@ export default function EditorialCarouselSection({
             {/* Top Image Frame */}
             <div className="relative aspect-[16/10] overflow-hidden bg-gray-200 border-b border-black/15">
               <img
-                src={art.imageUrl}
+                src={art.coverImageUrl || art.imageUrl}
                 alt={art.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

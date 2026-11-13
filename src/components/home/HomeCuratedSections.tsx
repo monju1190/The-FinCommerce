@@ -16,7 +16,7 @@ export default function HomeCuratedSections() {
       subtitle: found.subtitle,
       author: found.author,
       category: found.category,
-      imageUrl: found.imageUrl,
+      imageUrl: found.coverImageUrl || found.imageUrl,
       date: found.date,
     };
   };

@@ -85,7 +85,7 @@ export default function StaggeredDualSplit({
 
             <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-black/15 bg-gray-200 overflow-hidden relative">
               <img
-                src={art.imageUrl}
+                src={art.coverImageUrl || art.imageUrl}
                 alt={art.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -107,7 +107,7 @@ export default function StaggeredDualSplit({
             <Link href={`/news/${leftArticle.slug}`} className="block">
               <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
                 <img
-                  src={leftArticle.imageUrl}
+                  src={leftArticle.coverImageUrl || leftArticle.imageUrl}
                   alt={leftArticle.title}
                   className="w-full h-full object-cover print-grayscale transition-transform duration-700 group-hover:scale-104"
                 />
@@ -151,7 +151,7 @@ export default function StaggeredDualSplit({
             <Link href={`/news/${rightArticle.slug}`} className="block">
               <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
                 <img
-                  src={rightArticle.imageUrl}
+                  src={rightArticle.coverImageUrl || rightArticle.imageUrl}
                   alt={rightArticle.title}
                   className="w-full h-full object-cover print-grayscale transition-transform duration-700 group-hover:scale-104"
                 />

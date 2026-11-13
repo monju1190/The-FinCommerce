@@ -91,7 +91,7 @@ export default function BroadsheetSpotlight({
 
           <div className={`w-24 xs:w-28 aspect-[4/3] shrink-0 border overflow-hidden relative ${isDark ? "border-white/20 bg-gray-900" : "border-black/15 bg-gray-200"}`}>
             <img
-              src={article.imageUrl}
+              src={article.coverImageUrl || article.imageUrl}
               alt={article.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -110,7 +110,7 @@ export default function BroadsheetSpotlight({
               }`}
             >
               <img
-                src={article.imageUrl}
+                src={article.coverImageUrl || article.imageUrl}
                 alt={article.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-104"
               />

@@ -81,7 +81,7 @@ export default function AsymmetricBroadsheet({
 
             <div className="w-24 xs:w-28 aspect-[4/3] shrink-0 border border-black/15 bg-gray-200 overflow-hidden relative">
               <img
-                src={art.imageUrl}
+                src={art.coverImageUrl || art.imageUrl}
                 alt={art.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -98,7 +98,7 @@ export default function AsymmetricBroadsheet({
             {/* 16:10 Large Frame */}
             <div className="aspect-[16/10] w-full overflow-hidden border border-black/15 bg-gray-200 mb-6 relative">
               <img
-                src={leadArticle.imageUrl}
+                src={leadArticle.coverImageUrl || leadArticle.imageUrl}
                 alt={leadArticle.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-104"
               />
@@ -156,7 +156,7 @@ export default function AsymmetricBroadsheet({
 
                 <div className="sm:col-span-4 aspect-[4/3] overflow-hidden border border-black/15 bg-gray-200">
                   <img
-                    src={art.imageUrl}
+                    src={art.coverImageUrl || art.imageUrl}
                     alt={art.title}
                     className="w-full h-full object-cover print-grayscale transition-transform duration-500 group-hover:scale-105"
                   />
