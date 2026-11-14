@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { FaLinkedinIn, FaFacebookF, FaTimes, FaSearch, FaArrowRight } from "react-icons/fa";
 import { Playfair_Display_SC } from "next/font/google";
 import { magazineData } from "@/data/mockData";
+import { HOME_SECTIONS } from "@/data/sectionsConfig";
 
 const playfair = Playfair_Display_SC({
   weight: ["400", "700", "900"],
@@ -125,40 +126,32 @@ export default function MainHeader() {
               onMouseEnter={() => setIsNewsDropdownOpen(true)}
               onMouseLeave={() => setIsNewsDropdownOpen(false)}
             >
-              <Link href="/news" className="flex items-center hover:text-gray-300 transition-colors pb-2 pt-2">
-                Sections
+              <Link href="/category" className="flex items-center hover:text-gray-300 transition-colors pb-2 pt-2">
+                Sections ({HOME_SECTIONS.length})
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </Link>
               {isNewsDropdownOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-64 z-50 block">
-                  <div className="bg-primary-green border border-white/20 shadow-2xl rounded-xl overflow-hidden">
-                    <div className="py-2 flex flex-col text-left">
-                      <Link href="/category/industry-practices" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Industry Practices
-                      </Link>
-                      <Link href="/category/sustainable-finance" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Sustainable Finance
-                      </Link>
-                      <Link href="/category/playbook" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Playbook & Standards
-                      </Link>
-                      <Link href="/category/sustainable-cities" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Sustainable Cities
-                      </Link>
-                      <Link href="/category/agriculture" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Agriculture
-                      </Link>
-                      <Link href="/category/technology" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Technology
-                      </Link>
-                      <Link href="/category/home-and-the-world" className="px-4 py-2.5 hover:bg-white/10 border-b border-white/10 transition-colors">
-                        Home & The World
-                      </Link>
-                      <Link href="/category/wildlife" className="px-4 py-2.5 hover:bg-white/10 transition-colors">
-                        Wildlife & Health
-                      </Link>
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[540px] z-50 block">
+                  <div className="bg-primary-green border border-white/20 shadow-2xl rounded-xl overflow-hidden p-3">
+                    <div className="grid grid-cols-2 gap-x-3 text-left">
+                      {HOME_SECTIONS.map((sec) => (
+                        <Link
+                          key={sec.slug}
+                          href={`/category/${sec.slug}`}
+                          onClick={() => setIsNewsDropdownOpen(false)}
+                          className="px-3 py-2 hover:bg-white/10 rounded-lg transition-colors flex items-center justify-between text-[11px] border-b border-white/10"
+                        >
+                          <span className="truncate pr-2">
+                            <span className="text-[#8DC63F] font-mono mr-1.5">{sec.number}.</span>
+                            {sec.title}
+                          </span>
+                          <span className="text-[10px] font-mono text-white/60 shrink-0">
+                            {sec.articleSlugs.length}
+                          </span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -248,7 +241,7 @@ export default function MainHeader() {
               All Articles
             </Link>
             <Link href="/category" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">
-              Sections
+              All {HOME_SECTIONS.length} Sections
             </Link>
             <Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">
               About Us

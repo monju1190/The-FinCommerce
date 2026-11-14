@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { magazineData } from "@/data/mockData";
+import { HOME_SECTIONS } from "@/data/sectionsConfig";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function InteractiveMasterIndex() {
@@ -12,97 +13,14 @@ export default function InteractiveMasterIndex() {
   }, []);
 
   const masterSections = useMemo(() => {
-    const list = [
-      {
-        title: "ESG",
-        slug: "esg",
-        filterCategories: ["esg", "esg award"]
-      },
-      {
-        title: "Industry Practice",
-        slug: "industry-practices",
-        filterCategories: ["industry practices", "rmg & textile"]
-      },
-      {
-        title: "Agriculture",
-        slug: "agriculture",
-        filterCategories: ["agriculture"]
-      },
-      {
-        title: "Standards",
-        slug: "standards",
-        filterCategories: ["standards"]
-      },
-      {
-        title: "Waste Management",
-        slug: "waste-management",
-        filterCategories: ["waste management"]
-      },
-      {
-        title: "Sustainable City",
-        slug: "sustainable-city",
-        filterCategories: ["sustainable city", "sustainable cities", "cover story"]
-      },
-      {
-        title: "Health",
-        slug: "health",
-        filterCategories: ["health"]
-      },
-      {
-        title: "Technology",
-        slug: "technology",
-        filterCategories: ["technology"]
-      },
-      {
-        title: "Governance",
-        slug: "governance",
-        filterCategories: ["governance", "rule book"]
-      },
-      {
-        title: "Wild Life & Biodiversity",
-        slug: "wild-life-and-biodiversity",
-        filterCategories: ["wild life & biodiversity", "wildlife"]
-      },
-      {
-        title: "Sustainable Finance",
-        slug: "sustainable-finance",
-        filterCategories: ["sustainable finance", "playbook", "capital market"]
-      },
-      {
-        title: "Friend In Need",
-        slug: "friend-in-need",
-        filterCategories: ["friend in need", "friends in need"]
-      },
-      {
-        title: "Culture & Myth",
-        slug: "culture-and-myth",
-        filterCategories: ["culture & myth"]
-      },
-      {
-        title: "Frontrunner",
-        slug: "frontrunner",
-        filterCategories: ["frontrunner"]
-      },
-      {
-        title: "Energy & Power",
-        slug: "energy-and-power",
-        filterCategories: ["energy & power"]
-      },
-      {
-        title: "Circular Economy",
-        slug: "circular-economy",
-        filterCategories: ["circular economy"]
-      }
-    ];
-
-    return list.map((item) => {
-      const matched = allArticles.filter((art) =>
-        item.filterCategories.some((cat) => art.category.toLowerCase().includes(cat))
-      );
+    return HOME_SECTIONS.map((sec) => {
+      const matched = sec.articleSlugs
+        .map((slug) => allArticles.find((a) => a.slug === slug))
+        .filter((a): a is NonNullable<typeof a> => Boolean(a));
       return {
-        title: item.title,
-        slug: item.slug,
-        count: matched.length > 0 ? matched.length : 1,
+        title: sec.title,
+        slug: sec.slug,
+        count: matched.length,
         sampleArticle: matched[0] || allArticles[0],
       };
     });
@@ -122,7 +40,7 @@ export default function InteractiveMasterIndex() {
             Volume 01 Compendium
           </h2>
           <p className="text-xs sm:text-sm font-serif text-gray-600 mt-1">
-            Browse all 16 core editorial sections across the maiden print &amp; digital broadsheet.
+            Browse all {HOME_SECTIONS.length} editorial sections across the maiden print &amp; digital broadsheet.
           </p>
         </div>
       </div>

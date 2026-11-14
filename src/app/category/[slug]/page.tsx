@@ -1,40 +1,9 @@
 import React from "react";
-import { categories, magazineData } from "@/data/mockData";
+import { categories, magazineData, NewsArticle } from "@/data/mockData";
+import { HOME_SECTIONS, SECTION_SLUG_ALIASES } from "@/data/sectionsConfig";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
-
-const relatedCategoryGroups: Record<string, string[]> = {
-  "top-stories": ["top stories", "culture & myth", "editorial"],
-  "industry-practices": ["industry practices", "rmg & textile", "rule book", "governance", "frontrunner"],
-  "rmg-and-textile": ["rmg & textile", "industry practices"],
-  "sustainable-finance": ["sustainable finance", "capital market", "friends in need", "standards"],
-  "capital-market": ["capital market", "sustainable finance", "playbook", "standards"],
-  "standards": ["standards", "capital market", "sustainable finance", "playbook"],
-  "energy-and-power": ["energy & power", "top stories", "sustainable finance"],
-  "home-and-the-world": ["home & the world"],
-  "playbook": ["playbook", "standards", "rule book"],
-  "frontrunner": ["frontrunner", "esg award", "industry practices"],
-  "esg": ["esg", "esg award", "frontrunner", "standards", "playbook"],
-  "esg-award": ["esg award", "frontrunner"],
-  "sustainable-cities": ["sustainable cities", "sustainable city", "top stories", "waste management"],
-  "sustainable-city": ["sustainable city", "sustainable cities", "waste management"],
-  "circular-economy": ["circular economy", "waste management", "industry practices"],
-  "agriculture": ["agriculture", "sustainable cities"],
-  "technology": ["technology", "playbook"],
-  "waste-management": ["waste management", "circular economy", "sustainable cities"],
-  "friends-in-need": ["friends in need", "friend in need", "sustainable finance"],
-  "friend-in-need": ["friend in need", "friends in need", "sustainable finance"],
-  "rule-book": ["rule book", "governance", "industry practices"],
-  "governance": ["governance", "rule book", "industry practices"],
-  "wildlife": ["wildlife", "wild life & biodiversity", "culture & myth"],
-  "wildlife-and-biodiversity": ["wild life & biodiversity", "wildlife", "culture & myth"],
-  "wild-life-and-biodiversity": ["wild life & biodiversity", "wildlife", "culture & myth"],
-  "culture-and-myth": ["culture & myth", "wildlife"],
-  "health": ["health", "wildlife"],
-  "cover-story": ["cover story", "sustainable cities"],
-  "editorial": ["editorial"],
-};
 
 export default async function CategoryArchivePage({
   params,
@@ -43,26 +12,33 @@ export default async function CategoryArchivePage({
 }) {
   const { slug } = await params;
 
+  const canonicalSlug = SECTION_SLUG_ALIASES[slug] || slug;
+  const homeSection = HOME_SECTIONS.find((s) => s.slug === canonicalSlug);
   const categoryInfo = categories.find((c) => c.slug === slug);
-  if (!categoryInfo) {
+
+  if (!homeSection && !categoryInfo) {
     notFound();
   }
 
   const allArticles = magazineData.flatMap((section) => section.articles);
-  const targetCategories = relatedCategoryGroups[slug] || [
-    categoryInfo.name.toLowerCase(),
-  ];
 
-  // Primary matches first, then related matches
-  const primaryArticles = allArticles.filter(
-    (a) => a.category.toLowerCase() === categoryInfo.name.toLowerCase()
-  );
-  const secondaryArticles = allArticles.filter(
-    (a) =>
-      a.category.toLowerCase() !== categoryInfo.name.toLowerCase() &&
-      targetCategories.includes(a.category.toLowerCase())
-  );
-  const categoryArticles = [...primaryArticles, ...secondaryArticles];
+  let categoryArticles: NewsArticle[];
+  let displayTitle: string;
+  let displayDescription: string;
+
+  if (homeSection) {
+    categoryArticles = homeSection.articleSlugs
+      .map((s) => allArticles.find((a) => a.slug === s))
+      .filter((a): a is NewsArticle => Boolean(a));
+    displayTitle = homeSection.title;
+    displayDescription = homeSection.description;
+  } else {
+    categoryArticles = allArticles.filter(
+      (a) => a.category.toLowerCase() === categoryInfo!.name.toLowerCase()
+    );
+    displayTitle = categoryInfo!.name;
+    displayDescription = categoryInfo!.description;
+  }
 
   return (
     <main className="bg-[#F7F5F0] text-[#111111] min-h-screen antialiased">
@@ -82,10 +58,10 @@ export default async function CategoryArchivePage({
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-black/15">
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
-                {categoryInfo.name}
+                {displayTitle}
               </h1>
               <p className="text-base sm:text-lg text-gray-700 font-serif measure-readable mt-2">
-                {categoryInfo.description}
+                {displayDescription}
               </p>
             </div>
             <div className="text-left md:text-right">
