@@ -6,6 +6,7 @@ import FullBleedSpread from "@/components/home/FullBleedSpread";
 import BroadsheetSpotlight from "@/components/home/BroadsheetSpotlight";
 import EditorialListSection from "@/components/home/EditorialListSection";
 import EditorialCarouselSection from "@/components/home/EditorialCarouselSection";
+import AsymmetricBroadsheet from "@/components/home/AsymmetricBroadsheet";
 import InteractiveMasterIndex from "@/components/home/InteractiveMasterIndex";
 import EditorialCursor from "@/components/home/EditorialCursor";
 import CtaSection from "@/components/shared/CtaSection";
@@ -21,10 +22,11 @@ export default function Home() {
     return slugs.map((s) => getArticle(s)).filter((a): a is NewsArticle => Boolean(a));
   };
 
-  // 1. ESG (2 articles: Epyllion Group & ESG Excellence Awards)
+  // 1. ESG (3 articles: Epyllion Group, ESG Excellence Awards, & How Corporates are Rated)
   const esgArticles = getArticles([
     "epyllion-group-championing-esg-beyond-compliance",
     "verifiable-impact-bangladesh-inaugural-esg-excellence-awards",
+    "esg-ratings-how-corporates-are-rated-and-why-it-matters",
   ]);
 
   // 2. Industry Practice (2 articles: Beyond the Plaque & Radisson Blu)
@@ -108,6 +110,24 @@ export default function Home() {
     "closing-the-loop-circular-economy-industrial-symbiosis-bangladesh"
   );
 
+  // 17. Playbook (2 articles: Corporate ESG Ratings & Sustainable Finance Blueprint)
+  const playbookArticles = getArticles([
+    "esg-ratings-how-corporates-are-rated-and-why-it-matters",
+    "sustainable-finance-blueprint-coordinated-regulation-bangladesh",
+  ]);
+
+  // 18. Rule Book (1 article: HREDD & Export Competitiveness)
+  const ruleBookArticle = getArticle(
+    "from-audit-to-accountability-export-competitiveness-hredd"
+  );
+
+  // 19. Home & The World (3 articles: Bangladesh Crossroads, Ivorian Workers, Balance Sheet of Development)
+  const homeWorldArticles = getArticles([
+    "bangladesh-at-the-crossroads-un-sdg-report-2026",
+    "climate-change-and-decent-work-ivory-coast",
+    "the-balance-sheet-of-development-asia-pacific-sustainability",
+  ]);
+
   // Global Briefings / Real-Time Dispatch (4 articles)
   const topStoriesArticles = getArticles([
     "bangladesh-national-sustainability-news-solar-duties-climate-finance",
@@ -124,13 +144,13 @@ export default function Home() {
       {/* COVER STORY & VOLUME 01 HERO SPOTLIGHT */}
       <InauguralMonolith />
 
-      {/* 1. ESG (2 Articles) */}
-      <StaggeredDualSplit
+      {/* 1. ESG (3 Articles) */}
+      <AsymmetricBroadsheet
         sectionNumber="01"
         sectionTitle="ESG"
         categorySlug="esg"
         articles={esgArticles}
-        description="From Epyllion Group's GRI-aligned factory sustainability to Bangladesh's inaugural evidence-based ESG Excellence Awards."
+        description="Corporate sustainability benchmarks, independent ESG ratings, and verifiable non-financial performance across leading enterprises."
       />
 
       {/* 2. INDUSTRY PRACTICE (2 Articles) */}
@@ -139,7 +159,7 @@ export default function Home() {
         sectionTitle="Industry Practice"
         categorySlug="industry-practices"
         articles={industryArticles}
-        description="Transitioning from 349 LEED green factory certifications to daily lean manufacturing operations and sustainable hospitality."
+        description="Operational decarbonisation, green manufacturing systems, and sustainable hospitality driving industrial competitiveness."
       />
 
       {/* 3. AGRICULTURE (2 Articles) */}
@@ -148,25 +168,25 @@ export default function Home() {
         sectionTitle="Agriculture"
         categorySlug="agriculture"
         articles={agriArticles}
-        description="From the desert sands of Arabia to the coastal rivers of Bengal: climate-smart farming and salinity-resistant crops."
+        description="Climate-smart cultivation, food–water security, and salinity-resilient agricultural innovation across coastal and delta regions."
       />
 
-      {/* 4. STANDARDS (2 Articles: Banking Standards & IFRS 9 Transition) */}
+      {/* 4. STANDARDS (2 Articles) */}
       <EditorialListSection
         sectionNumber="04"
         title="Standards"
         categorySlug="standards"
         articles={standardsArticles}
-        description="The hidden technology revolution inside IFRS 9 banking rules alongside central bank decarbonisation financing."
+        description="Regulatory frameworks, international reporting rules, and central bank policy shaping risk governance and green compliance."
       />
 
-      {/* 5. WASTE MANAGEMENT (2 Articles: EPR & Waste Infrastructure) */}
+      {/* 5. WASTE MANAGEMENT (2 Articles) */}
       <StaggeredDualSplit
         sectionNumber="05"
         sectionTitle="Waste Management"
         categorySlug="waste-management"
         articles={wasteArticles}
-        description="Making Extended Producer Responsibility (EPR) enforceable and scaling community-based plastic recovery."
+        description="Resource recovery, producer accountability frameworks, and community-led waste valorisation across urban and industrial hubs."
       />
 
       {/* 6. SUSTAINABLE CITY (2 Articles) */}
@@ -175,7 +195,7 @@ export default function Home() {
         sectionTitle="Sustainable City"
         categorySlug="sustainable-city"
         articles={cityArticles}
-        description="A suffocated Buriganga river meets Dhaka's shrinking urban biodiversity in Ramna Park."
+        description="Urban hydrology, river restoration, and ecological planning for resilient, livable cities."
       />
 
       {/* 7. HEALTH (1 Article — World-Class Feature Spread) */}
@@ -195,7 +215,7 @@ export default function Home() {
         sectionTitle="Technology"
         categorySlug="technology"
         articles={techArticles}
-        description="Can Bangladesh build domestic semiconductor capacity while accelerating green data-center approvals through AI?"
+        description="Deep-tech industrial capacity, AI-enabled environmental governance, and digital infrastructure for a low-carbon economy."
       />
 
       {/* 9. GOVERNANCE (1 Article — World-Class Feature Spread) */}
@@ -215,16 +235,16 @@ export default function Home() {
         sectionTitle="Wild Life &amp; Biodiversity"
         categorySlug="wild-life-and-biodiversity"
         articles={wildlifeArticles}
-        description="Documenting the 12 delta kingfishers of Bangladesh alongside elephant and tiger conservation along the Sundarbans edge."
+        description="Conservation science, habitat protection, and ecological stewardship across forests, wetlands, and delta ecosystems."
       />
 
-      {/* 11. SUSTAINABLE FINANCE (2 Articles: Carbon Corridor & Sustainable Finance Blueprint) */}
+      {/* 11. SUSTAINABLE FINANCE (2 Articles) */}
       <StaggeredDualSplit
         sectionNumber="11"
         sectionTitle="Sustainable Finance"
         categorySlug="sustainable-finance"
         articles={sustainableFinanceArticles}
-        description="Unlocking high-integrity carbon corridors and institutional capital markets to finance industrial decarbonisation."
+        description="Green capital markets, transition finance instruments, and institutional investment pathways for industrial decarbonisation."
       />
 
       {/* 12. FRIEND IN NEED (1 Article — World-Class Feature Spread) */}
@@ -234,7 +254,7 @@ export default function Home() {
           sectionTitle="Friend In Need"
           categorySlug="friend-in-need"
           article={friendArticle}
-          description="Denmark and Bangladesh forge a pioneering bilateral partnership spanning offshore wind, PaCT, and agri-food resilience."
+          description="International climate diplomacy, bilateral technical cooperation, and cross-border partnerships accelerating green transition."
         />
       )}
 
@@ -244,7 +264,7 @@ export default function Home() {
         sectionTitle="Culture &amp; Myth"
         categorySlug="culture-and-myth"
         articles={mythArticles}
-        description="The folklore of Bonbibi in the Sundarbans and Humbaba in Mesopotamia as enduring metaphors for ecological boundaries."
+        description="Mythology, indigenous folklore, and cultural narratives that preserve humanity's sacred boundaries with the natural world."
       />
 
       {/* 14. FRONTRUNNER (1 Article — Exclusive TSV Interview Spotlight) */}
@@ -270,7 +290,7 @@ export default function Home() {
         />
       )}
 
-      {/* 16. CIRCULAR ECONOMY (1 Article — Sobar Niche / Closed-Loop Systems) */}
+      {/* 16. CIRCULAR ECONOMY (1 Article — Closed-Loop Systems) */}
       {circularArticle && (
         <BroadsheetSpotlight
           sectionNumber="16"
@@ -281,14 +301,44 @@ export default function Home() {
         />
       )}
 
+      {/* 17. PLAYBOOK (2 Articles) */}
+      <StaggeredDualSplit
+        sectionNumber="17"
+        sectionTitle="Playbook"
+        categorySlug="playbook"
+        articles={playbookArticles}
+        description="Practical executive frameworks for corporate ESG evaluation, reporting rigor, and sustainable finance execution."
+      />
+
+      {/* 18. RULE BOOK (1 Article) */}
+      {ruleBookArticle && (
+        <BroadsheetSpotlight
+          sectionNumber="18"
+          sectionTitle="Rule Book"
+          categorySlug="rule-book"
+          article={ruleBookArticle}
+          theme="light"
+          imageOnRight={true}
+        />
+      )}
+
+      {/* 19. HOME & THE WORLD (3 Articles) */}
+      <AsymmetricBroadsheet
+        sectionNumber="19"
+        sectionTitle="Home &amp; The World"
+        categorySlug="home-and-the-world"
+        articles={homeWorldArticles}
+        description="Global sustainability intelligence, regional development benchmarks, and climate-resilient labor across emerging economies."
+      />
+
       {/* TOP STORIES / GLOBAL BRIEFINGS */}
       <EditorialCarouselSection
-        sectionNumber="14"
+        sectionNumber="20"
         title="Today's Global Briefings"
         categorySlug="top-stories"
         articles={topStoriesArticles}
         motifTitle="Top Stories &amp; Dispatch"
-        description="National solar tariff policies, European textile destruction bans, and carbon credit market disruptions."
+        description="Key policy shifts, clean energy milestones, and international sustainability briefings shaping global markets."
       />
 
       {/* MASTER DIRECTORY & COMPENDIUM */}
