@@ -28,8 +28,7 @@ export default async function NewsPage({
 
   const articleIndex = allArticles.findIndex((a) => a.slug === effectiveSlug);
   const safeIndex = articleIndex >= 0 ? articleIndex : 0;
-  const underArticleAd = magazineAds[safeIndex % magazineAds.length];
-  const sidebarAd = magazineAds[(safeIndex + 4) % magazineAds.length];
+  const sidebarAd = magazineAds[safeIndex % magazineAds.length];
 
   const currentIssue = recentEditions[0];
 
@@ -120,11 +119,6 @@ export default async function NewsPage({
 
           {/* Bottom Article Share Bar */}
           <ArticleShareBar title={article.title} slug={article.slug} />
-
-          {/* Dedicated Advertisement Under This News */}
-          {underArticleAd && (
-            <MagazineAdBanner variant="leaderboard" adId={underArticleAd.id} className="mt-8 mb-4" />
-          )}
         </div>
 
         {/* Right Sidebar: Issue PDF & Related Articles */}

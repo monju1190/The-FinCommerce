@@ -239,7 +239,7 @@ export const magazineData: MagazineSectionData[] = [
         "slug": "denmark-bangladesh-lasting-partnership-greener-turn",
         "title": "Denmark–Bangladesh: A Lasting Partnership Takes a Greener Turn",
         "subtitle": "Over five decades of bilateral ties have evolved from traditional aid into a strategic partnership driving green growth, cleaner textiles (PaCT), offshore wind, and sustainable dairy value chains.",
-        "author": "Embassy of Denmark in Bangladesh",
+        "author": "TSV Desk",
         "authorRole": "Diplomatic & Development Feature",
         "date": "October–December 2026",
         "category": "Friends in Need",

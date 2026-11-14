@@ -6,7 +6,6 @@ import FullBleedSpread from "@/components/home/FullBleedSpread";
 import BroadsheetSpotlight from "@/components/home/BroadsheetSpotlight";
 import EditorialListSection from "@/components/home/EditorialListSection";
 import EditorialCarouselSection from "@/components/home/EditorialCarouselSection";
-import AsymmetricBroadsheet from "@/components/home/AsymmetricBroadsheet";
 import InteractiveMasterIndex from "@/components/home/InteractiveMasterIndex";
 import EditorialCursor from "@/components/home/EditorialCursor";
 import CtaSection from "@/components/shared/CtaSection";
@@ -145,7 +144,7 @@ export default function Home() {
       <InauguralMonolith />
 
       {/* 1. ESG (3 Articles) */}
-      <AsymmetricBroadsheet
+      <StaggeredDualSplit
         sectionNumber="01"
         sectionTitle="ESG"
         categorySlug="esg"
