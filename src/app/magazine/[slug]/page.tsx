@@ -3,6 +3,7 @@ import { recentEditions, magazineData } from "@/data/mockData";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
+import DigitalEditionReader from "@/components/shared/DigitalEditionReader";
 
 export default async function MagazineDetailPage({
   params,
@@ -71,6 +72,12 @@ export default async function MagazineDetailPage({
             </div>
           </div>
         </div>
+
+        {/* Locked Digital Soft Copy Reader (Pages 1–4 Preview, Pages 5–140 Locked) */}
+        <DigitalEditionReader
+          editionTitle={currentEdition.month}
+          issueNumber={currentEdition.issueNumber}
+        />
 
         {/* Issue Sections and Articles */}
         <div className="space-y-12">

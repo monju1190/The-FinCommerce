@@ -42,3 +42,6 @@ next-env.d.ts
 
 # scratch
 scratch/
+
+# private locked editions (not served publicly)
+/private/

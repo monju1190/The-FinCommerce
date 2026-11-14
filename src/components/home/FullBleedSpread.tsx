@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 interface FullBleedSpreadProps {
   sectionNumber: string;
   sectionTitle: string;
-  kicker: string;
+  kicker?: string;
   categorySlug: string;
   article: NewsArticle;
   description?: string;
@@ -40,11 +40,11 @@ export default function FullBleedSpread({
         {/* Broadside Section Header — Prominently Highlighting Section Name */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-8 sm:mb-12 border-b-2 border-black/20 gap-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
-              <span>{sectionNumber}. {sectionTitle}</span>
-              <span>•</span>
-              <span>{kicker}</span>
-            </div>
+            {kicker && (
+              <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
+                <span>{kicker}</span>
+              </div>
+            )}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
               {sectionTitle}
             </h2>

@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 interface StaggeredDualSplitProps {
   sectionNumber: string;
   sectionTitle: string;
-  kicker: string;
+  kicker?: string;
   categorySlug: string;
   articles: NewsArticle[];
   description?: string;
@@ -34,9 +34,11 @@ export default function StaggeredDualSplit({
       {/* Broadside Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-10 border-b-2 border-[#111111] gap-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
-            <span>{kicker}</span>
-          </div>
+          {kicker && (
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#1a4d2e] mb-1 font-bold">
+              <span>{kicker}</span>
+            </div>
+          )}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display uppercase tracking-tight text-[#111111]">
             {sectionTitle}
           </h2>

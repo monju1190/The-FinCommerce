@@ -1,5 +1,5 @@
 import React from "react";
-import { magazineData, magazinePdfLinks, recentEditions } from "@/data/mockData";
+import { magazineData, magazineAds, recentEditions } from "@/data/mockData";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { FaBookOpen } from "react-icons/fa";
@@ -25,6 +25,11 @@ export default async function NewsPage({
   const relatedArticles = allArticles
     .filter((a) => a.slug !== effectiveSlug)
     .slice(0, 4);
+
+  const articleIndex = allArticles.findIndex((a) => a.slug === effectiveSlug);
+  const safeIndex = articleIndex >= 0 ? articleIndex : 0;
+  const underArticleAd = magazineAds[safeIndex % magazineAds.length];
+  const sidebarAd = magazineAds[(safeIndex + 4) % magazineAds.length];
 
   const currentIssue = recentEditions[0];
 
@@ -115,6 +120,11 @@ export default async function NewsPage({
 
           {/* Bottom Article Share Bar */}
           <ArticleShareBar title={article.title} slug={article.slug} />
+
+          {/* Dedicated Advertisement Under This News */}
+          {underArticleAd && (
+            <MagazineAdBanner variant="leaderboard" adId={underArticleAd.id} className="mt-8 mb-4" />
+          )}
         </div>
 
         {/* Right Sidebar: Issue PDF & Related Articles */}
@@ -146,7 +156,7 @@ export default async function NewsPage({
           </div>
 
           {/* Sponsored Partner from Print Edition */}
-          <MagazineAdBanner variant="sidebar" adPage={47} />
+          {sidebarAd && <MagazineAdBanner variant="sidebar" adId={sidebarAd.id} />}
 
           {/* Related Stories */}
           <div className="bg-[#fff8f3] p-6 rounded-2xl border border-[#dfcfc2] shadow-sm">

@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { recentEditions, magazineData, magazineAds, MagazineAd } from "@/data/mockData";
-import { FaArrowRight, FaTimes, FaLayerGroup } from "react-icons/fa";
+import { FaArrowRight, FaTimes, FaLayerGroup, FaBookOpen } from "react-icons/fa";
+import DigitalEditionReader from "@/components/shared/DigitalEditionReader";
 
 export default function MagazineArchivePage() {
   const [selectedAd, setSelectedAd] = useState<MagazineAd | null>(null);
@@ -72,6 +73,13 @@ export default function MagazineArchivePage() {
 
               <div className="pt-4 border-t border-black/15 flex flex-wrap items-center gap-4">
                 <a
+                  href="#digital-reader"
+                  className="inline-flex items-center gap-2 bg-[#1a4d2e] text-white hover:bg-[#111111] px-6 py-3.5 text-xs font-mono uppercase tracking-wider font-bold transition-colors"
+                >
+                  <FaBookOpen size={12} />
+                  <span>Read Digital Preview (Pages 1–4)</span>
+                </a>
+                <a
                   href="#table-of-contents"
                   className="inline-flex items-center gap-2 bg-[#111111] text-[#F7F5F0] hover:bg-[#D92B2B] px-6 py-3.5 text-xs font-mono uppercase tracking-wider transition-colors"
                 >
@@ -90,6 +98,12 @@ export default function MagazineArchivePage() {
             </div>
           </div>
         </div>
+
+        {/* Locked Digital Soft Copy Reader (Pages 1–4 Preview, Pages 5–140 Locked) */}
+        <DigitalEditionReader
+          editionTitle={currentIssue.month}
+          issueNumber={currentIssue.issueNumber}
+        />
 
         {/* Full Table of Contents (Direct Article Links) */}
         <div id="table-of-contents" className="scroll-mt-12">

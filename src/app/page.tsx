@@ -128,7 +128,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="01"
         sectionTitle="ESG"
-        kicker="CORPORATE BENCHMARKS &amp; VERIFIABLE EXCELLENCE"
         categorySlug="esg"
         articles={esgArticles}
         description="From Epyllion Group's GRI-aligned factory sustainability to Bangladesh's inaugural evidence-based ESG Excellence Awards."
@@ -138,7 +137,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="02"
         sectionTitle="Industry Practice"
-        kicker="MANUFACTURING &amp; GREEN OPERATIONS"
         categorySlug="industry-practices"
         articles={industryArticles}
         description="Transitioning from 349 LEED green factory certifications to daily lean manufacturing operations and sustainable hospitality."
@@ -148,7 +146,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="03"
         sectionTitle="Agriculture"
-        kicker="FOOD–WATER SECURITY &amp; SALINITY ADAPTATION"
         categorySlug="agriculture"
         articles={agriArticles}
         description="From the desert sands of Arabia to the coastal rivers of Bengal: climate-smart farming and salinity-resistant crops."
@@ -158,7 +155,6 @@ export default function Home() {
       <EditorialListSection
         sectionNumber="04"
         title="Standards"
-        kicker="BANKING STANDARDS &amp; RISK MONITORING"
         categorySlug="standards"
         articles={standardsArticles}
         description="The hidden technology revolution inside IFRS 9 banking rules alongside central bank decarbonisation financing."
@@ -168,7 +164,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="05"
         sectionTitle="Waste Management"
-        kicker="EXTENDED PRODUCER RESPONSIBILITY &amp; ZERO WASTE"
         categorySlug="waste-management"
         articles={wasteArticles}
         description="Making Extended Producer Responsibility (EPR) enforceable and scaling community-based plastic recovery."
@@ -178,7 +173,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="06"
         sectionTitle="Sustainable City"
-        kicker="URBAN HYDROLOGY &amp; ECOLOGICAL RESILIENCE"
         categorySlug="sustainable-city"
         articles={cityArticles}
         description="A suffocated Buriganga river meets Dhaka's shrinking urban biodiversity in Ramna Park."
@@ -189,7 +183,6 @@ export default function Home() {
         <FullBleedSpread
           sectionNumber="07"
           sectionTitle="Health"
-          kicker="LONGEVITY SCIENCE &amp; HEALTH EQUITY"
           categorySlug="health"
           article={healthArticle}
           description="Examining public health inequalities, preventative medicine, and the structural determinants of community longevity."
@@ -200,7 +193,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="08"
         sectionTitle="Technology"
-        kicker="SEMICONDUCTORS &amp; AI CLEARANCE MODERNIZATION"
         categorySlug="technology"
         articles={techArticles}
         description="Can Bangladesh build domestic semiconductor capacity while accelerating green data-center approvals through AI?"
@@ -211,7 +203,6 @@ export default function Home() {
         <FullBleedSpread
           sectionNumber="09"
           sectionTitle="Governance"
-          kicker="BOARDROOM OVERSIGHT &amp; FIDUCIARY DUTY"
           categorySlug="governance"
           article={governanceArticle}
           description="Why corporate sustainability cannot remain confined to CSR departments and must be directed by board fiduciary oversight."
@@ -222,7 +213,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="10"
         sectionTitle="Wild Life &amp; Biodiversity"
-        kicker="DELTA CONSERVATION &amp; AVIAN HERITAGE"
         categorySlug="wild-life-and-biodiversity"
         articles={wildlifeArticles}
         description="Documenting the 12 delta kingfishers of Bangladesh alongside elephant and tiger conservation along the Sundarbans edge."
@@ -232,7 +222,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="11"
         sectionTitle="Sustainable Finance"
-        kicker="TRANSITION ARCHITECTURE &amp; GREEN CAPITAL"
         categorySlug="sustainable-finance"
         articles={sustainableFinanceArticles}
         description="Unlocking high-integrity carbon corridors and institutional capital markets to finance industrial decarbonisation."
@@ -243,7 +232,6 @@ export default function Home() {
         <FullBleedSpread
           sectionNumber="12"
           sectionTitle="Friend In Need"
-          kicker="BILATERAL CLIMATE DIPLOMACY"
           categorySlug="friend-in-need"
           article={friendArticle}
           description="Denmark and Bangladesh forge a pioneering bilateral partnership spanning offshore wind, PaCT, and agri-food resilience."
@@ -254,7 +242,6 @@ export default function Home() {
       <StaggeredDualSplit
         sectionNumber="13"
         sectionTitle="Culture &amp; Myth"
-        kicker="ANCIENT ECOLOGICAL GUARDIANS"
         categorySlug="culture-and-myth"
         articles={mythArticles}
         description="The folklore of Bonbibi in the Sundarbans and Humbaba in Mesopotamia as enduring metaphors for ecological boundaries."
@@ -265,7 +252,6 @@ export default function Home() {
         <BroadsheetSpotlight
           sectionNumber="14"
           sectionTitle="Frontrunner"
-          kicker="TSV INTERVIEW &amp; CORPORATE LEADERSHIP"
           categorySlug="frontrunner"
           article={frontrunnerArticle}
           theme="light"
@@ -277,7 +263,6 @@ export default function Home() {
         <BroadsheetSpotlight
           sectionNumber="15"
           sectionTitle="Energy &amp; Power"
-          kicker="RENEWABLE TRANSITION &amp; CLEAN ENERGY"
           categorySlug="energy-and-power"
           article={energyArticle}
           theme="light"
@@ -290,7 +275,6 @@ export default function Home() {
         <BroadsheetSpotlight
           sectionNumber="16"
           sectionTitle="Circular Economy"
-          kicker="INDUSTRIAL SYMBIOSIS &amp; CLOSED-LOOP SYSTEMS"
           categorySlug="circular-economy"
           article={circularArticle}
           theme="light"
@@ -301,7 +285,6 @@ export default function Home() {
       <EditorialCarouselSection
         sectionNumber="14"
         title="Today's Global Briefings"
-        kicker="REAL-TIME INTELLIGENCE"
         categorySlug="top-stories"
         articles={topStoriesArticles}
         motifTitle="Top Stories &amp; Dispatch"
