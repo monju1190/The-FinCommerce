@@ -323,7 +323,7 @@ export default function Home() {
       )}
 
       {/* 19. HOME & THE WORLD (3 Articles) */}
-      <AsymmetricBroadsheet
+      <StaggeredDualSplit
         sectionNumber="19"
         sectionTitle="Home &amp; The World"
         categorySlug="home-and-the-world"

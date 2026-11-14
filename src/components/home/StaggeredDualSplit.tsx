@@ -23,8 +23,7 @@ export default function StaggeredDualSplit({
 }: StaggeredDualSplitProps) {
   if (!articles || articles.length < 2) return null;
 
-  const leftArticle = articles[0];
-  const rightArticle = articles[1];
+  const isThreeCol = articles.length >= 3;
 
   return (
     <section
@@ -60,7 +59,7 @@ export default function StaggeredDualSplit({
 
       {/* Mobile Phone View (< sm) — New Yorker Critics Row Layout (Image on Right) */}
       <div className="sm:hidden divide-y divide-black/15 bg-white border border-black/15 p-4 space-y-4">
-        {[leftArticle, rightArticle].map((art, idx) => (
+        {articles.map((art) => (
           <Link
             key={art.slug}
             href={`/news/${art.slug}`}
@@ -96,95 +95,75 @@ export default function StaggeredDualSplit({
         ))}
       </div>
 
-      {/* Desktop / Tablet Grid (sm: and above) — 12-Column Split: 6 Cols : 6 Cols */}
-      <div className="hidden sm:grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:divide-x lg:divide-black/15">
-        {/* Left Column (6 Cols — Landscape Visual Weight Matching Right) */}
-        <div className="lg:col-span-6 lg:pr-8 flex flex-col justify-between group">
-          <div>
-            <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-500 mb-3">
-              <span className="text-[#1a4d2e] font-bold">{leftArticle.category}</span>
-              <span>{leftArticle.date || "OCT–DEC 2026"}</span>
-            </div>
-
-            <Link href={`/news/${leftArticle.slug}`} className="block">
-              <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
-                <img
-                  src={leftArticle.coverImageUrl || leftArticle.imageUrl}
-                  alt={leftArticle.title}
-                  className="w-full h-full object-cover print-grayscale transition-transform duration-700 group-hover:scale-104"
-                />
+      {/* Desktop / Tablet Grid (sm: and above) — Symmetrical 2-Col or 3-Col Broadsheet Grid */}
+      <div
+        className={`hidden sm:grid grid-cols-1 gap-8 lg:divide-x lg:divide-black/15 ${
+          isThreeCol ? "lg:grid-cols-3 lg:gap-8" : "lg:grid-cols-2 lg:gap-12"
+        }`}
+      >
+        {articles.map((art, idx) => (
+          <div
+            key={art.slug}
+            className={`flex flex-col justify-between group ${
+              isThreeCol
+                ? idx === 0
+                  ? "lg:pr-6"
+                  : idx === articles.length - 1
+                  ? "lg:pl-6"
+                  : "lg:px-6"
+                : idx === 0
+                ? "lg:pr-8"
+                : "lg:pl-8"
+            }`}
+          >
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-500 mb-3">
+                <span className="text-[#1a4d2e] font-bold">{art.category}</span>
+                <span>{art.date || "OCT–DEC 2026"}</span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl md:text-[32px] font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-[1.2] mb-3">
-                {leftArticle.title}
-              </h3>
-            </Link>
+              <Link href={`/news/${art.slug}`} className="block">
+                <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
+                  <img
+                    src={art.coverImageUrl || art.imageUrl}
+                    alt={art.title}
+                    className="w-full h-full object-cover print-grayscale transition-transform duration-700 group-hover:scale-104"
+                  />
+                </div>
 
-            <p className="text-sm sm:text-base text-gray-700 font-serif leading-relaxed line-clamp-3 mb-6 measure-readable">
-              {leftArticle.subtitle}
-            </p>
-          </div>
+                <h3
+                  className={`font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-[1.2] mb-3 ${
+                    isThreeCol
+                      ? "text-xl sm:text-2xl md:text-[26px]"
+                      : "text-2xl sm:text-3xl md:text-[32px]"
+                  }`}
+                >
+                  {art.title}
+                </h3>
+              </Link>
 
-          <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-4 border-t border-black/10">
-            <span className="font-semibold text-[#111111]">
-              {leftArticle.author.toLowerCase().includes("interview")
-                ? leftArticle.author
-                : leftArticle.author.startsWith("By ")
-                ? leftArticle.author
-                : `By ${leftArticle.author}`}
-            </span>
-            <Link
-              href={`/news/${leftArticle.slug}`}
-              className="font-bold text-[#1a4d2e] hover:underline"
-            >
-              Read Story →
-            </Link>
-          </div>
-        </div>
-
-        {/* Right Column (6 Cols — Symmetrical Landscape Visual Weight, Baseline Aligned) */}
-        <div className="lg:col-span-6 lg:pl-8 flex flex-col justify-between group">
-          <div>
-            <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-500 mb-3">
-              <span className="text-[#1a4d2e] font-bold">{rightArticle.category}</span>
-              <span>{rightArticle.date || "OCT–DEC 2026"}</span>
+              <p className="text-sm sm:text-base text-gray-700 font-serif leading-relaxed line-clamp-3 mb-6 measure-readable">
+                {art.subtitle}
+              </p>
             </div>
 
-            <Link href={`/news/${rightArticle.slug}`} className="block">
-              <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden border border-black/15 bg-gray-200 mb-5 relative">
-                <img
-                  src={rightArticle.coverImageUrl || rightArticle.imageUrl}
-                  alt={rightArticle.title}
-                  className="w-full h-full object-cover print-grayscale transition-transform duration-700 group-hover:scale-104"
-                />
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl md:text-[32px] font-bold font-display text-[#111111] group-hover:text-[#D92B2B] transition-colors leading-[1.2] mb-3">
-                {rightArticle.title}
-              </h3>
-            </Link>
-
-            <p className="text-sm sm:text-base text-gray-700 font-serif leading-relaxed line-clamp-3 mb-6 measure-readable">
-              {rightArticle.subtitle}
-            </p>
+            <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-4 border-t border-black/10">
+              <span className="font-semibold text-[#111111]">
+                {art.author.toLowerCase().includes("interview")
+                  ? art.author
+                  : art.author.startsWith("By ")
+                  ? art.author
+                  : `By ${art.author}`}
+              </span>
+              <Link
+                href={`/news/${art.slug}`}
+                className="font-bold text-[#1a4d2e] hover:underline"
+              >
+                Read Story →
+              </Link>
+            </div>
           </div>
-
-          <div className="flex items-center justify-between text-xs font-mono uppercase text-gray-600 pt-4 border-t border-black/10">
-            <span className="font-semibold text-[#111111]">
-              {rightArticle.author.toLowerCase().includes("interview")
-                ? rightArticle.author
-                : rightArticle.author.startsWith("By ")
-                ? rightArticle.author
-                : `By ${rightArticle.author}`}
-            </span>
-            <Link
-              href={`/news/${rightArticle.slug}`}
-              className="font-bold text-[#1a4d2e] hover:underline"
-            >
-              Read Story →
-            </Link>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
