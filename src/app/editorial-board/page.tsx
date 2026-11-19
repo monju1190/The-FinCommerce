@@ -171,7 +171,7 @@ export default function EditorialBoardPage() {
                 Editorial Desk: <span className="text-[#111111] font-semibold">editor@sustainabilityvoice.com</span>
               </p>
               <p className="text-gray-700">
-                Direct Line: <span className="text-[#111111] font-semibold">+880 1713 039784</span>
+                Direct Line: <span className="text-[#111111] font-semibold">+880 17 4225 4805</span>
               </p>
               <p className="text-gray-500">
                 Quarterly Print Run: Registration No. 48/2026

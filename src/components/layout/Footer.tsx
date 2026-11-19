@@ -28,7 +28,7 @@ export default function Footer() {
 
             <div className="text-gray-400 text-xs sm:text-sm space-y-1">
               <p>Editorial Desk: <span className="text-white">editor@sustainabilityvoice.com</span></p>
-              <p>Inquiries: <span className="text-white">+880 1713 039784</span></p>
+              <p>Inquiries: <span className="text-white">+880 17 4225 4805</span></p>
             </div>
           </div>
 

@@ -100,9 +100,6 @@ export default function ContactPage() {
                   <p className="text-sm font-mono font-bold text-[#111111]">
                     +880 17 4225 4805
                   </p>
-                  <p className="text-xs font-mono text-gray-600">
-                    +880 1713 039784 (Inquiries)
-                  </p>
                   <span className="text-[11px] text-gray-500 italic block pt-0.5">
                     Sunday to Thursday • 09:00 to 18:00 BST
                   </span>
