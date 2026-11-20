@@ -212,3 +212,32 @@ article,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Maintain uniform default arrow cursor across all links, buttons, and clickable elements */
+*,
+*::before,
+*::after,
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+select,
+label,
+summary,
+.cursor-pointer {
+  cursor: default !important;
+}
+
+/* Keep standard I-beam text cursor for text input fields */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea {
+  cursor: text !important;
+}
+

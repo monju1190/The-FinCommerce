@@ -7,7 +7,6 @@ import BroadsheetSpotlight from "@/components/home/BroadsheetSpotlight";
 import EditorialListSection from "@/components/home/EditorialListSection";
 import EditorialCarouselSection from "@/components/home/EditorialCarouselSection";
 import InteractiveMasterIndex from "@/components/home/InteractiveMasterIndex";
-import EditorialCursor from "@/components/home/EditorialCursor";
 import CtaSection from "@/components/shared/CtaSection";
 
 export default function Home() {
@@ -137,9 +136,6 @@ export default function Home() {
 
   return (
     <main className="master-container pb-16 antialiased">
-      {/* Magnetic "READ" Cursor Indicator (Desktop Only) */}
-      <EditorialCursor />
-
       {/* COVER STORY & VOLUME 01 HERO SPOTLIGHT */}
       <InauguralMonolith />
 
