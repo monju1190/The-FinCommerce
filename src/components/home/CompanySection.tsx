@@ -21,7 +21,7 @@ export default function CompanySection() {
       name: "ESG AWARD • 32 COMPANIES RECOGNIZED",
       title: "Verifiable Impact: Inside Bangladesh’s Inaugural ESG Excellence Awards",
       desc: "32 companies and three individuals were honored across 20 evidence-based categories anchored in IFRS S1/S2, GRI Standards, UNGC, and SBTi frameworks.",
-      img: "/magazine/oct-dec/photos/esg-award-gold-1.jpg",
+      img: "/magazine/oct-dec/photos/esg-award-ceremony-group.jpg",
       slug: "verifiable-impact-bangladesh-inaugural-esg-excellence-awards"
     }
   ];

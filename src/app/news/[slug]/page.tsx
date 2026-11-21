@@ -1,8 +1,7 @@
 import React from "react";
-import { magazineData, magazineAds, recentEditions } from "@/data/mockData";
+import { magazineData, magazineAds } from "@/data/mockData";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { FaBookOpen } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
 import MagazineAdBanner from "@/components/shared/MagazineAdBanner";
 import ArticleShareBar from "@/components/shared/ArticleShareBar";
@@ -28,9 +27,20 @@ export default async function NewsPage({
 
   const articleIndex = allArticles.findIndex((a) => a.slug === effectiveSlug);
   const safeIndex = articleIndex >= 0 ? articleIndex : 0;
-  const sidebarAd = magazineAds[safeIndex % magazineAds.length];
 
-  const currentIssue = recentEditions[0];
+  // 1. Corporate Data (common across all news pages)
+  const corporateDataAd = magazineAds.find((a) => a.id === "ad-p117") || magazineAds[0];
+
+  // 2. BisNtel / Karbar (alternating in each news)
+  const bisntelAd = magazineAds.find((a) => a.id === "ad-p133") || magazineAds[0];
+  const karbarAd = magazineAds.find((a) => a.id === "ad-p1") || magazineAds[0];
+  const secondAd = safeIndex % 2 === 0 ? bisntelAd : karbarAd;
+
+  // 3. Other one (rotating through remaining magazine ads)
+  const otherAds = magazineAds.filter(
+    (a) => a.id !== "ad-p117" && a.id !== "ad-p133" && a.id !== "ad-p1"
+  );
+  const thirdAd = otherAds[safeIndex % otherAds.length] || otherAds[0];
 
   return (
     <main className="bg-[#F7F5F0] text-[#111111] pb-24 min-h-screen antialiased">
@@ -121,36 +131,16 @@ export default async function NewsPage({
           <ArticleShareBar title={article.title} slug={article.slug} />
         </div>
 
-        {/* Right Sidebar: Issue PDF & Related Articles */}
+        {/* Right Sidebar: 3 Ads & Related Articles */}
         <div className="lg:col-span-4 space-y-8">
-          {/* Magazine Issue Card */}
-          <div className="bg-[#f8ebe3] p-6 rounded-2xl border border-[#dfcfc2] shadow-sm">
-            <span className="text-[10px] font-black text-[#16a34a] uppercase tracking-widest block mb-2">
-              Published in {currentIssue.month}
-            </span>
-            <h3 className="text-lg font-bold font-display text-gray-900 mb-4">
-              {currentIssue.issueNumber}
-            </h3>
-            <Link href={`/magazine/${currentIssue.slug}`} className="block mb-4 overflow-hidden rounded-xl border border-[#d2c0b2] shadow-sm bg-[#0b101e]">
-              <img
-                src={currentIssue.imageUrl}
-                alt={currentIssue.month}
-                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
-              />
-            </Link>
-            <div className="space-y-2.5">
-              <Link
-                href={`/magazine/${currentIssue.slug}`}
-                className="w-full bg-primary-green text-white font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary-light transition-colors shadow-md"
-              >
-                <FaBookOpen size={13} />
-                <span>Explore Volume 01</span>
-              </Link>
-            </div>
-          </div>
+          {/* Ad 1: Corporate Data (Common) */}
+          <MagazineAdBanner variant="sidebar" adId={corporateDataAd.id} />
 
-          {/* Sponsored Partner from Print Edition */}
-          {sidebarAd && <MagazineAdBanner variant="sidebar" adId={sidebarAd.id} />}
+          {/* Ad 2: BisNtel / Karbar (Alternating) */}
+          <MagazineAdBanner variant="sidebar" adId={secondAd.id} />
+
+          {/* Ad 3: Other Partner (Rotational) */}
+          <MagazineAdBanner variant="sidebar" adId={thirdAd.id} />
 
           {/* Related Stories */}
           <div className="bg-[#fff8f3] p-6 rounded-2xl border border-[#dfcfc2] shadow-sm">

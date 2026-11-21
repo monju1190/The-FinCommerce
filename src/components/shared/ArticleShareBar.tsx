@@ -26,10 +26,13 @@ export default function ArticleShareBar({
   const [hasNativeShare, setHasNativeShare] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentUrl(window.location.href);
-      setHasNativeShare(Boolean(navigator.share));
-    }
+    const timer = setTimeout(() => {
+      if (typeof window !== "undefined") {
+        setCurrentUrl(window.location.href);
+        setHasNativeShare(typeof navigator !== "undefined" && Boolean(navigator.share));
+      }
+    }, 0);
+    return () => clearTimeout(timer);
   }, [slug]);
 
   const handleCopyLink = async () => {

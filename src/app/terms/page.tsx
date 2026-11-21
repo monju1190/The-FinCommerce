@@ -203,7 +203,7 @@ export default function TermsPage() {
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-700 font-bold">
               <FaBalanceScale />
-              <span>Publisher's Legal Governance • Dhaka, Bangladesh</span>
+              <span>Publisher&apos;s Legal Governance • Dhaka, Bangladesh</span>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-serif">
               For commercial rate inquiries, advertorial specs, or partnership proposals governed by these statutory policies:
