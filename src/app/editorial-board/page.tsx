@@ -44,7 +44,7 @@ export default function EditorialBoardPage() {
         {/* Officers Count Header */}
         <div className="flex items-center justify-between pb-4 border-b border-black/15 text-xs font-mono uppercase tracking-widest text-gray-500">
           <span>Editorial Council</span>
-          <span>12 Officers &amp; Fellows of the Press</span>
+          <span>{teamMembers.length} Officers &amp; Fellows of the Press</span>
         </div>
 
         {/* 1. Managing Editor (Grand Spotlight) */}

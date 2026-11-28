@@ -137,7 +137,7 @@ export const magazineData: MagazineSectionData[] = [
         "title": "The Sustainable Finance Blueprint",
         "subtitle": "A green transition is not financed by circulars alone—it happens when rooftop solar, cleaner dyeing lines, and recycling become tradable securities backed by coordinated capital market reform.",
         "author": "Enamul Hafiz Latifee",
-        "authorRole": "Chief Research Officer, A&J Corporation & Member, Editorial Panel",
+        "authorRole": "Chief Research Officer, A&J Corporation",
         "authorImage": "/magazine/oct-dec/pdf-images/p53_img1_390x428.jpeg",
         "date": "October–December 2026",
         "category": "Playbook",
@@ -631,11 +631,6 @@ export const teamMembers = [
     "name": "Mohammad Monower Hossain",
     "role": "Member, Editorial Panel",
     "imageUrl": "/magazine/oct-dec/pdf-images/p104_img1_683x1024.jpeg"
-  },
-  {
-    "name": "Enamul Hafiz Latifee",
-    "role": "Member, Editorial Panel",
-    "imageUrl": "/magazine/oct-dec/pdf-images/p53_img1_390x428.jpeg"
   },
   {
     "name": "Md. Abu Raihan",
